@@ -10,6 +10,15 @@ class User(db.Model, UserMixin):
     username = db.Column(db.String(40), nullable=False, unique=True)
     email = db.Column(db.String(255), nullable=False, unique=True)
     hashed_password = db.Column(db.String(255), nullable=False)
+    first_name = db.Column(db.String(40), nullable=False)
+    last_name = db.Column(db.String(55), nullable=False)
+    barking_since = db.Column(db.Date, nullable=False)
+    profile_img = db.Column(db.String, nullable=False)
+
+    comments = db.relationship('Comment', back_populates='users')
+    pet_profiles = db.relationship('Pet_Profile', back_populates='users')
+    posts = db.relationship('Post', back_populates='users')
+    user_answers = db.relationship('User_Answer', back_populates='users')
 
     @property
     def password(self):
@@ -26,5 +35,9 @@ class User(db.Model, UserMixin):
         return {
             'id': self.id,
             'username': self.username,
-            'email': self.email
+            'email': self.email,
+            'first_name': self.first_name,
+            'last_name': self.last_name,
+            'barking_since': self.barking_since,
+            'profile_img': self.profile_img
         }
