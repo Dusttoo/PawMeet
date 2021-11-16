@@ -7,7 +7,7 @@ def seed_posts():
         user_id = 1,
         title = 'Is this normal?',
         post_body = 'My dog is always chasing his tail. Is this normal beahvior?',
-        posted= datetime.date.today()
+        posted=datetime.date.today().strftime("%b %d %Y")
     )
 
     post2 = Post(
