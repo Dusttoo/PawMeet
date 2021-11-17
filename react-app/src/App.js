@@ -9,6 +9,10 @@ import UsersList from './components/UsersList';
 import User from './components/User';
 import { authenticate } from './store/session';
 import ForumHome from './components/Forum/Forum_Main';
+import Header from './components/Header/Header';
+import { allUsers } from './store/users';
+import { allPosts, allComments } from './store/forum';
+
 
 function App() {
   const [loaded, setLoaded] = useState(false);
@@ -17,6 +21,10 @@ function App() {
   useEffect(() => {
     (async() => {
       await dispatch(authenticate());
+      await dispatch(allUsers())
+      await dispatch(allPosts())
+      await dispatch(allComments())
+
       setLoaded(true);
     })();
   }, [dispatch]);
@@ -27,6 +35,7 @@ function App() {
 
   return (
     <BrowserRouter>
+      <Header />
       <NavBar />
       <Switch>
         <Route path='/login' exact={true}>

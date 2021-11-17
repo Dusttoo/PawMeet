@@ -1,0 +1,27 @@
+.nav-bar {
+    display: flex;
+    list-style: none;
+    width: 100%;
+    justify-content: space-evenly;
+}
+
+.nav-link {
+    /* margin-right: 5px; */
+    text-decoration: none;
+    color: black;
+}
+
+.nav-link:hover {
+    color: blue;
+
+}
+
+.logout {
+    background: none;
+    border: none;
+}
+
+.logout:hover {
+    cursor: pointer;
+    color: blue;
+}
