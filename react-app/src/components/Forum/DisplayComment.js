@@ -13,10 +13,11 @@ const DisplayComments = () => {
     const authors = useSelector(state => state.users)
     const comments = useSelector(state => state.comments)
     const currentUser = useSelector(state => state.session.user)
-
+    let author = {}
     const thisComment = Object.values(comments).find(comment => +comment.post_id === +postId)
-
-    const author = Object.keys(authors).find(thisAuthor => +thisComment.user_id === +thisAuthor)
+    if(thisComment) {
+        author = Object.keys(authors).find(thisAuthor => +thisComment.user_id === +thisAuthor)
+    }
     
     const deleteComment = () => {
         dispatch(removeComment(postId));
@@ -28,7 +29,7 @@ const DisplayComments = () => {
 
     return (
         <>
-            
+            {!thisComment ? <h2>No comments to display</h2>:
                <tr>  
                     <Link to={`/users/${author}`}><td><img className="profile-icon" src={authors[author].profile_img } alt={authors[author].name}/></td></Link>
                     <td>{thisComment.posted}</td>
@@ -40,7 +41,7 @@ const DisplayComments = () => {
                         className='delete-post'
                         onClick={deleteComment}>Delete</button>
                     </td> : <></>}
-                 </tr>  
+                 </tr>  }
         </>
     )
 }
