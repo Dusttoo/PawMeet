@@ -13,6 +13,8 @@ import Header from './components/Header/Header';
 import { allUsers } from './store/users';
 import { allPosts} from './store/forum';
 import { allComments } from './store/comments';
+import Posts from './components/Forum/Post';
+import UserProfile from './components/Profiles/UserProfile';
 
 
 
@@ -49,11 +51,17 @@ function App() {
         <ProtectedRoute path='/users' exact={true} >
           <UsersList/>
         </ProtectedRoute>
+        <ProtectedRoute path='/users/:id' exact={true} >
+          <UserProfile/>
+        </ProtectedRoute>
         <ProtectedRoute path='/users/:userId' exact={true} >
           <User />
         </ProtectedRoute>
         <ProtectedRoute path='/forum' exact={true} >
           <ForumHome />
+        </ProtectedRoute>
+        <ProtectedRoute path='/forum/posts/:postId' exact={true} >
+          <Posts />
         </ProtectedRoute>
         <ProtectedRoute path='/' exact={true} >
           <h1>My Home Page</h1>
