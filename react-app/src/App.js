@@ -11,7 +11,9 @@ import { authenticate } from './store/session';
 import ForumHome from './components/Forum/Forum_Main';
 import Header from './components/Header/Header';
 import { allUsers } from './store/users';
-import { allPosts, allComments } from './store/forum';
+import { allPosts} from './store/forum';
+import { allComments } from './store/comments';
+
 
 
 function App() {
