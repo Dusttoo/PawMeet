@@ -2,13 +2,13 @@ import React, { useEffect, useState }  from 'react';
 import { useDispatch } from 'react-redux';
 import { allPosts } from '../../store/forum';
 import { useSelector } from 'react-redux';
+import { Link } from 'react-router-dom';
 import './Forum.css'
 import DisplayPosts from './DisplayPost';
 import { allUsers } from '../../store/users';
 const ForumHome = () => {
     const dispatch = useDispatch()
     const posts = useSelector(state => state.forum)
-    const users = useSelector(state => state.session.users)
 
     useEffect(() => {
       dispatch(allPosts())
@@ -17,7 +17,10 @@ const ForumHome = () => {
 
     return (
         <>
-            <h1>Forum</h1>
+            <h1>Speak!</h1>
+            <div className="forum-options">
+                <Link to='/forum/add' className='add-post'>Add Post</Link>
+            </div>
             <table>
                 <tr>
                     <th>Author</th>
@@ -28,7 +31,7 @@ const ForumHome = () => {
                 
                     {Object.values(posts).map((post) => {
                         return (
-                            <DisplayPosts post={post} users={users}/>
+                            <DisplayPosts post={post}/>
                         )
                     })}
                 

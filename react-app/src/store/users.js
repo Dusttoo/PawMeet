@@ -14,7 +14,6 @@ export const allUsers = () => async (dispatch) => {
     }
   });
       const users = await response.json();
-      console.log('users thunk', users)
       dispatch(getUsers(users));
       return users
 }
@@ -22,12 +21,10 @@ export const allUsers = () => async (dispatch) => {
 export default function usersReducer(state = initialState, action) {
     switch (action.type) {
         case GET_USERS:
-        console.log('action', action.users, action.users.users)
           const everyUser = {...state}
           action.users.users.forEach(user => {
             everyUser[user.id] = user
           })
-          console.log('all users', everyUser)
           return {...everyUser}
         default:
             return state;

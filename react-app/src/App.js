@@ -15,6 +15,7 @@ import { allPosts} from './store/forum';
 import { allComments } from './store/comments';
 import Posts from './components/Forum/Post';
 import UserProfile from './components/Profiles/UserProfile';
+import AddPost from './components/Forum/AddPost';
 
 
 
@@ -59,6 +60,9 @@ function App() {
         </ProtectedRoute>
         <ProtectedRoute path='/forum' exact={true} >
           <ForumHome />
+        </ProtectedRoute>
+        <ProtectedRoute path='/forum/add' exact={true} >
+          <AddPost />
         </ProtectedRoute>
         <ProtectedRoute path='/forum/posts/:postId' exact={true} >
           <Posts />

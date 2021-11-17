@@ -1,8 +1,14 @@
 const GET_ALL_POSTS = 'forum/GET_POSTS'
+const ADD_POST = 'forum/ADD_POST'
 
 const getAllPosts = (posts) => ({
     type: GET_ALL_POSTS,
     posts
+})
+
+const addPost = (post) => ({
+    type: ADD_POST,
+    post
 })
 
 
@@ -22,6 +28,18 @@ export const allPosts = () => async (dispatch) => {
     return posts
 }
 
+export const addAPost = () => async (dispatch) => {
+    const response = await fetch('api/forum/posts/add', {
+        headers: {
+            'Content-Type': 'application/json'
+        }
+    });
+
+    const added = await response.json();
+    dispatch(addPost(added))
+    return added
+}
+
 
 
 export default function forumReducer(state = initialState, action) {
@@ -32,6 +50,10 @@ export default function forumReducer(state = initialState, action) {
                 allPosts[post.id] = post
             })
             return {...allPosts}
+        case ADD_POST:
+          const newState = {...state}
+            newState[action.post.id] = action.post
+            return newState
 
         default:
             return state;
