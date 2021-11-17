@@ -1,20 +1,23 @@
 import React, { useEffect, useState }  from 'react';
 import { useDispatch } from 'react-redux';
-import { addAPost, allPosts } from '../../store/forum';
+import { allPosts } from '../../store/forum';
 import { useSelector } from 'react-redux';
 import { useParams } from 'react-router';
 import { useHistory } from 'react-router';
+import { editAPost } from '../../store/forum';
 
 import './Forum.css'
 
-const AddPost = () => {
+const EditPost = ({setEditForm}) => {
+const {postId} = useParams()
+const posts = useSelector(state => state.forum)
+
 const [validationErrors, setValidationErrors] = useState([]);
 const dispatch = useDispatch()
-const [title, setTitle] = useState('')
-const [post_body, setBody] = useState('')
+const [title, setTitle] = useState(posts[postId].title)
+const [post_body, setBody] = useState(posts[postId].post_body)
 const user_id = useSelector(state => state.session.user.id)
-const currentDate = new Date()
-const posted = `${currentDate.getMonth()}-${currentDate.getDate()}-${currentDate.getFullYear()}`
+const posted = posts[postId].posted
 
     const history = useHistory();
 
@@ -40,7 +43,7 @@ const handleSubmit = async (e) => {
         } else {
             console.log('before dispatch')
             setValidationErrors([]);
-            const added = await dispatch(addAPost(createdPost));
+            const added = await dispatch(editAPost(createdPost));
             console.log('added', added)
             if(added) {
               history.push(`/posts/${added.id}`)
@@ -51,11 +54,9 @@ const handleSubmit = async (e) => {
 }
 
 
-
-
     return (
         <>
-        {validationErrors.length > 0 && (
+            {validationErrors.length > 0 && (
         <div className="errors">
             <p className="error-title"> The following errors were found: </p>
             <ul className="error-list">
@@ -88,4 +89,4 @@ const handleSubmit = async (e) => {
     )
 }
 
-export default AddPost
+export default EditPost

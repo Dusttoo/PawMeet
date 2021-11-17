@@ -7,14 +7,14 @@ def seed_posts():
         user_id = 1,
         title = 'Is this normal?',
         post_body = 'My dog is always chasing his tail. Is this normal beahvior?',
-        posted=datetime.date.today().strftime("%b %d %Y")
+        posted='11-11-2021'
     )
 
     post2 = Post(
         user_id=2,
         title='Dobermans are the best!',
         post_body='I just wanted to say that Dobermans are, by far, the BEST breed!!!',
-        posted=datetime.date.today()
+        posted='11-05-2021'
     )
 
     db.session.add(post1)

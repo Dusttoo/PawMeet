@@ -15,13 +15,29 @@ def add_post():
     if request.method == "POST":
         form = PostForm()
         form['csrf_token'].data = request.cookies['csrf_token']
+        print('\n\n DATA!!!!!!!')
         if form.validate_on_submit():
             data = Post()
+            print('\n\n DATA!!!!!!!', data)
             form.populate_obj(data)
             db.session.add(data)
             db.session.commit()
-        return data.to_dict()
+            return data.to_dict()
 
+
+@forum_routes.route('/posts/<int:id>/edit', methods=['POST'])
+def edit_post(id):
+    form = PostForm()
+    form['csrf_token'].data = request.cookies['csrf_token']
+    if form.validate_on_submit():
+        data = form.data
+        post = Post.query.get(id)
+        post.user_id = data['user_id']
+        post.title = data['title']
+        post.post_body = data['post_body']
+        post.posted = data['posted']
+        db.session.commit()
+        return post.to_dict()
 
 @forum_routes.route('/comments')
 def comments():

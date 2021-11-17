@@ -7,14 +7,14 @@ def seed_comments():
         user_id= 2,
         post_id = 1,
         comment_body="Yes, that's totally normal! My dog does it too",
-        posted=datetime.date.today()
+        posted='11-10-2021'
     )
 
     comment2 = Comment(
         user_id= 1,
         post_id = 2,
         comment_body='I have a Doberman too! He is awesome.',
-        posted=datetime.date.today()
+        posted='11-10-2021'
     )
 
     db.session.add(comment1)

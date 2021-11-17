@@ -8,7 +8,7 @@ class Comment(db.Model):
     user_id = db.Column(db.Integer, db.ForeignKey('users.id'), nullable=False)
     post_id = db.Column(db.Integer, db.ForeignKey('posts.id'), nullable=False)
     comment_body = db.Column(db.Text, nullable=False)
-    posted = db.Column(db.Date, nullable=False)
+    posted = db.Column(db.String, nullable=False)
 
 
     users = db.relationship('User', back_populates='comments')
