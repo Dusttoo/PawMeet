@@ -1,6 +1,8 @@
 from flask import Blueprint, jsonify, request
 from app.models import Post, Comment, Like, db
+from app.forms.add_comment import CommentForm
 from app.forms.add_post import PostForm
+
 
 forum_routes = Blueprint('forums', __name__)
 
@@ -41,7 +43,7 @@ def edit_post(id):
 
 
 @forum_routes.route('/posts/<int:id>/delete', methods=['DELETE'])
-def delete_playlist(id):
+def delete_comment(id):
     post = Post.query.get(id)
     db.session.delete(post)
     db.session.commit()
@@ -52,6 +54,43 @@ def delete_playlist(id):
 def comments():
     comments = Comment.query.all()
     return {'comments': [comment.to_dict() for comment in comments]}
+
+
+@forum_routes.route('/comments/add', methods=['POST'])
+def add_comment():
+    if request.method == "POST":
+        form = CommentForm()
+        form['csrf_token'].data = request.cookies['csrf_token']
+        if form.validate_on_submit():
+            data = Comment()
+            form.populate_obj(data)
+            db.session.add(data)
+            db.session.commit()
+            return data.to_dict()
+
+
+@forum_routes.route('/comments/<int:id>/edit', methods=['POST'])
+def edit_comment(id):
+    form = CommentForm()
+    form['csrf_token'].data = request.cookies['csrf_token']
+    if form.validate_on_submit():
+        data = form.data
+        comment = Comment.query.get(id)
+        comment.user_id = data['user_id']
+        comment.post_id = data['post_id']
+        comment.comment_body = data['comment_body']
+        comment.posted = data['posted']
+        db.session.commit()
+        return comment.to_dict()
+
+
+@forum_routes.route('/comments/<int:id>/delete', methods=['DELETE'])
+def delete_comment(id):
+    post = Post.query.get(id)
+    db.session.delete(post)
+    db.session.commit()
+
+    return post.to_dict()
 
 @forum_routes.route('/likes')
 def likes():
