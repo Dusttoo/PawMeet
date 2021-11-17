@@ -17,10 +17,8 @@ def add_post():
     if request.method == "POST":
         form = PostForm()
         form['csrf_token'].data = request.cookies['csrf_token']
-        print('\n\n DATA!!!!!!!')
         if form.validate_on_submit():
             data = Post()
-            print('\n\n DATA!!!!!!!', data)
             form.populate_obj(data)
             db.session.add(data)
             db.session.commit()
