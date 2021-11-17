@@ -4,8 +4,10 @@ import { allPosts, removePost } from '../../store/forum';
 import { useSelector } from 'react-redux';
 import { useParams, useHistory } from 'react-router';
 import EditPost from './EditPost';
+import AddComment from './AddComment';
 
 import './Forum.css'
+import DisplayComments from './DisplayComment';
 
 const Posts = () => {
     const { postId } = useParams();
@@ -14,9 +16,11 @@ const Posts = () => {
     const dispatch = useDispatch()
     const posts = useSelector(state => state.forum)
     const users = useSelector(state => state.users)
+    const comments = useSelector(state => state.comments)
     const author = Object.keys(users).find((user) => (+user === +posts[postId].user_id))
     const thisUser = useSelector(state => state.session.user)
     const [editForm, setEditForm] = useState(false)
+    const [commentForm, setCommentForm] = useState(false)
 
      useEffect(() => {
     (async() => {
@@ -42,6 +46,14 @@ const Posts = () => {
             history.push(`/forum`)
     }
 
+    const openCommentForm = () => {
+        if (commentForm) {
+            setCommentForm(false)
+        } else {
+            setCommentForm(true)
+        }
+    }
+
     return (
         <>
             <div className="post-container">
@@ -64,6 +76,15 @@ const Posts = () => {
                 <div>
                     <p>{posts[postId].post_body}</p>
                 </div>
+            </div>
+            <div className="comment-container">
+                <button onClick={openCommentForm}>Add a comment</button>
+                {commentForm ? 
+                <AddComment /> : <></>}
+                <table>
+                    <DisplayComments />
+                    
+                </table>
             </div>
         </>
     )
