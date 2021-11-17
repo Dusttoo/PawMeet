@@ -1,19 +1,33 @@
 import React, { useEffect, useState }  from 'react';
 import { useDispatch } from 'react-redux';
-import { allPosts } from '../../store/forum';
+import { allPosts, removePost } from '../../store/forum';
 import { useSelector } from 'react-redux';
-import { useParams } from 'react-router';
+import { useParams, useHistory } from 'react-router';
 import EditPost from './EditPost';
 
 import './Forum.css'
 
 const Posts = () => {
     const { postId } = useParams();
+    const [loaded, setLoaded] = useState(false);
+    const history = useHistory()
+    const dispatch = useDispatch()
     const posts = useSelector(state => state.forum)
     const users = useSelector(state => state.users)
     const author = Object.keys(users).find((user) => (+user === +posts[postId].user_id))
     const thisUser = useSelector(state => state.session.user)
     const [editForm, setEditForm] = useState(false)
+
+     useEffect(() => {
+    (async() => {
+      await dispatch(allPosts())
+      setLoaded(true);
+    })();
+  }, [dispatch]);
+
+  if (!loaded) {
+    return null;
+  }
 
     const openEditForm = () => {
         if(editForm) {
@@ -24,7 +38,8 @@ const Posts = () => {
     }
 
     const deletePost = () => {
-
+        dispatch(removePost(postId));
+            history.push(`/forum`)
     }
 
     return (

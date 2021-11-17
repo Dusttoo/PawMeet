@@ -1,6 +1,8 @@
 const GET_ALL_POSTS = 'forum/GET_POSTS'
 const ADD_POST = 'forum/ADD_POST'
 const UPDATE_POST = 'forum/UPDATE_POST'
+const DELETE_POST = 'forum/DELETE_POST'
+
 
 const getAllPosts = (posts) => ({
     type: GET_ALL_POSTS,
@@ -17,6 +19,10 @@ const upadtePost = (post) => ({
     post
 })
 
+const deletePost = (postId) => ({
+    type: DELETE_POST,
+    postId
+})
 
 
 const initialState = {}
@@ -55,6 +61,23 @@ export const editAPost = (post, postId) => async(dispatch) => {
     return added
 }
 
+export const removePost = (postId) => async (dispatch) => {
+  
+  const response = await fetch(`/api/forum/posts/${postId}/delete`,{
+  method: 'DELETE',
+  statusCode: 204,
+  headers: {'Content-Type': 'application/json'}
+});
+
+  if(response.ok) {
+    const post = await response.json();
+    dispatch(deletePost(postId));
+  }
+    return postId
+
+
+}
+
 export default function forumReducer(state = initialState, action) {
     switch (action.type) {
         case GET_ALL_POSTS:
@@ -71,7 +94,10 @@ export default function forumReducer(state = initialState, action) {
             const updatePost = {...state}
             updatePost[action.post.id] = action.post
             return {...updatePost}
-
+        case DELETE_POST:
+            const deleteState = {...state}
+            delete deleteState[action.postId]
+            return deleteState
         default:
             return state;
     }

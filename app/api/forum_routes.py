@@ -39,6 +39,15 @@ def edit_post(id):
         db.session.commit()
         return post.to_dict()
 
+
+@forum_routes.route('/posts/<int:id>/delete', methods=['DELETE'])
+def delete_playlist(id):
+    post = Post.query.get(id)
+    db.session.delete(post)
+    db.session.commit()
+
+    return post.to_dict()
+
 @forum_routes.route('/comments')
 def comments():
     comments = Comment.query.all()
