@@ -84,11 +84,11 @@ def edit_comment(id):
 
 @forum_routes.route('/comments/<int:id>/delete', methods=['DELETE'])
 def delete_comment(id):
-    post = Post.query.get(id)
-    db.session.delete(post)
+    comment = Comment.query.get(id)
+    db.session.delete(comment)
     db.session.commit()
 
-    return post.to_dict()
+    return comment.to_dict()
 
 @forum_routes.route('/likes')
 def likes():

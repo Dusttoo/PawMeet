@@ -20,8 +20,9 @@ const DisplayComments = () => {
     }
     
     const deleteComment = () => {
-        dispatch(removeComment(postId));
-        history.push(`/forum/posts/${postId}`)
+        console.log(thisComment.id)
+        dispatch(removeComment(thisComment.id));
+        // history.push(`/forum/posts/${postId}`)
     }
     
 

@@ -60,7 +60,6 @@ export const editAComment = (comment, commentId) => async(dispatch) => {
 }
 
 export const removeComment = (commentId) => async (dispatch) => {
-  
   const response = await fetch(`/api/forum/comments/${commentId}/delete`,{
   method: 'DELETE',
   statusCode: 204,
