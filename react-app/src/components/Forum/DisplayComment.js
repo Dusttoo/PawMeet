@@ -6,6 +6,9 @@ import './Forum.css'
 import { Link } from 'react-router-dom';
 import { useParams, useHistory } from 'react-router';
 import { removeComment } from '../../store/comments';
+import EditComment from './EditComment';
+
+
 const DisplayComments = () => {
     const {postId} = useParams()
     const history = useHistory()
@@ -13,6 +16,7 @@ const DisplayComments = () => {
     const authors = useSelector(state => state.users)
     const comments = useSelector(state => state.comments)
     const currentUser = useSelector(state => state.session.user)
+    const [editForm, setEditForm] = useState(false)
     let author = {}
     const thisComment = Object.values(comments).find(comment => +comment.post_id === +postId)
     if(thisComment) {
@@ -25,7 +29,14 @@ const DisplayComments = () => {
         // history.push(`/forum/posts/${postId}`)
     }
     
+    const openEditForm = () => {
 
+        if(editForm) {
+            setEditForm(false)
+        } else {
+            setEditForm(true)
+        }
+    }
 
 
     return (
@@ -35,9 +46,12 @@ const DisplayComments = () => {
                     <Link to={`/users/${author}`}><td><img className="profile-icon" src={authors[author].profile_img } alt={authors[author].name}/></td></Link>
                     <td>{thisComment.posted}</td>
                     <td>{thisComment.comment_body}</td>
+                    {editForm ? 
+                    <EditComment commentId={thisComment.id}/> : <></>}
                     {+authors[author].id === +currentUser.id ?
                     <td>
-                        <button className='edit-post'>Edit</button>
+                        <button className='edit-post'
+                        onClick={openEditForm}>Edit</button>
                         <button 
                         className='delete-post'
                         onClick={deleteComment}>Delete</button>
