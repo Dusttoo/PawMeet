@@ -77,12 +77,14 @@ const DisplayComments = ({commentId}) => {
                     <td className='table-cell' style={{width:'10%'}}>
                         <div className='comment-info'>
                             <Link to={`/users/${author}`}><img className="profile-icon" src={authors[author].profile_img } alt={authors[author].name}/></Link>
+                            <Link to={`/users/${author}`}>{authors[author].first_name} {authors[author].last_name}</Link>
+                            
                             {modifyTime()}
                         </div>
                     </td>
                     <td className='table-cell' style={{width:'65%'}} className='comment-body'>{theseComments[comment].comment_body}</td>
                     {editForm ? 
-                    <EditComment commentId={theseComments[comment].id}/> : <></>}
+                    <EditComment commentId={theseComments[comment].id} setEditForm={setEditForm}/> : <></>}
                     {+authors[author].id === +currentUser.id ?
                     <td className='comment-edit-delete'>
                         <button className='edit-post'

@@ -43,7 +43,7 @@ const handleSubmit = async (e) => {
             setValidationErrors([]);
             const added = await dispatch(editAPost(createdPost, postId));
             if(added) {
-              history.push(`/forum/posts/${added.id}`)
+                setEditForm(false)
             }
             
         };

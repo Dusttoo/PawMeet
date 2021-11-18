@@ -2,12 +2,13 @@ import React, { useEffect, useState }  from 'react';
 import { useDispatch } from 'react-redux';
 import { allPosts, removePost } from '../../store/forum';
 import { useSelector } from 'react-redux';
-import { useParams, useHistory } from 'react-router';
+import { useParams, useHistory} from 'react-router';
 import EditPost from './EditPost';
 import AddComment from './AddComment';
 import './Forum.css'
 import DisplayComments from './DisplayComment';
 import { postComments } from '../../store/post_comments';
+import { Link } from 'react-router-dom';
 
 const Posts = () => {
     const { postId } = useParams();
@@ -68,10 +69,10 @@ const Posts = () => {
                         onClick={deletePost}>Delete</button>
                     </div> : <></>}
                     {editForm ?
-                    <EditPost openEditForm={setEditForm}/> : <></>}
+                    <EditPost setEditForm={setEditForm}/> : <></>}
                     <div className="post-header">
                         <div className="author-details">
-                            <img className='profile-icon' src={users[author].profile_img} alt={users[author].first_name}/>
+                            <Link to={`/users/${author}`} ><img className='profile-icon' src={users[author].profile_img} alt={users[author].first_name}/></Link>
                             <p>{users[author].first_name} {users[author].last_name}</p>
                         </div>
                         <div className='post-title-container'>
