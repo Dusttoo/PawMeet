@@ -43,9 +43,9 @@ const handleSubmit = async (e) => {
             setValidationErrors([]);
             const added = await dispatch(addAComment(createdComment));
             console.log('added', added)
-            if(added) {
-              history.push(`/posts/${added.id}`)
-            }
+            // if(added) {
+            //   history.push(`/forum/posts/${postId}`)
+            // }
             
         };
 

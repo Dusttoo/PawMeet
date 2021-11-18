@@ -28,8 +28,8 @@ const DisplayPosts = ({post}) => {
         <>
             
                 <tr onClick={openPost}>  
-                    <Link to={`/users/${author}`}><td><img className="profile-icon" src={authors[author].profile_img } alt={authors[author].name}/></td></Link>
-                    <Link to={`/forum/posts/${post.id}`}><td>{post.title}</td></Link>
+                    <td><Link to={`/users/${author}`}><img className="profile-icon" src={authors[author].profile_img } alt={authors[author].name}/></Link></td>
+                    <td><Link to={`/forum/posts/${post.id}`}>{post.title}</Link></td>
                     <td>{post.posted}</td>
                     <td>{theseComments.length}</td>
                  </tr>  

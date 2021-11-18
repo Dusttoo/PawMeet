@@ -43,7 +43,7 @@ const handleSubmit = async (e) => {
             setValidationErrors([]);
             const added = await dispatch(editAComment(createdComment, commentId));
             if(added) {
-              history.push(`/posts/${postId}`)
+              history.push(`forum/posts/${postId}`)
             }
             
         };
