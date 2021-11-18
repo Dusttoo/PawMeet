@@ -2,16 +2,21 @@ import React, { useEffect, useState }  from 'react';
 import { useDispatch } from 'react-redux';
 import { useSelector } from 'react-redux';
 import { Link, useParams } from 'react-router-dom';
-import { allPets } from '../../store/pets';
+import { allPets, removePet } from '../../store/pets';
 import EditPet from './editPet';
 import AddPet from './addPet';
+import { useHistory } from 'react-router';
 import './Profiles.css'
 
 
+
 const PetProfile = () => {
+    const dispatch = useDispatch()
+    const history = useHistory()
     const {id} = useParams()
     const pets = useSelector(state => state.pets)
     const [editForm, setEditForm] = useState(false)
+    const owner = pets[id].owner_id
 
     const openEditForm = () => {
         if (editForm) {
@@ -23,7 +28,8 @@ const PetProfile = () => {
     }
 
     const deletePet = () => {
-
+        dispatch(removePet(id));
+            history.push(`/users/${owner}`)
     }
 
 
