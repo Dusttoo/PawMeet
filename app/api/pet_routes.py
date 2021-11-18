@@ -34,12 +34,16 @@ def edit_pet(id):
     if form.validate_on_submit():
         data = form.data
         pet = Pet_Profile.query.get(id)
-        pet.user_id = data['user_id']
+        print('\n\n\n before', pet.to_dict(), '\n\n\n')
+
+        pet.owner_id = data['owner_id']
         pet.profile_img = data['profile_img']
         pet.name = data['name']
         pet.breed = data['breed']
         pet.age = data['age']
         pet.description = data['description']
+
+        print('\n\n\n after', pet.to_dict(), '\n\n\n')
         db.session.commit()
         return pet.to_dict()
 

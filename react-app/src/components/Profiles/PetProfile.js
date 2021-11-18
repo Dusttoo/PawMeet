@@ -50,6 +50,10 @@ const PetProfile = () => {
                     <button
                     onClick={deletePet}>Delete Pet</button>
                 </div>
+                {editForm ?
+                <div className='edit-pet'>
+                    <EditPet />
+                </div> : <></>}
             </div>
         </>
     )
