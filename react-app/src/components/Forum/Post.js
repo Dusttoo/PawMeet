@@ -9,19 +9,32 @@ import './Forum.css'
 import DisplayComments from './DisplayComment';
 import { postComments } from '../../store/post_comments';
 import { Link } from 'react-router-dom';
+import { addALike, removeLike } from '../../store/likes';
 
 const Posts = () => {
     const { postId } = useParams();
     const [loaded, setLoaded] = useState(false);
     const history = useHistory()
     const dispatch = useDispatch()
+    const currentUser = useSelector(state => state.session.user)
     const posts = useSelector(state => state.forum)
     const users = useSelector(state => state.users)
+    const likes = useSelector(state => state.likes)
     const comments = useSelector(state => state.post_comments)
     const author = Object.keys(users).find((user) => (+user === +posts[postId].user_id))
     const thisUser = useSelector(state => state.session.user)
     const [editForm, setEditForm] = useState(false)
     const [commentForm, setCommentForm] = useState(false)
+    const liked = Object.values(likes).map((like) => {
+        if(+like.post_id === +postId) {
+        if(+like.user_id === +currentUser.id) {
+            return true
+        } 
+        return false
+        }
+        
+    })
+    console.log(liked.includes(true))
 
      useEffect(() => {
     (async() => {
@@ -34,6 +47,19 @@ const Posts = () => {
   if (!loaded) {
     return null;
   }
+
+    const getLikes = () => {
+        let numLikes = 0;
+        Object.values(likes).map((like) => {
+            if(+like.post_id === +postId) {
+                numLikes++
+                console.log(numLikes)
+            }
+        })
+        return numLikes
+
+    }
+
 
 
     const openEditForm = () => {
@@ -55,6 +81,20 @@ const Posts = () => {
         } else {
             setCommentForm(true)
         }
+    }
+
+    const addLike = () => {
+        const createdLike = {
+          user_id: currentUser.id,
+          post_id: postId,
+        };
+        dispatch(addALike(createdLike))
+    }
+
+    const deleteLike = () => {
+        const likeId = Object.values(likes).find((like) => +like.user_id === +currentUser.id)
+        console.log('like id', likeId.id)
+        dispatch(removeLike(+likeId.id))
     }
 
     return (
@@ -82,6 +122,14 @@ const Posts = () => {
                     <div className='post-body-container'>
                         <p>{posts[postId].post_body}</p>
                     </div>
+                    <div className='likes-container'>
+                        <p>Likes: {getLikes()}</p>
+                        {!liked.includes(true) ? <button 
+                        onClick={addLike}>add like</button> : <></>}
+                        {liked.includes(true) ?
+                        <button
+                        onClick={deleteLike}>delete like</button> : <></>}
+                        </div>
                 </div>
             </div>
             <div className="comment-container">

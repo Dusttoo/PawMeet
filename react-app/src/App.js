@@ -16,6 +16,7 @@ import { allComments } from './store/comments';
 import Posts from './components/Forum/Post';
 import UserProfile from './components/Profiles/UserProfile';
 import AddPost from './components/Forum/AddPost';
+import { allLikes } from './store/likes';
 
 
 
@@ -28,7 +29,7 @@ function App() {
       await dispatch(authenticate());
       await dispatch(allUsers())
       await dispatch(allPosts())
-      // await dispatch(allComments())
+      await dispatch(allLikes())
 
       setLoaded(true);
     })();

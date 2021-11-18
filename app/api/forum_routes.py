@@ -2,6 +2,7 @@ from flask import Blueprint, jsonify, request
 from app.models import Post, Comment, Like, db
 from app.forms.add_comment import CommentForm
 from app.forms.add_post import PostForm
+from app.forms.add_like import LikeForm
 
 
 forum_routes = Blueprint('forums', __name__)
@@ -103,5 +104,28 @@ def delete_comment(id):
 def likes():
     likes = Like.query.all()
     return {'likes': [like.to_dict() for like in likes]}
+
+
+@forum_routes.route('/likes/add', methods=['POST'])
+def add_like():
+    if request.method == "POST":
+        form = LikeForm()
+        print('\n\n\n', form)
+        form['csrf_token'].data = request.cookies['csrf_token']
+        if form.validate_on_submit():
+            data = Like()
+            form.populate_obj(data)
+            db.session.add(data)
+            db.session.commit()
+            return data.to_dict()
+
+
+@forum_routes.route('/likes/<int:id>/delete', methods=['DELETE'])
+def delete_like(id):
+    like = Like.query.get(id)
+    db.session.delete(like)
+    db.session.commit()
+
+    return like.to_dict()
 
 

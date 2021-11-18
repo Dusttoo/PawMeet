@@ -5,13 +5,15 @@ import forumReducer from './forum';
 import usersReducer from './users';
 import commentReducer from './comments';
 import post_commentReducer from './post_comments';
+import likeReducer from './likes';
 
 const rootReducer = combineReducers({
   session,
   forum: forumReducer,
   users: usersReducer,
   comments: commentReducer,
-  post_comments: post_commentReducer
+  post_comments: post_commentReducer,
+  likes: likeReducer
 });
 
 
