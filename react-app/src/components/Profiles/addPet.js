@@ -11,6 +11,7 @@ import './Profiles.css'
 const AddPet = () => {
 const [validationErrors, setValidationErrors] = useState([]);
 const dispatch = useDispatch()
+const breeds = useSelector(state => state.breeds)
 const [profile_img, setProfileImg] = useState('')
 const [name, setName] = useState('')
 const [breed, setBreed] = useState('')
@@ -24,6 +25,7 @@ const validate = () => {
     return validationErrors;
 }
 
+console.log(breed)
 const handleSubmit = async (e) => {
     e.preventDefault();
         const createdPet = {
@@ -72,12 +74,18 @@ const handleSubmit = async (e) => {
                     onChange={(e) => setName(e.target.value)}
                     required/>
                     <label className='form-label'>Breed:</label>
-                    <input
+                    <select
                     placeholder="Breed"
                     className='form-input'
                     value={breed}
                     onChange={(e) => setBreed(e.target.value)}
-                    required/>
+                    required>
+                        {Object.values(breeds).map((breed) => {
+                            return (
+                                <option value={breed.name}>{breed.name}</option>
+                            )
+                        })}
+                    </select>
                     <label className='form-label'>Age:</label>
                     <input
                     placeholder="Age in years"
