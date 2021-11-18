@@ -11,7 +11,6 @@ import { editAComment } from '../../store/post_comments';
 const EditComment = ({commentId, setEditForm}) => {
 const {postId} = useParams()
 const comments = useSelector(state => state.post_comments)
-console.log(comments, 'commentId')
 
 const [validationErrors, setValidationErrors] = useState([]);
 const dispatch = useDispatch()
