@@ -56,9 +56,6 @@ function App() {
         <ProtectedRoute path='/users/:id' exact={true} >
           <UserProfile/>
         </ProtectedRoute>
-        <ProtectedRoute path='/users/:userId' exact={true} >
-          <User />
-        </ProtectedRoute>
         <ProtectedRoute path='/forum' exact={true} >
           <ForumHome />
         </ProtectedRoute>
