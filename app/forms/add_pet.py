@@ -5,7 +5,7 @@ from app.models import Pet_Profile
 
 
 class PetForm(FlaskForm):
-    user_id = IntegerField('user_id', validators=[DataRequired()])
+    owner_id = IntegerField('owner_id', validators=[DataRequired()])
     profile_img = StringField('profile_img', validators=[DataRequired()])
     name = StringField('name', validators=[DataRequired()])
     breed = StringField('breed', validators=[DataRequired()])

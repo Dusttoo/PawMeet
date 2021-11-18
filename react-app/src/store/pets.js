@@ -40,6 +40,7 @@ export const allPets = () => async (dispatch) => {
 }
 
 export const addAPet = (pet) => async(dispatch) => {
+    console.log(pet)
     const response = await fetch(`/api/pets/add`, {
             method: 'POST',
             headers: {'Content-Type': 'application/json'},

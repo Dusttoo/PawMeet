@@ -20,6 +20,7 @@ def add_pet():
         form['csrf_token'].data = request.cookies['csrf_token']
         if form.validate_on_submit():
             data = Pet_Profile()
+            print('\n\n\n pet data', data, '\n\n\n')
             form.populate_obj(data)
             db.session.add(data)
             db.session.commit()
