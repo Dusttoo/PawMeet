@@ -116,7 +116,7 @@ const Posts = () => {
                             <p>{users[author].first_name} {users[author].last_name}</p>
                         </div>
                         <div className='post-title-container'>
-                            <h1 className="post-title">{posts[postId].title}</h1>
+                            <h1 className="show-post-title">{posts[postId].title}</h1>
                         </div>
                     </div>
                     <div className='post-body-container'>

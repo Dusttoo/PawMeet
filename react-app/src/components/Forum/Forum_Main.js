@@ -7,6 +7,7 @@ import './Forum.css'
 import DisplayPosts from './DisplayPost';
 import { allUsers } from '../../store/users';
 import { allComments } from '../../store/comments';
+import ForumSidebar from './SideBar';
 const ForumHome = () => {
     const dispatch = useDispatch()
     const posts = useSelector(state => state.forum)
@@ -19,6 +20,8 @@ const ForumHome = () => {
 
     return (
         <>
+        <div className='page-container'>
+          <ForumSidebar />
           <div className="forum-container">
             <h1 className="forum-header">Speak!</h1>
             <div className="forum-options">
@@ -40,6 +43,7 @@ const ForumHome = () => {
                 
             </table>
           </div>
+        </div>
         </>
     )
 }

@@ -1,10 +1,19 @@
 /* -- MAIN FORUM ------------------------ */
+.page-container {
+    display: flex;
+    padding-bottom: 100px;
+    align-items: center;
+
+}
 .forum-container {
-    width: 100%;
+    width: 90%;
     height: 100%;
     display:flex;
     flex-direction: column;
     align-items: center;
+    margin: 10px;
+    padding-bottom: 100px;
+    border: solid 1px black;
 }
 
 .profile-icon {
@@ -19,6 +28,13 @@
     justify-content: flex-end;
 }
 
+.forum-header {
+    text-align: center;
+    width: 100%;
+    border-bottom: 1px solid black;
+    padding-bottom: 10px;
+}
+
 .add-post {
     text-decoration: none;
     color: black;
@@ -30,12 +46,56 @@
 }
 
 .forum-table {
-    width: 80%;
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.table-label {
+    padding: 8px;
+    border-bottom: 1px solid black;
+}
+
+.post-row:nth-child(even) {background-color: #f2f2f2;}
+
+th, td {
+  padding: 15px;
+  text-align: left;
 }
 
 .comment-count {
     display: flex;
     justify-content: center;
+}
+
+.post-row {
+    height: 100px;
+    padding: 10px;
+}
+
+/* -- SIDEBAR ---------------------- */
+.sidebar-container {
+    width: 15%;
+    height: 100%;
+}
+
+.sidebar-links {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-evenly;
+    height: 100%;
+    padding-left: 10px;
+
+}
+
+.sidebar-link {
+    text-decoration: none;
+    color: black;
+    font-weight: 500;
+}
+
+.sidebar-link:hover {
+    color: blue;
 }
 
 /* -- POST PAGE -------------------- */
