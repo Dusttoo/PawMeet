@@ -77,6 +77,9 @@ function App() {
         <ProtectedRoute path='/forum' exact={true} >
           <ForumHome />
         </ProtectedRoute>
+        <ProtectedRoute path='/forum/:id' exact={true} >
+          <h1>Breed Forum</h1>
+        </ProtectedRoute>
         <ProtectedRoute path='/forum/add' exact={true} >
           <AddPost />
         </ProtectedRoute>
