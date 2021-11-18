@@ -61,6 +61,7 @@ const Posts = () => {
         return numLikes
 
     }
+    console.log(getLikes())
 
 
 
@@ -127,7 +128,11 @@ const Posts = () => {
                             <FontAwesomeIcon className='like-heart' onClick={addLike} icon={faHeart} style={{color: '#d3d3d3'}}/> 
                             {getLikes()}
                         </div> 
-                        : <FontAwesomeIcon className='like-heart' onClick={deleteLike} icon={faHeart} style={{color: '#ff0808'}}/>}
+                        : 
+                        <div className='likes-container'>
+                            <FontAwesomeIcon className='like-heart' onClick={deleteLike} icon={faHeart} style={{color: '#ff0808'}}/>
+                            {getLikes()}
+                        </div> }
 
                         
                 </div>
