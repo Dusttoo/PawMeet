@@ -23,6 +23,7 @@ import AddPet from './components/Profiles/addPet';
 import { allBreeds } from './store/breeds';
 import { allGroups } from './store/breed_groups';
 import BreedsPage from './components/Breeds/Breeds';
+import BreedInfo from './components/Breeds/BreedInfo';
 
 
 function App() {
@@ -73,7 +74,7 @@ function App() {
           <BreedsPage />
         </ProtectedRoute>
         <ProtectedRoute path='/breeds/:id' exact={true} >
-          <h1>Breed page</h1>
+          <BreedInfo />
         </ProtectedRoute>
         <ProtectedRoute path='/breeds/group/:id' exact={true} >
           <h1>Group page</h1>
