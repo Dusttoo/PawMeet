@@ -7,9 +7,9 @@ from app.forms.add_pet import PetForm
 pet_routes = Blueprint('pets', __name__)
 
 
-@pet_routes.route('/')
+@pet_routes.route('')
 def pets():
-    posts = Pet_Profile.query.all()
+    pets = Pet_Profile.query.all()
     return {'pets': [pet.to_dict() for pet in pets]}
 
 

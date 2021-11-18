@@ -6,6 +6,7 @@ import usersReducer from './users';
 import commentReducer from './comments';
 import post_commentReducer from './post_comments';
 import likeReducer from './likes';
+import petReducer from './pets';
 
 const rootReducer = combineReducers({
   session,
@@ -13,7 +14,8 @@ const rootReducer = combineReducers({
   users: usersReducer,
   comments: commentReducer,
   post_comments: post_commentReducer,
-  likes: likeReducer
+  likes: likeReducer,
+  pets: petReducer
 });
 
 

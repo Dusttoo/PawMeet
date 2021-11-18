@@ -17,7 +17,9 @@ import Posts from './components/Forum/Post';
 import UserProfile from './components/Profiles/UserProfile';
 import AddPost from './components/Forum/AddPost';
 import { allLikes } from './store/likes';
-
+import { allPets } from './store/pets';
+import PetProfile from './components/Profiles/PetProfile';
+import AddPet from './components/Profiles/addPet';
 
 
 function App() {
@@ -30,6 +32,7 @@ function App() {
       await dispatch(allUsers())
       await dispatch(allPosts())
       await dispatch(allLikes())
+      await dispatch(allPets())
 
       setLoaded(true);
     })();
@@ -55,6 +58,12 @@ function App() {
         </ProtectedRoute>
         <ProtectedRoute path='/users/:id' exact={true} >
           <UserProfile/>
+        </ProtectedRoute>
+        <ProtectedRoute path='/pets/add' exact={true} >
+          <AddPet />
+        </ProtectedRoute>
+        <ProtectedRoute path='/pets/:id' exact={true} >
+          <PetProfile />
         </ProtectedRoute>
         <ProtectedRoute path='/forum' exact={true} >
           <ForumHome />

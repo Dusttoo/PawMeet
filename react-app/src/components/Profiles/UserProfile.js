@@ -7,7 +7,18 @@ import './Profiles.css'
 
 const UserProfile = () => {
     const {id} = useParams();
+    const dispatch = useDispatch();
     const users = useSelector(state => state.users)
+    const currentUserId = useSelector(state => state.session.user.id)
+    const pets = useSelector(state => state.pets)
+    const thesePets = []
+
+    Object.values(pets).map(pet => {
+        if(+pet.owner_id === +id) {
+            thesePets.push(pet)
+        }
+    })
+
 
     const modifyTime = () => {
         const date = users[id].barking_since.replace('00:00:00 GMT', '')
@@ -30,7 +41,12 @@ const UserProfile = () => {
                         <div className='pet-links'>
                             <h3>Pets:</h3>
                             <div className='pet-links-container'>
-                                 <Link className='pet-link' to='/'>Link</Link>
+                                {thesePets.map(pet => {
+                                 return (
+                                     <Link className='pet-link' to={`/pets/${pet.id}`}>{pet.name}</Link>
+                                 )
+
+                                })}
                             </div>
                         </div>
                         <div className='user-posts'>
@@ -41,6 +57,8 @@ const UserProfile = () => {
                         </div>
                     </div>
                     <button className='add-friend'>Add Friend</button>
+                    {+id === +currentUserId ? 
+                    <Link to='/pets/add'>Add a pet</Link> : <></>}
                 </div>
             </div>
         </>
