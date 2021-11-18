@@ -35,16 +35,13 @@ const handleSubmit = async (e) => {
           post_body,
           posted
         };
-        console.log(createdPost, 'created post')
         const errors = validate();
 
         if (errors.length > 0) {
             setValidationErrors(errors);
         } else {
-            console.log('before dispatch')
             setValidationErrors([]);
             const added = await dispatch(editAPost(createdPost, postId));
-            console.log('added', added)
             if(added) {
               history.push(`/forum/posts/${added.id}`)
             }

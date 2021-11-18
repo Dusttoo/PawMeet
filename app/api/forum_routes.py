@@ -12,6 +12,13 @@ def posts():
     return {'posts': [post.to_dict() for post in posts]}
 
 
+@forum_routes.route('/posts/<int:id>/comments')
+def post_comments(id):
+    comments = Comment.query.filter(Comment.post_id == id).all()
+    print('\n\n\n', [comment.to_dict() for comment in comments], '\n\n\n')
+    return {'comments': [comment.to_dict() for comment in comments]}
+
+
 @forum_routes.route('/posts/add', methods=['POST'])
 def add_post():
     if request.method == "POST":

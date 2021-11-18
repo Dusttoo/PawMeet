@@ -8,6 +8,7 @@ import AddComment from './AddComment';
 
 import './Forum.css'
 import DisplayComments from './DisplayComment';
+import { postComments } from '../../store/post_comments';
 
 const Posts = () => {
     const { postId } = useParams();
@@ -16,7 +17,7 @@ const Posts = () => {
     const dispatch = useDispatch()
     const posts = useSelector(state => state.forum)
     const users = useSelector(state => state.users)
-    const comments = useSelector(state => state.comments)
+    const comments = useSelector(state => state.post_comments)
     const author = Object.keys(users).find((user) => (+user === +posts[postId].user_id))
     const thisUser = useSelector(state => state.session.user)
     const [editForm, setEditForm] = useState(false)
@@ -25,6 +26,7 @@ const Posts = () => {
      useEffect(() => {
     (async() => {
       await dispatch(allPosts())
+      await dispatch(postComments(postId))
       setLoaded(true);
     })();
   }, [dispatch]);
@@ -32,6 +34,7 @@ const Posts = () => {
   if (!loaded) {
     return null;
   }
+
 
     const openEditForm = () => {
         if(editForm) {
@@ -82,7 +85,10 @@ const Posts = () => {
                 {commentForm ? 
                 <AddComment /> : <></>}
                 <table>
-                    <DisplayComments />
+                {Object.values(comments).map((comment) => {
+                    return <DisplayComments commentId={comment.id}/>
+                })}
+                    
                     
                 </table>
             </div>

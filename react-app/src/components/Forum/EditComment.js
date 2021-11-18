@@ -39,7 +39,6 @@ const handleSubmit = async (e) => {
         if (errors.length > 0) {
             setValidationErrors(errors);
         } else {
-            console.log('before dispatch')
             setValidationErrors([]);
             const added = await dispatch(editAComment(createdComment, commentId));
             if(added) {

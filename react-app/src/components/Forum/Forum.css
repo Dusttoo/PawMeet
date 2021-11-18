@@ -31,3 +31,8 @@
 .forum-table {
     width: 80%;
 }
+
+.comment-count {
+    display: flex;
+    justify-content: center;
+}

@@ -7,25 +7,50 @@ import { Link } from 'react-router-dom';
 import { useParams, useHistory } from 'react-router';
 import { removeComment } from '../../store/comments';
 import EditComment from './EditComment';
+import { postComments } from '../../store/post_comments';
 
 
-const DisplayComments = () => {
+const DisplayComments = ({commentId}) => {
     const {postId} = useParams()
     const history = useHistory()
     const dispatch = useDispatch()
     const authors = useSelector(state => state.users)
-    const comments = useSelector(state => state.comments)
+    const theseComments = useSelector(state => state.post_comments)
     const currentUser = useSelector(state => state.session.user)
     const [editForm, setEditForm] = useState(false)
-    let author = {}
-    const thisComment = Object.values(comments).find(comment => +comment.post_id === +postId)
-    if(thisComment) {
-        author = Object.keys(authors).find(thisAuthor => +thisComment.user_id === +thisAuthor)
+    const [loaded, setLoaded] = useState(false);
+    const comment = Object.keys(theseComments).find(comment => +comment === commentId)
+
+    
+
+    let author = 0
+    // const thisComment = Object.keys(comments).find(comment => +comment === +commentId)
+    
+
+
+   useEffect(() => {
+    (async() => {
+     await dispatch(postComments(postId))
+
+      setLoaded(true);
+    })();
+  }, [dispatch]);
+
+  if (!loaded) {
+    return null;
+  }
+
+  if(comment) {
+        author = Object.keys(authors).find(thisAuthor => +theseComments[comment].user_id === +thisAuthor)
+    } else {
+        return null
     }
+
+    
+
     
     const deleteComment = () => {
-        console.log(thisComment.id)
-        dispatch(removeComment(thisComment.id));
+        dispatch(removeComment(theseComments[comment].id));
         // history.push(`/forum/posts/${postId}`)
     }
     
@@ -38,16 +63,21 @@ const DisplayComments = () => {
         }
     }
 
+    const modifyTime = () => {
+        const date = theseComments[comment].posted.replace('00:00:00 GMT', '')
+        return date
+
+    }
 
     return (
         <>
-            {!thisComment ? <h2>No comments to display</h2>:
-               <tr>  
+            {!Object.keys(theseComments) ? <h2>No comments to display</h2>:
+                <tr>  
                     <Link to={`/users/${author}`}><td><img className="profile-icon" src={authors[author].profile_img } alt={authors[author].name}/></td></Link>
-                    <td>{thisComment.posted}</td>
-                    <td>{thisComment.comment_body}</td>
+                    <td>{modifyTime()}</td>
+                    <td>{theseComments[comment].comment_body}</td>
                     {editForm ? 
-                    <EditComment commentId={thisComment.id}/> : <></>}
+                    <EditComment commentId={theseComments[comment].id}/> : <></>}
                     {+authors[author].id === +currentUser.id ?
                     <td>
                         <button className='edit-post'
@@ -56,7 +86,7 @@ const DisplayComments = () => {
                         className='delete-post'
                         onClick={deleteComment}>Delete</button>
                     </td> : <></>}
-                 </tr>  }
+                 </tr>}
         </>
     )
 }

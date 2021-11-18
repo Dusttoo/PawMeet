@@ -8,6 +8,7 @@ const getAllComments = (comments) => ({
     comments
 })
 
+
 const addComment = (comment) => ({
     type: ADD_COMMENT,
     comment

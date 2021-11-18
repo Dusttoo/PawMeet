@@ -28,7 +28,7 @@ function App() {
       await dispatch(authenticate());
       await dispatch(allUsers())
       await dispatch(allPosts())
-      await dispatch(allComments())
+      // await dispatch(allComments())
 
       setLoaded(true);
     })();
