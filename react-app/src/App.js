@@ -20,6 +20,7 @@ import { allLikes } from './store/likes';
 import { allPets } from './store/pets';
 import PetProfile from './components/Profiles/PetProfile';
 import AddPet from './components/Profiles/addPet';
+import { allBreeds } from './store/breeds';
 
 
 function App() {
@@ -33,6 +34,7 @@ function App() {
       await dispatch(allPosts())
       await dispatch(allLikes())
       await dispatch(allPets())
+      await dispatch(allBreeds())
 
       setLoaded(true);
     })();
