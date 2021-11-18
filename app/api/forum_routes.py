@@ -49,7 +49,9 @@ def edit_post(id):
 
 @forum_routes.route('/posts/<int:id>/delete', methods=['DELETE'])
 def delete_postt(id):
+    
     post = Post.query.get(id)
+    print('\n\n\n', post, '\n\n\n')
     db.session.delete(post)
     db.session.commit()
 

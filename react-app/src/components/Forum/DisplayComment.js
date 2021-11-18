@@ -72,14 +72,19 @@ const DisplayComments = ({commentId}) => {
     return (
         <>
             {!Object.keys(theseComments) ? <h2>No comments to display</h2>:
-                <tr>  
-                    <Link to={`/users/${author}`}><td><img className="profile-icon" src={authors[author].profile_img } alt={authors[author].name}/></td></Link>
-                    <td>{modifyTime()}</td>
-                    <td>{theseComments[comment].comment_body}</td>
+                <tr className='comment-row'>  
+                  
+                    <td className='table-cell' style={{width:'10%'}}>
+                        <div className='comment-info'>
+                            <Link to={`/users/${author}`}><img className="profile-icon" src={authors[author].profile_img } alt={authors[author].name}/></Link>
+                            {modifyTime()}
+                        </div>
+                    </td>
+                    <td className='table-cell' style={{width:'65%'}} className='comment-body'>{theseComments[comment].comment_body}</td>
                     {editForm ? 
                     <EditComment commentId={theseComments[comment].id}/> : <></>}
                     {+authors[author].id === +currentUser.id ?
-                    <td>
+                    <td className='comment-edit-delete'>
                         <button className='edit-post'
                         onClick={openEditForm}>Edit</button>
                         <button 

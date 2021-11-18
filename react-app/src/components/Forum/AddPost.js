@@ -40,7 +40,7 @@ const handleSubmit = async (e) => {
             setValidationErrors([]);
             const added = await dispatch(addAPost(createdPost));
             if(added) {
-              history.push(`/posts/${added.id}`)
+              history.push(`/forum/posts/${added.id}`)
             }
             
         };

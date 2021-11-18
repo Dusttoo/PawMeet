@@ -6,6 +6,7 @@ import { Link } from 'react-router-dom';
 import './Forum.css'
 import DisplayPosts from './DisplayPost';
 import { allUsers } from '../../store/users';
+import { allComments } from '../../store/comments';
 const ForumHome = () => {
     const dispatch = useDispatch()
     const posts = useSelector(state => state.forum)
@@ -13,12 +14,13 @@ const ForumHome = () => {
     useEffect(() => {
       dispatch(allPosts())
       dispatch(allUsers())
+      dispatch(allComments())
   }, [dispatch]);
 
     return (
         <>
           <div className="forum-container">
-            <h1>Speak!</h1>
+            <h1 className="forum-header">Speak!</h1>
             <div className="forum-options">
                 <Link to='/forum/add' className='add-post'>Add Post</Link>
             </div>

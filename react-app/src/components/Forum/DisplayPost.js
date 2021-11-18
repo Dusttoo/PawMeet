@@ -34,7 +34,7 @@ const DisplayPosts = ({post}) => {
             
                 <tr onClick={openPost}>  
                     <td><Link to={`/users/${author}`}><img className="profile-icon" src={authors[author].profile_img } alt={authors[author].name}/></Link></td>
-                    <td><Link to={`/forum/posts/${post.id}`}>{post.title}</Link></td>
+                    <td><Link to={`/forum/posts/${post.id}`} className='post-title'>{post.title}</Link></td>
                     <td>{modifyTime()}</td>
                     <td className="comment-count">{theseComments.length}</td>
                  </tr>  
