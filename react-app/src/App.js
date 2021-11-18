@@ -21,6 +21,7 @@ import { allPets } from './store/pets';
 import PetProfile from './components/Profiles/PetProfile';
 import AddPet from './components/Profiles/addPet';
 import { allBreeds } from './store/breeds';
+import { allGroups } from './store/breed_groups';
 
 
 function App() {
@@ -35,7 +36,7 @@ function App() {
       await dispatch(allLikes())
       await dispatch(allPets())
       await dispatch(allBreeds())
-
+      await dispatch(allGroups())
       setLoaded(true);
     })();
   }, [dispatch]);
@@ -66,6 +67,12 @@ function App() {
         </ProtectedRoute>
         <ProtectedRoute path='/pets/:id' exact={true} >
           <PetProfile />
+        </ProtectedRoute>
+        <ProtectedRoute path='/breeds/:id' exact={true} >
+          <h1>Breed page</h1>
+        </ProtectedRoute>
+        <ProtectedRoute path='/breeds/group/:id' exact={true} >
+          <h1>Group page</h1>
         </ProtectedRoute>
         <ProtectedRoute path='/forum' exact={true} >
           <ForumHome />

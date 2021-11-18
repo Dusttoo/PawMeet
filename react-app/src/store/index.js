@@ -8,6 +8,7 @@ import post_commentReducer from './post_comments';
 import likeReducer from './likes';
 import petReducer from './pets';
 import breedReducer from './breeds';
+import groupReducer from './breed_groups';
 
 const rootReducer = combineReducers({
   session,
@@ -17,7 +18,8 @@ const rootReducer = combineReducers({
   post_comments: post_commentReducer,
   likes: likeReducer,
   pets: petReducer,
-  breeds: breedReducer
+  breeds: breedReducer,
+  groups: groupReducer
 });
 
 
