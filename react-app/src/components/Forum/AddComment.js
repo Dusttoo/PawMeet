@@ -6,9 +6,9 @@ import { useParams } from 'react-router';
 import { useHistory } from 'react-router';
 
 import './Forum.css'
-import { addAComment } from '../../store/comments';
+import { addAComment} from '../../store/post_comments';
 
-const AddComment = () => {
+const AddComment = ({setCommentForm }) => {
 const {postId} = useParams()
 const [validationErrors, setValidationErrors] = useState([]);
 const dispatch = useDispatch()
@@ -17,7 +17,6 @@ const [comment_body, setBody] = useState('')
 const user_id = useSelector(state => state.session.user.id)
 const currentDate = new Date()
 const posted = `${currentDate.getMonth()}-${currentDate.getDate()}-${currentDate.getFullYear()}`
-
     const history = useHistory();
 
     const validate = () => {
@@ -41,9 +40,7 @@ const handleSubmit = async (e) => {
         } else {
             setValidationErrors([]);
             const added = await dispatch(addAComment(createdComment));
-            // if(added) {
-            //   history.push(`/forum/posts/${postId}`)
-            // }
+            if(added) setCommentForm(false)
             
         };
 

@@ -87,6 +87,7 @@ export default function commentReducer(state = initialState, action) {
         case ADD_COMMENT:
           const newState = {...state}
             newState[action.comment.id] = action.comment
+            console.log(newState, 'new state for add comment')
             return newState
         case UPDATE_COMMENT:
             const updateComment = {...state}

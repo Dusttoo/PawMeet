@@ -5,7 +5,7 @@ import { useSelector } from 'react-redux';
 import './Forum.css'
 import { Link } from 'react-router-dom';
 import { useParams, useHistory } from 'react-router';
-import { removeComment } from '../../store/comments';
+import { removeComment } from '../../store/post_comments';
 import EditComment from './EditComment';
 import { postComments } from '../../store/post_comments';
 

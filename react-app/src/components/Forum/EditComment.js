@@ -6,11 +6,13 @@ import { useParams } from 'react-router';
 import { useHistory } from 'react-router';
 
 import './Forum.css'
-import { editAComment } from '../../store/comments';
+import { editAComment } from '../../store/post_comments';
 
 const EditComment = ({commentId}) => {
 const {postId} = useParams()
-const comments = useSelector(state => state.comments)
+const comments = useSelector(state => state.post_comments)
+console.log(comments, 'commentId')
+
 const [validationErrors, setValidationErrors] = useState([]);
 const dispatch = useDispatch()
 const [comment_body, setBody] = useState(comments[commentId].comment_body)
@@ -42,7 +44,7 @@ const handleSubmit = async (e) => {
             setValidationErrors([]);
             const added = await dispatch(editAComment(createdComment, commentId));
             if(added) {
-              history.push(`forum/posts/${postId}`)
+              history.push(`/forum/posts/${postId}`)
             }
             
         };

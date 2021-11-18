@@ -91,7 +91,7 @@ const Posts = () => {
                     onClick={openCommentForm}>Add a comment</button>
                     </div>
                     {commentForm ? 
-                    <AddComment /> : <></>}
+                    <AddComment setCommentForm={setCommentForm}/> : <></>}
                     <table className='comments-table'>
                     {Object.values(comments).map((comment) => {
                         return <DisplayComments commentId={comment.id}/>
