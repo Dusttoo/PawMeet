@@ -22,7 +22,7 @@ def seed_breed_traits():
          description="How frequently a breed requires bathing, brushing, trimming, or other kinds of coat maintenance. Consider how much time, patience, and budget you have for this type of care when looking at the grooming effort needed. All breeds require regular nail trimming.",
      )
      drool = Breed_Trait(
-         trait="How drool-prone a breed tends to be. If you're a neat freak, dogs that can leave ropes of slobber on your arm or big wet spots on your clothes may not be the right choice for you.",
+         trait="Drooling Level",
          description="How drool-prone a breed tends to be. If you're a neat freak, dogs that can leave ropes of slobber on your arm or big wet spots on your clothes may not be the right choice for you.",
      )
      coatType = Breed_Trait(
