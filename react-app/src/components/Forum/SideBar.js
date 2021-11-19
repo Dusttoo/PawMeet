@@ -4,9 +4,13 @@ import { allPosts } from '../../store/forum';
 import { useSelector } from 'react-redux';
 import './Forum.css'
 import { Link } from 'react-router-dom';
+import { useParams } from 'react-router';
+import BreedForum from './BreedForum';
 
 const ForumSidebar = () => {
     const groups = useSelector(state => state.groups)
+    const {id} = useParams()
+
 
 
 

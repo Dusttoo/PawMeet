@@ -25,6 +25,7 @@ import { allGroups } from './store/breed_groups';
 import BreedsPage from './components/Breeds/Breeds';
 import BreedInfo from './components/Breeds/BreedInfo';
 import { allImages } from './store/breed_images';
+import BreedForum from './components/Forum/BreedForum';
 
 
 function App() {
@@ -60,6 +61,9 @@ function App() {
         <Route path='/sign-up' exact={true}>
           <SignUpForm />
         </Route>
+        <ProtectedRoute path='/forum/add' exact={true} >
+          <AddPost />
+        </ProtectedRoute>
         <ProtectedRoute path='/users' exact={true} >
           <UsersList/>
         </ProtectedRoute>
@@ -85,11 +89,9 @@ function App() {
           <ForumHome />
         </ProtectedRoute>
         <ProtectedRoute path='/forum/:id' exact={true} >
-          <h1>Breed Forum</h1>
+          <BreedForum />
         </ProtectedRoute>
-        <ProtectedRoute path='/forum/add' exact={true} >
-          <AddPost />
-        </ProtectedRoute>
+        
         <ProtectedRoute path='/forum/posts/:postId' exact={true} >
           <Posts />
         </ProtectedRoute>

@@ -20,10 +20,13 @@ const ForumHome = () => {
 
     return (
         <>
+        {}
         <div className='page-container'>
           <ForumSidebar />
           <div className="forum-container">
-            <h1 className="forum-header">Speak!</h1>
+            <div className='forum-header-image' style={{backgroundImage: "url('https://penntoday.upenn.edu/sites/default/files/2019-10/iStock-1094310798.jpg')"}}>
+                <h1 className="forum-header" >Speak!</h1>
+                </div>
             <div className="forum-options">
                 <Link to='/forum/add' className='add-post'>Add Post</Link>
             </div>

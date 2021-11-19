@@ -8,7 +8,8 @@ import { useParams, useHistory } from 'react-router';
 import { removeComment } from '../../store/post_comments';
 import EditComment from './EditComment';
 import { postComments } from '../../store/post_comments';
-
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faPlus, faPen, faMinusCircle } from '@fortawesome/free-solid-svg-icons';
 
 const DisplayComments = ({commentId}) => {
     const {postId} = useParams()
@@ -74,26 +75,30 @@ const DisplayComments = ({commentId}) => {
             {!Object.keys(theseComments) ? <h2>No comments to display</h2>:
                 <tr className='comment-row'>  
                   
-                    <td className='table-cell' style={{width:'10%'}}>
+                    <td className='comment-cell' >
                         <div className='comment-info'>
                             <Link to={`/users/${author}`}><img className="profile-icon" src={authors[author].profile_img } alt={authors[author].name}/></Link>
-                            <Link to={`/users/${author}`}>{authors[author].first_name} {authors[author].last_name}</Link>
+                            <div className='name-date'>
+                                <Link className='author-name' to={`/users/${author}`}>{authors[author].first_name} {authors[author].last_name}</Link>
+                                {modifyTime()}
+                            </div>
                             
-                            {modifyTime()}
                         </div>
+                        {+authors[author].id === +currentUser.id ?
+                        <td className='comment-edit-delete'>
+                            <FontAwesomeIcon icon={faPen} className='edit-button'
+                            onClick={openEditForm}/>
+                            <FontAwesomeIcon icon={faMinusCircle}
+                            className='delete-button'
+                            onClick={deleteComment}/>
+                        </td> : <div className=''></div>}
                     </td>
-                    <td className='table-cell' style={{width:'65%'}} className='comment-body'>{theseComments[comment].comment_body}</td>
-                    {editForm ? 
-                    <EditComment commentId={theseComments[comment].id} setEditForm={setEditForm}/> : <></>}
-                    {+authors[author].id === +currentUser.id ?
-                    <td className='comment-edit-delete'>
-                        <button className='edit-post'
-                        onClick={openEditForm}>Edit</button>
-                        <button 
-                        className='delete-post'
-                        onClick={deleteComment}>Delete</button>
-                    </td> : <></>}
+                    <td className='comment-body comment-cell' style={{width:'65%'}}>{theseComments[comment].comment_body}</td>
+                    
+                    
                  </tr>}
+                 {editForm ? 
+                    <EditComment commentId={theseComments[comment].id} setEditForm={setEditForm}/> : <></>}
         </>
     )
 }

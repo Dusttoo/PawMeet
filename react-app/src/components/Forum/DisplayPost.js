@@ -36,7 +36,7 @@ const DisplayPosts = ({post}) => {
                     <td>
                         <div className='comment-info'>
                             <Link to={`/users/${author}`}><img className="profile-icon" src={authors[author].profile_img } alt={authors[author].first_name}/></Link>
-                            <Link className='' to={`/users/${author}`}>{authors[author].first_name}</Link>
+                            <Link className='user-name' to={`/users/${author}`}>{authors[author].first_name}</Link>
                         </div>
                     </td>
                     
