@@ -326,3 +326,56 @@ th, td {
     width: 50%;
     color: rgb(0, 3, 20);
 }
+
+/* -- ADD POST ----------------------- */
+.add-form-con {
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.form-label {
+    padding-top: 8px;
+    padding-bottom: 4px;
+    font-weight: 500;
+}
+
+.form-input {
+    border: 1px solid rgb(219, 219, 219);
+    border-radius: 4px;
+    height: 100px;
+}
+
+.small-form-input {
+    border: 1px solid rgb(219, 219, 219);
+    border-radius: 4px;
+    height: 20px;
+}
+
+.small-form-select {
+    border: 1px solid rgb(219, 219, 219);
+    border-radius: 4px;
+    height: 20px;
+    width: 40%;
+}
+
+.submit-container {
+    display: flex;
+    justify-content: center;
+}
+
+.form-button {
+    margin-top: 5px;
+    padding: 2px 0;
+    background-color: rgb(201, 201, 201);
+    border: none;
+    border-radius: 3px;
+    width: 50%;
+    color: rgb(0, 3, 20);
+}
+
+.edit-form-container {
+    display: flex;
+    justify-content: center;
+}

@@ -108,8 +108,7 @@ const Posts = () => {
                         <FontAwesomeIcon className='edit-button' onClick={openEditForm} icon={faPen}/>
                             <FontAwesomeIcon className='delete-button' onClick={deletePost} icon={faMinusCircle }/>
                     </div> : <></>}
-                    {editForm ?
-                    <EditPost setEditForm={setEditForm}/> : <></>}
+                    
                     <div className="post-header">
                         <div className='comment-info'>
                             <Link to={`/users/${author}`} ><img className='profile-icon' src={users[author].profile_img} alt={users[author].first_name}/></Link>
@@ -135,7 +134,8 @@ const Posts = () => {
                             <FontAwesomeIcon className='like-heart' onClick={deleteLike} icon={faHeart} style={{color: '#ff0808'}}/>
                             {getLikes()}
                         </div> }
-
+                    {editForm ?
+                    <EditPost setEditForm={setEditForm}/> : <></>}
                         
                 </div>
             </div>

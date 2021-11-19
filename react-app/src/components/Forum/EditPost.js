@@ -18,6 +18,8 @@ const [title, setTitle] = useState(posts[postId].title)
 const [post_body, setBody] = useState(posts[postId].post_body)
 const user_id = useSelector(state => state.session.user.id)
 const posted = posts[postId].posted
+const breed_groups = useSelector(state => state.groups)
+const [group_id, setGroup] = useState(posts[postId].group_id)
 
     const history = useHistory();
 
@@ -29,11 +31,15 @@ const posted = posts[postId].posted
 
 const handleSubmit = async (e) => {
     e.preventDefault();
+    if(group_id === 0) {
+      setGroup(null)
+    }
         const createdPost = {
           user_id,
           title,
           post_body,
-          posted
+          posted,
+          group_id
         };
         const errors = validate();
 
@@ -53,7 +59,7 @@ const handleSubmit = async (e) => {
 
     return (
         <>
-            {validationErrors.length > 0 && (
+        {validationErrors.length > 0 && (
         <div className="errors">
             <p className="error-title"> The following errors were found: </p>
             <ul className="error-list">
@@ -67,10 +73,25 @@ const handleSubmit = async (e) => {
                 <label className="form-label" >Title:</label>
                         <input
                         placeholder="Title"
-                        className="form-input"
+                        className="small-form-input"
                         value={title}
                         onChange={(e) => setTitle(e.target.value)}
                         required/>
+                <label className='form-label'>Breed Group:</label>
+                    <select
+                    placeholder="Breed"
+                    className='small-form-select'
+                    value={group_id}
+                    onChange={(e) => setGroup(e.target.value)}
+                    required>
+                      <option value="" disabled>Please select a group</option>
+                      <option value={0}>Main</option>
+                        {Object.values(breed_groups).map((group) => {
+                            return (
+                                <option value={group.id}>{group.name}</option>
+                            )
+                        })}
+                </select>
                 <label className="form-label" >Body:</label>
                         <textarea
                         placeholder="Post Body"
@@ -78,7 +99,7 @@ const handleSubmit = async (e) => {
                         value={post_body}
                         onChange={(e) => setBody(e.target.value)}
                         required/>
-                <button className="form-button" type="submit">Submit</button>
+                <div className='submit-container'><button className="form-button" type="submit">Submit</button></div>
               </div>
             </form>
           </div>
