@@ -11,3 +11,11 @@ class Breed_Answer(db.Model):
 
     breeds = db.relationship('Breed', back_populates='breed_answers')
     breed_traits = db.relationship('Breed_Trait', back_populates='breed_answers')
+
+    def to_dict(self):
+        return {
+            'id': self.id,
+            'breed_id': self.breed_id,
+            'trait_id': self.trait_id,
+            'answer': self.answer
+        }

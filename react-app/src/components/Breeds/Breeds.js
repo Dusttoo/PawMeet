@@ -6,6 +6,7 @@ import { allPets, removePet } from '../../store/pets';
 import { useHistory } from 'react-router';
 import './Breed.css'
 import { allBreedTraits } from '../../store/breed_traits';
+import { allBreedAnswers } from '../../store/breed_answers';
 
 
 
@@ -17,7 +18,8 @@ const BreedsPage = () => {
 
     useEffect(() => {
     (async() => {
-      dispatch(allBreedTraits())
+      await dispatch(allBreedTraits())
+      await dispatch(allBreedAnswers())
       setLoaded(true);
     })();
   }, [dispatch]);

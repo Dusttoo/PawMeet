@@ -33,4 +33,4 @@ def images():
 @breed_routes.route('/answers')
 def answers():
     answers = Breed_Answer.query.all()
-    return {'awnsers': [answer.to_dict() for answer in answers]}
+    return {'answers': [answer.to_dict() for answer in answers]}
