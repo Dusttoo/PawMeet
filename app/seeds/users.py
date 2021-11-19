@@ -10,7 +10,7 @@ def seed_users():
         password='password',
         first_name='Demo',
         last_name='User',
-        barking_since=datetime.date.today(),
+        barking_since='10-05-2021',
         profile_img='https://images.pexels.com/photos/2253275/pexels-photo-2253275.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2')
 
     marnie = User(
@@ -19,7 +19,7 @@ def seed_users():
         password='password',
         first_name='Marnie',
         last_name='Matheson',
-        barking_since=datetime.date.today(),
+        barking_since='05-06-2021',
         profile_img='https://images.pexels.com/photos/243914/pexels-photo-243914.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2')
 
     joe = User(
@@ -28,7 +28,7 @@ def seed_users():
         password='password',
         first_name='Joe',
         last_name='Jobilie',
-        barking_since=datetime.date.today(),
+        barking_since='11-11-2021',
         profile_img='https://images.pexels.com/photos/3610168/pexels-photo-3610168.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2')
 
     tom = User(
@@ -37,7 +37,7 @@ def seed_users():
         password='password',
         first_name='Tom',
         last_name='Ford',
-        barking_since=datetime.date.today(),
+        barking_since='03-25-2020',
         profile_img='https://images.pexels.com/photos/1851164/pexels-photo-1851164.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2')
     
 

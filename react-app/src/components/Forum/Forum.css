@@ -1,0 +1,185 @@
+/* -- MAIN FORUM ------------------------ */
+.page-container {
+    display: flex;
+    padding-bottom: 100px;
+    align-items: center;
+
+}
+.forum-container {
+    width: 90%;
+    height: 100%;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10px;
+    padding-bottom: 100px;
+    border: solid 1px black;
+}
+
+.profile-icon {
+    border-radius: 100%;
+    width: 50px;
+    height: 50px;
+}
+
+.forum-options {
+    width: 80%;
+    display:flex;
+    justify-content: flex-end;
+}
+
+.forum-header {
+    text-align: center;
+    width: 100%;
+    border-bottom: 1px solid black;
+    padding-bottom: 10px;
+}
+
+.add-post {
+    text-decoration: none;
+    color: black;
+}
+
+.add-post:hover {
+    cursor: pointer;
+    color: blue;
+}
+
+.forum-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.table-label {
+    padding: 8px;
+    border-bottom: 1px solid black;
+}
+
+.post-row:nth-child(even) {background-color: #f2f2f2;}
+
+th, td {
+  padding: 15px;
+  text-align: left;
+}
+
+.comment-count {
+    display: flex;
+    justify-content: center;
+}
+
+.post-row {
+    height: 100px;
+    padding: 10px;
+}
+
+/* -- SIDEBAR ---------------------- */
+.sidebar-container {
+    width: 15%;
+    height: 100%;
+}
+
+.sidebar-links {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-evenly;
+    height: 100%;
+    padding-left: 10px;
+
+}
+
+.sidebar-link {
+    text-decoration: none;
+    color: black;
+    font-weight: 500;
+}
+
+.sidebar-link:hover {
+    color: blue;
+}
+
+/* -- POST PAGE -------------------- */
+.post-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
+.post {
+    width: 80%;
+    border: 1px solid black;
+    padding: 10px;
+    margin-bottom: 15px;
+}
+
+.post-user-options {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.post-header {
+    display: flex;
+    width: 80%;
+    justify-content: space-between;
+}
+
+.post-body-container {
+    width: 80%;
+
+}
+
+.post-title-container {
+    width: 90%;
+    padding-left: 15px;
+}
+
+.post-title {
+    text-decoration: none;
+    color: black;
+}
+
+.post-title:hover {
+    color: blue;
+}
+
+/* -- DISPLAY COMMENTS ----------------- */
+.comment-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.comments-table {
+    width: 100%;
+}
+
+.comment-options-container {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.comment-row {
+    width:100%;
+}
+
+.comment-info {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.comment-body {
+    text-align: center;
+}
+
+.table-cell {
+    padding-bottom: 20px;
+}
+
+.comment-edit-delete {
+    display: flex;
+    flex-direction: column;
+
+}

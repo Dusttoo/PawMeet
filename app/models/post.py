@@ -7,11 +7,11 @@ class Post(db.Model):
     user_id = db.Column(db.Integer, db.ForeignKey('users.id'), nullable=False)
     title = db.Column(db.String, nullable=False)
     post_body = db.Column(db.Text, nullable=False)
-    posted = db.Column(db.Date, nullable=False)
+    posted = db.Column(db.String, nullable=False)
 
     users = db.relationship('User', back_populates='posts')
-    comments = db.relationship('Comment', back_populates='posts')
-    likes = db.relationship('Like', back_populates='posts')
+    comments = db.relationship('Comment', cascade="all, delete-orphan", back_populates='posts')
+    likes = db.relationship('Like', cascade="all, delete-orphan", back_populates='posts')
 
 
     def to_dict(self):

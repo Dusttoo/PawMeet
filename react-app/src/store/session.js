@@ -11,7 +11,11 @@ const removeUser = () => ({
   type: REMOVE_USER,
 })
 
+
+
 const initialState = { user: null };
+
+
 
 export const authenticate = () => async (dispatch) => {
   const response = await fetch('/api/auth/', {

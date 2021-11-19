@@ -12,13 +12,15 @@ class User(db.Model, UserMixin):
     hashed_password = db.Column(db.String(255), nullable=False)
     first_name = db.Column(db.String(40), nullable=False)
     last_name = db.Column(db.String(55), nullable=False)
-    barking_since = db.Column(db.Date, nullable=False)
+    barking_since = db.Column(db.String, nullable=False)
     profile_img = db.Column(db.String, nullable=False)
 
     comments = db.relationship('Comment', back_populates='users')
     pet_profiles = db.relationship('Pet_Profile', back_populates='users')
     posts = db.relationship('Post', back_populates='users')
     user_answers = db.relationship('User_Answer', back_populates='users')
+    likes = db.relationship('Like', back_populates='users')
+
 
     @property
     def password(self):

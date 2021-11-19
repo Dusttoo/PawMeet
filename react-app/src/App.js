@@ -8,6 +8,17 @@ import ProtectedRoute from './components/auth/ProtectedRoute';
 import UsersList from './components/UsersList';
 import User from './components/User';
 import { authenticate } from './store/session';
+import ForumHome from './components/Forum/Forum_Main';
+import Header from './components/Header/Header';
+import { allUsers } from './store/users';
+import { allPosts} from './store/forum';
+import { allComments } from './store/comments';
+import Posts from './components/Forum/Post';
+import UserProfile from './components/Profiles/UserProfile';
+import AddPost from './components/Forum/AddPost';
+import { allLikes } from './store/likes';
+
+
 
 function App() {
   const [loaded, setLoaded] = useState(false);
@@ -16,6 +27,10 @@ function App() {
   useEffect(() => {
     (async() => {
       await dispatch(authenticate());
+      await dispatch(allUsers())
+      await dispatch(allPosts())
+      await dispatch(allLikes())
+
       setLoaded(true);
     })();
   }, [dispatch]);
@@ -26,6 +41,7 @@ function App() {
 
   return (
     <BrowserRouter>
+      <Header />
       <NavBar />
       <Switch>
         <Route path='/login' exact={true}>
@@ -37,8 +53,20 @@ function App() {
         <ProtectedRoute path='/users' exact={true} >
           <UsersList/>
         </ProtectedRoute>
+        <ProtectedRoute path='/users/:id' exact={true} >
+          <UserProfile/>
+        </ProtectedRoute>
         <ProtectedRoute path='/users/:userId' exact={true} >
           <User />
+        </ProtectedRoute>
+        <ProtectedRoute path='/forum' exact={true} >
+          <ForumHome />
+        </ProtectedRoute>
+        <ProtectedRoute path='/forum/add' exact={true} >
+          <AddPost />
+        </ProtectedRoute>
+        <ProtectedRoute path='/forum/posts/:postId' exact={true} >
+          <Posts />
         </ProtectedRoute>
         <ProtectedRoute path='/' exact={true} >
           <h1>My Home Page</h1>
