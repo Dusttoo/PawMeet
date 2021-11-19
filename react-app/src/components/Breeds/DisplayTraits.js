@@ -31,6 +31,7 @@ const DisplayTraits = ({trait, thisAnswer}) => {
               <div className='trait-dropdown'>
                 <h2 className='trait-header'>{trait.trait}</h2>
                 <FontAwesomeIcon icon={faAngleDown}
+                className='down-icon'
                 onClick={openDetails} />
               </div>
               {details ? 

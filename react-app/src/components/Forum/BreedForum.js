@@ -19,8 +19,8 @@ const BreedForum = () => {
         'https://www.petfoodprocessing.net/ext/resources/PFP-Images/Articles-20/092920_Eukanuba-Premium-Performance_Lead.jpg?t=1601328222&width=1080',
         'https://imagesvc.meredithcorp.io/v3/mm/image?q=85&c=sc&rect=2%2C0%2C2000%2C1332&poi=face&w=2000&h=1333&url=https%3A%2F%2Fstatic.onecms.io%2Fwp-content%2Fuploads%2Fsites%2F47%2F2020%2F10%2F26%2Fbasset-hound-167768274-2000.jpg',
         'https://res.cloudinary.com/jacepharm/image/upload/v1548864318/Depositphotos_64511131_xl-2015-min_efkipp.jpg',
-        'https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/single-minded-royalty-free-image-997141470-1558380148.jpg?crop=1.00xw:0.755xh;0,0.103xh&resize=640:*',
-        'https://www.purina.co.uk/sites/default/files/styles/ttt_image_510/public/2020-11/Toy%20Dogs%20Everything%20You%20Need%20to%20Know2.jpg?itok=lWaCco9f',
+        'https://www.scruffylittleterrier.com/wp-content/uploads/2020/07/AdobeStock_336595006-2880x1800.jpeg',
+        'https://blogstudio.s3.amazonaws.com/sitstay/3963c6cbd12033c4a966c0c9a62c9c05.jpg',
         'https://www.nativebreed.org/wp-content/uploads/2020/06/Bulldog.jpg',
         'https://thehappypuppysite.com/wp-content/uploads/2018/01/herding.jpg',
 

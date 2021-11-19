@@ -60,6 +60,8 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    padding-bottom: 10px;
+    padding-top: 25px;
 }
 
 .star-rating {
@@ -72,10 +74,12 @@
 
 .scale {
     display: flex;
-    justify-content: space-between
+    justify-content: space-between;
 }
 
-
+.down-icon {
+    font-size: 25px;
+}
 
 .breed-ratings {
     display: flex;
