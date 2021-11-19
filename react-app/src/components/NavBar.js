@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { NavLink } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import LogoutButton from './auth/LogoutButton';
 import './NavBar.css'
 
@@ -9,19 +9,19 @@ const NavBar = () => {
     <nav >
       <ul className="nav-bar">
         <li >
-          <NavLink className="nav-link" to='/' exact={true} activeClassName='active'>
+          <Link className="nav-link" to='/' exact={true} activeClassName='active'>
             Home
-          </NavLink>
+          </Link>
         </li>
         <li >
-          <NavLink className="nav-link" to='/forum' exact={true} activeClassName='active'>
+          <Link className="nav-link" to='/forum' exact={true} activeClassName='active'>
             Speak
-          </NavLink>
+          </Link>
         </li>
         <li >
-          <NavLink className="nav-link" to='/breeds' exact={true} activeClassName='active'>
+          <Link className="nav-link" to='/breeds' exact={true} activeClassName='active'>
             Breeds
-          </NavLink>
+          </Link>
         </li>
         <li>
           <LogoutButton />
