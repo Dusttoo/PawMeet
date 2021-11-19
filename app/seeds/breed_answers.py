@@ -978,6 +978,172 @@ def seed_breed_answers():
         trait_id=16,
         answer=3,
     )
+    # BOXER
+    boxer1 = Breed_Answer(
+        breed_id=13,
+        trait_id=1,
+        answer=4,
+    )
+    boxer2 = Breed_Answer(
+        breed_id=13,
+        trait_id=2,
+        answer=5,
+    )
+    boxer3 = Breed_Answer(
+        breed_id=13,
+        trait_id=3,
+        answer=3,
+    )
+    boxer4 = Breed_Answer(
+        breed_id=13,
+        trait_id=4,
+        answer=2,
+    )
+    boxer5 = Breed_Answer(
+        breed_id=13,
+        trait_id=5,
+        answer=2,
+    )
+    boxer6 = Breed_Answer(
+        breed_id=13,
+        trait_id=6,
+        answer=3,
+    )
+    boxer7 = Breed_Answer(
+        breed_id=13,
+        trait_id=7,
+        answer=7,
+    )
+    boxer8 = Breed_Answer(
+        breed_id=13,
+        trait_id=8,
+        answer=1,
+    )
+    boxer9 = Breed_Answer(
+        breed_id=13,
+        trait_id=9,
+        answer=4,
+    )
+    boxer10 = Breed_Answer(
+        breed_id=13,
+        trait_id=10,
+        answer=4,
+    )
+    boxer11 = Breed_Answer(
+        breed_id=13,
+        trait_id=11,
+        answer=4,
+    )
+    boxer12 = Breed_Answer(
+        breed_id=13,
+        trait_id=12,
+        answer=3,
+    )
+    boxer13 = Breed_Answer(
+        breed_id=13,
+        trait_id=13,
+        answer=4,
+    )
+    boxer14 = Breed_Answer(
+        breed_id=13,
+        trait_id=14,
+        answer=4,
+    )
+    boxer15 = Breed_Answer(
+        breed_id=13,
+        trait_id=15,
+        answer=3,
+    )
+    boxer16 = Breed_Answer(
+        breed_id=13,
+        trait_id=16,
+        answer=4,
+    )
+    # PUG
+    pug1 = Breed_Answer(
+        breed_id=14,
+        trait_id=1,
+        answer=5,
+    )
+    pug2 = Breed_Answer(
+        breed_id=14,
+        trait_id=2,
+        answer=5,
+    )
+    pug3 = Breed_Answer(
+        breed_id=14,
+        trait_id=3,
+        answer=4,
+    )
+    pug4 = Breed_Answer(
+        breed_id=14,
+        trait_id=4,
+        answer=4,
+    )
+    pug5 = Breed_Answer(
+        breed_id=14,
+        trait_id=5,
+        answer=2,
+    )
+    pug6 = Breed_Answer(
+        breed_id=14,
+        trait_id=6,
+        answer=1,
+    )
+    pug7 = Breed_Answer(
+        breed_id=14,
+        trait_id=7,
+        answer=7,
+    )
+    pug8 = Breed_Answer(
+        breed_id=14,
+        trait_id=8,
+        answer=1,
+    )
+    pug9 = Breed_Answer(
+        breed_id=14,
+        trait_id=9,
+        answer=5,
+    )
+    pug10 = Breed_Answer(
+        breed_id=14,
+        trait_id=10,
+        answer=5,
+    )
+    pug11 = Breed_Answer(
+        breed_id=14,
+        trait_id=11,
+        answer=3,
+    )
+    pug12 = Breed_Answer(
+        breed_id=14,
+        trait_id=12,
+        answer=5,
+    )
+    pug13 = Breed_Answer(
+        breed_id=14,
+        trait_id=13,
+        answer=4,
+    )
+    pug14 = Breed_Answer(
+        breed_id=14,
+        trait_id=14,
+        answer=3,
+    )
+    pug15 = Breed_Answer(
+        breed_id=14,
+        trait_id=15,
+        answer=1,
+    )
+    pug16 = Breed_Answer(
+        breed_id=14,
+        trait_id=16,
+        answer=3,
+    )
+
+
+
+
 
 
 
@@ -1175,6 +1341,38 @@ def seed_breed_answers():
     db.session.add(amstaff14)
     db.session.add(amstaff15)
     db.session.add(amstaff16)
+    db.session.add(boxer1)
+    db.session.add(boxer2)
+    db.session.add(boxer3)
+    db.session.add(boxer4)
+    db.session.add(boxer5)
+    db.session.add(boxer6)
+    db.session.add(boxer7)
+    db.session.add(boxer8)
+    db.session.add(boxer9)
+    db.session.add(boxer10)
+    db.session.add(boxer11)
+    db.session.add(boxer12)
+    db.session.add(boxer13)
+    db.session.add(boxer14)
+    db.session.add(boxer15)
+    db.session.add(boxer16)
+    db.session.add(pug1)
+    db.session.add(pug2)
+    db.session.add(pug3)
+    db.session.add(pug4)
+    db.session.add(pug5)
+    db.session.add(pug6)
+    db.session.add(pug7)
+    db.session.add(pug8)
+    db.session.add(pug9)
+    db.session.add(pug10)
+    db.session.add(pug11)
+    db.session.add(pug12)
+    db.session.add(pug13)
+    db.session.add(pug14)
+    db.session.add(pug15)
+    db.session.add(pug16)
 
 
     db.session.commit()

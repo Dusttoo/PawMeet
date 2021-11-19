@@ -291,6 +291,63 @@ def seed_breed_images():
         breed_id=12,
         img_url='https://jelenadogshows.com/eng/wp-content/uploads/2019/11/286-674x500.jpg'
     )
+    boxer1 = Breed_Image(
+        breed_id=13,
+        img_url='https://www.akc.org/wp-content/uploads/2017/11/Boxer.1.jpg'
+    )
+    boxer2 = Breed_Image(
+        breed_id=13,
+        img_url='https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Male_fawn_Boxer_undocked.jpg/1200px-Male_fawn_Boxer_undocked.jpg'
+    )
+    boxer3 = Breed_Image(
+        breed_id=13,
+        img_url='https://s3.amazonaws.com/cdn-origin-etr.akc.org/wp-content/uploads/2017/09/06202234/Boxer-laying-on-the-floor-indoors.jpg'
+    )
+    boxer4 = Breed_Image(
+        breed_id=13,
+        img_url='https://www.huntercreekboxers.com/s/cc_images/teaserbox_4104747998.jpg?t=1570900365'
+    )
+    boxer5 = Breed_Image(
+        breed_id=13,
+        img_url='https://i.pinimg.com/236x/e2/8d/f2/e28df2dcb25e60dd3b1f9d777aa096bd.jpg'
+    )
+    boxer6 = Breed_Image(
+        breed_id=13,
+        img_url='https://www.zooplus.co.uk/magazine/wp-content/uploads/2018/07/deutscher-boxer-tabby-2-768x523.jpg'
+    )
+    boxer7 = Breed_Image(
+        breed_id=13,
+        img_url='https://cdn.pixabay.com/photo/2016/04/11/01/17/good-aiderbichl-1321216_960_720.jpg'
+    )
+    pug1 = Breed_Image(
+        breed_id=14,
+        img_url='http://cdn.akc.org/content/article-body-image/SimonLouieVinnie.jpg'
+    )
+    pug2 = Breed_Image(
+        breed_id=14,
+        img_url='http://cdn.akc.org/PugPuppies.jpg'
+    )
+    pug3 = Breed_Image(
+        breed_id=14,
+        img_url='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR7-RTwNHxoTKPZ1tgbUVp8yQC2KW8Jd6OhqA&usqp=CAU'
+    )
+    pug4 = Breed_Image(
+        breed_id=14,
+        img_url='http://cdn.akc.org/PugSleeping.jpg'
+    )
+    pug5 = Breed_Image(
+        breed_id=14,
+        img_url='https://a-z-animals.com/media/Pug-Canis-familiaris-face.jpg'
+    )
+    pug6 = Breed_Image(
+        breed_id=14,
+        img_url='https://images.newscientist.com/wp-content/uploads/2020/10/13230802/pug-ex5kgg_web.jpg'
+    )
+    pug7 = Breed_Image(
+        breed_id=14,
+        img_url='https://www.purina.com.au/-/media/project/purina/main/breeds/dog/mobile/dog_pugs_mobile.jpg?h=300&la=en&w=375&hash=5BF9CFC4E6FC7347E6FDA383E42D8A52'
+    )
+    
 
 
     db.session.add(lab1)
@@ -365,6 +422,20 @@ def seed_breed_images():
     db.session.add(amstaff5)
     db.session.add(amstaff6)
     db.session.add(amstaff7)
+    db.session.add(boxer1)
+    db.session.add(boxer2)
+    db.session.add(boxer3)
+    db.session.add(boxer4)
+    db.session.add(boxer5)
+    db.session.add(boxer6)
+    db.session.add(boxer7)
+    db.session.add(pug1)
+    db.session.add(pug2)
+    db.session.add(pug3)
+    db.session.add(pug4)
+    db.session.add(pug5)
+    db.session.add(pug6)
+    db.session.add(pug7)
 
 
 

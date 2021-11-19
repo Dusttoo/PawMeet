@@ -203,6 +203,40 @@ def seed_breeds():
 
     )
 
+    boxer = Breed(
+        name='Boxer',
+        breed_group=3,
+        personality=['Bright', 'Fun-Loving', 'Active'],
+        avg_height={
+            'males': '23-25 inches',
+             'females': '21.5-23.5 inches'
+        },
+        avg_weight={
+            'males': '65-80 pounds',
+            'females': 'females are about 15 pounds less than male'
+        },
+        avg_life_exp='10-12 years',
+        description="Loyalty, affection, intelligence, work ethic, and good looks: Boxers are the whole doggy package. Bright and alert, sometimes silly, but always courageous, the Boxer has been among America's most popular dog breeds for a very long time. A well-made Boxer in peak condition is an awesome sight. A male can stand as high as 25 inches at the shoulder; females run smaller. Their muscles ripple beneath a short, tight-fitting coat. The dark brown eyes and wrinkled forehead give the face an alert, curious look. The coat can be fawn or brindle, with white markings. Boxers move like the athletes they are named for: smooth and graceful, with a powerful forward thrust. Boxers are upbeat and playful. Their patience and protective nature have earned them a reputation as a great dog with children. They take the jobs of watchdog and family guardian seriously and will meet threats fearlessly. Boxers do best when exposed to a lot of people and other animals in early puppyhood.",
+
+    )
+
+    pug = Breed(
+        name='Pug',
+        breed_group=5,
+        personality=['Charming', 'Loving', 'Mischevious'],
+        avg_height={
+            'males': '10-13 inches',
+            'females': '10-13 inches'
+        },
+        avg_weight={
+            'males': '14-18 pounds',
+            'females': '14-18 pounds'
+        },
+        avg_life_exp='13-15 years',
+        description="Once the mischievous companion of Chinese emperors, and later the mascot of Holland's royal House of Orange, the small but solid Pug is today adored by his millions of fans around the world. Pugs live to love and to be loved in return. The Pug's motto is the Latin phrase 'multum in parvo' (a lot in a little)' an apt description of this small but muscular breed. They come in three colors: silver or apricot-fawn with a black face mask, or all black. The large round head, the big, sparkling eyes, and the wrinkled brow give Pugs a range of human-like expressions'¿surprise, happiness, curiosity'¿that have delighted owners for centuries. Pug owners say their breed is the ideal house dog. Pugs are happy in the city or country, with kids or old folks, as an only pet or in a pack. They enjoy their food, and care must be taken to keep them trim. They do best in moderate climates 'not too hot, not too cold' but, with proper care, Pugs can be their adorable selves anywhere.",
+
+    )
+
 
 
     db.session.add(labrador)
@@ -217,6 +251,8 @@ def seed_breeds():
     db.session.add(dachshund)
     db.session.add(corso)
     db.session.add(pit)
+    db.session.add(boxer)
+    db.session.add(pug)
 
 
 

@@ -5,11 +5,26 @@ import { Link, useParams } from 'react-router-dom';
 import { allPets, removePet } from '../../store/pets';
 import { useHistory } from 'react-router';
 import './Breed.css'
+import { allBreedTraits } from '../../store/breed_traits';
 
 
 
 const BreedsPage = () => {
     const breeds = useSelector(state => state.breeds)
+    const dispatch = useDispatch()
+    const [loaded, setLoaded] = useState(false);
+
+
+    useEffect(() => {
+    (async() => {
+      dispatch(allBreedTraits())
+      setLoaded(true);
+    })();
+  }, [dispatch]);
+
+  if (!loaded) {
+    return null;
+  }
 
 
     return (
