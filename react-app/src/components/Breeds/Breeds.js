@@ -12,6 +12,7 @@ import { allBreedAnswers } from '../../store/breed_answers';
 
 const BreedsPage = () => {
     const breeds = useSelector(state => state.breeds)
+    const images = useSelector(state => state.breed_images)
     const dispatch = useDispatch()
     const [loaded, setLoaded] = useState(false);
 
@@ -33,8 +34,12 @@ const BreedsPage = () => {
         <>
           <div className='breed-list-container'>
             {Object.values(breeds).map((breed) => {
+              const thisImage = Object.values(images).find((image) => image.breed_id === breed.id)
                 return (
-                <Link to={`/breeds/${breed.id}`}>{breed.name}</Link>
+                <div className='breed-container'>
+                  <img src={thisImage.img_url} alt={breed.name}/>
+                  <Link className='breed' to={`/breeds/${breed.id}`}>{breed.name}</Link>
+                </div>
                 )
             })}
           </div>
