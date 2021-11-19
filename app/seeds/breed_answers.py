@@ -814,6 +814,173 @@ def seed_breed_answers():
         answer=3,
     )
 
+    # CORSO
+
+    corso1 = Breed_Answer(
+        breed_id=11,
+        trait_id=1,
+        answer=4,
+    )
+    corso2 = Breed_Answer(
+        breed_id=11,
+        trait_id=2,
+        answer=3,
+    )
+    corso3 = Breed_Answer(
+        breed_id=11,
+        trait_id=3,
+        answer=3,
+    )
+    corso4 = Breed_Answer(
+        breed_id=11,
+        trait_id=4,
+        answer=2,
+    )
+    corso5 = Breed_Answer(
+        breed_id=11,
+        trait_id=5,
+        answer=1,
+    )
+    corso6 = Breed_Answer(
+        breed_id=11,
+        trait_id=6,
+        answer=3,
+    )
+    corso7 = Breed_Answer(
+        breed_id=11,
+        trait_id=7,
+        answer=7,
+    )
+    corso8 = Breed_Answer(
+        breed_id=11,
+        trait_id=8,
+        answer=1,
+    )
+    corso9 = Breed_Answer(
+        breed_id=11,
+        trait_id=9,
+        answer=3,
+    )
+    corso10 = Breed_Answer(
+        breed_id=11,
+        trait_id=10,
+        answer=3,
+    )
+    corso11 = Breed_Answer(
+        breed_id=11,
+        trait_id=11,
+        answer=5,
+    )
+    corso12 = Breed_Answer(
+        breed_id=11,
+        trait_id=12,
+        answer=3,
+    )
+    corso13 = Breed_Answer(
+        breed_id=11,
+        trait_id=13,
+        answer=4,
+    )
+    corso14 = Breed_Answer(
+        breed_id=11,
+        trait_id=14,
+        answer=4,
+    )
+    corso15 = Breed_Answer(
+        breed_id=11,
+        trait_id=15,
+        answer=3,
+    )
+    corso16 = Breed_Answer(
+        breed_id=11,
+        trait_id=16,
+        answer=3,
+    )
+
+    # AMSTAFF
+    amstaff1= Breed_Answer(
+        breed_id=12,
+        trait_id=1,
+        answer=5,
+    )
+    amstaff2 = Breed_Answer(
+        breed_id=12,
+        trait_id=2,
+        answer=3,
+    )
+    amstaff3 = Breed_Answer(
+        breed_id=12,
+        trait_id=3,
+        answer=3,
+    )
+    amstaff4 = Breed_Answer(
+        breed_id=12,
+        trait_id=4,
+        answer=2,
+    )
+    amstaff5 = Breed_Answer(
+        breed_id=12,
+        trait_id=5,
+        answer=1,
+    )
+    amstaff6 = Breed_Answer(
+        breed_id=12,
+        trait_id=6,
+        answer=1,
+    )
+    amstaff7 = Breed_Answer(
+        breed_id=12,
+        trait_id=7,
+        answer=7,
+    )
+    amstaff8 = Breed_Answer(
+        breed_id=12,
+        trait_id=8,
+        answer=1,
+    )
+    amstaff9 = Breed_Answer(
+        breed_id=12,
+        trait_id=9,
+        answer=4,
+    )
+    amstaff10 = Breed_Answer(
+        breed_id=12,
+        trait_id=10,
+        answer=3,
+    )
+    amstaff11 = Breed_Answer(
+        breed_id=12,
+        trait_id=11,
+        answer=5,
+    )
+    amstaff12 = Breed_Answer(
+        breed_id=12,
+        trait_id=12,
+        answer=3,
+    )
+    amstaff13 = Breed_Answer(
+        breed_id=12,
+        trait_id=13,
+        answer=3,
+    )
+    amstaff14 = Breed_Answer(
+        breed_id=12,
+        trait_id=14,
+        answer=3,
+    )
+    amstaff15 = Breed_Answer(
+        breed_id=12,
+        trait_id=15,
+        answer=3,
+    )
+    amstaff16 = Breed_Answer(
+        breed_id=12,
+        trait_id=16,
+        answer=3,
+    )
+
+
+
 
 
     db.session.add(lab1)
@@ -976,6 +1143,38 @@ def seed_breed_answers():
     db.session.add(dox14)
     db.session.add(dox15)
     db.session.add(dox16)
+    db.session.add(corso1)
+    db.session.add(corso2)
+    db.session.add(corso3)
+    db.session.add(corso4)
+    db.session.add(corso5)
+    db.session.add(corso6)
+    db.session.add(corso7)
+    db.session.add(corso8)
+    db.session.add(corso9)
+    db.session.add(corso10)
+    db.session.add(corso11)
+    db.session.add(corso12)
+    db.session.add(corso13)
+    db.session.add(corso14)
+    db.session.add(corso15)
+    db.session.add(corso16)
+    db.session.add(amstaff1)
+    db.session.add(amstaff2)
+    db.session.add(amstaff3)
+    db.session.add(amstaff4)
+    db.session.add(amstaff5)
+    db.session.add(amstaff6)
+    db.session.add(amstaff7)
+    db.session.add(amstaff8)
+    db.session.add(amstaff9)
+    db.session.add(amstaff10)
+    db.session.add(amstaff11)
+    db.session.add(amstaff12)
+    db.session.add(amstaff13)
+    db.session.add(amstaff14)
+    db.session.add(amstaff15)
+    db.session.add(amstaff16)
 
 
     db.session.commit()

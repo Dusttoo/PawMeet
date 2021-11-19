@@ -8,6 +8,8 @@ class Breed_Group(db.Model):
     description = db.Column(db.Text, nullable=False)
 
     breeds = db.relationship('Breed', back_populates='breed_groups')
+    posts = db.relationship(
+        'Post', cascade="all, delete-orphan", back_populates='breed_groups')
 
     def to_dict(self):
         return {

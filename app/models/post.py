@@ -8,10 +8,12 @@ class Post(db.Model):
     title = db.Column(db.String, nullable=False)
     post_body = db.Column(db.Text, nullable=False)
     posted = db.Column(db.String, nullable=False)
+    group_id = db.Column(db.Integer, db.ForeignKey('breed_groups.id'), nullable=True)
 
     users = db.relationship('User', back_populates='posts')
     comments = db.relationship('Comment', cascade="all, delete-orphan", back_populates='posts')
     likes = db.relationship('Like', cascade="all, delete-orphan", back_populates='posts')
+    breed_groups = db.relationship('Breed_Group', back_populates='posts')
 
 
     def to_dict(self):
@@ -20,7 +22,8 @@ class Post(db.Model):
             'user_id': self.user_id,
             'title': self.title,
             'post_body': self.post_body,
-            'posted': self.posted
+            'posted': self.posted,
+            'group_id': self.group_id
         }
 
     

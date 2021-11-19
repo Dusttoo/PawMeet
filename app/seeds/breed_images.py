@@ -241,6 +241,57 @@ def seed_breed_images():
         breed_id=10,
         img_url='https://cdn.shopify.com/s/files/1/0108/6819/5428/files/How_social_are_Dachshunds_5.jpg?v=1580859512'
     )
+    corso1 = Breed_Image(
+        breed_id=11,
+        img_url='https://www.akc.org/wp-content/uploads/2015/11/Cane-Corso-standing-in-the-park.jpg'
+    )
+    corso2 = Breed_Image(
+        breed_id=11,
+        img_url='https://moderndogmagazine.com/sites/default/files/styles/slidehsow-banner/public/images/breeds/top_images/CaneCorso-Header.jpg?itok=R1dRXozR'
+    )
+    corso3 = Breed_Image(
+            breed_id=11,
+        img_url='https://www.petage.com/wp-content/uploads/2017/06/Cane-Corso-1-670x447.jpg'
+        )
+    corso4 = Breed_Image(
+        breed_id=11,
+        img_url='https://www.trendingbreeds.com/wp-content/uploads/2020/02/Alert-Cane-Corso.jpg'
+    )
+    corso5 = Breed_Image(
+            breed_id=11,
+        img_url='https://petkeen.com/wp-content/uploads/2021/06/Cane-Corso-laying-in-the-park_Stivog_Shutterstock.jpg'
+        )
+
+    amstaff1= Breed_Image(
+        breed_id=12,
+        img_url='https://www.dogmal.com/wp-content/uploads/2018/07/American-Staffordshire-Terriers.jpg'
+    )
+
+    amstaff2 = Breed_Image(
+        breed_id=12,
+        img_url='https://i.pinimg.com/originals/22/a3/39/22a339226c83494298a28aef79378bdd.jpg'
+    )
+    amstaff3 = Breed_Image(
+        breed_id=12,
+        img_url='https://www.kopekler.com/assets/media/b1618-11.jpg'
+    )
+    amstaff4 = Breed_Image(
+        breed_id=12,
+        img_url='https://i.pinimg.com/236x/65/fb/82/65fb82e8e4edd4c3273544de3ee565e8--dog-breeds-american-staffordshire-terriers.jpg'
+    )
+    amstaff5 = Breed_Image(
+        breed_id=12,
+        img_url='https://i.pinimg.com/736x/a3/7a/87/a37a8754ab05079eb4b9feebb31b0016.jpg'
+    )
+    amstaff6 = Breed_Image(
+        breed_id=12,
+        img_url='https://i.pinimg.com/originals/9a/58/69/9a586990564a2e17cad4e1c0deb243bd.jpg'
+    )
+    amstaff7 = Breed_Image(
+        breed_id=12,
+        img_url='https://jelenadogshows.com/eng/wp-content/uploads/2019/11/286-674x500.jpg'
+    )
+
 
     db.session.add(lab1)
     db.session.add(lab2)
@@ -302,6 +353,20 @@ def seed_breed_images():
     db.session.add(dox5)
     db.session.add(dox6)
     db.session.add(dox7)
+    db.session.add(corso1)
+    db.session.add(corso2)
+    db.session.add(corso3)
+    db.session.add(corso4)
+    db.session.add(corso5)
+    db.session.add(amstaff1)
+    db.session.add(amstaff2)
+    db.session.add(amstaff3)
+    db.session.add(amstaff4)
+    db.session.add(amstaff5)
+    db.session.add(amstaff6)
+    db.session.add(amstaff7)
+
+
 
     db.session.commit()
 

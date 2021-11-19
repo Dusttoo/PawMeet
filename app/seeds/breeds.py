@@ -168,6 +168,43 @@ def seed_breeds():
         description="The famously long, low silhouette, ever-alert expression, and bold, vivacious personality of the Dachshund have made him a superstar of the canine kingdom. Dachshunds come in two sizes and in three coat types of various colors and patterns. The word 'icon' is terribly overworked, but the Dachshund'with his unmistakable long-backed body, little legs, and big personality' is truly an icon of purebred dogdom. Dachshunds can be standard-sized(usually 16 to 32 pounds) or miniature(11 pounds or under), and come in one of three coat types: smooth, wirehaired, or longhaired. Dachshunds aren't built for distance running, leaping, or strenuous swimming, but otherwise these tireless hounds are game for anything. Smart and vigilant, with a big-dog bark, they make fine watchdogs. Bred to be an independent hunter of dangerous prey, they can be brave to the point of rashness, and a bit stubborn, but their endearing nature and unique look has won millions of hearts the world over.",
 
     )
+
+    corso = Breed(
+        name='Cane Corso',
+        breed_group=3,
+        personality=['Affectionate', 'Intelligent', 'Majestic'],
+        avg_height={
+            'males': '25-27.5 inches',
+             'females': '23.5-26 inches'
+        },
+        avg_weight={
+            'males': 'Proportionate to height',
+            'females': 'Proportionate to height'
+        },
+        avg_life_exp='9-12 years',
+        description="Smart, trainable, and of noble bearing, the assertive and confident Cane Corso is a peerless protector. The Corso's lineage goes back to ancient Roman times, and the breed's name roughly translates from the Latin as 'bodyguard dog.' At nearly 28 inches at the shoulder and often weighing more than 100 pounds, with a large head, alert expression, and muscles rippling beneath their short, stiff coat, Corsi are at a glance intimidating creatures. Their imposing appearance is their first line of defense against intruders. As one writer put it, 'An understated air of cool competence, the kind of demeanor you'd expect from a professional bodyguard, is the breed's trademark.' Corsi are intelligent, loyal, eager to please, versatile, and intensely loyal to their humans, but are also assertive and willful, and can end up owning an unwitting owner. As with any other big guardian dog, responsible breeding and early socialization with people and other dogs is vital.",
+
+    )
+
+    pit = Breed(
+        name='American Staffordshire Terrier',
+        breed_group=4,
+        personality=['Confident', 'Smart', 'Good-Natured'],
+        avg_height={
+            'males': '18-19 inches',
+             'females': '17-18 inches'
+        },
+        avg_weight={
+            'males': '55-70 pounds',
+            'females': '40-55 pounds'
+        },
+        avg_life_exp='12-16 years',
+        description="The American Staffordshire Terrier, known to their fans as AmStaffs, are smart, confident, good-natured companions. Their courage is proverbial. A responsibly bred, well-socialized AmStaff is a loyal, trustworthy friend to the end. AmStaffs are stocky, muscular bull-type terriers standing 17 to 19 inches at the shoulder. The head is broad, the jaws well defined, the cheekbones pronounced, and the dark, round eyes are set wide apart. AmStaff movement is agile and graceful, with a springy gait that advertises the breed's innate confidence. The stiff, glossy coat comes in many colors and patterns. AmStaffers describe their dogs as keenly aware of their surroundings, game for anything, and lovable 'personality dogs' around the house. AmStaffs like mental and physical challenges. They are highly trainable, as their many forays into showbiz suggest. When acquiring an AmStaff, there's only one way to go: Do your homework and find a responsible AKC breeder.",
+
+    )
+
+
+
     db.session.add(labrador)
     db.session.add(frenchie)
     db.session.add(gsd)
@@ -178,6 +215,11 @@ def seed_breeds():
     db.session.add(rottweiler)
     db.session.add(gsp)
     db.session.add(dachshund)
+    db.session.add(corso)
+    db.session.add(pit)
+
+
+
 
     db.session.commit()
 
@@ -200,7 +242,7 @@ def undo_breeds():
     #         'females': ''
     #     },
     #     avg_life_exp='',
-    #     description='',
+    #     description="",
 
     # )
 
