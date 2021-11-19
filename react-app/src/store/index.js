@@ -21,7 +21,7 @@ const rootReducer = combineReducers({
   pets: petReducer,
   breeds: breedReducer,
   groups: groupReducer,
-  images: imageReducer
+  breed_images: imageReducer
 });
 
 

@@ -24,6 +24,7 @@ import { allBreeds } from './store/breeds';
 import { allGroups } from './store/breed_groups';
 import BreedsPage from './components/Breeds/Breeds';
 import BreedInfo from './components/Breeds/BreedInfo';
+import { allImages } from './store/breed_images';
 
 
 function App() {
@@ -39,6 +40,7 @@ function App() {
       await dispatch(allPets())
       await dispatch(allBreeds())
       await dispatch(allGroups())
+      await dispatch(allImages())
       setLoaded(true);
     })();
   }, [dispatch]);
