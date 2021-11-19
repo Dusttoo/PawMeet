@@ -6,6 +6,7 @@ import './Forum.css'
 import { Link } from 'react-router-dom';
 
 const ForumSidebar = () => {
+    const groups = useSelector(state => state.groups)
 
 
 
@@ -13,14 +14,13 @@ const ForumSidebar = () => {
         <>
             <div className='sidebar-container'>
                 <div className='sidebar-links'>  
-                    <Link className='sidebar-link' to='/forum'>Main</Link>   
-                    <Link className='sidebar-link' to='/forum'>Sporting</Link>   
-                    <Link className='sidebar-link' to='/forum'>Hound</Link>   
-                    <Link className='sidebar-link' to='/forum'>Working</Link>   
-                    <Link className='sidebar-link' to='/forum'>Terrier</Link>   
-                    <Link className='sidebar-link' to='/forum'>Toy</Link>   
-                    <Link className='sidebar-link' to='/forum'>Non-Sporting</Link>   
-                    <Link className='sidebar-link' to='/forum'>Herding</Link> 
+                <Link className='sidebar-link' to='/forum'>Main</Link>   
+                {Object.values(groups).map((group) => {
+                    return(
+                        <Link className='sidebar-link' to={`/forum/${group.id}`}>{group.name}</Link>   
+                    )
+
+                })}
                 </div>   
                  
             </div> 

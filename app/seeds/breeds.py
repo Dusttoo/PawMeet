@@ -168,17 +168,16 @@ def seed_breeds():
         description="The famously long, low silhouette, ever-alert expression, and bold, vivacious personality of the Dachshund have made him a superstar of the canine kingdom. Dachshunds come in two sizes and in three coat types of various colors and patterns. The word 'icon' is terribly overworked, but the Dachshund'with his unmistakable long-backed body, little legs, and big personality' is truly an icon of purebred dogdom. Dachshunds can be standard-sized(usually 16 to 32 pounds) or miniature(11 pounds or under), and come in one of three coat types: smooth, wirehaired, or longhaired. Dachshunds aren't built for distance running, leaping, or strenuous swimming, but otherwise these tireless hounds are game for anything. Smart and vigilant, with a big-dog bark, they make fine watchdogs. Bred to be an independent hunter of dangerous prey, they can be brave to the point of rashness, and a bit stubborn, but their endearing nature and unique look has won millions of hearts the world over.",
 
     )
-
-    db.session.add(dachshund)
-    db.session.add(gsp)
-    db.session.add(rottweiler)
-    db.session.add(beagle)
-    db.session.add(poodle)
-    db.session.add(bulldog)
-    db.session.add(golden)
-    db.session.add(gsd)
-    db.session.add(frenchie)
     db.session.add(labrador)
+    db.session.add(frenchie)
+    db.session.add(gsd)
+    db.session.add(golden)
+    db.session.add(bulldog)
+    db.session.add(poodle)
+    db.session.add(beagle)
+    db.session.add(rottweiler)
+    db.session.add(gsp)
+    db.session.add(dachshund)
 
     db.session.commit()
 

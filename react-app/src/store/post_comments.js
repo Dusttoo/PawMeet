@@ -84,12 +84,10 @@ export default function post_commentReducer(state = initialState, action) {
             action.comments.comments.forEach(comment => {
                 postComments[comment.id] = comment
             })
-            console.log(postComments)
             return {...postComments}
         case ADD_POST_COMMENT:
           const newState = {...state}
             newState[action.comment.id] = action.comment
-            console.log(newState, 'new state for add comment')
             return newState
         case UPDATE_COMMENT:
             const updateComment = {...state}

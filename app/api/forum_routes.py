@@ -16,7 +16,6 @@ def posts():
 @forum_routes.route('/posts/<int:id>/comments')
 def post_comments(id):
     comments = Comment.query.filter(Comment.post_id == id).all()
-    print('\n\n\n', [comment.to_dict() for comment in comments], '\n\n\n')
     return {'comments': [comment.to_dict() for comment in comments]}
 
 
@@ -52,7 +51,6 @@ def edit_post(id):
 def delete_postt(id):
     
     post = Post.query.get(id)
-    print('\n\n\n', post, '\n\n\n')
     db.session.delete(post)
     db.session.commit()
 
@@ -110,9 +108,9 @@ def likes():
 def add_like():
     if request.method == "POST":
         form = LikeForm()
-        print('\n\n\n', form)
         form['csrf_token'].data = request.cookies['csrf_token']
         if form.validate_on_submit():
+
             data = Like()
             form.populate_obj(data)
             db.session.add(data)

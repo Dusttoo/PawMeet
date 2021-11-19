@@ -10,6 +10,10 @@ import DisplayComments from './DisplayComment';
 import { postComments } from '../../store/post_comments';
 import { Link } from 'react-router-dom';
 import { addALike, removeLike } from '../../store/likes';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faHeart, faPenSquare} from '@fortawesome/free-solid-svg-icons'
+import { faStopCircle, faMinusCircle } from '@fortawesome/free-solid-svg-icons';
+
 
 const Posts = () => {
     const { postId } = useParams();
@@ -34,7 +38,6 @@ const Posts = () => {
         }
         
     })
-    console.log(liked.includes(true))
 
      useEffect(() => {
     (async() => {
@@ -53,12 +56,12 @@ const Posts = () => {
         Object.values(likes).map((like) => {
             if(+like.post_id === +postId) {
                 numLikes++
-                console.log(numLikes)
             }
         })
         return numLikes
 
     }
+    console.log(getLikes())
 
 
 
@@ -93,7 +96,6 @@ const Posts = () => {
 
     const deleteLike = () => {
         const likeId = Object.values(likes).find((like) => +like.user_id === +currentUser.id)
-        console.log('like id', likeId.id)
         dispatch(removeLike(+likeId.id))
     }
 
@@ -103,10 +105,8 @@ const Posts = () => {
                 <div className='post'>
                     {thisUser.id === +author ?
                     <div className='post-user-options'>
-                        <button className='edit-post'
-                        onClick={openEditForm}>Edit</button>
-                        <button className='delete-post'
-                        onClick={deletePost}>Delete</button>
+                        <FontAwesomeIcon className='edit-button' onClick={openEditForm} icon={faPenSquare}/>
+                        <FontAwesomeIcon className='delete-button' onClick={deletePost} icon={faMinusCircle }/>
                     </div> : <></>}
                     {editForm ?
                     <EditPost setEditForm={setEditForm}/> : <></>}
@@ -122,14 +122,19 @@ const Posts = () => {
                     <div className='post-body-container'>
                         <p>{posts[postId].post_body}</p>
                     </div>
-                    <div className='likes-container'>
-                        <p>Likes: {getLikes()}</p>
-                        {!liked.includes(true) ? <button 
-                        onClick={addLike}>add like</button> : <></>}
-                        {liked.includes(true) ?
-                        <button
-                        onClick={deleteLike}>delete like</button> : <></>}
-                        </div>
+                    
+                        {!liked.includes(true) ? 
+                        <div className='likes-container'>
+                            <FontAwesomeIcon className='like-heart' onClick={addLike} icon={faHeart} style={{color: '#d3d3d3'}}/> 
+                            {getLikes()}
+                        </div> 
+                        : 
+                        <div className='likes-container'>
+                            <FontAwesomeIcon className='like-heart' onClick={deleteLike} icon={faHeart} style={{color: '#ff0808'}}/>
+                            {getLikes()}
+                        </div> }
+
+                        
                 </div>
             </div>
             <div className="comment-container">

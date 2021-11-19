@@ -10,6 +10,8 @@ from .models import db, User, Breed
 from .api.user_routes import user_routes
 from .api.auth_routes import auth_routes
 from .api.forum_routes import forum_routes
+from .api.pet_routes import pet_routes
+from .api.breed_routes import breed_routes
 
 from .seeds import seed_commands
 
@@ -34,6 +36,10 @@ app.config.from_object(Config)
 app.register_blueprint(user_routes, url_prefix='/api/users')
 app.register_blueprint(auth_routes, url_prefix='/api/auth')
 app.register_blueprint(forum_routes, url_prefix='/api/forum')
+app.register_blueprint(pet_routes, url_prefix='/api/pets')
+app.register_blueprint(breed_routes, url_prefix='/api/breeds')
+
+
 db.init_app(app)
 Migrate(app, db)
 

@@ -144,6 +144,9 @@ th, td {
     color: blue;
 }
 
+.like-heart:hover {
+    cursor: pointer;
+}
 /* -- DISPLAY COMMENTS ----------------- */
 .comment-container {
     display: flex;

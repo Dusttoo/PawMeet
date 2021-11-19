@@ -17,7 +17,14 @@ import Posts from './components/Forum/Post';
 import UserProfile from './components/Profiles/UserProfile';
 import AddPost from './components/Forum/AddPost';
 import { allLikes } from './store/likes';
-
+import { allPets } from './store/pets';
+import PetProfile from './components/Profiles/PetProfile';
+import AddPet from './components/Profiles/addPet';
+import { allBreeds } from './store/breeds';
+import { allGroups } from './store/breed_groups';
+import BreedsPage from './components/Breeds/Breeds';
+import BreedInfo from './components/Breeds/BreedInfo';
+import { allImages } from './store/breed_images';
 
 
 function App() {
@@ -30,7 +37,10 @@ function App() {
       await dispatch(allUsers())
       await dispatch(allPosts())
       await dispatch(allLikes())
-
+      await dispatch(allPets())
+      await dispatch(allBreeds())
+      await dispatch(allGroups())
+      await dispatch(allImages())
       setLoaded(true);
     })();
   }, [dispatch]);
@@ -56,11 +66,26 @@ function App() {
         <ProtectedRoute path='/users/:id' exact={true} >
           <UserProfile/>
         </ProtectedRoute>
-        <ProtectedRoute path='/users/:userId' exact={true} >
-          <User />
+        <ProtectedRoute path='/pets/add' exact={true} >
+          <AddPet />
+        </ProtectedRoute>
+        <ProtectedRoute path='/pets/:id' exact={true} >
+          <PetProfile />
+        </ProtectedRoute>
+        <ProtectedRoute path='/breeds' exact={true} >
+          <BreedsPage />
+        </ProtectedRoute>
+        <ProtectedRoute path='/breeds/:id' exact={true} >
+          <BreedInfo />
+        </ProtectedRoute>
+        <ProtectedRoute path='/breeds/group/:id' exact={true} >
+          <h1>Group page</h1>
         </ProtectedRoute>
         <ProtectedRoute path='/forum' exact={true} >
           <ForumHome />
+        </ProtectedRoute>
+        <ProtectedRoute path='/forum/:id' exact={true} >
+          <h1>Breed Forum</h1>
         </ProtectedRoute>
         <ProtectedRoute path='/forum/add' exact={true} >
           <AddPost />
