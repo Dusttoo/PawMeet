@@ -33,11 +33,21 @@ const BreedsPage = () => {
     return (
         <>
           <div className='breed-list-container'>
-            {Object.values(breeds).map((breed) => {
+            {Object.values(breeds).sort(function(a, b) {
+              let nameA = a.name.toUpperCase();
+              let nameB = b.name.toUpperCase();
+              if (nameA < nameB) {
+                  return -1;
+                }
+                if (nameA > nameB) {
+                  return 1;
+                }
+                return 0;
+            }).map((breed) => {
               const thisImage = Object.values(images).find((image) => image.breed_id === breed.id)
                 return (
-                <div className='breed-container'>
-                  <img src={thisImage.img_url} alt={breed.name}/>
+                <div className='breed-list-item-container'>
+                  <img className='breed-link-image' src={thisImage.img_url} alt={breed.name}/>
                   <Link className='breed' to={`/breeds/${breed.id}`}>{breed.name}</Link>
                 </div>
                 )
