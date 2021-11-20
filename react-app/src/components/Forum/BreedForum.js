@@ -9,6 +9,8 @@ import { allUsers } from '../../store/users';
 import { allComments } from '../../store/comments';
 import ForumSidebar from './SideBar';
 import { useParams } from 'react-router';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faAngleLeft, faAngleRight } from '@fortawesome/free-solid-svg-icons';
 const BreedForum = () => {
     const dispatch = useDispatch()
     const {id} = useParams()
@@ -44,6 +46,34 @@ const BreedForum = () => {
       return sortedByTime.splice(index, remove)
 
   }
+  console.log('just the index', index)
+  console.log('just the length', sortedByTime.length)
+
+
+  const showPrevious = () => {
+      console.log('previous')
+      if(index > 10) {
+          console.log('previous index', index)
+          setIndex(index - 10)
+      }
+
+  }
+
+  const showNext = () => {
+      console.log('next', index)
+      if(index + 10 <= sortedByTime.length) {
+        console.log('next length', sortedByTime.length)
+
+          if( (sortedByTime.length - index) < 10) {
+            console.log('next length', sortedByTime.length - index)
+                
+              setIndex(index + (sortedByTime.length - index))
+          } else {
+              setIndex(index + 10)
+          }
+      }
+
+  }
 
     return (
         <>
@@ -72,6 +102,12 @@ const BreedForum = () => {
                     
             </table>
                {Object.keys(posts).length ? <></> : <h2>No Posts Yet!</h2>}
+               <div className='next-prev-container'>
+                   <FontAwesomeIcon icon={faAngleLeft} 
+                   onClick={showPrevious}/>
+                   <FontAwesomeIcon icon={faAngleRight} 
+                   onClick={showNext}/>
+               </div>
           </div>
         </div>
         </>

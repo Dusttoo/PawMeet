@@ -21,7 +21,7 @@ export const allPostsForGroup = (id) => async (dispatch) => {
 export default function groupPostReducer(state = initialState, action) {
     switch (action.type) {
         case GET_POSTS_FOR_GROUP:
-            const allGroupPosts = {...state}
+            const allGroupPosts = {}
             action.posts.posts.forEach(post => {
                 allGroupPosts[post.id] = post
             })
