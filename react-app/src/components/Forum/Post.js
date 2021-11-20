@@ -99,6 +99,10 @@ const Posts = () => {
         dispatch(removeLike(+likeId.id))
     }
 
+      const sortedByTime = Object.values(comments).sort(function(a,b){
+      return new Date(a.posted)  - new Date(b.posted)
+  })
+
     return (
         <>
             <div className="post-container">
@@ -149,7 +153,7 @@ const Posts = () => {
                     </div>
                     
                     <table className='comments-table'>
-                    {Object.values(comments).map((comment) => {
+                    {sortedByTime.map((comment) => {
                         return <DisplayComments commentId={comment.id}/>
                     })}
                     

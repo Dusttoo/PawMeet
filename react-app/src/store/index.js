@@ -12,6 +12,7 @@ import groupReducer from './breed_groups';
 import imageReducer from './breed_images';
 import breedTraitReducer from './breed_traits';
 import breedAnswerReducer from './breed_answers';
+import groupPostReducer from './group_posts';
 
 const rootReducer = combineReducers({
   session,
@@ -25,7 +26,8 @@ const rootReducer = combineReducers({
   groups: groupReducer,
   breed_images: imageReducer,
   breed_traits: breedTraitReducer,
-  breed_answers: breedAnswerReducer
+  breed_answers: breedAnswerReducer,
+  group_posts: groupPostReducer
 });
 
 

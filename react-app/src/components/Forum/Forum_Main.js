@@ -11,6 +11,8 @@ import ForumSidebar from './SideBar';
 const ForumHome = () => {
     const dispatch = useDispatch()
     const posts = useSelector(state => state.forum)
+    const [index, setIndex] = useState(0)
+    const remove = 10;
 
     useEffect(() => {
       dispatch(allPosts())
@@ -18,9 +20,21 @@ const ForumHome = () => {
       dispatch(allComments())
   }, [dispatch]);
 
+
+  const sortedByTime = Object.values(posts).sort(function(a,b){
+      return new Date(b.posted) - new Date(a.posted) 
+  })
+
+  const getTenPosts = () => {
+      return sortedByTime.splice(index, remove)
+
+  }
+
+  console.log(getTenPosts())
+
+
     return (
         <>
-        {}
         <div className='page-container'>
           <ForumSidebar />
           <div className="forum-container">
@@ -37,8 +51,7 @@ const ForumHome = () => {
                     <th style={{width:'23%'}} className="table-label">Date</th>
                     <th style={{width:'2%'}} className="table-label">Comments</th>
                 </tr>
-                
-                    {Object.values(posts).map((post) => {
+                   { getTenPosts().map((post) => {
                         return (
                             <DisplayPosts post={post}/>
                         )

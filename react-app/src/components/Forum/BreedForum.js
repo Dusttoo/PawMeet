@@ -1,6 +1,6 @@
 import React, { useEffect, useState }  from 'react';
 import { useDispatch } from 'react-redux';
-import { allPosts } from '../../store/forum';
+import { allPostsForGroup } from '../../store/group_posts';
 import { useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
 import './Forum.css'
@@ -12,9 +12,11 @@ import { useParams } from 'react-router';
 const BreedForum = () => {
     const dispatch = useDispatch()
     const {id} = useParams()
-    const posts = useSelector(state => state.forum)
+    const posts = useSelector(state => state.group_posts)
     const breed_groups = useSelector(state => state.groups)
     const thesePosts = []
+    const [index, setIndex] = useState(0)
+    const remove = 10;
     const headerImage = [
         'https://www.petfoodprocessing.net/ext/resources/PFP-Images/Articles-20/092920_Eukanuba-Premium-Performance_Lead.jpg?t=1601328222&width=1080',
         'https://imagesvc.meredithcorp.io/v3/mm/image?q=85&c=sc&rect=2%2C0%2C2000%2C1332&poi=face&w=2000&h=1333&url=https%3A%2F%2Fstatic.onecms.io%2Fwp-content%2Fuploads%2Fsites%2F47%2F2020%2F10%2F26%2Fbasset-hound-167768274-2000.jpg',
@@ -29,10 +31,19 @@ const BreedForum = () => {
     ]
 
     useEffect(() => {
-      dispatch(allPosts())
+      dispatch(allPostsForGroup(id))
       dispatch(allUsers())
       dispatch(allComments())
-  }, [dispatch]);
+  }, [dispatch, id]);
+
+    const sortedByTime = Object.values(posts).sort(function(a,b){
+      return new Date(b.posted) - new Date(a.posted) 
+  })
+
+  const getTenPosts = () => {
+      return sortedByTime.splice(index, remove)
+
+  }
 
     return (
         <>
@@ -53,17 +64,14 @@ const BreedForum = () => {
                     <th style={{width:'2%'}} className="table-label">Comments</th>
                 </tr>
                 
-                    {Object.values(posts).map((post) => {
-                        if(+post.group_id === +id) {
-                            thesePosts.push(post)
-                            return (
+                    {getTenPosts().map((post) => {
+                        return (
                             <DisplayPosts post={post}/>
                         )
-                        }
                     })}
                     
             </table>
-               {thesePosts.length ? <></> : <h2>No Posts Yet!</h2>}
+               {Object.keys(posts).length ? <></> : <h2>No Posts Yet!</h2>}
           </div>
         </div>
         </>

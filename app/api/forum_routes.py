@@ -13,6 +13,13 @@ def posts():
     return {'posts': [post.to_dict() for post in posts]}
 
 
+@forum_routes.route('/posts/<int:id>')
+def group_posts(id):
+    posts = Post.query.filter_by(group_id=id)
+    print('\n\n\n', posts, '\n\n\n')
+    return {'posts': [post.to_dict() for post in posts]}
+
+
 @forum_routes.route('/posts/<int:id>/comments')
 def post_comments(id):
     comments = Comment.query.filter(Comment.post_id == id).all()
