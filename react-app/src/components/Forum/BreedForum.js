@@ -11,6 +11,8 @@ import ForumSidebar from './SideBar';
 import { useParams } from 'react-router';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faAngleLeft, faAngleRight } from '@fortawesome/free-solid-svg-icons';
+import Next from './Next'
+import Previous from './Previous';
 const BreedForum = () => {
     const dispatch = useDispatch()
     const {id} = useParams()
@@ -18,6 +20,11 @@ const BreedForum = () => {
     const breed_groups = useSelector(state => state.groups)
     const thesePosts = []
     const [index, setIndex] = useState(0)
+    const [next, setNext] = useState(false)
+    const [first, setFirst] = useState(true)
+    const [previous, setPrevious] = useState(false)
+    const [pageNum, setPageNum] = useState(1)
+
     const remove = 10;
     const headerImage = [
         'https://www.petfoodprocessing.net/ext/resources/PFP-Images/Articles-20/092920_Eukanuba-Premium-Performance_Lead.jpg?t=1601328222&width=1080',
@@ -46,34 +53,39 @@ const BreedForum = () => {
       return sortedByTime.splice(index, remove)
 
   }
-  console.log('just the index', index)
-  console.log('just the length', sortedByTime.length)
-
-
-  const showPrevious = () => {
-      console.log('previous')
-      if(index > 10) {
-          console.log('previous index', index)
-          setIndex(index - 10)
-      }
-
-  }
 
   const showNext = () => {
-      console.log('next', index)
-      if(index + 10 <= sortedByTime.length) {
-        console.log('next length', sortedByTime.length)
+      const lastPage = Math.ceil(sortedByTime.length / 10)
+      if (lastPage === pageNum) {
+          return null
+      } else {
+        setFirst(false)
+        setNext(true)
+        setPageNum(pageNum + 1)
+        if (sortedByTime.length - index < 10) {
+            setIndex(index + (sortedByTime.length - index))
+        } else {
+        setIndex(index + 10)
 
-          if( (sortedByTime.length - index) < 10) {
-            console.log('next length', sortedByTime.length - index)
-                
-              setIndex(index + (sortedByTime.length - index))
-          } else {
-              setIndex(index + 10)
-          }
+        }
       }
-
+      
   }
+
+  const showPrevious = () => {
+      if(pageNum < 2) {
+          setFirst(true)
+          setPrevious(false)
+      } else {
+        setPageNum(pageNum - 1)
+        setFirst(false)
+        setNext(false)
+        setPrevious(true)
+        setIndex(index - 10)
+      }
+      
+  }
+
 
     return (
         <>
@@ -94,11 +106,16 @@ const BreedForum = () => {
                     <th style={{width:'2%'}} className="table-label">Comments</th>
                 </tr>
                 
-                    {getTenPosts().map((post) => {
+                    {first ?
+                    getTenPosts().map((post) => {
                         return (
                             <DisplayPosts post={post}/>
                         )
-                    })}
+                    }) : <></>}
+                    {next ?
+                    <Next index={index}/> : <></>}
+                    {previous ?
+                    <Previous index={index}/> : <></>}
                     
             </table>
                {Object.keys(posts).length ? <></> : <h2>No Posts Yet!</h2>}
@@ -106,8 +123,13 @@ const BreedForum = () => {
                    <FontAwesomeIcon icon={faAngleLeft} 
                    onClick={showPrevious}/>
                    <FontAwesomeIcon icon={faAngleRight} 
-                   onClick={showNext}/>
+                   onClick={showNext}
+                   />
                </div>
+               <div className='page-num-container'>
+                <p>{pageNum}</p>
+
+                </div>
           </div>
         </div>
         </>
