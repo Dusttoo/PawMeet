@@ -26,6 +26,7 @@ import BreedsPage from './components/Breeds/Breeds';
 import BreedInfo from './components/Breeds/BreedInfo';
 import { allImages } from './store/breed_images';
 import BreedForum from './components/Forum/BreedForum';
+import Landing from './components/Landing/Landing';
 
 
 function App() {
@@ -76,28 +77,27 @@ function App() {
         <ProtectedRoute path='/pets/:id' exact={true} >
           <PetProfile />
         </ProtectedRoute>
-        <ProtectedRoute path='/breeds' exact={true} >
+        <Route path='/breeds' exact={true} >
           <BreedsPage />
-        </ProtectedRoute>
-        <ProtectedRoute path='/breeds/:id' exact={true} >
+        </Route>
+        <Route path='/breeds/:id' exact={true} >
           <BreedInfo />
-        </ProtectedRoute>
-        <ProtectedRoute path='/breeds/group/:id' exact={true} >
+        </Route>
+        <Route path='/breeds/group/:id' exact={true} >
           <h1>Group page</h1>
-        </ProtectedRoute>
-        <ProtectedRoute path='/forum' exact={true} >
+        </Route>
+        <Route path='/forum' exact={true} >
           <ForumHome />
-        </ProtectedRoute>
-        <ProtectedRoute path='/forum/:id' exact={true} >
+        </Route>
+        <Route path='/forum/:id' exact={true} >
           <BreedForum />
-        </ProtectedRoute>
-        
-        <ProtectedRoute path='/forum/posts/:postId' exact={true} >
+        </Route>
+        <Route path='/forum/posts/:postId' exact={true} >
           <Posts />
-        </ProtectedRoute>
-        <ProtectedRoute path='/' exact={true} >
-          <h1>My Home Page</h1>
-        </ProtectedRoute>
+        </Route>
+        <Route path='/' exact={true} >
+          <Landing />
+        </Route>
       </Switch>
     </BrowserRouter>
   );

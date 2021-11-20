@@ -1,0 +1,11 @@
+.landing-container {
+
+}
+
+.highlighted-breed-container {
+    display: flex;
+}
+
+.highlighted-image {
+    width: 40%;
+}
