@@ -1,8 +1,10 @@
 import React, { useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { Redirect } from 'react-router-dom';
+import { Redirect, Link } from 'react-router-dom';
 import { login } from '../../store/session';
 import './Auth.css'
+import DemoButton from './DemoButton';
+
 
 const LoginForm = () => {
   const [errors, setErrors] = useState([]);
@@ -42,9 +44,12 @@ const LoginForm = () => {
       <div className='row'>
         <div>
         {errors.map((error, ind) => {
-          if(error.includes('email')) {
+         const where = error.slice(0, error.indexOf(':'))
+          const onlyError = error.slice(error.indexOf(':') + 1)
+          if(where.includes('email')) {
+
             return (
-              <div className='error' key={ind}>{error}</div>
+              <div className='error' key={ind}>{onlyError}</div>
             )
           }
           
@@ -63,11 +68,15 @@ const LoginForm = () => {
       <div className='row'>
         <div>
         {errors.map((error, ind) => {
-          if(error.includes('password')) {
+          const where = error.slice(0, error.indexOf(':'))
+          const onlyError = error.slice(error.indexOf(':') + 1)
+          if(where.includes('password')) {
+
             return (
-              <div className='error' key={ind}>{error}</div>
+              <div className='error' key={ind}>{onlyError}</div>
             )
           }
+          
           
         })}
         </div>
@@ -83,8 +92,11 @@ const LoginForm = () => {
       </div>
       <div className='login-submit-container'>
         <button className='login-button' type='submit'>Login</button>
+        <DemoButton />
       </div>
+      <p className='already'>Don't have an account? <Link className='login-redirect' to='/sign-up'>Sign Up</Link></p>
       <h3 className='login-slogan'>Let the barking begin</h3>
+
     </form>
     
   </div>  

@@ -21,6 +21,19 @@ const [group_id, setGroup] = useState(null)
 
     const validate = () => {
         const validationErrors = [];
+        if(!title) {
+          validationErrors.push('Please enter a title')
+        }
+        if(title.length < 6 || title.length > 30) {
+          validationErrors.push('Title must be between 6 and 30 characters')
+        }
+        if(!post_body) {
+          validationErrors.push('Please enter a post body')
+        }
+        if (post_body.length < 6 || post_body.length > 1000) {
+          validationErrors.push('Post body must be between 6 and 1000 characters')
+        }
+
 
         return validationErrors;
     }

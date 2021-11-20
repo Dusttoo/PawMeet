@@ -7,6 +7,17 @@ from app.forms.add_like import LikeForm
 
 forum_routes = Blueprint('forums', __name__)
 
+
+def validation_errors_to_error_messages(validation_errors):
+    """
+    Simple function that turns the WTForms validation errors into a simple list
+    """
+    errorMessages = []
+    for field in validation_errors:
+        for error in validation_errors[field]:
+            errorMessages.append(f'{field} : {error}')
+    return errorMessages
+
 @forum_routes.route('/posts')
 def posts():
     posts = Post.query.all()
@@ -37,6 +48,8 @@ def add_post():
             db.session.add(data)
             db.session.commit()
             return data.to_dict()
+        return {'errors': validation_errors_to_error_messages(form.errors)}, 401
+
 
 
 @forum_routes.route('/posts/<int:id>/edit', methods=['POST'])
