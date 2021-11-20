@@ -1,9 +1,9 @@
 from app.models import db, User
-import datetime
-
+from faker import Faker
 
 # Adds a demo user, you can add other users here if you want
 def seed_users():
+    fake = Faker()
     demo = User(
         username='Demo', 
         email='demo@aa.io', 
@@ -39,6 +39,68 @@ def seed_users():
         last_name='Ford',
         barking_since='03-25-2020',
         profile_img='https://images.pexels.com/photos/1851164/pexels-photo-1851164.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2')
+
+    fake1 = User(
+        username=fake.user_name(),
+        email=fake.email(),
+        password=fake.password(),
+        first_name=fake.first_name(),
+        last_name=fake.last_name(),
+        barking_since=fake.date_between(start_date='-3y', end_date='today'),
+        profile_img='https://placeimg.com/640/480/any')
+
+    fake2 = User(
+        username=fake.user_name(),
+        email=fake.email(),
+        password=fake.password(),
+        first_name=fake.first_name(),
+        last_name=fake.last_name(),
+        barking_since=fake.date_between(start_date='-3y', end_date='today'),
+        profile_img='https://placeimg.com/640/480/animals')
+
+    fake3 = User(
+        username=fake.user_name(),
+        email=fake.email(),
+        password=fake.password(),
+        first_name=fake.first_name(),
+        last_name=fake.last_name(),
+        barking_since=fake.date_between(start_date='-3y', end_date='today'),
+        profile_img='https://placeimg.com/640/480/architecture')
+
+    fake4 = User(
+        username=fake.user_name(),
+        email=fake.email(),
+        password=fake.password(),
+        first_name=fake.first_name(),
+        last_name=fake.last_name(),
+        barking_since=fake.date_between(start_date='-3y', end_date='today'),
+        profile_img='https://placeimg.com/640/480/nature')
+
+    fake5 = User(
+        username=fake.user_name(),
+        email=fake.email(),
+        password=fake.password(),
+        first_name=fake.first_name(),
+        last_name=fake.last_name(),
+        barking_since=fake.date_between(start_date='-3y', end_date='today'),
+        profile_img='https://placeimg.com/640/480/people')
+    fake6 = User(
+        username=fake.user_name(),
+        email=fake.email(),
+        password=fake.password(),
+        first_name=fake.first_name(),
+        last_name=fake.last_name(),
+        barking_since=fake.date_between(start_date='-3y', end_date='today'),
+        profile_img='https://placeimg.com/640/480/tech')
+    fake7 = User(
+        username=fake.user_name(),
+        email=fake.email(),
+        password=fake.password(),
+        first_name=fake.first_name(),
+        last_name=fake.last_name(),
+        barking_since=fake.date_between(start_date='-3y', end_date='today'),
+        profile_img='https://placeimg.com/640/480/sepia')
+    
     
 
 
@@ -46,6 +108,13 @@ def seed_users():
     db.session.add(marnie)
     db.session.add(joe)
     db.session.add(tom)
+    db.session.add(fake1)
+    db.session.add(fake2)
+    db.session.add(fake3)
+    db.session.add(fake4)
+    db.session.add(fake5)
+    db.session.add(fake6)
+    db.session.add(fake7)
 
 
 

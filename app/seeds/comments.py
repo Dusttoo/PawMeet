@@ -1,8 +1,12 @@
 from app.models import db, Comment
-import datetime
+from faker import Faker
+from random import randrange
+
+
 
 
 def seed_comments():
+    fake = Faker()
     comment1 = Comment(
         user_id= 2,
         post_id = 1,
@@ -19,6 +23,20 @@ def seed_comments():
 
     db.session.add(comment1)
     db.session.add(comment2)
+
+    for i in range(100):
+
+        i = Comment(
+            user_id=randrange(1, 12),
+            post_id=randrange(1, 203),
+            comment_body=fake.paragraph(),
+            posted=fake.date_between(start_date='-3y', end_date='today')
+        )
+        db.session.add(i)
+   
+
+
+
 
     db.session.commit()
 

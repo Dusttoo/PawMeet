@@ -66,6 +66,8 @@ def seed_breed_traits():
          description="How much mental stimulation a breed needs to stay happy and healthy. Purpose-bred dogs can have jobs that require decision-making, problem-solving, concentration, or other qualities, and without the brain exercise they need, they'll create their own projects to keep their minds busy -- and they probably won't be the kind of projects you'd like.",
      )
 
+     
+
      db.session.add(family)
      db.session.add(children)
      db.session.add(dogs)

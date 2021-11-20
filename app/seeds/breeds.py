@@ -238,6 +238,109 @@ def seed_breeds():
     )
 
 
+    akita = Breed(
+        name='Akita',
+        breed_group=3,
+        personality=['Courageous', 'Diginified', 'Profoundly Loyal'],
+        avg_height={
+            'males': '26-28 inches',
+             'females': '24-26 inches'
+        },
+        avg_weight={
+            'males': '100-130 pounds',
+            'females': '70-100 pounds '
+        },
+        avg_life_exp='10-14 years',
+        description="Akita is muscular, double-coated dogs of ancient Japanese lineage famous for her dignity, courage, and loyalty. In her native land, she's venerated as family protectors and symbols of good health, happiness, and long life. Akitas are burly, heavy-boned spitz-type dogs of imposing stature. Standing 24 to 28 inches at the shoulder, Akitas have a dense coat that comes in several colors, including white. The head is broad and massive, and is balanced in the rear by a full, curled-over tail. The erect ears and dark, shining eyes contribute to an expression of alertness, a hallmark of the breed.     Akitas are quiet, fastidious dogs. Wary of strangers and often intolerant of other animals, Akitas will gladly share their silly, affectionate side with family and friends. They thrive on human companionship. The large, independent-thinking Akita is hardwired for protecting those they love. They must be well socialized from birth with people and other dogs.",
+    )
+
+
+    husky = Breed(
+        name='Siberian Husky',
+        breed_group=3,
+        personality=['Loyal', 'Outgoing', 'Mischevious'],
+        avg_height={
+            'males': '21-23.5 inches',
+             'females': '20-22 inches'
+        },
+        avg_weight={
+            'males': '45-60 pounds',
+            'females': '35-50 pounds'
+        },
+        avg_life_exp='12-14 years',
+        description="Siberian Husky, a thickly coated, compact sled dog of medium size and great endurance, was developed to work in packs, pulling light loads at moderate speeds over vast frozen expanses. Sibes are friendly, fastidious, and dignified. The graceful, medium-sized Siberian Husky's almond-shaped eyes can be either brown or blue'¿and sometimes one of each'¿and convey a keen but amiable and even mischievous expression. Quick and nimble-footed, Siberians are known for their powerful but seemingly effortless gait. Tipping the scales at no more than 60 pounds, they are noticeably smaller and lighter than their burly cousin, the Alaskan Malamute. As born pack dogs, they enjoy family life and get on well with other dogs. The Sibe's innate friendliness render them indifferent watchdogs. These are energetic dogs who can't resist chasing small animals, so secure running room is a must. An attractive feature of the breed: Sibes are naturally clean, with little doggy odor.",
+    )
+
+    bully = Breed(
+        name='American Bully',
+        breed_group=6,
+        personality=['Adaptable', 'Trainable', 'Loving'],
+        avg_height={
+            'males': '13–20 in',
+             'females': '13–20 in'
+        },
+        avg_weight={
+            'males': '44–132 lb',
+            'females': '44–132 lb'
+        },
+        avg_life_exp='8-13 years',
+        description="The American Bully is a recently formed companion dog breed, originally recognized in 2004 by the American Bully Kennel Club (ABKC) and followed by the European Bully Kennel Club (EBKC) in 2008. It has been recognized by the United Kennel Club (UKC) since July 15, 2013.[1] The breed has not been recognized by the American Kennel Club (AKC). The American Bully is a small to large breed, which has been divided into four categories by some registering organizations, including Pocket, Standard, Classic, and XL. Other organizations, including the UKC, have one consistent size standard.",
+    )
+
+    corgi = Breed(
+        name='Pembroke Welsh Corgi',
+        breed_group=7,
+        personality=['Affectionate', 'Smart', 'Alert'],
+        avg_height={
+            'males': '10-12 inches',
+            'females': '10-12 inches'
+        },
+        avg_weight={
+            'males': 'up to 30 pounds',
+            'females': 'up to 28 pounds'
+        },
+        avg_life_exp='12-13 years',
+        description="Among the most agreeable of all small housedogs, the Pembroke Welsh Corgi is a strong, athletic, and lively little herder who is affectionate and companionable without being needy. They are one the world's most popular herding breeds. At 10 to 12 inches at the shoulder and 27 to 30 pounds, a well-built male Pembroke presents a big dog in a small package. Short but powerful legs, muscular thighs, and a deep chest equip him for a hard day's work. Built long and low, Pembrokes are surprisingly quick and agile. They can be red, sable, fawn, and black and tan, with or without white markings. The Pembroke is a bright, sensitive dog who enjoys play with his human family and responds well to training. As herders bred to move cattle, they are fearless and independent. They are vigilant watchdogs, with acute senses and a 'big dog' bark. Families who can meet their bold but kindly Pembroke's need for activity and togetherness will never have a more loyal, loving pet.",
+    )
+
+    cocker = Breed(
+        name='Cocker Spaniel',
+        breed_group=1,
+        personality=['Smart', 'Happy', 'Gentle'],
+        avg_height={
+            'males': '14.5-15.5 inches',
+            'females': '13.5-14.5 inches'
+        },
+        avg_weight={
+            'males': '25-30 pounds',
+            'females': '20-25 pounds'
+        },
+        avg_life_exp='10-14 years',
+        description="The merry and frolicsome Cocker Spaniel, with his big, dreamy eyes and impish personality, is one of the world's best-loved breeds. They were developed as hunting dogs, but Cockers gained their wide popularity as all-around companions. Those big, dark eyes; that sweet expression; those long, lush ears that practically demand to be touched'¿no wonder the Cocker spent years as America's most popular breed. The Cocker is the AKC's smallest sporting spaniel, standing about 14 to 15 inches. The coat comes in enough colors and patterns to please any taste. The well-balanced body is sturdy and solid, and these quick, durable gundogs move with a smooth, easy gait. Cockers are eager playmates for kids and are easily trained as companions and athletes. They are big enough to be sporty, but compact enough to be portable. A Cocker in full coat rewards extra grooming time by being the prettiest dog on the block. These energetic sporting dogs love playtime and brisk walks.",
+    )
+
+    mastiff = Breed(
+        name='Bullmastiff',
+        breed_group=3,
+        personality=['Affectionate', 'Loyal', 'Brave'],
+        avg_height={
+            'males': '25-27 inches',
+            'females': '24-26 inches'
+        },
+        avg_weight={
+            'males': '110-130 pounds',
+            'females': '100-120 pounds'
+        },
+        avg_life_exp='7-9 years',
+        description="Fearless at work, docile at home, the Bullmastiff is a large, muscular guarder who pursued and held poachers in Merry Old England'¿merry, we suppose, for everyone but poachers. Bullmastiffs are the result of Bulldog and Mastiff crosses. The Bullmastiff isn't quite as large as his close cousin the Mastiff. Still, standing as high as 27 inches at the shoulder and weighing between 100 and 130 pounds, this is still a whole lot of dog. After the first impression made by the Bullmastiff's size, it is the large, broad head that conveys the breed's essence: the dark eyes, high-set V-shaped ears, and broad, deep muzzle all combine to present the intelligence, alertness, and confidence that make the Bullmastiff a world-class protector and family companion. Coats come in fawn, red, or brindle. These are biddable and reliable creatures, but as with any large guarding dog, owners must begin training and socialization early, while the puppy is still small enough to control.",
+        )
+
+
+            
+
+
+
+
 
     db.session.add(labrador)
     db.session.add(frenchie)
@@ -253,6 +356,14 @@ def seed_breeds():
     db.session.add(pit)
     db.session.add(boxer)
     db.session.add(pug)
+
+    db.session.add(akita)
+    db.session.add(husky)
+    db.session.add(bully)
+    db.session.add(corgi)
+    db.session.add(cocker)
+    db.session.add(mastiff)
+
 
 
 
