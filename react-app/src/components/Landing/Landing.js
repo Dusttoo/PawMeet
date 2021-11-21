@@ -13,30 +13,6 @@ const breedGroups = useSelector(state => state.groups)
 const posts = useSelector(state => state.forum)
 const index = 0
 
-const breedVideos = [
-    '',
-    'https://youtu.be/3__1qFlK3c0?t=10',
-    'https://youtu.be/hakSTAofwm4?t=10',
-    'https://youtu.be/ydrkZ5_gmWo?t=14',
-    'https://youtu.be/rw-LOH0v0b0?t=303',
-    'https://youtu.be/43b1JeJivCA?t=9',
-    'https://youtu.be/yh8Bot1OfkE?t=43',
-    'https://youtu.be/5HD-LQ4nDnk?t=50',
-    'https://youtu.be/-wX7bFzQhHg?t=21',
-    'https://youtu.be/sH2DE7VdFlE?t=30',
-    'https://youtu.be/_6r_hZUHDo4?t=39',
-    'https://youtu.be/lWT2ER5gJWA?t=10',
-    'https://youtu.be/mVneF136Rbc?t=10',
-    'https://youtu.be/7BSCUzx9ub8?t=19',
-    'https://youtu.be/-5mC27mFPMI?t=10',
-    'https://youtu.be/4YorlFHQlOw?t=10',
-    'https://youtu.be/W3p9w-NQ4zE',
-    'https://youtu.be/vxty0k37HR0?t=10',
-    'https://youtu.be/BeoY-zSQvkM?t=11',
-    'https://youtu.be/vNscIMWdcqo',
-    'https://youtu.be/L6Xjb7iNNI4?t=10',
-]
-
 function getRandomInt(min, max) {
   min = Math.ceil(min);
   max = Math.floor(max);
@@ -65,7 +41,7 @@ const sortedByTime = Object.values(posts).sort(function(a,b){
                     {/* <img className='highlighted-image' src={highlightedImage.img_url} alt={highlightedBreed.name}/> */}
                     {/* <video src={breedVideos[highlightedBreed.id]} /> */}
                     <ReactPlayer 
-                    url={breedVideos[highlightedBreed.id]} 
+                    url={highlightedBreed.breed_video} 
                     muted={true}
                     playing={true}/>
                     <div className='highlighted-breed-details'>

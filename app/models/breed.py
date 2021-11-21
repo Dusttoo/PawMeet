@@ -10,6 +10,7 @@ class Breed(db.Model):
     avg_height = db.Column(db.JSON, nullable=False)
     avg_weight = db.Column(db.JSON, nullable=False)
     avg_life_exp = db.Column(db.String, nullable=False)
+    breed_video = db.Column(db.String, nullable=False)
     description = db.Column(db.Text, nullable=False)
 
     breed_groups = db.relationship('Breed_Group', back_populates='breeds')
@@ -25,5 +26,6 @@ class Breed(db.Model):
             'avg_height': self.avg_height,
             'avg_weight': self.avg_weight,
             'avg_life_exp': self.avg_life_exp,
+            'breed_video': self.breed_video,
             'description': self.description
         }
