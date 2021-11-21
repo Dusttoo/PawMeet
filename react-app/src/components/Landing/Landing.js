@@ -2,6 +2,7 @@ import React, { useEffect, useState }  from 'react';
 import { useDispatch } from 'react-redux';
 import { useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
+import ReactPlayer from 'react-player'
 import './Landing.css'
 
 
@@ -11,6 +12,30 @@ const breedImages = useSelector(state => state.breed_images)
 const breedGroups = useSelector(state => state.groups)
 const posts = useSelector(state => state.forum)
 const index = 0
+
+const breedVideos = [
+    '',
+    'https://youtu.be/3__1qFlK3c0?t=10',
+    'https://youtu.be/hakSTAofwm4?t=10',
+    'https://youtu.be/ydrkZ5_gmWo?t=14',
+    'https://youtu.be/rw-LOH0v0b0?t=303',
+    'https://youtu.be/43b1JeJivCA?t=9',
+    'https://youtu.be/yh8Bot1OfkE?t=43',
+    'https://youtu.be/5HD-LQ4nDnk?t=50',
+    'https://youtu.be/-wX7bFzQhHg?t=21',
+    'https://youtu.be/sH2DE7VdFlE?t=30',
+    'https://youtu.be/_6r_hZUHDo4?t=39',
+    'https://youtu.be/lWT2ER5gJWA?t=10',
+    'https://youtu.be/mVneF136Rbc?t=10',
+    'https://youtu.be/7BSCUzx9ub8?t=19',
+    'https://youtu.be/-5mC27mFPMI?t=10',
+    'https://youtu.be/4YorlFHQlOw?t=10',
+    'https://youtu.be/W3p9w-NQ4zE',
+    'https://youtu.be/vxty0k37HR0?t=10',
+    'https://youtu.be/BeoY-zSQvkM?t=11',
+    'https://youtu.be/vNscIMWdcqo',
+    'https://youtu.be/L6Xjb7iNNI4?t=10',
+]
 
 function getRandomInt(min, max) {
   min = Math.ceil(min);
@@ -37,7 +62,12 @@ const sortedByTime = Object.values(posts).sort(function(a,b){
                     <h2 className='tagline'>A place to discover man's next best friend</h2>
                 </div>
                 <div className='highlighted-breed-container'>
-                    <img className='highlighted-image' src={highlightedImage.img_url} alt={highlightedBreed.name}/>
+                    {/* <img className='highlighted-image' src={highlightedImage.img_url} alt={highlightedBreed.name}/> */}
+                    {/* <video src={breedVideos[highlightedBreed.id]} /> */}
+                    <ReactPlayer 
+                    url={breedVideos[highlightedBreed.id]} 
+                    muted={true}
+                    playing={true}/>
                     <div className='highlighted-breed-details'>
                         <Link to={`/breeds/${highlightedBreed.id}`} className='highlighted-breed-name'>{highlightedBreed.name}</Link>
                         <h3 className='highlighted-breed-group'>{highlightedGroup.name}</h3>
