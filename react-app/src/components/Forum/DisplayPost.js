@@ -10,7 +10,6 @@ const DisplayPosts = ({post}) => {
     const author = Object.keys(authors).find(thisAuthor => +post.user_id === +thisAuthor)
     const comments = useSelector(state => state.comments)
     const theseComments = []
-
     Object.keys(comments).map((commentId) => {
         const comment = Object.values(comments).find(thisComment => +thisComment.id === +commentId)
         if(comment.post_id === post.id) {
@@ -18,6 +17,7 @@ const DisplayPosts = ({post}) => {
         }
         
     })
+
 
     const openPost = () => {
     }

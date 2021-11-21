@@ -33,7 +33,7 @@ const BreedsPage = () => {
     return (
         <>
           <div className='breed-list-container'>
-            <h1 className='breed-list-heading'>Meet the Breeds</h1>
+            <h2 className='breed-list-heading'>Meet the Breeds</h2>
             {Object.values(breeds).sort(function(a, b) {
               let nameA = a.name.toUpperCase();
               let nameB = b.name.toUpperCase();

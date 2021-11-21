@@ -3,32 +3,64 @@ import { useDispatch } from 'react-redux';
 import { useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
 import ReactPlayer from 'react-player'
+import { allUsers } from '../../store/users';
+import { allPosts } from '../../store/forum';
+import { allPets } from '../../store/pets';
+import { allBreeds } from '../../store/breeds';
+import { allGroups } from '../../store/breed_groups';
+import { allImages } from '../../store/breed_images';
+import DisplayPosts from '../Forum/DisplayPost';
 import './Landing.css'
+import { allComments } from '../../store/comments';
+import BreedsPage from '../Breeds/Breeds';
 
 
 const Landing = () => {
+const dispatch = useDispatch()
 const breeds = useSelector(state => state.breeds)
-const breedImages = useSelector(state => state.breed_images)
-const breedGroups = useSelector(state => state.groups)
-const posts = useSelector(state => state.forum)
-const index = 0
-
 function getRandomInt(min, max) {
   min = Math.ceil(min);
   max = Math.floor(max);
   return Math.floor(Math.random() * (max - min) + min); //The maximum is exclusive and the minimum is inclusive
 }
-  const getTenPosts = () => {
-      return sortedByTime.splice(index, 10)
-
-  }
-    const users = useSelector(state => state.users)
-const highlightedBreed = breeds[getRandomInt(0, Object.keys(breeds).length)]
+const randnum = getRandomInt(1, Object.keys(breeds).length - 1)
+const highlightedBreed = breeds[randnum]
+const breedImages = useSelector(state => state.breed_images)
+const breedGroups = useSelector(state => state.groups)
+const posts = useSelector(state => state.forum)
+const index = 0
+const [loaded, setLoaded] = useState(false);
+const users = useSelector(state => state.users)
 const highlightedImage = Object.values(breedImages).find(image => image.breed_id === highlightedBreed.id)
 const highlightedGroup = Object.values(breedGroups).find(group => +group.id === +highlightedBreed.breed_group)
 const sortedByTime = Object.values(posts).sort(function(a,b){
       return new Date(b.posted) - new Date(a.posted) 
   })
+
+
+  useEffect(() => {
+    (async() => {
+      await dispatch(allUsers())
+      await dispatch(allPosts())
+      await dispatch(allPets())
+      await dispatch(allBreeds())
+      await dispatch(allGroups())
+      await dispatch(allImages())
+      await dispatch(allComments())
+      setLoaded(true);
+    })();
+  }, [dispatch]);
+
+  if (!loaded) {
+    return null;
+  }
+
+
+  const getTenPosts = () => {
+      return sortedByTime.splice(index, 5)
+
+  }
+
 
     return (
         <>
@@ -39,37 +71,36 @@ const sortedByTime = Object.values(posts).sort(function(a,b){
                 </div>
                 <div className='highlighted-breed-container'>
                     <ReactPlayer 
+                    width={'50%'}
                     url={highlightedBreed.breed_video} 
                     muted={true}
                     playing={true}/>
                     <div className='highlighted-breed-details'>
                         <Link to={`/breeds/${highlightedBreed.id}`} className='highlighted-breed-name'>{highlightedBreed.name}</Link>
-                        <h3 className='highlighted-breed-group'>{highlightedGroup.name}</h3>
+                        <h3 className='highlighted-breed-group'>{highlightedGroup.name} Group</h3>
                     </div>
                 </div>
-                <div className='recent-posts-container'>
-                    <h3 className='recent-posts-header'>What's everyone barking about?</h3>
-                    <table className='recent-posts'>
-                    {getTenPosts().map((post) => {
-                    const author = Object.keys(users).find((user) => (+user === +post.user_id))
+                <div className='bottom-content'>
+                    <div className='recent-posts-container'>
+                        <h2 className='breed-list-heading'>What's everyone barking about?</h2>
+                        <table className='recent-posts'>
+                    <tr>
+                        <th style={{width:'10%'}} className="table-label">Author</th>
+                        <th style={{width:'65%'}} className="table-label">Title</th>
+                        <th style={{width:'23%'}} className="table-label">Date</th>
+                        <th style={{width:'2%'}} className="table-label">Comments</th>
+                    </tr>
+                       {getTenPosts().map((post) => {
+                            return (
+                                <DisplayPosts post={post}/>
+                            )
+                        })}
+                        </table>
+                    </div>
+                    <div className='breed-highlights-container'>
+                        <BreedsPage />
 
-                    return (
-                        <tr>
-                            <td>
-                                <div className='comment-info'>
-                                    <Link to={`/users/${author}`} ><img className='profile-icon' src={users[author].profile_img} alt={users[author].first_name}/></Link>
-                                    <div className='name-date'>
-                                        <Link className='author-name' to={`/users/${author}`}>{users[author].first_name} {users[author].last_name}</Link>
-                                    </div>
-                                </div>
-                            </td>
-                            <td><Link to={`/forum/posts/${post.id}`}>{post.title}</Link></td>
-
-                        </tr>
-                        
-                        )                        
-                    })}
-                    </table>
+                    </div>
                 </div>
             </div>
         </>
