@@ -8,7 +8,7 @@ import './NavBar.css'
 const NavBar = () => {
   const currentUser = useSelector(state => state.session.user)
   return (
-    <nav >
+    <nav className='nav'>
       <ul className="nav-bar">
         <li >
           <Link className="nav-link" to='/' exact={true} activeClassName='active'>
