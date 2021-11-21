@@ -38,8 +38,6 @@ const sortedByTime = Object.values(posts).sort(function(a,b){
                     <h2 className='tagline'>A place to discover man's next best friend</h2>
                 </div>
                 <div className='highlighted-breed-container'>
-                    {/* <img className='highlighted-image' src={highlightedImage.img_url} alt={highlightedBreed.name}/> */}
-                    {/* <video src={breedVideos[highlightedBreed.id]} /> */}
                     <ReactPlayer 
                     url={highlightedBreed.breed_video} 
                     muted={true}
