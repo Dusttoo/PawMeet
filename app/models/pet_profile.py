@@ -22,5 +22,6 @@ class Pet_Profile(db.Model):
             'profile_img': self.profile_img,
             'name': self.name,
             'breed': self.breed,
+            'age': self.age,
             'description': self.description
         }
