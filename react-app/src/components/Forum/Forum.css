@@ -4,7 +4,7 @@
     flex-direction: column;
     padding-bottom: 100px;
     align-items: center;
-
+    margin-top: 25px;
 }
 .forum-container {
     width: 90%;
@@ -13,7 +13,7 @@
     flex-direction: column;
     align-items: center;
     margin: 10px;
-    padding-bottom: 100px;
+    padding-bottom: 20px;
     border: solid 2px rgb(212, 212, 212);
     border-radius: 5px;
 }
@@ -57,7 +57,7 @@
 
 .add-post:hover {
     cursor: pointer;
-    color: blue;
+    color: #333810;
 }
 
 .forum-table {
@@ -93,7 +93,15 @@ th, td {
 }
 
 .user-name:hover {
-    color: blue;
+    color: #333810;
+}
+
+.next-prev-container {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 15px;
+    box-sizing: border-box;
 }
 
 /* -- SIDEBAR ---------------------- */
@@ -118,10 +126,11 @@ th, td {
     border-bottom: 1px solid rgb(212, 212, 212);
     margin-bottom: 10px;
     text-align: center;
+    padding: 4px;
 }
 
 .sidebar-link:hover {
-    color: blue;
+    color: #333810;
 }
 
 /* -- POST PAGE -------------------- */
@@ -195,7 +204,7 @@ th, td {
 }
 
 .post-title:hover {
-    color: blue;
+    color: #333810;
 }
 
 .likes-container {
@@ -215,7 +224,7 @@ th, td {
 }
 
 .author-name:hover {
-    color: blue;
+    color: #333810;
 }
 /* -- DISPLAY COMMENTS ----------------- */
 .comment-container {

@@ -48,7 +48,7 @@ const DisplayComments = ({commentId}) => {
     }
 
     
-
+    console.log(Object.keys(theseComments))
     
     const deleteComment = () => {
         dispatch(removeComment(theseComments[comment].id));
@@ -72,7 +72,7 @@ const DisplayComments = ({commentId}) => {
 
     return (
         <>
-            {!Object.keys(theseComments) ? <h2>No comments to display</h2>:
+            {Object.keys(theseComments) ? <></> : <h2>No comments to display</h2>}
                 <tr className='comment-row'>  
                   
                     <td className='comment-cell' >
@@ -96,7 +96,7 @@ const DisplayComments = ({commentId}) => {
                     <td className='comment-body comment-cell' style={{width:'65%'}}>{theseComments[comment].comment_body}</td>
                     
                     
-                 </tr>}
+                 </tr>
                  {editForm ? 
                     <EditComment commentId={theseComments[comment].id} setEditForm={setEditForm}/> : <></>}
         </>

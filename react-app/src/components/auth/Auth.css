@@ -43,6 +43,8 @@
     background: none;
     border: none;
     font-size: 15px;
+    text-decoration: none;
+    color: white;
 }
 
 .login-redirect {
@@ -51,11 +53,11 @@
 }
 
 .login-redirect:hover {
-    color: blue;
+    color: #333810;
 }
 
 .login-button:hover {
-    color: blue;
+    color: #333810;
     cursor: pointer;
 }
 

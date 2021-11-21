@@ -7,6 +7,10 @@
     
 }
 
+.breed-list-heading {
+    text-align: center;
+}
+
 .breed {
     text-decoration: none;
     color: black;
@@ -32,7 +36,7 @@
 }
 
 .breed:hover {
-    color: blue;
+    color: #333810;
 }
 
 .carousel {
