@@ -56,7 +56,7 @@ const UserProfile = () => {
                             </div>
                         </div>
                     </div>
-                    <button className='add-friend'>Add Friend</button>
+                    {/* <button className='add-friend'>Add Friend</button> */}
                     {+id === +currentUserId ? 
                     <Link to='/pets/add'>Add a pet</Link> : <></>}
                 </div>
