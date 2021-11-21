@@ -27,6 +27,7 @@ import BreedInfo from './components/Breeds/BreedInfo';
 import { allImages } from './store/breed_images';
 import BreedForum from './components/Forum/BreedForum';
 import Landing from './components/Landing/Landing';
+import Footer from './components/Footer/Footer';
 
 
 function App() {
@@ -99,6 +100,7 @@ function App() {
           <Landing />
         </Route>
       </Switch>
+      <Footer />
     </BrowserRouter>
   );
 }

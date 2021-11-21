@@ -17,22 +17,22 @@
 .nav-link {
     /* margin-right: 5px; */
     text-decoration: none;
-    color: white;
+    color: #333810;
     
 }
 
 .nav-link:hover {
-    color: #333810;
+    color: white;
 
 }
 
 .logout {
     background: none;
     border: none;
-    color:white;
+    color:#333810;
 }
 
 .logout:hover {
     cursor: pointer;
-    color: #333810;
+    color: white;
 }
