@@ -69,7 +69,7 @@ def sign_up():
             first_name=form.data['first_name'],
             last_name=form.data['last_name'],
             profile_img=form.data['last_name'],
-            barking_since=form.data['barking_since']
+            barking_since=form.data['barking_since'],
             # repeat_password=form.data['repeat_password']
         )
         db.session.add(user)

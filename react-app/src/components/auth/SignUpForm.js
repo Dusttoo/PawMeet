@@ -17,6 +17,7 @@ const SignUpForm = () => {
   const barking_since = new Date();
   const user = useSelector(state => state.session.user);
   const dispatch = useDispatch();
+  console.log('username', username, 'email', email, 'password',password, 'repeatPassword',repeatPassword, 'first_name',first_name, 'last_name',last_name, 'profile_img',profile_img, 'barking_since',barking_since)
 
   const onSignUp = async (e) => {
     e.preventDefault();
