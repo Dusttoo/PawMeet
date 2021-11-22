@@ -53,3 +53,24 @@
     justify-content: center;
     height: 100%;
 }
+
+.intro {
+    text-decoration: none;
+    font-size: 45px;
+    color: #333810;
+}
+
+.tagline {
+    text-decoration: none;
+    color: #333810;
+}
+
+.tagline-breed-quiz {
+    text-decoration: none;
+    color: #333810;
+}
+
+.tagline-breed-quiz:hover {
+    text-decoration: none;
+    color: #899e00;
+}
