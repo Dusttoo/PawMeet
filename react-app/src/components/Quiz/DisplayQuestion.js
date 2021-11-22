@@ -75,8 +75,10 @@ const DisplayQuestion = () => {
         <>
         {loading ? 
         <>
-        <GifPlayer gif="https://i.imgur.com/JS8bT2R.gif" autoplay={true} />
-        <h2 className='loading'>Calling all the dogs</h2>
+        <div className='loading-container'>
+            <GifPlayer gif="https://i.imgur.com/JS8bT2R.gif" autoplay={true} />
+            <h2 className='highlighted-breed-name'>Calling all the dogs...</h2>
+        </div>
         </> :
         <>
         <h2 className='question'>{breedTraits[next].question}</h2>
