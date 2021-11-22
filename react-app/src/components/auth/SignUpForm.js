@@ -11,12 +11,16 @@ const SignUpForm = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [repeatPassword, setRepeatPassword] = useState('');
+  const [first_name, setFirstName] = useState('')
+  const [last_name, setLastName] = useState('')
+  const [profile_img, setProfileImg] = useState('')
+  const barking_since = new Date();
   const user = useSelector(state => state.session.user);
   const dispatch = useDispatch();
 
   const onSignUp = async (e) => {
     e.preventDefault();
-      const data = await dispatch(signUp(username, email, password, repeatPassword));
+      const data = await dispatch(signUp(username, email, password, first_name, last_name, profile_img, barking_since));
       if (data) {
         setErrors(data)
     }
@@ -36,6 +40,16 @@ const SignUpForm = () => {
 
   const updateRepeatPassword = (e) => {
     setRepeatPassword(e.target.value);
+  };
+
+  const updateFirstName= (e) => {
+    setFirstName(e.target.value);
+  };
+  const updateLastName= (e) => {
+    setLastName(e.target.value);
+  };
+  const updateProfileImg= (e) => {
+    setProfileImg(e.target.value);
   };
 
   if (user) {
@@ -96,6 +110,30 @@ const SignUpForm = () => {
           onChange={updateEmail}
           value={email}
         ></input>
+        <label className='label'>First Name</label>
+        <input
+          className='input'
+          type='text'
+          name='firstName'
+          onChange={updateFirstName}
+          value={first_name}
+        ></input>
+        <label className='label'>Last Name</label>
+        <input
+          className='input'
+          type='text'
+          name='lastName'
+          onChange={updateLastName}
+          value={last_name}
+        ></input>
+        <label className='label'>Profile Image</label>
+        <input
+          className='input'
+          type='text'
+          name='profileImg'
+          onChange={updateProfileImg}
+          value={profile_img}
+        ></input>
       </div>
       <div className='row'>
         <div>
@@ -111,6 +149,7 @@ const SignUpForm = () => {
           
         })}
         </div>
+        
         <label className='label'>Password</label>
         <input
           className='input'

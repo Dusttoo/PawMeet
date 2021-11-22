@@ -66,7 +66,11 @@ def sign_up():
             username=form.data['username'],
             email=form.data['email'],
             password=form.data['password'],
-            repeat_password=form.data['repeat_password']
+            first_name=form.data['first_name'],
+            last_name=form.data['last_name'],
+            profile_img=form.data['last_name'],
+            barking_since=form.data['barking_since']
+            # repeat_password=form.data['repeat_password']
         )
         db.session.add(user)
         db.session.commit()
