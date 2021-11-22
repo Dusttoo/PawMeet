@@ -6,13 +6,17 @@ import './Quiz.css'
 import { useParams } from 'react-router';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { addAnAnswer } from '../../store/user_answers';
+import GifPlayer from 'react-gif-player'
 
 
-const DisplayQuestion = ({trait, next}) => {
+const DisplayQuestion = () => {
     const [validationErrors, setValidationErrors] = useState([]);
     const dispatch = useDispatch()
-    const trait_id = trait.id
     const [answer, setAnswer] = useState('')
+    const [next, setNext] = useState(1)
+    const breedTraits = useSelector(state => state?.breed_traits)
+    const trait_id = breedTraits[next].id
+
     // const [important, setImportant] = useState('')
     const user_id = useSelector(state => state.session.user.id)
     const history = useHistory();
@@ -20,6 +24,7 @@ const DisplayQuestion = ({trait, next}) => {
     const coatTypes = ['Wiry', 'Rough', 'Curly', 'Hairless', 'Corded', 'Wavy', 'Smooth', 'Double', 'Silky']
     let index = 0;
     const coatLengths = ['Short', 'Medium', 'Long']
+    const [loading, setLoading] = useState(false)
 
     const validate = () => {
         const validationErrors = [];
@@ -29,6 +34,10 @@ const DisplayQuestion = ({trait, next}) => {
 
     const handleSubmit = async (e) => {
     e.preventDefault();
+    setLoading(true)
+        console.log(loading)
+
+
         const createdAnswer = {
           user_id,
           trait_id,
@@ -49,16 +58,28 @@ const DisplayQuestion = ({trait, next}) => {
             }
             
         };
-    next(trait.id++)
+        
+        setNext(next + 1)
+        setLoading(false)
+
 
 }
+
+        console.log(loading)
+
 
 
 
 
     return (
         <>
-        <h2 className='question'>{trait.question}</h2>
+        {loading ? 
+        <>
+        <GifPlayer gif="https://i.imgur.com/JS8bT2R.gif" autoplay={true} />
+        <h2 className='loading'>Calling all the dogs</h2>
+        </> :
+        <>
+        <h2 className='question'>{breedTraits[next].question}</h2>
         {validationErrors.length > 0 && (
         <div className="errors">
             <p className="error-title"> The following errors were found: </p>
@@ -72,7 +93,7 @@ const DisplayQuestion = ({trait, next}) => {
             <form className='post-form' onSubmit={handleSubmit}>
               <div className="add-form-con">
                     <div className='radio-container'>
-                        {trait.id === 7 ?
+                        {breedTraits[next].id === 7 ?
                         
                         <>
                         {coatTypes.map((coat) => {
@@ -93,7 +114,7 @@ const DisplayQuestion = ({trait, next}) => {
                         })}
                         </>: <></>}
 
-                        {trait.id === 8 ?
+                        {breedTraits[next].id === 8 ?
                         <>
                         {coatLengths.map((coat) => {
                         index++
@@ -115,10 +136,10 @@ const DisplayQuestion = ({trait, next}) => {
                         : <></>}
 
 
-                        {normal.includes(trait.id) ? 
+                        {normal.includes(breedTraits[next].id) ? 
                         <>
                         <div className='min-max'>
-                            <label className='form-label'>{trait.min}</label>
+                            <label className='form-label'>{breedTraits[next].min}</label>
                             <input
                             type='radio'
                             name='answer'
@@ -160,7 +181,7 @@ const DisplayQuestion = ({trait, next}) => {
                             required/>
                         </div>
                         <div className='min-max'>
-                            <label className='form-label'>{trait.max}</label>
+                            <label className='form-label'>{breedTraits[next].max}</label>
                             <input
                             type='radio'
                             className="quiz-radio"
@@ -176,6 +197,7 @@ const DisplayQuestion = ({trait, next}) => {
               </div>
             </form>
           </div>
+        </>}
             
         </>
     )

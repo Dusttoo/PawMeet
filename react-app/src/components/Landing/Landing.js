@@ -64,6 +64,7 @@ const sortedByTime = Object.values(posts).sort(function(a,b){
         {loading ? 
         <>
         <GifPlayer gif="https://i.imgur.com/JS8bT2R.gif" autoplay={true} />
+        <h2 className='loading'>Calling all the dogs</h2>
         </> :
         <>
             <div className='landing-container'>
