@@ -29,6 +29,8 @@ import BreedForum from './components/Forum/BreedForum';
 import Landing from './components/Landing/Landing';
 import Footer from './components/Footer/Footer';
 import UserResults from './components/Quiz/QuizResults';
+import Quiz from './components/Quiz/Quiz';
+import { allBreedTraits } from './store/breed_traits';
 
 
 function App() {
@@ -45,6 +47,7 @@ function App() {
       await dispatch(allBreeds())
       await dispatch(allGroups())
       await dispatch(allImages())
+      await dispatch(allBreedTraits())
       setLoaded(true);
     })();
   }, [dispatch]);
@@ -81,6 +84,9 @@ function App() {
         </ProtectedRoute>
         <ProtectedRoute path='/quiz-results/:id' exact={true} >
           <UserResults />
+        </ProtectedRoute>
+        <ProtectedRoute path='/breed-quiz' exact={true} >
+          <Quiz />
         </ProtectedRoute>
         <Route path='/breeds' exact={true} >
           <BreedsPage />

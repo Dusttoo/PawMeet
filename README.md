@@ -113,6 +113,9 @@ variables.
 
 (Replaces **Step 8**)
 
+   pipenv lock -r > requirements.txt
+
+
 1. Build image with linux platform for heroku servers. Replace
 {NAME_OF_HEROKU_APP} with your own tag:
 

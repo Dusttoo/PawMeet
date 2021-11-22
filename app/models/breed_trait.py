@@ -5,6 +5,9 @@ class Breed_Trait(db.Model):
 
     id = db.Column(db.Integer, primary_key=True)
     trait = db.Column(db.String, nullable=False)
+    question = db.Column(db.String, nullable=False)
+    min = db.Column(db.String, nullable=False)
+    max = db.Column(db.String, nullable=False)
     description = db.Column(db.Text, nullable=False)
 
     breed_answers = db.relationship('Breed_Answer', back_populates='breed_traits')
@@ -15,6 +18,9 @@ class Breed_Trait(db.Model):
         return {
             'id': self.id,
             'trait': self.trait,
+            'question': self.question,
+            'min': self.min,
+            'max': self.max,
             'description': self.description
 
         }

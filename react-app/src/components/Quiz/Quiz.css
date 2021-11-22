@@ -1,0 +1,15 @@
+.radio-container {
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+    padding: 5px;
+    margin-bottom: 15px;
+}
+
+.min-max {
+    display: flex;
+    flex-direction: column;
+    height: 50px;
+    justify-content: flex-end;
+}
+
