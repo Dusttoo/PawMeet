@@ -13,6 +13,7 @@ import DisplayPosts from '../Forum/DisplayPost';
 import './Landing.css'
 import { allComments } from '../../store/comments';
 import BreedsPage from '../Breeds/Breeds';
+import GifPlayer from 'react-gif-player'
 
 
 const Landing = () => {
@@ -29,7 +30,7 @@ const breedImages = useSelector(state => state.breed_images)
 const breedGroups = useSelector(state => state.groups)
 const posts = useSelector(state => state.forum)
 const index = 0
-const [loaded, setLoaded] = useState(false);
+const [loading, setLoading] = useState(true);
 const users = useSelector(state => state.users)
 const highlightedImage = Object.values(breedImages).find(image => image.breed_id === highlightedBreed.id)
 const highlightedGroup = Object.values(breedGroups).find(group => +group.id === +highlightedBreed.breed_group)
@@ -47,13 +48,9 @@ const sortedByTime = Object.values(posts).sort(function(a,b){
       await dispatch(allGroups())
       await dispatch(allImages())
       await dispatch(allComments())
-      setLoaded(true);
+      setLoading(false);
     })();
   }, [dispatch]);
-
-  if (!loaded) {
-    return null;
-  }
 
 
   const getTenPosts = () => {
@@ -64,10 +61,18 @@ const sortedByTime = Object.values(posts).sort(function(a,b){
 
     return (
         <>
+        {loading ? 
+        <>
+        <GifPlayer gif="https://i.imgur.com/JS8bT2R.gif" autoplay={true} />
+        </> :
+        <>
             <div className='landing-container'>
                 <div className='landing-header'>
+                     
                     <h1 className='intro'>Welcome to Paw Meet!</h1>
                     <h2 className='tagline'>A place to discover man's next best friend</h2>
+                    <Link to='/breed-quiz' className='tagline-breed-quiz'>Take our quiz to find the perfect breed for you!</Link>
+
                 </div>
                 <div className='highlighted-breed-container'>
                     <ReactPlayer 
@@ -103,6 +108,7 @@ const sortedByTime = Object.values(posts).sort(function(a,b){
                     </div>
                 </div>
             </div>
+        </>}
         </>
     )
 }

@@ -25,6 +25,11 @@ const NavBar = () => {
             Breeds
           </Link>
         </li>
+        <li >
+          <Link className="nav-link" to='/breed-quiz' exact={true} activeClassName='active'>
+            Breed Selector
+          </Link>
+        </li>
         <li>
           {currentUser ?
            <LogoutButton /> : <Link to='/login' className='login-button'>Log In</Link>
