@@ -63,10 +63,8 @@ const BreedInfo = () => {
 
   const traits =  breeds[id].personality.split(',')
   const personality = []
-  console.log(traits)
   traits.map(word => {
       if(word.includes('{')) {
-          console.log('{ true')
         personality.push(word.replace('{', ''))
       } else if(word.includes('}')) {
         personality.push(word.replace('}', ''))

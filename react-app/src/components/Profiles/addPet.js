@@ -25,7 +25,6 @@ const validate = () => {
     return validationErrors;
 }
 
-console.log(breed)
 const handleSubmit = async (e) => {
     e.preventDefault();
         const createdPet = {
@@ -42,9 +41,7 @@ const handleSubmit = async (e) => {
             setValidationErrors(errors);
         } else {
             setValidationErrors([]);
-            console.log('created pet', createdPet)
             const added = await dispatch(addAPet(createdPet));
-            console.log('added response', added)
             if(added) {
               history.push(`/users/${owner_id}`)
             }

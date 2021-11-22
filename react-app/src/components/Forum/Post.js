@@ -61,7 +61,6 @@ const Posts = () => {
         return numLikes
 
     }
-    console.log(getLikes())
 
 
 

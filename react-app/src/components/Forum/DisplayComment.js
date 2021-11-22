@@ -48,7 +48,6 @@ const DisplayComments = ({commentId}) => {
     }
 
     
-    console.log(Object.keys(theseComments))
     
     const deleteComment = () => {
         dispatch(removeComment(theseComments[comment].id));

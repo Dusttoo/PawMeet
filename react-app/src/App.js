@@ -28,6 +28,7 @@ import { allImages } from './store/breed_images';
 import BreedForum from './components/Forum/BreedForum';
 import Landing from './components/Landing/Landing';
 import Footer from './components/Footer/Footer';
+import UserResults from './components/Quiz/QuizResults';
 
 
 function App() {
@@ -77,6 +78,9 @@ function App() {
         </ProtectedRoute>
         <ProtectedRoute path='/pets/:id' exact={true} >
           <PetProfile />
+        </ProtectedRoute>
+        <ProtectedRoute path='/quiz-results/:id' exact={true} >
+          <UserResults />
         </ProtectedRoute>
         <Route path='/breeds' exact={true} >
           <BreedsPage />

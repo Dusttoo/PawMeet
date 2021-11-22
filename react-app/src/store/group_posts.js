@@ -13,7 +13,6 @@ export const allPostsForGroup = (id) => async (dispatch) => {
         
     });
     const posts = await response.json();
-    console.log('response posts' , posts)
     dispatch(getPostsForGroup(posts))
     return posts
 }
