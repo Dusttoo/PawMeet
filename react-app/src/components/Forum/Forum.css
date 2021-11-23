@@ -89,7 +89,8 @@ th, td {
 
 .user-name {
     text-decoration: none;
-    color:rgb(121, 121, 121)
+    color:rgb(121, 121, 121);
+    padding-left: 4px;
 }
 
 .user-name:hover {
@@ -276,6 +277,7 @@ th, td {
 .comment-info {
     display: flex;
     justify-content: flex-start;
+    align-items: center;
 
 }
 

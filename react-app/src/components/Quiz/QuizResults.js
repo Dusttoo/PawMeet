@@ -19,7 +19,7 @@ const UserResults = () => {
     const breedAnswers = useSelector(state => state.breed_answers)
     const userAnswers = useSelector(state => state.user_answers)
     const images = useSelector(state => state.breed_images)
-    
+    let index = 0;
     const results = []
 
 
@@ -51,10 +51,18 @@ const UserResults = () => {
   calculateResults()
   const sortedResults = results.sort(function(a, b){return b[1]-a[1]})
 
+  const topResults = () => {
+      const top = []
+      for (let i = 0; i < 5; i++) {
+        top.push(results[i])
+      }
+      return top
+  }
+
 
     return (
         <>
-            {results.map((breed) => {
+            {topResults().map((breed) => {
                 const thisBreed= breeds[breed[0]]
                 const thisImage = Object.values(images).find((image) => image.breed_id === thisBreed.id)
                 return (

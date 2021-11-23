@@ -7,6 +7,8 @@ import { useHistory } from 'react-router';
 import './Breed.css'
 import { allBreedTraits } from '../../store/breed_traits';
 import { allBreedAnswers } from '../../store/breed_answers';
+import Loading from '../Loading/Loading';
+
 
 
 
@@ -15,6 +17,8 @@ const BreedsPage = () => {
     const images = useSelector(state => state.breed_images)
     const dispatch = useDispatch()
     const [loaded, setLoaded] = useState(false);
+    const [loading, setLoading] = useState(true);
+
 
 
     useEffect(() => {
@@ -22,6 +26,8 @@ const BreedsPage = () => {
       await dispatch(allBreedTraits())
       await dispatch(allBreedAnswers())
       setLoaded(true);
+      setLoading(false);
+
     })();
   }, [dispatch]);
 
@@ -32,6 +38,11 @@ const BreedsPage = () => {
 
     return (
         <>
+        {loading ? 
+        <>
+        <Loading />
+        
+        </> :
           <div className='breed-list-container'>
             <h2 className='breed-list-heading'>Meet the Breeds</h2>
             {Object.values(breeds).sort(function(a, b) {
@@ -53,7 +64,7 @@ const BreedsPage = () => {
                 </div>
                 )
             })}
-          </div>
+          </div>}
 
         </>
     )

@@ -42,7 +42,7 @@ const UserProfile = () => {
     }
 
     const getTenPosts = () => {
-      return sortedByTime.splice(index, 5)
+      return sortedByTime.splice(index, 3)
 
   }
 
@@ -70,7 +70,7 @@ const UserProfile = () => {
                             </div>
                         </div>
                         <div className='user-posts'>
-                            <h3>Recent Posts</h3>
+                            <h3>Recent Posts:</h3>
                             <div className='user-post-list'>
                                 {getTenPosts().map((post) => {
                             return (
@@ -82,7 +82,7 @@ const UserProfile = () => {
                     </div>
                     {/* <button className='add-friend'>Add Friend</button> */}
                     {+id === +currentUserId ? 
-                    <Link to='/pets/add'>Add a pet</Link> : <></>}
+                    <Link className='add-pet' to='/pets/add'>Add a pet</Link> : <></>}
                 </div>
             </div>
         </>

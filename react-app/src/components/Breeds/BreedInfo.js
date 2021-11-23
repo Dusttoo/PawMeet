@@ -11,6 +11,7 @@ import { allBreedTraits } from '../../store/breed_traits';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faAngleDown, faAnglesDown } from '@fortawesome/free-solid-svg-icons';
 import DisplayTraits from './DisplayTraits';
+import Loading from '../Loading/Loading';
 
 
 
@@ -23,6 +24,8 @@ const BreedInfo = () => {
     const breedTraits = useSelector(state => state.breed_traits)
     const breedAnswers = useSelector(state => state.breed_answers)
     const [loaded, setLoaded] = useState(false);
+    const [loading, setLoading] = useState(true);
+
     // let thisAnswer = ''
     const theseAnswers = []
     Object.values(breedAnswers).map((answer) => {
@@ -37,6 +40,7 @@ const BreedInfo = () => {
       await dispatch(allBreedTraits())
       await dispatch(allBreedAnswers())
       setLoaded(true);
+      setLoading(false)
     })();
   }, [dispatch]);
 
@@ -79,6 +83,11 @@ const BreedInfo = () => {
 
     return (
         <>
+        {loading ? 
+        <>
+        <Loading />
+        
+        </> :
           <div className='breed-container'>
             <div className='carousel-container'>
                 <Carousel
@@ -111,27 +120,30 @@ const BreedInfo = () => {
             <div className='breed-content'>
                 <h2>{personality[0]} - {personality[1]} - {personality[2]}</h2>
                 <p className='breed-description'>{breeds[id].description}</p>
-                <div className='breed-info-container'>
-                  <h3 className='breed-info-header'>Average Life Expectancy</h3>
-                  <p className='breed-description'>{breeds[id].avg_life_exp}</p>
-                </div>
-                <div className='breed-info-container'>
-                  <h3 className='breed-info-header'>Average Height</h3>
+                <div className='breed-details'>
+                  <div className='breed-info-container'>
+                    <h3 className='breed-info-header'>Life Expectancy</h3>
+                    <p className='breed-description'>{breeds[id].avg_life_exp}</p>
+                  </div>
+                  <div className='breed-info-container'>
+                    <h3 className='breed-info-header'>Average Height</h3>
 
-                  <p className='breed-description'>Males: {breeds[id].avg_height.males}</p>
-                  <p className='breed-description'>Females: {breeds[id].avg_height.females}</p>
-                </div>
-
-                
-                <div className='breed-info-container'>
-                  <h3 className='breed-info-header'>Average Weight</h3>
-
-                  <p className='breed-description'>Males: {breeds[id].avg_weight.males}</p>
-                  <p className='breed-description'>Females: {breeds[id].avg_height.females}</p>
-                </div>
-
+                    <p className='breed-description'>Males: {breeds[id].avg_height.males}</p>
+                    <p className='breed-description'>Females: {breeds[id].avg_height.females}</p>
+                  </div>
                 
 
+                
+                  <div className='breed-info-container'>
+                    <h3 className='breed-info-header'>Average Weight</h3>
+
+                    <p className='breed-description'>Males: {breeds[id].avg_weight.males}</p>
+                    <p className='breed-description'>Females: {breeds[id].avg_height.females}</p>
+                  </div>
+
+                
+
+            </div>
             </div>
             <div className='breed-traits-container'>
               {Object.values(breedTraits).map((trait) => {
@@ -141,7 +153,7 @@ const BreedInfo = () => {
                 )
               })}
             </div>
-          </div>
+          </div>}
 
         </>
     )

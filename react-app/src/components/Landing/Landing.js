@@ -14,6 +14,7 @@ import './Landing.css'
 import { allComments } from '../../store/comments';
 import BreedsPage from '../Breeds/Breeds';
 import GifPlayer from 'react-gif-player'
+import Loading from '../Loading/Loading';
 
 
 const Landing = () => {
@@ -63,10 +64,7 @@ const sortedByTime = Object.values(posts).sort(function(a,b){
         <>
         {loading ? 
         <>
-        <div className='loading-container'>
-            <GifPlayer gif="https://i.imgur.com/JS8bT2R.gif" autoplay={true} />
-            <h2 className='highlighted-breed-name'>Calling all the dogs...</h2>
-        </div>
+        <Loading />
         
         </> :
         <>

@@ -74,7 +74,7 @@ const DisplayQuestion = () => {
 
 
     return (
-        <>
+        <div className='question-quiz-container'>
         {loading ? 
         <>
         <div className='loading-container'>
@@ -129,7 +129,7 @@ const DisplayQuestion = () => {
                         index++
                             return (
                             <div className='min-max'>
-                                <label className='container'>{coat}</label>
+                                <label className='container'>{coat}
                                     <input
                                     type='radio'
                                     name='length'
@@ -138,7 +138,7 @@ const DisplayQuestion = () => {
                                     onChange={(e) => setAnswer(e.target.value)}
                                     required/>
                                     <span className='checkmark'></span>
-                                
+                                </label>
                             </div>
                         )    
                         
@@ -225,7 +225,7 @@ const DisplayQuestion = () => {
           </div>
         </>}
             
-        </>
+        </div>
     )
 }
 

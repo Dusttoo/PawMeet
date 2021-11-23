@@ -9,6 +9,9 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import DisplayQuestion from './DisplayQuestion';
 import UserResults from './QuizResults';
 import GifPlayer from 'react-gif-player'
+import Loading from '../Loading/Loading';
+import {allUserAnswers} from '../../store/user_answers'
+
 
 
 
@@ -17,31 +20,45 @@ const Quiz = () => {
     const breedTraits = useSelector(state => state?.breed_traits)
     const userAnswers = useSelector(state => state.user_answers)
     const currentUser = useSelector(state => state.session.user)
-    // const [loading, setLoading] = useState(false)
+    const [loading, setLoading] = useState(false)
     
 
 
 
     useEffect(() => {
         dispatch(allBreedTraits())
+        dispatch(allUserAnswers(currentUser.id))
+        // setLoading(false);
+
     },[dispatch])
 
 
-    const alreadyTaken = Object.values(userAnswers).filter((answer) => +answer.user_id === +currentUser.id)
-    console.log(alreadyTaken.length)
 
     return (
+        <div className='quiz-container'>
+        {loading ? 
         <>
-            {alreadyTaken.length === 16 ? <UserResults /> : 
+        <Loading />
+        
+        </> :
+        <>
+            {Object.keys(userAnswers).length >= 16 ? 
+            <>
+            <div className='results-page-container'>
+                <h1 className='matches-title'>Your Matches</h1>
+                <UserResults /> 
+            </div>
+            </>: 
             
             <>
              <DisplayQuestion />
             </>}
+        </>}
             
 
             
             
-        </>
+        </div>
     )}
 
 export default Quiz
