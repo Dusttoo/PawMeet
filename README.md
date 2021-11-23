@@ -25,4 +25,8 @@ Paw Meet is a full stack web application where users can explore many different 
   * Postgres
   * Heroku deployment
 
+## Database example:
+![paw meet](https://i.imgur.com/JcCO2nT.png)
+
+
 
