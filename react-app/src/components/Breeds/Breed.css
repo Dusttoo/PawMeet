@@ -167,3 +167,10 @@
   background-color: #ccc;
 }
 
+/* -- Search results ------------------ */
+.search-container {
+    padding: 25px;
+    margin-bottom: 15px;
+    border-bottom: .1px solid #333810;
+}
+

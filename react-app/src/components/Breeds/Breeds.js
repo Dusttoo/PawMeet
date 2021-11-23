@@ -8,6 +8,10 @@ import './Breed.css'
 import { allBreedTraits } from '../../store/breed_traits';
 import { allBreedAnswers } from '../../store/breed_answers';
 import Loading from '../Loading/Loading';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faSearch } from '@fortawesome/free-solid-svg-icons';
+import SearchBar from '../Search/Search'
+import SearchResults from '../Search/SearchResults';
 
 
 
@@ -18,6 +22,7 @@ const BreedsPage = () => {
     const dispatch = useDispatch()
     const [loaded, setLoaded] = useState(false);
     const [loading, setLoading] = useState(true);
+    const [search, setSearch] = useState(false)
 
 
 
@@ -35,6 +40,11 @@ const BreedsPage = () => {
     return null;
   }
 
+  const openSearch = () => {
+    if (search) setSearch(false)
+    if (!search) setSearch(true)
+  }
+
 
     return (
         <>
@@ -45,6 +55,27 @@ const BreedsPage = () => {
         </> :
           <div className='breed-list-container'>
             <h2 className='breed-list-heading'>Meet the Breeds</h2>
+            <FontAwesomeIcon 
+            className='search-button'
+            icon={faSearch}
+            onClick={openSearch} />
+            {search ? 
+                  <>
+                  <div className='search-container'>
+                    <SearchBar />
+                    {Object.values(breeds).map((item) => {
+                    const findImage = Object.values(images).find((image) => image.breed_id === item.id)
+                    return (
+                      
+                          <SearchResults breed={item} image={findImage}/>
+                      
+                  
+              )
+            
+            })}
+                 </div> </> : <></>}
+            
+            
             {Object.values(breeds).sort(function(a, b) {
               let nameA = a.name.toUpperCase();
               let nameB = b.name.toUpperCase();
