@@ -32,7 +32,6 @@ const Quiz = () => {
 
     return (
         <>
-            <h1>Quiz</h1>
             {alreadyTaken.length === 16 ? <UserResults /> : 
             
             <>

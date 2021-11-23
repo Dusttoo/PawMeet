@@ -5,6 +5,7 @@ import { Link, useHistory } from 'react-router-dom';
 import './Quiz.css'
 import { useParams } from 'react-router';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faRightLong } from '@fortawesome/free-solid-svg-icons';
 import { addAnAnswer } from '../../store/user_answers';
 import GifPlayer from 'react-gif-player'
 
@@ -93,7 +94,7 @@ const DisplayQuestion = () => {
         
         <div className="add-form-container">
             <form className='post-form' onSubmit={handleSubmit}>
-              <div className="add-form-con">
+              <div className="quiz-form-con">
                     <div className='radio-container'>
                         {breedTraits[next].id === 7 ?
                         
@@ -102,14 +103,15 @@ const DisplayQuestion = () => {
                             index++
                         return (
                         <div className='min-max'>
-                            <label className='form-label'>{coat}
+                            <label className='container'>{coat}</label>
                             <input
                             type='radio'
                             name='type'
                             className="quiz-radio"
                             value={index}
                             onChange={(e) => setAnswer(e.target.value)}
-                            required/></label>
+                            required/>
+                            <span className='checkmark'></span>
                         </div>
                         )    
                         
@@ -122,14 +124,16 @@ const DisplayQuestion = () => {
                         index++
                             return (
                             <div className='min-max'>
-                                <label className='form-label'>{coat}
-                                <input
-                                type='radio'
-                                name='length'
-                                className="quiz-radio"
-                                value={index}
-                                onChange={(e) => setAnswer(e.target.value)}
-                                required/></label>
+                                <label className='container'>{coat}</label>
+                                    <input
+                                    type='radio'
+                                    name='length'
+                                    className="quiz-radio"
+                                    value={index}
+                                    onChange={(e) => setAnswer(e.target.value)}
+                                    required/>
+                                    <span className='checkmark'></span>
+                                
                             </div>
                         )    
                         
@@ -141,61 +145,76 @@ const DisplayQuestion = () => {
                         {normal.includes(breedTraits[next].id) ? 
                         <>
                         <div className='min-max'>
-                            <label className='form-label'>{breedTraits[next].min}</label>
-                            <input
-                            type='radio'
-                            name='answer'
-                            className="quiz-radio"
-                            value={1}
-                            onChange={(e) => setAnswer(e.target.value)}
-                            required/>
-                        </div>
-                        <div className='min-max'>
-                            <label className='form-label'></label>
-                            <input
-                            type='radio'
-                            className="quiz-radio"
-                            name='answer'
-                            value={2}
-                            onChange={(e) => setAnswer(e.target.value)}
-                            required/>
-                        </div>
-                        <div className='min-max'>
-                            <label className='form-label'></label>
+                            <label className='container'>{breedTraits[next].min}
+                                <input
+                                type='radio'
+                                name='answer'
+                                className="quiz-radio"
+                                value={1}
+                                onChange={(e) => setAnswer(e.target.value)}
+                                required/>
+                                <span className='checkmark'></span>
+                            </label>
 
-                            <input
-                            type='radio'
-                            className="quiz-radio"
-                            name='answer'
-                            value={3}
-                            onChange={(e) => setAnswer(e.target.value)}
-                            required/>
                         </div>
                         <div className='min-max'>
-                            <label className='form-label'></label>
+                            <label className='container'>
+                                <input
+                                type='radio'
+                                className="quiz-radio"
+                                name='answer'
+                                value={2}
+                                onChange={(e) => setAnswer(e.target.value)}
+                                required/>
+                                <span className='checkmark'></span>
+                            </label>
 
-                            <input
-                            type='radio'
-                            className="quiz-radio"
-                            name='answer'
-                            value={4}
-                            onChange={(e) => setAnswer(e.target.value)}
-                            required/>
                         </div>
                         <div className='min-max'>
-                            <label className='form-label'>{breedTraits[next].max}</label>
-                            <input
-                            type='radio'
-                            className="quiz-radio"
-                            name='answer'
-                            value={5}
-                            onChange={(e) => setAnswer(e.target.value)}
-                            required/>
+                            <label className='container'>
+
+                                <input
+                                type='radio'
+                                className="quiz-radio"
+                                name='answer'
+                                value={3}
+                                onChange={(e) => setAnswer(e.target.value)}
+                                required/>
+                                <span className='checkmark'></span>
+                            </label>
+
+                        </div>
+                        <div className='min-max'>
+                            <label className='container'>
+
+                                <input
+                                type='radio'
+                                className="quiz-radio"
+                                name='answer'
+                                value={4}
+                                onChange={(e) => setAnswer(e.target.value)}
+                                required/>
+                                <span className='checkmark'></span>
+                            </label>
+
+                        </div>
+                        <div className='min-max'>
+                            <label className='container'>{breedTraits[next].max}
+                                <input
+                                type='radio'
+                                className="quiz-radio"
+                                name='answer'
+                                value={5}
+                                onChange={(e) => setAnswer(e.target.value)}
+                                required/>
+                                <span className='checkmark'></span>
+                            </label>
+
                         </div>
                         </>
                         :<></>}
                     </div>
-                <div className='submit-container'><button className="form-button" type="submit">Next</button></div>
+                <div className='submit-container'><button className="quiz-button" type="submit">Next <FontAwesomeIcon className='arrow' icon={faRightLong}/></button></div>
               </div>
             </form>
           </div>
