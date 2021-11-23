@@ -1,31 +1,49 @@
 
-import React from 'react';
-import { NavLink } from 'react-router-dom';
+import React, { useState } from 'react';
+import { useSelector } from 'react-redux';
+import { Link } from 'react-router-dom';
 import LogoutButton from './auth/LogoutButton';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+
 import './NavBar.css'
+import { faUser } from '@fortawesome/free-solid-svg-icons';
 
 const NavBar = () => {
+  const currentUser = useSelector(state => state.session.user)
   return (
-    <nav >
+    <nav className='nav'>
       <ul className="nav-bar">
         <li >
-          <NavLink className="nav-link" to='/' exact={true} activeClassName='active'>
+          <Link className="nav-link" to='/' exact={true} activeClassName='active'>
             Home
-          </NavLink>
+          </Link>
         </li>
         <li >
-          <NavLink className="nav-link" to='/forum' exact={true} activeClassName='active'>
+          <Link className="nav-link" to='/forum' exact={true} activeClassName='active'>
             Speak
-          </NavLink>
+          </Link>
         </li>
         <li >
-          <NavLink className="nav-link" to='/breeds' exact={true} activeClassName='active'>
+          <Link className="nav-link" to='/breeds' exact={true} activeClassName='active'>
             Breeds
-          </NavLink>
+          </Link>
+        </li>
+        <li >
+          <Link className="nav-link" to='/breed-quiz' exact={true} activeClassName='active'>
+            Breed Selector
+          </Link>
         </li>
         <li>
-          <LogoutButton />
+          {currentUser ?
+          <>
+            <LogoutButton /> 
+            <Link className='account-button' to={`/users/${currentUser.id}`} ><FontAwesomeIcon icon={faUser} /></Link>
+           </>
+           : <Link to='/login' className='login-button'>Log In</Link>
+          }
+         
         </li>
+        
       </ul>
     </nav>
   );

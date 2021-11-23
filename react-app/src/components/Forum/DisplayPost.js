@@ -10,7 +10,6 @@ const DisplayPosts = ({post}) => {
     const author = Object.keys(authors).find(thisAuthor => +post.user_id === +thisAuthor)
     const comments = useSelector(state => state.comments)
     const theseComments = []
-
     Object.keys(comments).map((commentId) => {
         const comment = Object.values(comments).find(thisComment => +thisComment.id === +commentId)
         if(comment.post_id === post.id) {
@@ -18,6 +17,7 @@ const DisplayPosts = ({post}) => {
         }
         
     })
+
 
     const openPost = () => {
     }
@@ -36,7 +36,7 @@ const DisplayPosts = ({post}) => {
                     <td>
                         <div className='comment-info'>
                             <Link to={`/users/${author}`}><img className="profile-icon" src={authors[author].profile_img } alt={authors[author].first_name}/></Link>
-                            <Link className='' to={`/users/${author}`}>{authors[author].first_name}</Link>
+                            <Link className='user-name' to={`/users/${author}`}>{authors[author].first_name}</Link>
                         </div>
                     </td>
                     

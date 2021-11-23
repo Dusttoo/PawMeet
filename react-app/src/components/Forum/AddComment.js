@@ -21,6 +21,9 @@ const posted = `${currentDate.getMonth()}-${currentDate.getDate()}-${currentDate
 
     const validate = () => {
         const validationErrors = [];
+        if(comment_body.length < 6) {
+            validationErrors.push('Comment must be at least 6 characters.')
+        }
 
         return validationErrors;
     }
@@ -59,17 +62,17 @@ const handleSubmit = async (e) => {
             </ul>
         </div>
         )}
-        <div className="add-form-container">
-            <form className='post-form' onSubmit={handleSubmit}>
-              <div className="add-form-con">
-                <label className="form-label" >Message:</label>
+        <div className="comment-form-container">
+            <form className='comment-form' onSubmit={handleSubmit}>
+              <div className="comment-form-con">
+                <label className="comment-form-label" >Message:</label>
                         <textarea
-                        placeholder="Post Body"
-                        className="form-input"
+                        placeholder="Comment Body"
+                        className="comment-form-input"
                         value={comment_body}
                         onChange={(e) => setBody(e.target.value)}
                         required/>
-                <button className="form-button" type="submit">Submit</button>
+                <div className='submit-container'><button className="comment-form-button" type="submit">Submit</button></div>
               </div>
             </form>
           </div>

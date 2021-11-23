@@ -25,6 +25,12 @@ import { allGroups } from './store/breed_groups';
 import BreedsPage from './components/Breeds/Breeds';
 import BreedInfo from './components/Breeds/BreedInfo';
 import { allImages } from './store/breed_images';
+import BreedForum from './components/Forum/BreedForum';
+import Landing from './components/Landing/Landing';
+import Footer from './components/Footer/Footer';
+import UserResults from './components/Quiz/QuizResults';
+import Quiz from './components/Quiz/Quiz';
+import { allBreedTraits } from './store/breed_traits';
 
 
 function App() {
@@ -41,6 +47,7 @@ function App() {
       await dispatch(allBreeds())
       await dispatch(allGroups())
       await dispatch(allImages())
+      await dispatch(allBreedTraits())
       setLoaded(true);
     })();
   }, [dispatch]);
@@ -60,6 +67,9 @@ function App() {
         <Route path='/sign-up' exact={true}>
           <SignUpForm />
         </Route>
+        <ProtectedRoute path='/forum/add' exact={true} >
+          <AddPost />
+        </ProtectedRoute>
         <ProtectedRoute path='/users' exact={true} >
           <UsersList/>
         </ProtectedRoute>
@@ -72,31 +82,36 @@ function App() {
         <ProtectedRoute path='/pets/:id' exact={true} >
           <PetProfile />
         </ProtectedRoute>
-        <ProtectedRoute path='/breeds' exact={true} >
+        <ProtectedRoute path='/quiz-results/:id' exact={true} >
+          <UserResults />
+        </ProtectedRoute>
+        <ProtectedRoute path='/breed-quiz' exact={true} >
+          <Quiz />
+        </ProtectedRoute>
+        
+        <Route path='/breeds' exact={true} >
           <BreedsPage />
-        </ProtectedRoute>
-        <ProtectedRoute path='/breeds/:id' exact={true} >
+        </Route>
+        <Route path='/breeds/:id' exact={true} >
           <BreedInfo />
-        </ProtectedRoute>
-        <ProtectedRoute path='/breeds/group/:id' exact={true} >
+        </Route>
+        <Route path='/breeds/group/:id' exact={true} >
           <h1>Group page</h1>
-        </ProtectedRoute>
-        <ProtectedRoute path='/forum' exact={true} >
+        </Route>
+        <Route path='/forum' exact={true} >
           <ForumHome />
-        </ProtectedRoute>
-        <ProtectedRoute path='/forum/:id' exact={true} >
-          <h1>Breed Forum</h1>
-        </ProtectedRoute>
-        <ProtectedRoute path='/forum/add' exact={true} >
-          <AddPost />
-        </ProtectedRoute>
+        </Route>
+        <Route path='/forum/:id' exact={true} >
+          <BreedForum />
+        </Route>
         <ProtectedRoute path='/forum/posts/:postId' exact={true} >
           <Posts />
         </ProtectedRoute>
-        <ProtectedRoute path='/' exact={true} >
-          <h1>My Home Page</h1>
-        </ProtectedRoute>
+        <Route path='/' exact={true} >
+          <Landing />
+        </Route>
       </Switch>
+      <Footer />
     </BrowserRouter>
   );
 }

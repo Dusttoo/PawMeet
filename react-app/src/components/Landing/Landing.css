@@ -1,0 +1,76 @@
+.landing-container {
+    padding: 20px;
+
+}
+
+.landing-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 25px;
+    border-bottom: 1px solid lightgrey;
+    margin-bottom: 20px;
+
+}
+
+.highlighted-breed-name {
+    text-decoration: none;
+    font-size: 55px;
+    color: #333810;
+}
+
+.highlighted-breed-container {
+    display: flex;
+    padding-bottom: 20px;
+    border-bottom: 1px solid lightgrey;
+}
+
+.highlighted-breed-details {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.recent-posts-container {
+    width: 50%;
+}
+
+.recent-posts {
+    border-collapse: collapse;
+    width: 20%;
+}
+
+.bottom-content {
+    display: flex;
+}
+
+.loading-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+.intro {
+    text-decoration: none;
+    font-size: 45px;
+    color: #333810;
+}
+
+.tagline {
+    text-decoration: none;
+    color: #333810;
+}
+
+.tagline-breed-quiz {
+    text-decoration: none;
+    color: #333810;
+}
+
+.tagline-breed-quiz:hover {
+    text-decoration: none;
+    color: #899e00;
+}

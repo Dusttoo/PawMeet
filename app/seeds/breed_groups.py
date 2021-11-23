@@ -8,7 +8,7 @@ def seed_breed_groups():
     )
 
     hound = Breed_Group(
-        name='Houd',
+        name='Hound',
         description='All breeds in the Hound Group were bred to pursue warm-blooded quarry. The sleek, long-legged sighthounds use explosive speed and wide vision to chase swift prey, like jackrabbits and antelope, while tough, durable scenthounds rely on their powerful noses to trail anything from raccoons to escaped convicts. Members of the Hound Group possess strong prey drives and often will stop at nothing to catch their quarries.'
     )
 

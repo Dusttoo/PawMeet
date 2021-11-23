@@ -814,6 +814,832 @@ def seed_breed_answers():
         answer=3,
     )
 
+    # CORSO
+
+    corso1 = Breed_Answer(
+        breed_id=11,
+        trait_id=1,
+        answer=4,
+    )
+    corso2 = Breed_Answer(
+        breed_id=11,
+        trait_id=2,
+        answer=3,
+    )
+    corso3 = Breed_Answer(
+        breed_id=11,
+        trait_id=3,
+        answer=3,
+    )
+    corso4 = Breed_Answer(
+        breed_id=11,
+        trait_id=4,
+        answer=2,
+    )
+    corso5 = Breed_Answer(
+        breed_id=11,
+        trait_id=5,
+        answer=1,
+    )
+    corso6 = Breed_Answer(
+        breed_id=11,
+        trait_id=6,
+        answer=3,
+    )
+    corso7 = Breed_Answer(
+        breed_id=11,
+        trait_id=7,
+        answer=7,
+    )
+    corso8 = Breed_Answer(
+        breed_id=11,
+        trait_id=8,
+        answer=1,
+    )
+    corso9 = Breed_Answer(
+        breed_id=11,
+        trait_id=9,
+        answer=3,
+    )
+    corso10 = Breed_Answer(
+        breed_id=11,
+        trait_id=10,
+        answer=3,
+    )
+    corso11 = Breed_Answer(
+        breed_id=11,
+        trait_id=11,
+        answer=5,
+    )
+    corso12 = Breed_Answer(
+        breed_id=11,
+        trait_id=12,
+        answer=3,
+    )
+    corso13 = Breed_Answer(
+        breed_id=11,
+        trait_id=13,
+        answer=4,
+    )
+    corso14 = Breed_Answer(
+        breed_id=11,
+        trait_id=14,
+        answer=4,
+    )
+    corso15 = Breed_Answer(
+        breed_id=11,
+        trait_id=15,
+        answer=3,
+    )
+    corso16 = Breed_Answer(
+        breed_id=11,
+        trait_id=16,
+        answer=3,
+    )
+
+    # AMSTAFF
+    amstaff1= Breed_Answer(
+        breed_id=12,
+        trait_id=1,
+        answer=5,
+    )
+    amstaff2 = Breed_Answer(
+        breed_id=12,
+        trait_id=2,
+        answer=3,
+    )
+    amstaff3 = Breed_Answer(
+        breed_id=12,
+        trait_id=3,
+        answer=3,
+    )
+    amstaff4 = Breed_Answer(
+        breed_id=12,
+        trait_id=4,
+        answer=2,
+    )
+    amstaff5 = Breed_Answer(
+        breed_id=12,
+        trait_id=5,
+        answer=1,
+    )
+    amstaff6 = Breed_Answer(
+        breed_id=12,
+        trait_id=6,
+        answer=1,
+    )
+    amstaff7 = Breed_Answer(
+        breed_id=12,
+        trait_id=7,
+        answer=7,
+    )
+    amstaff8 = Breed_Answer(
+        breed_id=12,
+        trait_id=8,
+        answer=1,
+    )
+    amstaff9 = Breed_Answer(
+        breed_id=12,
+        trait_id=9,
+        answer=4,
+    )
+    amstaff10 = Breed_Answer(
+        breed_id=12,
+        trait_id=10,
+        answer=3,
+    )
+    amstaff11 = Breed_Answer(
+        breed_id=12,
+        trait_id=11,
+        answer=5,
+    )
+    amstaff12 = Breed_Answer(
+        breed_id=12,
+        trait_id=12,
+        answer=3,
+    )
+    amstaff13 = Breed_Answer(
+        breed_id=12,
+        trait_id=13,
+        answer=3,
+    )
+    amstaff14 = Breed_Answer(
+        breed_id=12,
+        trait_id=14,
+        answer=3,
+    )
+    amstaff15 = Breed_Answer(
+        breed_id=12,
+        trait_id=15,
+        answer=3,
+    )
+    amstaff16 = Breed_Answer(
+        breed_id=12,
+        trait_id=16,
+        answer=3,
+    )
+    # BOXER
+    boxer1 = Breed_Answer(
+        breed_id=13,
+        trait_id=1,
+        answer=4,
+    )
+    boxer2 = Breed_Answer(
+        breed_id=13,
+        trait_id=2,
+        answer=5,
+    )
+    boxer3 = Breed_Answer(
+        breed_id=13,
+        trait_id=3,
+        answer=3,
+    )
+    boxer4 = Breed_Answer(
+        breed_id=13,
+        trait_id=4,
+        answer=2,
+    )
+    boxer5 = Breed_Answer(
+        breed_id=13,
+        trait_id=5,
+        answer=2,
+    )
+    boxer6 = Breed_Answer(
+        breed_id=13,
+        trait_id=6,
+        answer=3,
+    )
+    boxer7 = Breed_Answer(
+        breed_id=13,
+        trait_id=7,
+        answer=7,
+    )
+    boxer8 = Breed_Answer(
+        breed_id=13,
+        trait_id=8,
+        answer=1,
+    )
+    boxer9 = Breed_Answer(
+        breed_id=13,
+        trait_id=9,
+        answer=4,
+    )
+    boxer10 = Breed_Answer(
+        breed_id=13,
+        trait_id=10,
+        answer=4,
+    )
+    boxer11 = Breed_Answer(
+        breed_id=13,
+        trait_id=11,
+        answer=4,
+    )
+    boxer12 = Breed_Answer(
+        breed_id=13,
+        trait_id=12,
+        answer=3,
+    )
+    boxer13 = Breed_Answer(
+        breed_id=13,
+        trait_id=13,
+        answer=4,
+    )
+    boxer14 = Breed_Answer(
+        breed_id=13,
+        trait_id=14,
+        answer=4,
+    )
+    boxer15 = Breed_Answer(
+        breed_id=13,
+        trait_id=15,
+        answer=3,
+    )
+    boxer16 = Breed_Answer(
+        breed_id=13,
+        trait_id=16,
+        answer=4,
+    )
+    # PUG
+    pug1 = Breed_Answer(
+        breed_id=14,
+        trait_id=1,
+        answer=5,
+    )
+    pug2 = Breed_Answer(
+        breed_id=14,
+        trait_id=2,
+        answer=5,
+    )
+    pug3 = Breed_Answer(
+        breed_id=14,
+        trait_id=3,
+        answer=4,
+    )
+    pug4 = Breed_Answer(
+        breed_id=14,
+        trait_id=4,
+        answer=4,
+    )
+    pug5 = Breed_Answer(
+        breed_id=14,
+        trait_id=5,
+        answer=2,
+    )
+    pug6 = Breed_Answer(
+        breed_id=14,
+        trait_id=6,
+        answer=1,
+    )
+    pug7 = Breed_Answer(
+        breed_id=14,
+        trait_id=7,
+        answer=7,
+    )
+    pug8 = Breed_Answer(
+        breed_id=14,
+        trait_id=8,
+        answer=1,
+    )
+    pug9 = Breed_Answer(
+        breed_id=14,
+        trait_id=9,
+        answer=5,
+    )
+    pug10 = Breed_Answer(
+        breed_id=14,
+        trait_id=10,
+        answer=5,
+    )
+    pug11 = Breed_Answer(
+        breed_id=14,
+        trait_id=11,
+        answer=3,
+    )
+    pug12 = Breed_Answer(
+        breed_id=14,
+        trait_id=12,
+        answer=5,
+    )
+    pug13 = Breed_Answer(
+        breed_id=14,
+        trait_id=13,
+        answer=4,
+    )
+    pug14 = Breed_Answer(
+        breed_id=14,
+        trait_id=14,
+        answer=3,
+    )
+    pug15 = Breed_Answer(
+        breed_id=14,
+        trait_id=15,
+        answer=1,
+    )
+    pug16 = Breed_Answer(
+        breed_id=14,
+        trait_id=16,
+        answer=3,
+    )
+
+    traits = [
+        Breed_Answer(
+            breed_id=15,
+            trait_id=1,
+            answer=3,
+        ),
+        Breed_Answer(
+            breed_id=15,
+            trait_id=2,
+            answer=3,
+        ),
+        Breed_Answer(
+            breed_id=15,
+            trait_id=3,
+            answer=1,
+        ),
+        Breed_Answer(
+            breed_id=15,
+            trait_id=4,
+            answer=3,
+        ),
+        Breed_Answer(
+            breed_id=15,
+            trait_id=5,
+            answer=3,
+        ),
+        Breed_Answer(
+            breed_id=15,
+            trait_id=6,
+            answer=1,
+        ),
+        Breed_Answer(
+            breed_id=15,
+            trait_id=7,
+            answer=8,
+        ),
+        Breed_Answer(
+            breed_id=15,
+            trait_id=8,
+            answer=2,
+        ),
+        Breed_Answer(
+            breed_id=15,
+            trait_id=9,
+            answer=2,
+        ),
+        Breed_Answer(
+            breed_id=15,
+            trait_id=10,
+            answer=3,
+        ),
+        Breed_Answer(
+            breed_id=15,
+            trait_id=11,
+            answer=5,
+        ),
+        Breed_Answer(
+            breed_id=15,
+            trait_id=12,
+            answer=3,
+        ),
+        Breed_Answer(
+            breed_id=15,
+            trait_id=13,
+            answer=3,
+        ),
+        Breed_Answer(
+            breed_id=15,
+            trait_id=14,
+            answer=4,
+        ),
+        Breed_Answer(
+            breed_id=15,
+            trait_id=15,
+            answer=2,
+        ),
+        Breed_Answer(
+            breed_id=15,
+            trait_id=16,
+            answer=3,
+        ),
+        Breed_Answer(
+            breed_id=16,
+            trait_id=1,
+            answer=5,
+        ),
+        Breed_Answer(
+            breed_id=16,
+            trait_id=2,
+            answer=5,
+        ),
+        Breed_Answer(
+            breed_id=16,
+            trait_id=3,
+            answer=5,
+        ),
+        Breed_Answer(
+            breed_id=16,
+            trait_id=4,
+            answer=4,
+        ),
+        Breed_Answer(
+            breed_id=16,
+            trait_id=5,
+            answer=2,
+        ),
+        Breed_Answer(
+            breed_id=16,
+            trait_id=6,
+            answer=1,
+        ),
+        Breed_Answer(
+            breed_id=16,
+            trait_id=7,
+            answer=8,
+        ),
+        Breed_Answer(
+            breed_id=16,
+            trait_id=8,
+            answer=2,
+        ),
+        Breed_Answer(
+            breed_id=16,
+            trait_id=9,
+            answer=5,
+        ),
+        Breed_Answer(
+            breed_id=16,
+            trait_id=10,
+            answer=5,
+        ),
+        Breed_Answer(
+            breed_id=16,
+            trait_id=11,
+            answer=1,
+        ),
+        Breed_Answer(
+            breed_id=16,
+            trait_id=12,
+            answer=4,
+        ),
+        Breed_Answer(
+            breed_id=16,
+            trait_id=13,
+            answer=3,
+        ),
+        Breed_Answer(
+            breed_id=16,
+            trait_id=14,
+            answer=5,
+        ),
+        Breed_Answer(
+            breed_id=16,
+            trait_id=15,
+            answer=5,
+        ),
+        Breed_Answer(
+            breed_id=16,
+            trait_id=16,
+            answer=4,
+        ),
+        Breed_Answer(
+            breed_id=17,
+            trait_id=1,
+            answer=5,
+        ),
+        Breed_Answer(
+            breed_id=17,
+            trait_id=2,
+            answer=5,
+        ),
+        Breed_Answer(
+            breed_id=17,
+            trait_id=3,
+            answer=3,
+        ),
+        Breed_Answer(
+            breed_id=17,
+            trait_id=4,
+            answer=2,
+        ),
+        Breed_Answer(
+            breed_id=17,
+            trait_id=5,
+            answer=2,
+        ),
+        Breed_Answer(
+            breed_id=17,
+            trait_id=6,
+            answer=4,
+        ),
+        Breed_Answer(
+            breed_id=17,
+            trait_id=7,
+            answer=7,
+        ),
+        Breed_Answer(
+            breed_id=17,
+            trait_id=8,
+            answer=1,
+        ),
+        Breed_Answer(
+            breed_id=17,
+            trait_id=9,
+            answer=4,
+        ),
+        Breed_Answer(
+            breed_id=17,
+            trait_id=10,
+            answer=4,
+        ),
+        Breed_Answer(
+            breed_id=17,
+            trait_id=11,
+            answer=4,
+        ),
+        Breed_Answer(
+            breed_id=17,
+            trait_id=12,
+            answer=5,
+        ),
+        Breed_Answer(
+            breed_id=17,
+            trait_id=13,
+            answer=3,
+        ),
+        Breed_Answer(
+            breed_id=17,
+            trait_id=14,
+            answer=4,
+        ),
+        Breed_Answer(
+            breed_id=17,
+            trait_id=15,
+            answer=3,
+        ),
+        Breed_Answer(
+            breed_id=17,
+            trait_id=16,
+            answer=3,
+        ),
+        Breed_Answer(
+            breed_id=18,
+            trait_id=1,
+            answer=5,
+        ),
+        Breed_Answer(
+            breed_id=18,
+            trait_id=2,
+            answer=3,
+        ),
+        Breed_Answer(
+            breed_id=18,
+            trait_id=3,
+            answer=4,
+        ),
+        Breed_Answer(
+            breed_id=18,
+            trait_id=4,
+            answer=4,
+        ),
+        Breed_Answer(
+            breed_id=18,
+            trait_id=5,
+            answer=2,
+        ),
+        Breed_Answer(
+            breed_id=18,
+            trait_id=6,
+            answer=1,
+        ),
+        Breed_Answer(
+            breed_id=18,
+            trait_id=7,
+            answer=8,
+        ),
+        Breed_Answer(
+            breed_id=18,
+            trait_id=8,
+            answer=1,
+        ),
+        Breed_Answer(
+            breed_id=18,
+            trait_id=9,
+            answer=4,
+        ),
+        Breed_Answer(
+            breed_id=18,
+            trait_id=10,
+            answer=4,
+        ),
+        Breed_Answer(
+            breed_id=18,
+            trait_id=11,
+            answer=5,
+        ),
+        Breed_Answer(
+            breed_id=18,
+            trait_id=12,
+            answer=4,
+        ),
+        Breed_Answer(
+            breed_id=18,
+            trait_id=13,
+            answer=4,
+        ),
+        Breed_Answer(
+            breed_id=18,
+            trait_id=14,
+            answer=4,
+        ),
+        Breed_Answer(
+            breed_id=18,
+            trait_id=15,
+            answer=4,
+        ),
+        Breed_Answer(
+            breed_id=18,
+            trait_id=16,
+            answer=4,
+        ),
+        Breed_Answer(
+            breed_id=19,
+            trait_id=1,
+            answer=4,
+        ),
+        Breed_Answer(
+            breed_id=19,
+            trait_id=2,
+            answer=5,
+        ),
+        Breed_Answer(
+            breed_id=19,
+            trait_id=3,
+            answer=5,
+        ),
+        Breed_Answer(
+            breed_id=19,
+            trait_id=4,
+            answer=3,
+        ),
+        Breed_Answer(
+            breed_id=19,
+            trait_id=5,
+            answer=4,
+        ),
+        Breed_Answer(
+            breed_id=19,
+            trait_id=6,
+            answer=2,
+        ),
+        Breed_Answer(
+            breed_id=19,
+            trait_id=7,
+            answer=8,
+        ),
+        Breed_Answer(
+            breed_id=19,
+            trait_id=8,
+            answer=3,
+        ),
+        Breed_Answer(
+            breed_id=19,
+            trait_id=9,
+            answer=4,
+        ),
+        Breed_Answer(
+            breed_id=19,
+            trait_id=10,
+            answer=3,
+        ),
+        Breed_Answer(
+            breed_id=19,
+            trait_id=11,
+            answer=3,
+        ),
+        Breed_Answer(
+            breed_id=19,
+            trait_id=12,
+            answer=4,
+        ),
+        Breed_Answer(
+            breed_id=19,
+            trait_id=13,
+            answer=4,
+        ),
+        Breed_Answer(
+            breed_id=19,
+            trait_id=14,
+            answer=4,
+        ),
+        Breed_Answer(
+            breed_id=19,
+            trait_id=15,
+            answer=3,
+        ),
+        Breed_Answer(
+            breed_id=19,
+            trait_id=16,
+            answer=3,
+        ),
+        Breed_Answer(
+            breed_id=20,
+            trait_id=1,
+            answer=4,
+        ),
+        Breed_Answer(
+            breed_id=20,
+            trait_id=2,
+            answer=3,
+        ),
+        Breed_Answer(
+            breed_id=20,
+            trait_id=3,
+            answer=3,
+        ),
+        Breed_Answer(
+            breed_id=20,
+            trait_id=4,
+            answer=3,
+        ),
+        Breed_Answer(
+            breed_id=20,
+            trait_id=5,
+            answer=1,
+        ),
+        Breed_Answer(
+            breed_id=20,
+            trait_id=6,
+            answer=3,
+        ),
+        Breed_Answer(
+            breed_id=20,
+            trait_id=7,
+            answer=7,
+        ),
+        Breed_Answer(
+            breed_id=20,
+            trait_id=8,
+            answer=1,
+        ),
+        Breed_Answer(
+            breed_id=20,
+            trait_id=9,
+            answer=3,
+        ),
+        Breed_Answer(
+            breed_id=20,
+            trait_id=10,
+            answer=3,
+        ),
+        Breed_Answer(
+            breed_id=20,
+            trait_id=11,
+            answer=5,
+        ),
+        Breed_Answer(
+            breed_id=20,
+            trait_id=12,
+            answer=3,
+        ),
+        Breed_Answer(
+            breed_id=20,
+            trait_id=13,
+            answer=4,
+        ),
+        Breed_Answer(
+            breed_id=20,
+            trait_id=14,
+            answer=4,
+        ),
+        Breed_Answer(
+            breed_id=20,
+            trait_id=15,
+            answer=1,
+        ),
+        Breed_Answer(
+            breed_id=20,
+            trait_id=16,
+            answer=4,
+        ),
+
+
+
+        
+
+
+
+
+
+
+    ]
+
+
+
+
+
+
+
 
 
     db.session.add(lab1)
@@ -976,7 +1802,71 @@ def seed_breed_answers():
     db.session.add(dox14)
     db.session.add(dox15)
     db.session.add(dox16)
-
+    db.session.add(corso1)
+    db.session.add(corso2)
+    db.session.add(corso3)
+    db.session.add(corso4)
+    db.session.add(corso5)
+    db.session.add(corso6)
+    db.session.add(corso7)
+    db.session.add(corso8)
+    db.session.add(corso9)
+    db.session.add(corso10)
+    db.session.add(corso11)
+    db.session.add(corso12)
+    db.session.add(corso13)
+    db.session.add(corso14)
+    db.session.add(corso15)
+    db.session.add(corso16)
+    db.session.add(amstaff1)
+    db.session.add(amstaff2)
+    db.session.add(amstaff3)
+    db.session.add(amstaff4)
+    db.session.add(amstaff5)
+    db.session.add(amstaff6)
+    db.session.add(amstaff7)
+    db.session.add(amstaff8)
+    db.session.add(amstaff9)
+    db.session.add(amstaff10)
+    db.session.add(amstaff11)
+    db.session.add(amstaff12)
+    db.session.add(amstaff13)
+    db.session.add(amstaff14)
+    db.session.add(amstaff15)
+    db.session.add(amstaff16)
+    db.session.add(boxer1)
+    db.session.add(boxer2)
+    db.session.add(boxer3)
+    db.session.add(boxer4)
+    db.session.add(boxer5)
+    db.session.add(boxer6)
+    db.session.add(boxer7)
+    db.session.add(boxer8)
+    db.session.add(boxer9)
+    db.session.add(boxer10)
+    db.session.add(boxer11)
+    db.session.add(boxer12)
+    db.session.add(boxer13)
+    db.session.add(boxer14)
+    db.session.add(boxer15)
+    db.session.add(boxer16)
+    db.session.add(pug1)
+    db.session.add(pug2)
+    db.session.add(pug3)
+    db.session.add(pug4)
+    db.session.add(pug5)
+    db.session.add(pug6)
+    db.session.add(pug7)
+    db.session.add(pug8)
+    db.session.add(pug9)
+    db.session.add(pug10)
+    db.session.add(pug11)
+    db.session.add(pug12)
+    db.session.add(pug13)
+    db.session.add(pug14)
+    db.session.add(pug15)
+    db.session.add(pug16)
+    db.session.add_all(traits)
 
     db.session.commit()
 
@@ -990,84 +1880,84 @@ def undo_breed_answers():
 
 
     # Next breed
-    # 1= Breed_Answer(
+    # Breed_Answer(
     #     breed_id=,
     #     trait_id=1,
     #     answer=,
-    # )
-    # 2= Breed_Answer(
+    # ),
+    # Breed_Answer(
     #     breed_id=,
     #     trait_id=2,
     #     answer=,
-    # )
-    # 3= Breed_Answer(
+    # ),
+    # Breed_Answer(
     #     breed_id=,
     #     trait_id=3,
     #     answer=,
-    # )
-    # 4= Breed_Answer(
+    # ),
+    # Breed_Answer(
     #     breed_id=,
     #     trait_id=4,
     #     answer=,
-    # ) 
-    # 5= Breed_Answer(
+    # ), 
+    # Breed_Answer(
     #     breed_id=,
     #     trait_id=5,
     #     answer=,
-    # )
-    # 6= Breed_Answer(
+    # ),
+    # Breed_Answer(
     #     breed_id=,
     #     trait_id=6,
     #     answer=,
-    # ) 
-    # 7= Breed_Answer(
+    # ), 
+    # Breed_Answer(
     #     breed_id=,
     #     trait_id=7,
     #     answer=,
-    # )
-    # 8= Breed_Answer(
+    # ),
+    # Breed_Answer(
     #     breed_id=,
     #     trait_id=8,
     #     answer=,
-    # ) 
-    # 9= Breed_Answer(
+    # ), 
+    # Breed_Answer(
     #     breed_id=,
     #     trait_id=9,
     #     answer=,
-    # )
-    # 10= Breed_Answer(
+    # ),
+    # Breed_Answer(
     #     breed_id=,
     #     trait_id=10,
     #     answer=,
-    # ) 
-    # 11= Breed_Answer(
+    # ), 
+    # Breed_Answer(
     #     breed_id=,
     #     trait_id=11,
     #     answer=,
-    # )
-    # 12= Breed_Answer(
+    # ),
+    # Breed_Answer(
     #     breed_id=,
     #     trait_id=12,
     #     answer=,
-    # ) 
-    # 13= Breed_Answer(
+    # ), 
+    # Breed_Answer(
     #     breed_id=,
     #     trait_id=13,
     #     answer=,
-    # )
-    # 14= Breed_Answer(
+    # ),
+    # Breed_Answer(
     #     breed_id=,
     #     trait_id=14,
     #     answer=,
-    # ) 
-    # 15= Breed_Answer(
+    # ), 
+    # Breed_Answer(
     #     breed_id=,
     #     trait_id=15,
     #     answer=,
-    # )
-    # 16= Breed_Answer(
+    # ),
+    # Breed_Answer(
     #     breed_id=,
     #     trait_id=16,
     #     answer=,
-    # )
+    # ),
 

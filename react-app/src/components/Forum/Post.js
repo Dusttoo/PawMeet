@@ -11,8 +11,8 @@ import { postComments } from '../../store/post_comments';
 import { Link } from 'react-router-dom';
 import { addALike, removeLike } from '../../store/likes';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faHeart, faPenSquare} from '@fortawesome/free-solid-svg-icons'
-import { faStopCircle, faMinusCircle } from '@fortawesome/free-solid-svg-icons';
+import { faHeart} from '@fortawesome/free-solid-svg-icons'
+import { faPen, faMinusCircle, faPlus } from '@fortawesome/free-solid-svg-icons';
 
 
 const Posts = () => {
@@ -61,7 +61,6 @@ const Posts = () => {
         return numLikes
 
     }
-    console.log(getLikes())
 
 
 
@@ -99,21 +98,26 @@ const Posts = () => {
         dispatch(removeLike(+likeId.id))
     }
 
+      const sortedByTime = Object.values(comments).sort(function(a,b){
+      return new Date(a.posted)  - new Date(b.posted)
+  })
+
     return (
         <>
             <div className="post-container">
                 <div className='post'>
                     {thisUser.id === +author ?
                     <div className='post-user-options'>
-                        <FontAwesomeIcon className='edit-button' onClick={openEditForm} icon={faPenSquare}/>
-                        <FontAwesomeIcon className='delete-button' onClick={deletePost} icon={faMinusCircle }/>
+                        <FontAwesomeIcon className='edit-button' onClick={openEditForm} icon={faPen}/>
+                            <FontAwesomeIcon className='delete-button' onClick={deletePost} icon={faMinusCircle }/>
                     </div> : <></>}
-                    {editForm ?
-                    <EditPost setEditForm={setEditForm}/> : <></>}
+                    
                     <div className="post-header">
-                        <div className="author-details">
+                        <div className='comment-info'>
                             <Link to={`/users/${author}`} ><img className='profile-icon' src={users[author].profile_img} alt={users[author].first_name}/></Link>
-                            <p>{users[author].first_name} {users[author].last_name}</p>
+                            <div className='name-date'>
+                                <Link className='author-name' to={`/users/${author}`}>{users[author].first_name} {users[author].last_name}</Link>
+                            </div>
                         </div>
                         <div className='post-title-container'>
                             <h1 className="show-post-title">{posts[postId].title}</h1>
@@ -133,7 +137,8 @@ const Posts = () => {
                             <FontAwesomeIcon className='like-heart' onClick={deleteLike} icon={faHeart} style={{color: '#ff0808'}}/>
                             {getLikes()}
                         </div> }
-
+                    {editForm ?
+                    <EditPost setEditForm={setEditForm}/> : <></>}
                         
                 </div>
             </div>
@@ -141,18 +146,20 @@ const Posts = () => {
                 <div className='post'>
 
                     <div className='comment-options-container'>
-                        <button 
-                    onClick={openCommentForm}>Add a comment</button>
+                        <FontAwesomeIcon icon={faPlus}
+                    className="add-comment"
+                    onClick={openCommentForm}/>
                     </div>
-                    {commentForm ? 
-                    <AddComment setCommentForm={setCommentForm}/> : <></>}
+                    
                     <table className='comments-table'>
-                    {Object.values(comments).map((comment) => {
+                    {sortedByTime.map((comment) => {
                         return <DisplayComments commentId={comment.id}/>
                     })}
-
+                    
 
                     </table>
+                    {commentForm ? 
+                    <AddComment setCommentForm={setCommentForm}/> : <></>}
                 </div>
             </div>
         </>

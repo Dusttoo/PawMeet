@@ -6,16 +6,51 @@ import { allPets, removePet } from '../../store/pets';
 import { useHistory } from 'react-router';
 import { Carousel } from 'react-carousel-minimal';
 import './Breed.css'
-import { faBorderNone } from '@fortawesome/free-solid-svg-icons';
+import { allBreedAnswers } from '../../store/breed_answers';
+import { allBreedTraits } from '../../store/breed_traits';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faAngleDown, faAnglesDown } from '@fortawesome/free-solid-svg-icons';
+import DisplayTraits from './DisplayTraits';
+import Loading from '../Loading/Loading';
+
 
 
 
 const BreedInfo = () => {
     const {id} = useParams()
+    const dispatch = useDispatch()
     const breeds = useSelector(state => state.breeds)
     const images = useSelector(state => state.breed_images)
+    const breedTraits = useSelector(state => state.breed_traits)
+    const breedAnswers = useSelector(state => state.breed_answers)
+    const [loaded, setLoaded] = useState(false);
+    const [loading, setLoading] = useState(true);
+
+    // let thisAnswer = ''
+    const theseAnswers = []
+    Object.values(breedAnswers).map((answer) => {
+      if(+answer.breed_id === +id) {
+        theseAnswers.push(answer)
+      }
+    })
+
+
+    useEffect(() => {
+    (async() => {
+      await dispatch(allBreedTraits())
+      await dispatch(allBreedAnswers())
+      setLoaded(true);
+      setLoading(false)
+    })();
+  }, [dispatch]);
+
+  if (!loaded) {
+    return null;
+  }
+
     const data = []
     Object.values(images).map((image) => {
+      
         if(+image.breed_id === +id) {
             data.push({
             'image': image.img_url,
@@ -32,10 +67,8 @@ const BreedInfo = () => {
 
   const traits =  breeds[id].personality.split(',')
   const personality = []
-  console.log(traits)
   traits.map(word => {
       if(word.includes('{')) {
-          console.log('{ true')
         personality.push(word.replace('{', ''))
       } else if(word.includes('}')) {
         personality.push(word.replace('}', ''))
@@ -44,12 +77,17 @@ const BreedInfo = () => {
       }
   })
 
-  console.log(personality)
+
 
 
 
     return (
         <>
+        {loading ? 
+        <>
+        <Loading />
+        
+        </> :
           <div className='breed-container'>
             <div className='carousel-container'>
                 <Carousel
@@ -80,10 +118,42 @@ const BreedInfo = () => {
                 />
             </div>
             <div className='breed-content'>
-                <h2>{personality[0]} {personality[1]} {personality[2]}</h2>
-                <p>{breeds[id].description}</p>
+                <h2>{personality[0]} - {personality[1]} - {personality[2]}</h2>
+                <p className='breed-description'>{breeds[id].description}</p>
+                <div className='breed-details'>
+                  <div className='breed-info-container'>
+                    <h3 className='breed-info-header'>Life Expectancy</h3>
+                    <p className='breed-description'>{breeds[id].avg_life_exp}</p>
+                  </div>
+                  <div className='breed-info-container'>
+                    <h3 className='breed-info-header'>Average Height</h3>
+
+                    <p className='breed-description'>Males: {breeds[id].avg_height.males}</p>
+                    <p className='breed-description'>Females: {breeds[id].avg_height.females}</p>
+                  </div>
+                
+
+                
+                  <div className='breed-info-container'>
+                    <h3 className='breed-info-header'>Average Weight</h3>
+
+                    <p className='breed-description'>Males: {breeds[id].avg_weight.males}</p>
+                    <p className='breed-description'>Females: {breeds[id].avg_height.females}</p>
+                  </div>
+
+                
+
             </div>
-          </div>
+            </div>
+            <div className='breed-traits-container'>
+              {Object.values(breedTraits).map((trait) => {
+                const thisAnswer = theseAnswers.find((answer) => +answer.trait_id === +trait.id)
+                return (
+                <DisplayTraits trait={trait} thisAnswer={thisAnswer}/>
+                )
+              })}
+            </div>
+          </div>}
 
         </>
     )

@@ -64,7 +64,7 @@ const handleSubmit = async (e) => {
             </ul>
         </div>
         )}
-        <div className="add-form-container">
+        <div className="edit-form-container">
             <form className='post-form' onSubmit={handleSubmit}>
               <div className="add-form-con">
                 <label className="form-label" >Message:</label>
@@ -74,7 +74,7 @@ const handleSubmit = async (e) => {
                         value={comment_body}
                         onChange={(e) => setBody(e.target.value)}
                         required/>
-                <button className="form-button" type="submit">Submit</button>
+                <div className='submit-container'><button className="form-button" type="submit">Submit</button></div>
               </div>
             </form>
           </div>
