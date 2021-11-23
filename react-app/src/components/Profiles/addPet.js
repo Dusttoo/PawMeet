@@ -5,6 +5,7 @@ import { Link, useParams } from 'react-router-dom';
 import { addAPet, allPets } from '../../store/pets';
 import { useHistory } from 'react-router';
 import validator from 'validator';
+import ImageUploading from 'react-images-uploading';
 
 import './Profiles.css'
 
@@ -21,9 +22,6 @@ const [description, setDescription] = useState('')
 const owner_id = useSelector(state => state.session.user.id)
 const history = useHistory();
 const letters = ['a','b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
-const imgExtent = ['.jpeg', '.png', '.jpg', '.gif']
-
-console.log('validate', profile_img, validator.isIn(profile_img, imgExtent))
 
 const validate = () => {
     const validationErrors = [];
@@ -33,7 +31,6 @@ const validate = () => {
     if(validator.isIn(age, letters)) validationErrors.push('Age must only be numbers')
     if(!description) validationErrors.push('Please enter a description')
     if(description.length < 10) validationErrors.push('Description must be at least 10 characters')
-    if(!validator.isIn(profile_img, imgExtent)) validationErrors.push('Please enter a valid image url')
     
     
     return validationErrors;
@@ -62,7 +59,13 @@ const handleSubmit = async (e) => {
             
         };
 
+    
+
 }
+
+    const onChange = (image) => {
+    setProfileImg(image[0].data_url);
+  };
 
     return (
         <>
@@ -106,12 +109,47 @@ const handleSubmit = async (e) => {
                     onChange={(e) => setAge(e.target.value)}
                     required/>
                     <label className='pet-label'>Profile Image:</label>
-                    <input
-                    placeholder="Profile image url"
-                    className='pet-input'
-                    value={profile_img}
-                    onChange={(e) => setProfileImg(e.target.value)}
-                    required/>
+                    <ImageUploading
+                        multiple
+                        value={profile_img}
+                        onChange={onChange}
+                        maxNumber={1}
+                        dataURLKey="data_url"
+                      > 
+                      {({
+          onImageUpload,
+          isDragging,
+          dragProps,
+        }) => (
+          // write your building UI
+          <div className="upload__image-wrapper">
+            <button
+              style={isDragging ? { color: 'red' } : undefined}
+              onClick={onImageUpload}
+              {...dragProps}
+            >
+              Click or Drop here
+            </button>
+            &nbsp;
+          </div>
+        )}
+      </ImageUploading>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
                     <label className="pet-label" >Description:</label>
                     <textarea
                     placeholder="Post Body"
