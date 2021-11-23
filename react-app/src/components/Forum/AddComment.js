@@ -21,6 +21,9 @@ const posted = `${currentDate.getMonth()}-${currentDate.getDate()}-${currentDate
 
     const validate = () => {
         const validationErrors = [];
+        if(comment_body.length < 6) {
+            validationErrors.push('Comment must be at least 6 characters.')
+        }
 
         return validationErrors;
     }

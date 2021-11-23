@@ -4,6 +4,7 @@ import { useSelector } from 'react-redux';
 import { Link, useParams } from 'react-router-dom';
 import { addAPet, allPets } from '../../store/pets';
 import { useHistory } from 'react-router';
+import validator from 'validator';
 
 import './Profiles.css'
 
@@ -19,9 +20,22 @@ const [age, setAge] = useState('')
 const [description, setDescription] = useState('')
 const owner_id = useSelector(state => state.session.user.id)
 const history = useHistory();
+const letters = ['a','b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
+const imgExtent = ['.jpeg', '.png', '.jpg', '.gif']
+
+console.log('validate', profile_img, validator.isIn(profile_img, imgExtent))
 
 const validate = () => {
     const validationErrors = [];
+    if(!name) validationErrors.push('Name is required')
+    if(name.length < 3) validationErrors.push('Name must be at least 3 characters')
+    if(!breed) validationErrors.push('Please select a breed')
+    if(validator.isIn(age, letters)) validationErrors.push('Age must only be numbers')
+    if(!description) validationErrors.push('Please enter a description')
+    if(description.length < 10) validationErrors.push('Description must be at least 10 characters')
+    if(!validator.isIn(profile_img, imgExtent)) validationErrors.push('Please enter a valid image url')
+    
+    
     return validationErrors;
 }
 
