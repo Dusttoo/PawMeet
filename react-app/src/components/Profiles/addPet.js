@@ -22,6 +22,7 @@ const [description, setDescription] = useState('')
 const owner_id = useSelector(state => state.session.user.id)
 const history = useHistory();
 const letters = ['a','b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
+const [image, setImage] = useState([])
 
 const validate = () => {
     const validationErrors = [];
@@ -64,6 +65,7 @@ const handleSubmit = async (e) => {
 }
 
     const onChange = (image) => {
+    setImage(image)
     setProfileImg(image[0].data_url);
   };
 
@@ -109,6 +111,10 @@ const handleSubmit = async (e) => {
                     onChange={(e) => setAge(e.target.value)}
                     required/>
                     <label className='pet-label'>Profile Image:</label>
+                    {profile_img ?
+                    <img className='upload-preview' src={profile_img} alt='upload'/> :<></>
+                    }
+                    
                     <ImageUploading
                         multiple
                         value={profile_img}
@@ -117,39 +123,24 @@ const handleSubmit = async (e) => {
                         dataURLKey="data_url"
                       > 
                       {({
-          onImageUpload,
-          isDragging,
-          dragProps,
-        }) => (
-          // write your building UI
-          <div className="upload__image-wrapper">
-            <button
-              style={isDragging ? { color: 'red' } : undefined}
-              onClick={onImageUpload}
-              {...dragProps}
-            >
-              Click or Drop here
-            </button>
-            &nbsp;
-          </div>
-        )}
-      </ImageUploading>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+                          onImageUpload,
+                          isDragging,
+                          dragProps,
+                        }) => (
+                          // write your building UI
+                          <div className="upload__image-wrapper">
+                            <button
+                              className='pet-button'
+                              style={isDragging ? { color: 'red' } : undefined}
+                              onClick={onImageUpload}
+                              {...dragProps}
+                            >
+                              Click or Drop here
+                            </button>
+                            &nbsp;
+                          </div>
+                        )}
+                    </ImageUploading>
                     <label className="pet-label" >Description:</label>
                     <textarea
                     placeholder="Post Body"
