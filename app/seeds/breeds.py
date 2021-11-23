@@ -355,6 +355,224 @@ def seed_breeds():
         description="Fearless at work, docile at home, the Bullmastiff is a large, muscular guarder who pursued and held poachers in Merry Old England'¿merry, we suppose, for everyone but poachers. Bullmastiffs are the result of Bulldog and Mastiff crosses. The Bullmastiff isn't quite as large as his close cousin the Mastiff. Still, standing as high as 27 inches at the shoulder and weighing between 100 and 130 pounds, this is still a whole lot of dog. After the first impression made by the Bullmastiff's size, it is the large, broad head that conveys the breed's essence: the dark eyes, high-set V-shaped ears, and broad, deep muzzle all combine to present the intelligence, alertness, and confidence that make the Bullmastiff a world-class protector and family companion. Coats come in fawn, red, or brindle. These are biddable and reliable creatures, but as with any large guarding dog, owners must begin training and socialization early, while the puppy is still small enough to control.",
         )
 
+    breeds = [
+        Breed(
+            name='Australian Shepherd',
+            breed_group=7,
+            personality=['Smart', 'Work-Oriented', 'Exuberant'],
+            avg_height={
+                'males': '20-23 inches',
+                'females': '18-21 inches'
+            },
+            avg_weight={
+                'males': '50-65 pounds',
+                'females': '40-55 pounds'
+            },
+            avg_life_exp='12-15 years',
+            breed_video='https://youtu.be/H-KCl_cqE38?t=13',
+            description="The Australian Shepherd, a lean, tough ranch dog, is one of those 'only in America' stories: a European breed perfected in California by way of Australia. Fixtures on the rodeo circuit, they are closely associated with the cowboy life. The Australian Shepherd, the cowboy's herding dog of choice, is a medium-sized worker with a keen, penetrating gaze in the eye. Aussie coats offer different looks, including merle (a mottled pattern with contrasting shades of blue or red). In all ways, they're the picture of rugged and agile movers of stock. Aussies exhibit an irresistible impulse to herd, anything: birds, dogs, kids. This strong work drive can make Aussies too much dog for a sedentary pet owner. Aussies are remarkably intelligent, quite capable of hoodwinking an unsuspecting novice owner. In short, this isn't the pet for everyone. But if you're looking for a brainy, tireless, and trainable partner for work or sport, your search might end here.",
+
+        ),
+        Breed(
+            name='Yorkshire Terrier',
+            breed_group=5,
+            personality=['Affectionate', 'Sprightly', 'Tomboyish'],
+            avg_height={
+                'males': '7-8 inches',
+                'females': '7-8 inches'
+            },
+            avg_weight={
+                'males': '7 pounds',
+                'females': '7 pounds'
+            },
+            avg_life_exp='11-15 years',
+            breed_video='https://youtu.be/k4vXGmhAOPY',
+
+            description="Beneath the dainty, glossy, floor-length coat of a Yorkshire Terrier beats the heart of a feisty, old-time terrier. Yorkies earned their living as ratters in mines and mills long before they became the beribboned lapdogs of Victorian ladies. The Yorkshire Terrier is a compact, toy-size terrier of no more than seven pounds whose crowning glory is a floor-length, silky coat of steel blue and a rich golden tan. Don't let the Yorkie's daintiness fool you. Tenacious, feisty, brave, and sometimes bossy, the Yorkie exhibits all the traits of a true terrier. Often named the most popular dog breed in various American cities, Yorkies pack lots of big-town attitude into a small but self-important package. They are favorites of urbanites the world over. Yorkies are long-lived and hypoallergenic (the coat is more like human hair than animal fur), and they make fine little watchdogs. This is a true 'personality breed,' providing years of laughs, love, and close companionship.",
+
+        ),
+        Breed(
+            name='Great Dane',
+            breed_group=3,
+            personality=['Friendly', 'Patient', 'Dependable'],
+            avg_height={
+                'males': '30-32 inches',
+                'females': '28-30 inches'
+            },
+            avg_weight={
+                'males': '140-175 pounds',
+                'females': '110-140 pounds'
+            },
+            avg_life_exp='7-10 years',
+            breed_video='https://youtu.be/f9A-3IdCzMk?t=10',
+
+            description="The easygoing Great Dane, the mighty 'Apollo of Dogs,' is a total joy to live with, but owning a dog of such imposing size, weight, and strength is a commitment not to be entered into lightly. This breed is indeed great, but not a Dane. As tall as 32 inches at the shoulder, Danes tower over most other dogs and when standing on their hind legs, they are taller than most people. These powerful giants are the picture of elegance and balance, with the smooth and easy stride of born noblemen. The coat comes in different colors and patterns, perhaps the best-known being the black-and-white patchwork pattern known as 'harlequin.' Despite their sweet nature, Danes are alert home guardians. Just the sight of these gentle giants is usually enough to make intruders think twice. But those foolish enough to mistake the breed's friendliness for softness will meet a powerful foe of true courage and spirit. Patient with kids, Danes are people pleasers who make friends easily.",
+
+        ),
+        Breed(
+            name='Cavalier King Charles Spaniel',
+            breed_group=5,
+            personality=['Affectionate', 'Gentle', 'Graceful'],
+            avg_height={
+                'males': '12-13 inches',
+                'females': '12-13 inches'
+            },
+            avg_weight={
+                'males': '13-18 pounds',
+                'females': '13-18 pounds'
+            },
+            avg_life_exp='12-15 years',
+            breed_video='https://youtu.be/KuYuo6ybPg0',
+
+            description="The Cavalier King Charles Spaniel wears his connection to British history in his breed's name. Cavaliers are the best of two worlds, combining the gentle attentiveness of a toy breed with the verve and athleticism of a sporting spaniel. The Cavalier's all-around beauty, regal grace, and even temper mark him as one of dogdom's noblemen. A toy spaniel no more than 13 inches high, the Cavalier draws you in with his face: The sweet, gentle, melting expression emanating from large, round eyes is a breed hallmark. Another is the silky, richly colored coat that can be one of four distinct varieties (described in this page's History section). Cavaliers may be aristocrats, but they gladly descend from their royal high horse for a backyard frolic or a squirrel chase. They get along nicely with children and other dogs. Adaptable Cavaliers do equally well with active owners and homebodies'¿they can be upbeat athletes or shameless couch potatoes, depending on an owner's lifestyle.",
+
+        ),
+        Breed(
+            name='Doberman Pinscher',
+            breed_group=3,
+            personality=['Fearless', 'Loyal', 'Alert'],
+            avg_height={
+                'males': '26-28 inches',
+                'females': '24-26 inches'
+            },
+            avg_weight={
+                'males': '75-100 pounds',
+                'females': '60-90 pounds'
+            },
+            avg_life_exp='10-12 years',
+            breed_video='https://youtu.be/HNYyLPkUaMA?t=9',
+
+            description="Sleek and powerful, possessing both a magnificent physique and keen intelligence, the Doberman Pinscher is one of dogkind's noblemen. This incomparably fearless and vigilant breed stands proudly among the world's finest protection dogs. Dobermans are compactly built dogs'¿muscular, fast, and powerful'¿standing between 24 to 28 inches at the shoulder. The body is sleek but substantial, and is covered with a glistening coat of black, blue, red, or fawn, with rust markings. These elegant qualities, combined with a noble wedge-shaped head and an easy, athletic way of moving, have earned Dobermans a reputation as royalty in the canine kingdom. A well-conditioned Doberman on patrol will deter all but the most foolish intruder.",
+
+        ),
+        Breed(
+            name='Miniature Schnauzer',
+            breed_group=4,
+            personality=['Friendly', 'Smart', 'Obedient'],
+            avg_height={
+                'males': '12-14 inches',
+                'females': '12-14 inches'
+            },
+            avg_weight={
+                'males': '11-20 pounds',
+                'females': '11-20 pounds'
+            },
+            avg_life_exp='12-15 years',
+            breed_video='https://youtu.be/xe8gIVqjeRQ',
+
+            description="The Miniature Schnauzer, the smallest of the three Schnauzer breeds, is a generally healthy, long-lived, and low-shedding companion. Add an outgoing personality, a portable size, and sporty good looks, and you've got an ideal family dog. Stocky, robust little dogs standing 12 to 14 inches, Miniature Schnauzers were bred down from their larger cousins, Standard Schnauzers. The bushy beard and eyebrows give Minis a charming, human-like expression. The hard, wiry coat comes in three color patterns: salt and pepper, black and silver, and solid black. Created to be all-around farm dogs and ratters, they are tough, muscular, and fearless without being aggressive. The Miniature Schnauzer is a bright, friendly, trainable companion, small enough to adapt to apartment life but tireless enough to patrol acres of farmland. They get along well with other animals and kids. Minis are sturdy little guys and enjoy vigorous play. Home and family oriented, they make great watchdogs.",
+
+        ),
+        Breed(
+            name='Shih Tzu',
+            breed_group=5,
+            personality=['Affectionate', 'Playful', 'Outgoing'],
+            avg_height={
+                'males': '9-10.5 inches',
+                'females': '9-10.5 inches'
+            },
+            avg_weight={
+                'males': '9-16 pounds',
+                'females': '9-16 pounds'
+            },
+            avg_life_exp='10-18 years',
+            breed_video='https://youtu.be/XwWoYElh4lI',
+
+            description="That face! Those big dark eyes looking up at you with that sweet expression! It's no surprise that Shih Tzu owners have been so delighted with this little 'Lion Dog' for a thousand years. Where Shih Tzu go, giggles and mischief follow. Shi Tsu (pronounced in the West 'sheed-zoo' or 'sheet-su'; the Chinese say 'sher-zer'), weighing between 9 to 16 pounds, and standing between 8 and 11 inches, are surprisingly solid for dogs their size. The coat, which comes in many colors, is worth the time you will put into it'¿few dogs are as beautiful as a well-groomed Shih Tzu. Being cute is a way of life for this lively charmer. The Shih Tzu is known to be especially affectionate with children. As a small dog bred to spend most of their day inside royal palaces, they make a great pet if you live in an apartment or lack a big backyard. Some dogs live to dig holes and chase cats, but a Shih Tzu's idea of fun is sitting in your lap acting adorable as you try to watch TV.",
+
+        ),
+        Breed(
+            name='Boston Terrier',
+            breed_group=6,
+            personality=['Friendly', 'Bright', 'Amusing'],
+            avg_height={
+                'males': '15-17 inches',
+                'females': '15-17 inches'
+            },
+            avg_weight={
+                'males': '12-25 pounds',
+                'females': '12-25 pounds'
+            },
+            avg_life_exp='11-13 years',
+            breed_video='https://youtu.be/G3dWns5n21s',
+
+            description="The Boston Terrier is a lively little companion recognized by his tight tuxedo jacket, sporty but compact body, and the friendly glow in his big, round eyes. His impeccable manners have earned him the nickname 'The American Gentleman.' Boston Terriers are compact, short-tailed, well-balanced little dogs weighing no more than 25 pounds. The stylish 'tuxedo' coat can be white and either black, brindle, or seal (dark brown). The head is square, the muzzle is short, and the large, round eyes can shine with kindness, curiosity, or mischief. Ever alert to their surroundings, Bostons move with a jaunty, rhythmic step. It's a safe bet that a breed named for a city'¿the Havanese or Brussels Griffon, for instance'¿will make an excellent urban pet. Bostons are no exception: they are sturdy but portable, people-oriented, and always up for a brisk walk to the park or outdoor cafe. A bright dog with a natural gift for comedy, the dapper Bostonian is a steady source of smiles.",
+
+        ),
+        Breed(
+            name='Bernese Mountain Dog',
+            breed_group=3,
+            personality=['Good-Natured', 'Calm', 'Strong'],
+            avg_height={
+                'males': '25-27.5 inches',
+                'females': '23-26 inches'
+            },
+            avg_weight={
+                'males': '80-115 pounds',
+                'females': '70-95 pounds'
+            },
+            avg_life_exp='7-10 years',
+            breed_video='',
+
+            description="Big, powerful, and built for hard work, the Bernese Mountain Dog is also strikingly beautiful and blessed with a sweet, affectionate nature. Berners are generally placid but are always up for a romp with the owner, whom they live to please. The Bernese Mountain Dog is a large, sturdy worker who can stand over 27 inches at the shoulder. The thick, silky, and moderately long coat is tricolored: jet black, clear white, and rust. The distinctive markings on the coat and face are breed hallmarks and, combined with the intelligent gleam in the dark eyes, add to the Berner's aura of majestic nobility. A hardy dog who thrives in cold weather, the Berner's brain and brawn helped him multitask on the farms and pastures of Switzerland. Berners get along with the entire family and are particularly gentle with children, but they will often become more attached to one lucky human. Berners are imposing but not threatening, and they maintain an aloof dignity with strangers.",
+
+        ),
+        # Breed(
+        #     name='',
+        #     breed_group=,
+        #     personality=[],
+        #     avg_height={
+        #         'males': '',
+        #         'females': ''
+        #     },
+        #     avg_weight={
+        #         'males': '',
+        #         'females': ''
+        #     },
+        #     avg_life_exp='',
+        #     breed_video='',
+
+        #     description="",
+
+        # ),
+        # Breed(
+        #     name='',
+        #     breed_group=,
+        #     personality=[],
+        #     avg_height={
+        #         'males': '',
+        #         'females': ''
+        #     },
+        #     avg_weight={
+        #         'males': '',
+        #         'females': ''
+        #     },
+        #     avg_life_exp='',
+        #     breed_video='',
+
+        #     description="",
+
+        # ),
+        # Breed(
+        #     name='',
+        #     breed_group=,
+        #     personality=[],
+        #     avg_height={
+        #         'males': '',
+        #         'females': ''
+        #     },
+        #     avg_weight={
+        #         'males': '',
+        #         'females': ''
+        #     },
+        #     avg_life_exp='',
+        #     breed_video='',
+
+        #     description="",
+
+        # ),
+        
+    ]
 
             
 
@@ -383,6 +601,8 @@ def seed_breeds():
     db.session.add(corgi)
     db.session.add(cocker)
     db.session.add(mastiff)
+    db.session.add_all(breeds)
+
 
 
 
@@ -409,6 +629,8 @@ def undo_breeds():
     #         'females': ''
     #     },
     #     avg_life_exp='',
+    # breed_video = '',
+# 
     #     description="",
 
     # )

@@ -477,6 +477,270 @@ def seed_breed_images():
         breed_id=20,
         img_url='https://lh3.googleusercontent.com/proxy/HBZT8YsLpIFaZ2BVQoTbq2TJ-Vv1ZMQrlf6njNCsWIJXdPKOObsKaDRdQ24M_jx8htQasYLKAt_YMKcLny8_5o-F7Q'
     ),
+
+        Breed_Image(
+        breed_id=21,
+        img_url='https://www.akc.org/wp-content/uploads/2017/11/Australian-Shepherd.1.jpg'
+    ),
+
+        Breed_Image(
+        breed_id=21,
+        img_url='https://besthqwallpapers.com/Uploads/12-4-2018/48079/thumb2-aussie-meadow-blur-australian-shepherd-pets.jpg'
+    ),
+
+        Breed_Image(
+        breed_id=21,
+        img_url='https://images4.alphacoders.com/101/1012745.jpg'
+    ),
+
+        Breed_Image(
+        breed_id=21,
+        img_url='https://wallup.net/wp-content/uploads/2018/09/25/571172-Australian_Shepherd-forest-Papillon-dog-748x468.jpg'
+    ),
+
+        Breed_Image(
+        breed_id=21,
+        img_url='https://c4.wallpaperflare.com/wallpaper/94/43/766/autumn-leaves-pose-background-paw-hd-wallpaper-preview.jpg'
+    ),
+
+        Breed_Image(
+        breed_id=21,
+        img_url='https://besthqwallpapers.com/Uploads/4-10-2018/67832/thumb2-australian-shepherd-little-puppy-autumn-forest-pets.jpg'
+    ),
+
+    Breed_Image(
+        breed_id=21,
+        img_url='https://motaen.com/upload/wallpapers/2020/06/08/14/52/67329/nature-running-dog-wildflowers-preview.jpg'
+    ),
+
+        Breed_Image(
+        breed_id=22,
+        img_url='https://highlandcanine.com/wp-content/uploads/2021/05/yorkshire-terrier-sitting-on-decking.jpg'
+    ),
+
+        Breed_Image(
+        breed_id=22,
+        img_url='https://www.thesprucepets.com/thmb/wUATuqZfVXedDqKnYorz3vwadQ8=/1414x1414/smart/filters:no_upscale()/GettyImages-652401198-53c4d9adf78c4d5a9cb1eec9d8ecb1a5.jpg'
+    ),
+
+        Breed_Image(
+        breed_id=22,
+        img_url='https://media-be.chewy.com/wp-content/uploads/2021/07/16074327/YorkshireTerrier-FeaturedImage.jpg'
+    ),
+
+        Breed_Image(
+        breed_id=22,
+        img_url='https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fstatic.onecms.io%2Fwp-content%2Fuploads%2Fsites%2F47%2F2021%2F08%2F10%2Fyorkshire-terrier-red-bow-walking-1291798649-2000.jpg'
+    ),
+
+    Breed_Image(
+        breed_id=22,
+        img_url='https://assets.orvis.com/is/image/orvisprd/AdobeStock_180022533?wid=1023&src=is($object$:7-3)'
+    ),
+
+        Breed_Image(
+        breed_id=22,
+        img_url='https://cdn1.playbarkrun.com/wp-content/uploads/2018/05/28100010/yorkshire-terrier-coat-grooming-brushing.jpg'
+    ),
+
+        Breed_Image(
+        breed_id=23,
+        img_url='https://www.akc.org/wp-content/uploads/2017/11/Great-Dane-looking-back-over-his-shoulder-outdoors-at-the-park.jpg'
+    ),
+
+        Breed_Image(
+        breed_id=23,
+        img_url='https://cdn.mos.cms.futurecdn.net/2vdJPwVUSsqtZJLdxJ4i36.jpg'
+    ),
+
+    Breed_Image(
+        breed_id=23,
+        img_url='https://www.purinaproclub.com/sites/g/files/auxxlc346/files/styles/large/public/GrtDane_list.jpg?itok=OTuKazwD'
+    ),
+
+    Breed_Image(
+        breed_id=23,
+        img_url='https://vetstreet.brightspotcdn.com/dims4/default/531e3f0/2147483647/crop/0x0%2B0%2B0/resize/645x380/quality/90/?url=https%3A%2F%2Fvetstreet-brightspot.s3.amazonaws.com%2F46%2F2d1f90a0d711e0a2380050568d634f%2Ffile%2FGreat-Danes-3-645mk062111.jpg'
+    ),
+
+        Breed_Image(
+        breed_id=23,
+        img_url='https://i.pinimg.com/originals/be/7e/4f/be7e4fd51e34ffb15157d8ac859a0990.jpg'
+    ),
+        Breed_Image(
+        breed_id=23,
+        img_url='https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/great-dane-dog-portrait-royalty-free-image-1594629594.jpg?crop=1.00xw:0.752xh;0,0.151xh&resize=1200:*'
+    ),
+
+        Breed_Image(
+        breed_id=23,
+        img_url='https://animals.net/wp-content/uploads/2018/08/Great-Dane-3.jpg'
+    ),
+
+        Breed_Image(
+        breed_id=24,
+        img_url='https://www.akc.org/wp-content/uploads/2017/11/Cavalier-King-Charles-Spaniel-standing-in-the-grass.jpg'
+    ),
+
+        Breed_Image(
+        breed_id=24,
+        img_url='https://media-be.chewy.com/wp-content/uploads/2021/06/02112758/Cavalier-King-Charles-Spaniel-FeaturedImage.jpg'
+    ),
+
+        Breed_Image(
+        breed_id=24,
+        img_url='https://vetstreet.brightspotcdn.com/dims4/default/31d2721/2147483647/thumbnail/645x380/quality/90/?url=https%3A%2F%2Fvetstreet-brightspot.s3.amazonaws.com%2F6a%2F38%2F713599734f789b790f6cb060ac74%2FCavalier-King-Charles-Spaniel-AP-KHUGZ3-645sm11514.jpg'
+    ),
+
+        Breed_Image(
+        breed_id=24,
+        img_url='https://www.k9web.com/wp-content/uploads/2019/02/cavalier-king-charles-spaniel-relaxing-outdoor-in-autumn-season.jpg'
+    ),
+        Breed_Image(
+        breed_id=24,
+        img_url='https://d17fnq9dkz9hgj.cloudfront.net/breed-uploads/2018/08/cavalier-king-charles-spaniel-detail.jpg?bust=1535565465&width=355'
+    ),
+
+        Breed_Image(
+        breed_id=24,
+        img_url='https://biologydictionary.net/wp-content/uploads/2020/09/shutterstock_1697345674-1.jpg'
+    ),
+
+        Breed_Image(
+        breed_id=25,
+        img_url='https://www.akc.org/wp-content/uploads/2017/11/Doberman-Pinscher-standing-outdoors.jpg'
+    ),
+
+    Breed_Image(
+        breed_id=25,
+        img_url='https://c4.wallpaperflare.com/wallpaper/330/679/681/doberman-dog-face-tongue-wallpaper-preview.jpg'
+    ),
+
+    Breed_Image(
+        breed_id=25,
+        img_url='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSR9m_ah6RPKoeUIR6L9GVeZYY-bkEsaIcG3zV3Pew0LF_NjvGT2wsMYrhbkmtBj-zrVWc&usqp=CAU'
+    ),
+
+        Breed_Image(
+        breed_id=25,
+        img_url='https://www.petfirst.com/wp-content/uploads/2018/03/Breed-Hero-Doberman.jpg'
+    ),
+        Breed_Image(
+        breed_id=25,
+        img_url='https://d.newsweek.com/en/full/1844491/doberman-sat-grass.jpg?w=1600&h=1600&q=88&f=a3db3191c42298f89836cf05466b2de6'
+    ),
+
+        Breed_Image(
+        breed_id=25,
+        img_url='https://cdn-bcjdl.nitrocdn.com/gnkKBTQljcQxQnaeTeakBaOogLcXVjMx/assets/static/optimized/wp-content/uploads/2015/10/doberman-768x432.jpg'
+    ),
+
+        Breed_Image(
+        breed_id=25,
+        img_url='https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fstatic.onecms.io%2Fwp-content%2Fuploads%2Fsites%2F47%2F2021%2F03%2F25%2Fdoberman-pinscher-running-grass-1082940764-2000.jpg'
+    ),
+
+    Breed_Image(
+        breed_id=26,
+        img_url='https://d17fnq9dkz9hgj.cloudfront.net/breed-uploads/2018/08/miniature-schnauzer-detail.jpg?bust=1535566660&width=355'
+    ),
+
+    Breed_Image(
+        breed_id=26,
+        img_url='https://images.ctfassets.net/440y9b545yd9/2T9MD2d7gNk5aqBD1alzc8/4810719048d0e773ddc2bdb66e837128/Miniature_Schnauzer_5_Things_850.jpg'
+    ),
+
+        Breed_Image(
+        breed_id=26,
+        img_url='https://cf.ltkcdn.net/dogs/images/orig/259106-1600x1030-standard-schnauzer-temperament.jpg'
+    ),
+        Breed_Image(
+        breed_id=26,
+        img_url='https://upload.wikimedia.org/wikipedia/commons/3/36/%D0%9F%D0%B8%D1%82%D0%BE%D0%BC%D0%BD%D0%B8%D0%BA_%22%D0%90%D1%81%D1%81%D0%BE%D0%BD_%D0%90%D1%80%D0%B8%22_%D0%A6%D0%B2%D0%B5%D1%80%D0%B3%D1%88%D0%BD%D0%B0%D1%83%D1%86%D0%B5%D1%80%D1%8B_%D0%B1%D0%B5%D0%BB%D1%8B%D0%B5_%D0%B8_%D1%87%D0%B5%D1%80%D0%BD%D1%8B%D0%B5_%D1%81_%D1%81%D0%B5%D1%80%D0%B5%D0%B1%D1%80%D0%BE%D0%BC_12.jpg'
+    ),
+
+        Breed_Image(
+        breed_id=26,
+        img_url='https://m9b5y6z6.rocketcdn.me/wp-content/uploads/2019/07/Miniature_Schnauzer_standing-scaled.jpeg'
+    ),
+
+        Breed_Image(
+        breed_id=27,
+        img_url='https://www.petmd.com/sites/default/files/2020-11/picture-of-shih-tzu-dog.jpg'
+    ),
+
+    Breed_Image(
+        breed_id=27,
+        img_url='https://s36700.pcdn.co/wp-content/uploads/2017/04/iStock-shihtzu_thumb-600x400.jpg.optimal.jpg'
+    ),
+
+    Breed_Image(
+        breed_id=27,
+        img_url='https://www.scotsman.com/webimg/b25lY21zOmU5ZDY3Mjc5LWRkMTItNDA1Zi04MzljLTM2MTE5ZTU2N2ZkNzo5OTM1OGZlZC1jYmQ3LTQ2N2ItOWJlMi03ZjY3NDBmNmVhMWE=.jpg?width=2048&enable=upscale'
+    ),
+
+        Breed_Image(
+        breed_id=28,
+        img_url='https://vetstreet.brightspotcdn.com/dims4/default/871fdd9/2147483647/crop/0x0%2B0%2B0/resize/645x380/quality/90/?url=https%3A%2F%2Fvetstreet-brightspot.s3.amazonaws.com%2F30%2Fee8ec09e8e11e0a2380050568d634f%2Ffile%2Fboston-terrier-1-062411.jpg'
+    ),
+        Breed_Image(
+        breed_id=28,
+        img_url='https://thehappypuppysite.com/wp-content/uploads/2019/01/Boston-Terrier-Temperament-long.jpg'
+    ),
+
+        Breed_Image(
+        breed_id=28,
+        img_url='https://thehappypuppysite.com/wp-content/uploads/2018/08/boston-terrier-long.jpg'
+    ),
+
+        Breed_Image(
+        breed_id=28,
+        img_url='https://img.particlenews.com/img/id/2Q7G40_0cfD0NBP00?type=thumbnail_1600x1200'
+    ),
+
+    Breed_Image(
+        breed_id=28,
+        img_url='https://media-be.chewy.com/wp-content/uploads/2021/07/06093435/Boston-Terrier_FeaturedImage.jpg'
+    ),
+
+    Breed_Image(
+        breed_id=28,
+        img_url='https://maggielovesorbit.com/wp-content/uploads/2020/02/Canada-Pooch-2.jpg'
+    ),
+
+        Breed_Image(
+        breed_id=29,
+        img_url='https://www.akc.org/wp-content/uploads/2017/11/Bernese-Mountain-Dog-On-White-01.jpg'
+    ),
+        Breed_Image(
+        breed_id=29,
+        img_url='https://s36700.pcdn.co/wp-content/uploads/2018/04/Bernese-Mountain-Dog-running-600x400.jpg.optimal.jpg'
+    ),
+
+        Breed_Image(
+        breed_id=29,
+        img_url='https://www.akc.org/wp-content/uploads/2020/11/Bernese-Mountain-Dog-head-portrait-outdoors.jpg'
+    ),
+
+        Breed_Image(
+        breed_id=29,
+        img_url='https://www.wideopenpets.com/wp-content/uploads/2021/10/living-with-Bernese-mountain-dogs.png'
+    ),
+
+    Breed_Image(
+        breed_id=29,
+        img_url='https://www.wideopenpets.com/wp-content/uploads/2019/11/Bernese-Mountain-Dog.png'
+    ),
+
+    Breed_Image(
+        breed_id=29,
+        img_url='https://cf.ltkcdn.net/dogs/images/orig/268758-1600x1030-bernese-mountain-dog-complete-breed-care-guide.jpg'
+    ),
+
+        Breed_Image(
+        breed_id=29,
+        img_url='https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fstatic.onecms.io%2Fwp-content%2Fuploads%2Fsites%2F47%2F2021%2F05%2F27%2Fbernese-mountain-dog-closeup-puppy-429989103-2000.jpg'
+    ),
     ]
     
    
