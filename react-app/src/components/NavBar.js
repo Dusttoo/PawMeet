@@ -3,7 +3,10 @@ import React, { useState } from 'react';
 import { useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
 import LogoutButton from './auth/LogoutButton';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+
 import './NavBar.css'
+import { faUser } from '@fortawesome/free-solid-svg-icons';
 
 const NavBar = () => {
   const currentUser = useSelector(state => state.session.user)
@@ -32,10 +35,15 @@ const NavBar = () => {
         </li>
         <li>
           {currentUser ?
-           <LogoutButton /> : <Link to='/login' className='login-button'>Log In</Link>
+          <>
+            <LogoutButton /> 
+            <Link className='account-button' to={`/users/${currentUser.id}`} ><FontAwesomeIcon icon={faUser} /></Link>
+           </>
+           : <Link to='/login' className='login-button'>Log In</Link>
           }
          
         </li>
+        
       </ul>
     </nav>
   );

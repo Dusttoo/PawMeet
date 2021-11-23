@@ -37,7 +37,6 @@ class SignUpForm(FlaskForm):
         min=6, max=18, message='First Name must be between 6 and 18 characters')])
     last_name = StringField('last_name', validators=[DataRequired(message='Last Name Required'), Length(
         min=6, max=18, message='Last Name must be between 6 and 18 characters')])
-    profile_img = StringField('profile_img', validators=[DataRequired(message='Profile Image URL Required'), Length(
-        min=6, max=18, message='profile image must be between 6 and 18 characters')])
+    profile_img = StringField('profile_img', validators=[DataRequired(message='Profile Image URL Required')])
     barking_since = StringField('barking_since', validators=[
                                 DataRequired()])

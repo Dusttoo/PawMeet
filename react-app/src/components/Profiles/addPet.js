@@ -61,50 +61,51 @@ const handleSubmit = async (e) => {
         </div>
         )}
         <div className='add-pet-container'>
-            <form className='pet-form' onSubmit={handleSubmit}>
-                <div className='add-pet'>
-                    <label className='form-label'>Name:</label>
+            <form className='add-pet-form' onSubmit={handleSubmit}>
+                <div className='edit-pet'>
+                    <label className='pet-label'>Name:</label>
                     <input
                     placeholder="Pet Name"
-                    className='form-input'
+                    className='pet-input'
                     value={name}
                     onChange={(e) => setName(e.target.value)}
                     required/>
-                    <label className='form-label'>Breed:</label>
+                    <label className='pet-label'>Breed:</label>
                     <select
                     placeholder="Breed"
-                    className='form-input'
+                    className='pet-input'
                     value={breed}
                     onChange={(e) => setBreed(e.target.value)}
                     required>
+                        <option value={breed}>{breed}</option>
                         {Object.values(breeds).map((breed) => {
                             return (
                                 <option value={breed.name}>{breed.name}</option>
                             )
                         })}
                     </select>
-                    <label className='form-label'>Age:</label>
+                    <label className='pet-label'>Age:</label>
                     <input
                     placeholder="Age in years"
-                    className='form-input'
+                    className='pet-input'
                     value={age}
                     onChange={(e) => setAge(e.target.value)}
                     required/>
-                    <label className='form-label'>Profile Image:</label>
+                    <label className='pet-label'>Profile Image:</label>
                     <input
                     placeholder="Profile image url"
-                    className='form-input'
+                    className='pet-input'
                     value={profile_img}
                     onChange={(e) => setProfileImg(e.target.value)}
                     required/>
-                    <label className="form-label" >Description:</label>
+                    <label className="pet-label" >Description:</label>
                     <textarea
                     placeholder="Post Body"
-                    className="form-input"
+                    className="pet-description-input"
                     value={description}
                     onChange={(e) => setDescription(e.target.value)}
                     required/>
-                <button className="form-button" type="submit">Submit</button>
+                <button className="pet-button" type="submit">Submit</button>
                 </div>
             </form>
         </div>

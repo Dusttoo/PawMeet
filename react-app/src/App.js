@@ -104,9 +104,9 @@ function App() {
         <Route path='/forum/:id' exact={true} >
           <BreedForum />
         </Route>
-        <Route path='/forum/posts/:postId' exact={true} >
+        <ProtectedRoute path='/forum/posts/:postId' exact={true} >
           <Posts />
-        </Route>
+        </ProtectedRoute>
         <Route path='/' exact={true} >
           <Landing />
         </Route>

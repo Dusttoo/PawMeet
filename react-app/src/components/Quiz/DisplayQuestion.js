@@ -25,6 +25,7 @@ const DisplayQuestion = () => {
     const coatTypes = ['Wiry', 'Rough', 'Curly', 'Hairless', 'Corded', 'Wavy', 'Smooth', 'Double', 'Silky']
     let index = 0;
     const coatLengths = ['Short', 'Medium', 'Long']
+    const breedImages = useSelector(state => state.breed_images)
     const [loading, setLoading] = useState(false)
 
     const validate = () => {
@@ -82,7 +83,10 @@ const DisplayQuestion = () => {
         </div>
         </> :
         <>
-        <h2 className='question'>{breedTraits[next].question}</h2>
+        <div className='image-container'>
+            <img className='quiz-image' src={breedImages[next].img_url} alt='breed quiz'></img>
+            <h2 className='question'>{breedTraits[next].question}</h2>
+        </div>
         {validationErrors.length > 0 && (
         <div className="errors">
             <p className="error-title"> The following errors were found: </p>
@@ -95,7 +99,7 @@ const DisplayQuestion = () => {
         <div className="add-form-container">
             <form className='post-form' onSubmit={handleSubmit}>
               <div className="quiz-form-con">
-                    <div className='radio-container'>
+                    <div className='coat-container'>
                         {breedTraits[next].id === 7 ?
                         
                         <>
@@ -103,15 +107,16 @@ const DisplayQuestion = () => {
                             index++
                         return (
                         <div className='min-max'>
-                            <label className='container'>{coat}</label>
-                            <input
-                            type='radio'
-                            name='type'
-                            className="quiz-radio"
-                            value={index}
-                            onChange={(e) => setAnswer(e.target.value)}
-                            required/>
-                            <span className='checkmark'></span>
+                            <label className='container'>{coat}
+                                <input
+                                type='radio'
+                                name='type'
+                                className="quiz-radio"
+                                value={index}
+                                onChange={(e) => setAnswer(e.target.value)}
+                                required/>
+                                <span className='checkmark'></span>
+                            </label>
                         </div>
                         )    
                         

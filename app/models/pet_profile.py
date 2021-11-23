@@ -13,7 +13,8 @@ class Pet_Profile(db.Model):
 
 
     users = db.relationship('User', back_populates='pet_profiles')
-    pet_images = db.relationship('Pet_Image', back_populates='pet_profiles')
+    pet_images = db.relationship(
+        'Pet_Image', cascade="all, delete-orphan", back_populates='pet_profiles')
 
     def to_dict(self):
         return {

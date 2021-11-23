@@ -44,3 +44,55 @@
 .pet-profile-img {
     width: 500px;
 }
+
+.pet-button {
+    background: none;
+    border: 1px solid #8A7B4E;
+    border-radius: 10px;
+    color: #8A7B4E;
+    margin: 8px;
+}
+
+.pet-button:hover {
+    background-color: #8A7B4E;
+    color: white;
+    cursor: pointer;
+}
+
+.edit-pet {
+    display: flex;
+    flex-direction: column;
+}
+
+.pet-label {
+    padding: 5px;
+}
+
+.pet-input {
+    border: 1px solid #8A7B4E;
+    border-radius: 2px;
+    height: 25px;
+}
+
+.pet-description-input {
+    border: 1px solid #8A7B4E;
+    border-radius: 2px;
+    height: 65px;
+}
+
+.owner-link {
+    text-decoration: none;
+    color: #8A7B4E;
+    text-align: center;
+    width: 100%;
+}
+
+.owner-link:hover {
+    color: #333810;
+}
+
+.add-pet-form {
+    display: flex;
+    flex-direction: column;
+    padding: 25px;
+}

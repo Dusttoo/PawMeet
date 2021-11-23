@@ -2,6 +2,7 @@ import React, { useEffect, useState }  from 'react';
 import { useDispatch } from 'react-redux';
 import { useSelector } from 'react-redux';
 import { Link, useParams } from 'react-router-dom';
+import DisplayPosts from '../Forum/DisplayPost';
 import './Profiles.css'
 
 
@@ -12,6 +13,20 @@ const UserProfile = () => {
     const currentUserId = useSelector(state => state.session.user.id)
     const pets = useSelector(state => state.pets)
     const thesePets = []
+    const posts = useSelector(state => state.forum)
+    const index = 0
+
+    const thesePosts = []
+    Object.values(posts).map(post => {
+        if (+post.user_id === +id) {
+            thesePosts.push(post)
+        }
+    })
+
+    const sortedByTime = thesePosts.sort(function(a,b){
+      return new Date(b.posted) - new Date(a.posted) 
+  })
+
 
     Object.values(pets).map(pet => {
         if(+pet.owner_id === +id) {
@@ -26,6 +41,11 @@ const UserProfile = () => {
 
     }
 
+    const getTenPosts = () => {
+      return sortedByTime.splice(index, 5)
+
+  }
+
     return (
         <>
             <div className='user-page'>
@@ -34,7 +54,7 @@ const UserProfile = () => {
                         <img className='profile-img' src={users[id].profile_img} alt={users[id].first_name}></img>
                         <div className='user-details-header'>
                             <h1>{users[id].first_name} {users[id].last_name}</h1>
-                            <p>Member since: {modifyTime()}</p>
+                            <p>Barking since: {modifyTime()}</p>
                         </div>
                     </div>
                     <div className='user-content'>
@@ -52,7 +72,11 @@ const UserProfile = () => {
                         <div className='user-posts'>
                             <h3>Recent Posts</h3>
                             <div className='user-post-list'>
-                                <p>Post goes here</p>
+                                {getTenPosts().map((post) => {
+                            return (
+                                <DisplayPosts post={post}/>
+                            )
+                        })}
                             </div>
                         </div>
                     </div>

@@ -18,6 +18,7 @@ const PetProfile = () => {
     const [editForm, setEditForm] = useState(false)
     const owner = pets[id].owner_id
     const currentUser = useSelector(state => state.session.user)
+    const users = useSelector(state => state.users)
 
     const openEditForm = () => {
         if (editForm) {
@@ -32,6 +33,8 @@ const PetProfile = () => {
         dispatch(removePet(id));
             history.push(`/users/${owner}`)
     }
+
+    console.log(users[pets[id].owner_id])
 
 
     return (
@@ -48,13 +51,16 @@ const PetProfile = () => {
                     </div>
                     <div className='pet-content'>
                         <p>{pets[id].description}</p>
+                        <Link className='owner-link' to={`/users/${users[pets[id].owner_id].id}`}>Owner: {users[pets[id].owner_id].first_name} {users[pets[id].owner_id].last_name}</Link>
 
                     </div>
                     {owner === currentUser.id ? 
                     <div className='pet-options'>
                         <button 
+                        className='pet-button'
                         onClick={openEditForm}>Edit Pet</button>
                         <button
+                        className='pet-button'
                         onClick={deletePet}>Delete Pet</button>
                     </div>
                     : <></>}
