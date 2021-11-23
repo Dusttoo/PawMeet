@@ -61,7 +61,7 @@ const UserResults = () => {
 
 
     return (
-        <>
+        <div className='quiz-results'>
             {topResults().map((breed) => {
                 const thisBreed= breeds[breed[0]]
                 const thisImage = Object.values(images).find((image) => image.breed_id === thisBreed.id)
@@ -72,7 +72,7 @@ const UserResults = () => {
                 </div>
                 )
             })}
-        </>
+        </div>
     )
 }
 

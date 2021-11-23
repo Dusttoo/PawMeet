@@ -4,6 +4,8 @@ import { Redirect } from 'react-router-dom';
 import { signUp } from '../../store/session';
 import { Link } from 'react-router-dom';
 import DemoButton from './DemoButton';
+import ImageUploading from 'react-images-uploading';
+
 
 const SignUpForm = () => {
   const [errors, setErrors] = useState([]);
@@ -56,6 +58,10 @@ const SignUpForm = () => {
   if (user) {
     return <Redirect to='/' />;
   }
+
+  const onChange = (image) => {
+    setProfileImg(image[0].data_url);
+  };
 
 
   return (
@@ -128,13 +134,43 @@ const SignUpForm = () => {
           value={last_name}
         ></input>
         <label className='label'>Profile Image</label>
-        <input
+        {/* <input
           className='input'
           type='text'
           name='profileImg'
           onChange={updateProfileImg}
           value={profile_img}
-        ></input>
+        ></input> */}
+        {profile_img ?
+         <img className='upload-preview' src={profile_img} alt='upload'/> :<></>
+         }
+        <ImageUploading
+              multiple={false}
+              value={profile_img}
+              onChange={onChange}
+              maxNumber={1}
+              dataURLKey="data_url"
+            > 
+            {({
+                onImageUpload,
+                isDragging,
+                dragProps,
+              }) => (
+                // write your building UI
+                <div className="upload__image-wrapper">
+                  <button
+                    className='pet-button'
+                    style={isDragging ? { color: 'red' } : undefined}
+                    onClick={onImageUpload}
+                    {...dragProps}
+                  >
+                    Click or Drop here
+                  </button>
+                  &nbsp;
+                </div>
+              )}
+          </ImageUploading>
+
       </div>
       <div className='row'>
         <div>

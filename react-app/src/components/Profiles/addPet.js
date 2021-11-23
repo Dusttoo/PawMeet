@@ -1,8 +1,7 @@
-import React, { useEffect, useState }  from 'react';
+import React, { useState }  from 'react';
 import { useDispatch } from 'react-redux';
 import { useSelector } from 'react-redux';
-import { Link, useParams } from 'react-router-dom';
-import { addAPet, allPets } from '../../store/pets';
+import { addAPet } from '../../store/pets';
 import { useHistory } from 'react-router';
 import validator from 'validator';
 import ImageUploading from 'react-images-uploading';
