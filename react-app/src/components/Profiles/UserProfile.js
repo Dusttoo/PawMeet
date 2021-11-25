@@ -63,7 +63,13 @@ const UserProfile = () => {
                             <div className='pet-links-container'>
                                 {thesePets.map(pet => {
                                  return (
-                                     <Link className='pet-link' to={`/pets/${pet.id}`}>{pet.name}</Link>
+                                     <Link className='pet-link' to={`/pets/${pet.id}`}>
+                                         <div className='pet-link-details'>
+                                            <img className='pet-link-image' src={pet.profile_img} alt={pet.name}/>
+                                            <p className='pet-link-name'>{pet.name}</p>
+                                         </div>
+
+                                    </Link>
                                  )
 
                                 })}

@@ -46,6 +46,18 @@
     max-width: 100px;
 }
 
+.pet-link-image {
+    width: 75px;
+    border-radius: 6px;
+}
+
+.pet-link-details {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
 
 
 

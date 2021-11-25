@@ -105,8 +105,10 @@ const ForumHome = () => {
             </table>
             <div className='next-prev-container'>
                    <FontAwesomeIcon icon={faAngleLeft} 
+                   className='next-prev'
                    onClick={showPrevious}/>
                    <FontAwesomeIcon icon={faAngleRight} 
+                   className='next-prev'
                    onClick={showNext}
                    />
                </div>
