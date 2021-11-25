@@ -6,12 +6,12 @@ import './Search.css'
 const SearchBar = () => {
   const history = useHistory();
   const [queryString, setQueryString] = useState(new URLSearchParams(history.location.search).get('q') ?? '');
-
+  console.log('history location', history.location.pathname)
   const updateSearch = (e) => {
     setQueryString(e.target.value);
     if (e.target.value) {
       history.replace({
-        pathname: '/breeds',
+        pathname: history.location.pathname,
         search: `?q=${e.target.value}`,
       });
     } else {

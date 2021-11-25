@@ -73,7 +73,7 @@ const sortedByTime = Object.values(posts).sort(function(a,b){
                      
                     <h1 className='intro'>Welcome to Paw Meet!</h1>
                     <h2 className='tagline'>A place to discover man's next best friend</h2>
-                    <Link to='/breed-quiz' className='tagline-breed-quiz'>Take our quiz to find the perfect breed for you!</Link>
+                    <Link to='/sign-up' className='tagline-breed-quiz'>Sign up to take our quiz to find the perfect breed for you!</Link>
 
                 </div>
                 <div className='highlighted-breed-container'>
