@@ -39,7 +39,7 @@ const NavBar = () => {
             <LogoutButton /> 
             <Link className='account-button' to={`/users/${currentUser.id}`} ><FontAwesomeIcon icon={faUser} /></Link>
            </>
-           : <Link to='/login' className='login-button'>Log In</Link>
+           : <Link to='/login' className='nav-link'>Log In</Link>
           }
          
         </li>

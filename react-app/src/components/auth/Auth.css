@@ -39,12 +39,16 @@
     margin: 6px 0;
 }
 
-.login-button {
-    background: none;
+.login-button, .demo {
+    background-color: rgba(244, 143, 109, .7);
+    border-radius: 8px;
     border: none;
     font-size: 15px;
     text-decoration: none;
     color: white;
+    font-size: 20px;
+    margin: 4px;
+    padding: 4px;
 }
 
 .login-redirect {

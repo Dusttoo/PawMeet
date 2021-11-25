@@ -92,7 +92,7 @@ const LoginForm = () => {
       </div>
       <div className='login-submit-container'>
         <button className='login-button' type='submit'>Login</button>
-        <DemoButton />
+        <DemoButton className='demo'/>
       </div>
       <p className='already'>Don't have an account? <Link className='login-redirect' to='/sign-up'>Sign Up</Link></p>
       <h3 className='login-slogan'>Let the barking begin</h3>
