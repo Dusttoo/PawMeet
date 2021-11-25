@@ -117,6 +117,17 @@ const SignUpForm = () => {
           onChange={updateEmail}
           value={email}
         ></input>
+        {errors.map((error, ind) => {
+        const where = error.slice(0, error.indexOf(':'))
+          const onlyError = error.slice(error.indexOf(':') + 1)
+          if(where.includes('first_name')) {
+
+            return (
+              <div className='error' key={ind}>{onlyError}</div>
+            )
+          }
+          
+        })}
         <label className='label'>First Name</label>
         <input
           className='input'
@@ -125,6 +136,17 @@ const SignUpForm = () => {
           onChange={updateFirstName}
           value={first_name}
         ></input>
+        {errors.map((error, ind) => {
+        const where = error.slice(0, error.indexOf(':'))
+          const onlyError = error.slice(error.indexOf(':') + 1)
+          if(where.includes('last_name')) {
+
+            return (
+              <div className='error' key={ind}>{onlyError}</div>
+            )
+          }
+          
+        })}
         <label className='label'>Last Name</label>
         <input
           className='input'
@@ -133,15 +155,26 @@ const SignUpForm = () => {
           onChange={updateLastName}
           value={last_name}
         ></input>
+        {errors.map((error, ind) => {
+        const where = error.slice(0, error.indexOf(':'))
+          const onlyError = error.slice(error.indexOf(':') + 1)
+          if(where.includes('profile_img')) {
+
+            return (
+              <div className='error' key={ind}>{onlyError}</div>
+            )
+          }
+          
+        })}
         <label className='label'>Profile Image</label>
-        {/* <input
+        <input
           className='input'
           type='text'
           name='profileImg'
           onChange={updateProfileImg}
           value={profile_img}
-        ></input> */}
-        {profile_img ?
+        ></input>
+        {/* {profile_img ?
          <img className='upload-preview' src={profile_img} alt='upload'/> :<></>
          }
         <ImageUploading
@@ -169,7 +202,7 @@ const SignUpForm = () => {
                   &nbsp;
                 </div>
               )}
-          </ImageUploading>
+          </ImageUploading> */}
 
       </div>
       <div className='row'>
