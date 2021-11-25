@@ -54,11 +54,13 @@ const BreedsPage = () => {
         
         </> :
           <div className='breed-list-container'>
-            <h2 className='breed-list-heading'>Meet the Breeds</h2>
-            <FontAwesomeIcon 
-            className='search-button'
-            icon={faSearch}
-            onClick={openSearch} />
+            <div className='header-search'>
+              <h2 className='breed-list-heading'>Meet the Breeds</h2>
+              <FontAwesomeIcon 
+              className='search-button'
+              icon={faSearch}
+              onClick={openSearch} />
+            </div>
             {search ? 
                   <>
                   <div className='search-container'>

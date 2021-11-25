@@ -7,8 +7,26 @@
     
 }
 
+.header-search {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 .breed-list-heading {
     text-align: center;
+}
+
+.search-button {
+    font-size: 20px;
+    padding-left: 20px;
+
+}
+
+.search-button:hover {
+    color: #8A7B4E;
+    cursor: pointer;
+
 }
 
 .breed {
