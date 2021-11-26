@@ -15,6 +15,12 @@ import { allComments } from '../../store/comments';
 import BreedsPage from '../Breeds/Breeds';
 import GifPlayer from 'react-gif-player'
 import Loading from '../Loading/Loading';
+import SearchBar from '../Search/Search'
+import SearchResults from '../Search/SearchResults';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faSearch } from '@fortawesome/free-solid-svg-icons';
+
+
 
 
 const Landing = () => {
@@ -38,6 +44,8 @@ const highlightedGroup = Object.values(breedGroups).find(group => +group.id === 
 const sortedByTime = Object.values(posts).sort(function(a,b){
       return new Date(b.posted) - new Date(a.posted) 
   })
+const [search, setSearch] = useState(false)
+
 
 
   useEffect(() => {
@@ -57,6 +65,26 @@ const sortedByTime = Object.values(posts).sort(function(a,b){
   const getTenPosts = () => {
       return sortedByTime.splice(index, 5)
 
+  }
+
+  const getTenBreeds = () => {
+    return  Object.values(breeds).sort(function(a, b) {
+        let nameA = a.name.toUpperCase();
+        let nameB = b.name.toUpperCase();
+        if (nameA < nameB) {
+            return -1;
+          }
+          if (nameA > nameB) {
+            return 1;
+          }
+          return 0;
+      }).splice(index, 10)
+
+  }
+
+  const openSearch = () => {
+    if (search) setSearch(false)
+    if (!search) setSearch(true)
   }
 
 
@@ -99,13 +127,40 @@ const sortedByTime = Object.values(posts).sort(function(a,b){
                     </tr>
                        {getTenPosts().map((post) => {
                             return (
-                                <DisplayPosts post={post}/>
+                                <DisplayPosts className="recent-posts-box" post={post}/>
                             )
                         })}
                         </table>
                     </div>
                     <div className='breed-highlights-container'>
-                        <BreedsPage />
+                        {/* <BreedsPage /> */}
+                        <div className='header-search'>
+                          <h2 className='breed-list-heading'>Meet the Breeds</h2>
+                          <FontAwesomeIcon 
+                          className='search-button'
+                          icon={faSearch}
+                          onClick={openSearch} />
+                        </div>
+                        {search ? 
+                            <>
+                            <div className='search-container'>
+                              <SearchBar />
+                              {Object.values(breeds).map((item) => {
+                              const findImage = Object.values(breedImages).find((image) => image.breed_id === item.id)
+                              return (
+                              <SearchResults breed={item} image={findImage}/>
+                              )
+                        })}
+                        </div> </> : <></>}
+                        {getTenBreeds().map((breed) => {
+                          const thisImage = Object.values(breedImages).find((image) => image.breed_id === breed.id)
+                            return (
+                            <div className='landing-breed-container'>
+                              <img className='breed-link-image' src={thisImage.img_url} alt={breed.name}/>
+                              <Link className='breed' to={`/breeds/${breed.id}`}>{breed.name}</Link>
+                            </div>
+                            )
+                        })}
 
                     </div>
                 </div>
