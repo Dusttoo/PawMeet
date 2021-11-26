@@ -73,10 +73,6 @@ export default function userAnswerReducer(state = initialState, action) {
             newState[action.answer.id] = action.answer
             return newState
         case DELETE_ANSWERS:
-            // const deleteState = {...state}
-            // console.log('delete state', deleteState, 'action', action.userId)
-            // Object.keys(deleteState)
-            // delete deleteState[action.userId]
             return {}
         default:
             return state;

@@ -106,8 +106,9 @@ const DisplayQuestion = () => {
                         {coatTypes.map((coat) => {
                             index++
                         return (
-                        <div className='min-max'>
-                            <label className='container'>{coat}
+                        <div className='coat-min-max'>
+                            <label className='coat-radio-title'>{coat}</label>
+                            <label className='container'>
                                 <input
                                 type='radio'
                                 name='type'
@@ -128,8 +129,9 @@ const DisplayQuestion = () => {
                         {coatLengths.map((coat) => {
                         index++
                             return (
-                            <div className='min-max'>
-                                <label className='container'>{coat}
+                            <div className='coat-min-max'>
+                                <label className='coat-radio-title'>{coat}</label>
+                                <label className='container'>
                                     <input
                                     type='radio'
                                     name='length'
@@ -150,7 +152,8 @@ const DisplayQuestion = () => {
                         {normal.includes(breedTraits[next].id) ? 
                         <>
                         <div className='min-max'>
-                            <label className='container'>{breedTraits[next].min}
+                            <label className='radio-title'>{breedTraits[next].min}</label>
+                            <label className='container'>
                                 <input
                                 type='radio'
                                 name='answer'
@@ -204,7 +207,8 @@ const DisplayQuestion = () => {
 
                         </div>
                         <div className='min-max'>
-                            <label className='container'>{breedTraits[next].max}
+                            <label className='radio-title'>{breedTraits[next].max}</label>
+                            <label className='container'>
                                 <input
                                 type='radio'
                                 className="quiz-radio"

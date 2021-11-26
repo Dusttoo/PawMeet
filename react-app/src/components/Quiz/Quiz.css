@@ -6,7 +6,7 @@
 .quiz-results {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: center;
   flex-wrap: wrap;
   padding: 20px;
 }
@@ -70,6 +70,13 @@
     flex-direction: column;
     height: 50px;
     justify-content: flex-end;
+    align-items: center;
+}
+
+.radio-title {
+  margin-bottom: 5px;
+  text-align: center;
+  height: 50px;
 }
 
 .container {
@@ -176,4 +183,38 @@
   align-items: center;
   margin: 10px;
 
+}
+
+.delete-quiz {
+  background: none;
+    border: none;
+    font-size: 35px;
+    color: #333810;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.delete-quiz:hover {
+    cursor: pointer;
+    color: #BB9519;
+}
+
+.restart-icon {
+  padding-left: 10px;
+}
+
+.coat-min-max {
+    display: flex;
+    flex-wrap: wrap;
+    /* flex-direction: column; */
+    height: 50px;
+    justify-content: center;
+    align-items: center;
+}
+
+.coat-radio-title {
+  /* margin-bottom: 5px; */
+  /* text-align: center; */
+  /* height: 50px; */
 }
