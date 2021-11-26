@@ -1,6 +1,6 @@
 .quiz-container {
   height: 100%;
- 
+ padding-bottom: 100px;
 }
 
 .quiz-results {
@@ -168,5 +168,12 @@
     flex-direction: column;
     align-items: center;
     margin-top: 25px;
+
+}
+
+.breed-results-container {
+  display: flex;
+  align-items: center;
+  margin: 10px;
 
 }

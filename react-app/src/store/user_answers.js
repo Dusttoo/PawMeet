@@ -1,5 +1,7 @@
 const GET_USER_ANSWERS = 'quiz/GET_ANSWERS'
 const ADD_ANSWER = 'quiz/ADD_ANSWER'
+const DELETE_ANSWERS = 'quiz/DELETE_ANSWERS'
+
 
 const getAllUserAnswers = (answers) => ({
     type: GET_USER_ANSWERS,
@@ -9,6 +11,11 @@ const getAllUserAnswers = (answers) => ({
 const addAnswer = (answer) => ({
     type: ADD_ANSWER,
     answer
+})
+
+const deleteAnswers = (userId) => ({
+    type: DELETE_ANSWERS,
+    userId
 })
 
 const initialState = {}
@@ -37,6 +44,22 @@ export const addAnAnswer = (answer) => async(dispatch) => {
     return added
 }
 
+export const removeAnswer = (userId) => async (dispatch) => {
+  
+  const response = await fetch(`/api/quiz/${userId}/delete`,{
+  method: 'DELETE',
+  statusCode: 204,
+  headers: {'Content-Type': 'application/json'}
+});
+
+  if(response.ok) {
+    const answer = await response.json();
+    dispatch(deleteAnswers(userId));
+  }
+    return userId
+
+}
+
 export default function userAnswerReducer(state = initialState, action) {
     switch (action.type) {
         case GET_USER_ANSWERS:
@@ -49,6 +72,12 @@ export default function userAnswerReducer(state = initialState, action) {
           const newState = {...state}
             newState[action.answer.id] = action.answer
             return newState
+        case DELETE_ANSWERS:
+            // const deleteState = {...state}
+            // console.log('delete state', deleteState, 'action', action.userId)
+            // Object.keys(deleteState)
+            // delete deleteState[action.userId]
+            return {}
         default:
             return state;
     }

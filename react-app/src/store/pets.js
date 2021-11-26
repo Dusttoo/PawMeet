@@ -75,7 +75,6 @@ export const removePet = (petId) => async (dispatch) => {
   }
     return petId
 
-
 }
 
 export default function petReducer(state = initialState, action) {

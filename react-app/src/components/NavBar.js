@@ -29,7 +29,7 @@ const NavBar = () => {
           </Link>
         </li>
         <li >
-          <Link className="nav-link" to='/breed-quiz' exact={true} activeClassName='active'>
+          <Link className="nav-link" to={`/breed-quiz/${currentUser.id}`} exact={true} activeClassName='active'>
             Breed Selector
           </Link>
         </li>

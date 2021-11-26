@@ -25,3 +25,13 @@ def submit_answers():
             db.session.add(data)
             db.session.commit()
             return data.to_dict()
+
+
+@quiz_routes.route('<int:id>/delete', methods=['DELETE'])
+def delete_quiz(id):
+
+    db.session.query(User_Answer).filter_by(user_id=id).delete()
+    # print('\n\n\n', db.session.query(User_Answer).filter_by(user_id=id).delete(), '\n\n\n')
+    db.session.commit()
+
+    return {'deleted': id}

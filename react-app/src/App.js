@@ -85,7 +85,7 @@ function App() {
         <ProtectedRoute path='/quiz-results/:id' exact={true} >
           <UserResults />
         </ProtectedRoute>
-        <ProtectedRoute path='/breed-quiz' exact={true} >
+        <ProtectedRoute path='/breed-quiz/:id' exact={true} >
           <Quiz />
         </ProtectedRoute>
         

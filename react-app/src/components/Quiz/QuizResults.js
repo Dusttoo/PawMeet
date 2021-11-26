@@ -9,6 +9,7 @@ import { allUserAnswers } from '../../store/user_answers';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faAngleLeft, faAngleRight } from '@fortawesome/free-solid-svg-icons';
 import { allBreedAnswers } from '../../store/breed_answers';
+import DeleteQuiz from './DeleteQuiz';
 
 
 
@@ -21,6 +22,7 @@ const UserResults = () => {
     const images = useSelector(state => state.breed_images)
     let index = 0;
     const results = []
+    console.log('id', id)
 
 
     useEffect(() => {
@@ -72,6 +74,7 @@ const UserResults = () => {
                 </div>
                 )
             })}
+            < DeleteQuiz userId={id}/>
         </div>
     )
 }
