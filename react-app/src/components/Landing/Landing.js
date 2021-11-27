@@ -36,6 +36,7 @@ const highlightedBreed = breeds[randnum]
 const breedImages = useSelector(state => state.breed_images)
 const breedGroups = useSelector(state => state.groups)
 const posts = useSelector(state => state.forum)
+const currentUser = useSelector(state => state.session.user)
 const index = 0
 const [loading, setLoading] = useState(true);
 const users = useSelector(state => state.users)
@@ -101,7 +102,10 @@ const [search, setSearch] = useState(false)
                      
                     <h1 className='intro'>Welcome to Paw Meet!</h1>
                     <h2 className='tagline'>A place to discover man's next best friend</h2>
+                    {currentUser ? <Link className='tagline-breed-quiz' to={`/breed-quiz/${currentUser.id}`} >Take the breed quiz today </Link> : 
                     <Link to='/sign-up' className='tagline-breed-quiz'>Sign up to take our quiz to find the perfect breed for you!</Link>
+                    }
+                    
 
                 </div>
                 <div className='highlighted-breed-container'>
@@ -109,7 +113,10 @@ const [search, setSearch] = useState(false)
                     width={'50%'}
                     url={highlightedBreed.breed_video} 
                     muted={true}
-                    playing={true}/>
+                    playing={true}
+                    loop={true}
+                    controls={true}
+                    />
                     <div className='highlighted-breed-details'>
                         <Link to={`/breeds/${highlightedBreed.id}`} className='highlighted-breed-name'>{highlightedBreed.name}</Link>
                         <h3 className='highlighted-breed-group'>{highlightedGroup.name} Group</h3>

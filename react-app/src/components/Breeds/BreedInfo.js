@@ -23,8 +23,11 @@ const BreedInfo = () => {
     const images = useSelector(state => state.breed_images)
     const breedTraits = useSelector(state => state.breed_traits)
     const breedAnswers = useSelector(state => state.breed_answers)
+    const breedGroups = useSelector(state => state.groups)
+    const group = Object.values(breedGroups).find((thisGroup => +thisGroup.id === +breeds[id].breed_group))
     const [loaded, setLoaded] = useState(false);
     const [loading, setLoading] = useState(true);
+    console.log(group)
 
     // let thisAnswer = ''
     const theseAnswers = []
@@ -118,7 +121,11 @@ const BreedInfo = () => {
                 />
             </div>
             <div className='breed-content'>
-                <h2>{personality[0]} - {personality[1]} - {personality[2]}</h2>
+              <h2>The {breeds[id].name} is in the:</h2>
+                <h3>{group.name} group</h3>
+                <p>{group.description}</p>
+                <h2>The {breeds[id].name} is:</h2>
+                <h3>{personality[0]} - {personality[1]} - {personality[2]}</h3>
                 <p className='breed-description'>{breeds[id].description}</p>
                 <div className='breed-details'>
                   <div className='breed-info-container'>

@@ -11,7 +11,7 @@ import ImageUploading from 'react-images-uploading';
 import './Profiles.css'
 
 
-const EditPet = () => {
+const EditPet = ({openEditForm}) => {
 const {id} = useParams()
 const [validationErrors, setValidationErrors] = useState([]);
 const dispatch = useDispatch()
@@ -57,7 +57,8 @@ const handleSubmit = async (e) => {
             setValidationErrors([]);
             const added = await dispatch(editAPet(createdPet, +id));
             if(added) {
-              history.push(`/users/${owner_id}`)
+              openEditForm()
+              history.push(`/pets/${id}`)
             }
             
         };

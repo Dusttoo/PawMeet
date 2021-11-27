@@ -679,6 +679,222 @@ def seed_breeds():
             description="The Vizsla is a versatile, red-coated gundog built for long days in the field. For centuries these rugged but elegant athletes have been the pride of Hungarian sportsmen, and their popularity in America increases with each passing year. The Vizsla is easily recognized by his sleek golden-rust coat. They can stand between 21 to 24 inches at the shoulder and are the picture of a lean, light-footed hunter's companion. The long, silky ears frame a facial expression that is sensitive and loving around the house and intense when at work. As a hunter expected to work closely with humans, Vizslas form a tight bond with their owners and hate to be left alone. Athletes of many talents, Vizslas excel at various sports and activities. They are eager and graceful trotters of great stamina, making them ideal jogging or biking companions. An expert on the breed tells us, 'If you don't have the time to encourage this breed's full use of its brain, you're wasting a good dog.'",
 
         ),
+        Breed(
+            name='Basset Hound',
+            breed_group=2,
+            personality=['Charming', 'Patient', 'Low-Key'],
+            avg_height={
+                'males': 'up to 15 inches',
+                'females': '40-65 pounds'
+            },
+            avg_weight={
+                'males': '40-65 pounds',
+                'females': '40-65 pounds'
+            },
+            avg_life_exp='12-13 years',
+            breed_video='https://youtu.be/pHJ8JRHAFlE',
+
+            description="Among the most appealing of the AKC breeds, the endearing and instantly recognizable Basset Hound is a perennial favorite of dog lovers all over the world. This low-slung and low-key hound can be sometimes stubborn, but is always charming. The Basset Hound stands no higher than 14 inches at the shoulder but, with his remarkably heavy bone, powerful little legs, and massive paws, he possesses big-dog strength and stamina. Bassets are famous for a large, domed head that features extremely long, velvety ears, mournful eyes, and a wrinkled brow, which give the breed the look of a sad clown. Built more for endurance than speed, the Basset moves in a deliberate but effortless manner. The breed's scenting ability is uncanny; it's said that among dogs only the Bloodhound's nose is more accurate. Mild and agreeable at home, the Basset is stubborn on the trail and barks in a loud, ringing voice. Although they may not be wildly demonstrative in their affections, they are steadfastly loyal.",
+
+        ),
+        Breed(
+            name='Belgian Malinois',
+            breed_group=7,
+            personality=['Confident', 'Smart', 'Hardworking'],
+            avg_height={
+                'males': '24-26 inches',
+                'females': '22-24 inches'
+            },
+            avg_weight={
+                'males': '60-80 pounds',
+                'females': '40-60 pounds'
+            },
+            avg_life_exp='14-16 years',
+            breed_video='https://youtu.be/roC80WTQSLM?t=11',
+
+            description="The smart, confident, and versatile Belgian Malinois is a world-class worker who forges an unbreakable bond with his human partner. To deny a Mal activity and the pleasure of your company is to deprive him of his very reasons for being. Belgian Malinois are squarely built, proud, and alert herders standing 22 to 26 inches. Strong and well-muscled, but more elegant than bulky, there's an honest, no-frills look about them, as befit dogs built to work hard for their feed. A breed hallmark is the proud carriage of the head. Coat colors range from a rich fawn to mahogany. The black ears and mask accentuate bright, questioning eyes the color of dark Belgian chocolate. If you have ever seen a Mal perform an obedience routine, you know firsthand what a smart and eager breed this is. Problems set in, though, when this people-oriented dog is underemployed and neglected. Exercise, and plenty of it, preferably side by side with their adored owner, is key to Mal happiness.",
+
+        ),
+        Breed(
+            name='Maltese',
+            breed_group=5,
+            personality=['Playful', 'Charming', 'Gentle'],
+            avg_height={
+                'males': '7-9 inches',
+                'females': '7-9 inches'
+            },
+            avg_weight={
+                'males': 'under 7 pounds',
+                'females': 'under 7 pounds'
+            },
+            avg_life_exp='12-15 years',
+            breed_video='https://youtu.be/tRA2W1D0PTc',
+
+            description="The tiny Maltese, 'Ye Ancient Dogge of Malta,' has been sitting in the lap of luxury since the Bible was a work in progress. Famous for their show-stopping, floor-length coat, Maltese are playful, charming, and adaptable toy companions. Maltese are affectionate toy dogs weighing less than seven pounds, covered by a long, straight, silky coat. Beneath the all-white mantle is a compact body moving with a smooth and effortless gait. The overall picture depicts free-flowing elegance and balance. The irresistible Maltese face'¿with its big, dark eyes and black gumdrop nose'¿can conquer the most jaded sensibility. Despite their aristocratic bearing, Maltese are hardy and adaptable pets. They make alert watchdogs who are fearless in a charming toy-dog way, and they are game little athletes on the agility course. Maltese are low-shedding, long-lived, and happy to make new friends of all ages. Sometimes stubborn and willful, they respond well to rewards-based training.",
+
+        ),
+        Breed(
+            name='Weimaraner',
+            breed_group=1,
+            personality=['Fearless', 'Friendly','Obedient'],
+            avg_height={
+                'males': '25-27 inches',
+                'females': '23-25 inches'
+            },
+            avg_weight={
+                'males': '70-90 pounds',
+                'females': '55-75 pounds'
+            },
+            avg_life_exp='10-13 years',
+            breed_video='https://youtu.be/VUxM2qEZZFU',
+
+            description="The Weimaraner, Germany's sleek and swift 'Gray Ghost,' is beloved by hunters and pet owners alike for their friendliness, obedience, and beauty. They enjoy exercise, and plenty of it, along with lots of quality time with their humans. Instantly recognized by a distinctive silvery-gray coat, male Weimaraners stand 25 to 27 inches at the shoulder, and females 23 to 25 inches. A properly bred Weimaraner will be solid colored, with maybe a small white spot on the chest. The face, with its amber or blue-gray eyes framed by long velvety ears, is amiable and intelligent. Overall, the breed presents a picture of streamlined grace and balance. A well-conditioned Weimaraner on point is a breathtaking sight. Weimaraners are excellent with kids and yearn to be full-fledged family members. Easy grooming, trainability, a loving nature, and a can-do-attitude make them excellent pets, as long as owners are committed to keeping them physically active and mentally engaged.",
+
+        ),
+        # Breed(
+        #     name='',
+        #     breed_group=,
+        #     personality=[],
+        #     avg_height={
+        #         'males': '',
+        #         'females': ''
+        #     },
+        #     avg_weight={
+        #         'males': '',
+        #         'females': ''
+        #     },
+        #     avg_life_exp='',
+        #     breed_video='',
+
+        #     description="",
+
+        # ),
+        # Breed(
+        #     name='',
+        #     breed_group=,
+        #     personality=[],
+        #     avg_height={
+        #         'males': '',
+        #         'females': ''
+        #     },
+        #     avg_weight={
+        #         'males': '',
+        #         'females': ''
+        #     },
+        #     avg_life_exp='',
+        #     breed_video='',
+
+        #     description="",
+
+        # ),
+        # Breed(
+        #     name='',
+        #     breed_group=,
+        #     personality=[],
+        #     avg_height={
+        #         'males': '',
+        #         'females': ''
+        #     },
+        #     avg_weight={
+        #         'males': '',
+        #         'females': ''
+        #     },
+        #     avg_life_exp='',
+        #     breed_video='',
+
+        #     description="",
+
+        # ),
+        # Breed(
+        #     name='',
+        #     breed_group=,
+        #     personality=[],
+        #     avg_height={
+        #         'males': '',
+        #         'females': ''
+        #     },
+        #     avg_weight={
+        #         'males': '',
+        #         'females': ''
+        #     },
+        #     avg_life_exp='',
+        #     breed_video='',
+
+        #     description="",
+
+        # ),
+        # Breed(
+        #     name='',
+        #     breed_group=,
+        #     personality=[],
+        #     avg_height={
+        #         'males': '',
+        #         'females': ''
+        #     },
+        #     avg_weight={
+        #         'males': '',
+        #         'females': ''
+        #     },
+        #     avg_life_exp='',
+        #     breed_video='',
+
+        #     description="",
+
+        # ),
+        # Breed(
+        #     name='',
+        #     breed_group=,
+        #     personality=[],
+        #     avg_height={
+        #         'males': '',
+        #         'females': ''
+        #     },
+        #     avg_weight={
+        #         'males': '',
+        #         'females': ''
+        #     },
+        #     avg_life_exp='',
+        #     breed_video='',
+
+        #     description="",
+
+        # ),
+        # Breed(
+        #     name='',
+        #     breed_group=,
+        #     personality=[],
+        #     avg_height={
+        #         'males': '',
+        #         'females': ''
+        #     },
+        #     avg_weight={
+        #         'males': '',
+        #         'females': ''
+        #     },
+        #     avg_life_exp='',
+        #     breed_video='',
+
+        #     description="",
+
+        # ),
+        # Breed(
+        #     name='',
+        #     breed_group=,
+        #     personality=[],
+        #     avg_height={
+        #         'males': '',
+        #         'females': ''
+        #     },
+        #     avg_weight={
+        #         'males': '',
+        #         'females': ''
+        #     },
+        #     avg_life_exp='',
+        #     breed_video='',
+
+        #     description="",
+
+        # ),
         # Breed(
         #     name='',
         #     breed_group=,

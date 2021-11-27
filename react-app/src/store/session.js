@@ -91,7 +91,6 @@ export const signUp = (username, email, password, first_name, last_name, profile
       repeat_password: repeatPassword
     }),
   });
-  console.log(response, 'response')
   
   if (response.ok) {
     const data = await response.json();

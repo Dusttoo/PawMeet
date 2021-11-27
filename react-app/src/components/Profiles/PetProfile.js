@@ -34,7 +34,6 @@ const PetProfile = () => {
             history.push(`/users/${owner}`)
     }
 
-    console.log(users[pets[id].owner_id])
 
 
     return (
@@ -71,7 +70,7 @@ const PetProfile = () => {
                     : <></>}
                     {editForm ?
                     <div className='edit-pet'>
-                        <EditPet />
+                        <EditPet openEditForm={openEditForm}/>
                     </div> : <></>} 
                     
                 </div>

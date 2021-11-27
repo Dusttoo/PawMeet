@@ -61,6 +61,8 @@ const UserProfile = () => {
                         <div className='pet-links'>
                             <h3>Pets:</h3>
                             <div className='pet-links-container'>
+                                {thesePets.length === 0 ? 
+                                <h2>No pets to display.</h2> : <></>}
                                 {thesePets.map(pet => {
                                  return (
                                      <Link className='pet-link' to={`/pets/${pet.id}`}>

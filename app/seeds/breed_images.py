@@ -1,5 +1,14 @@
 from app.models import db, Breed_Image
 
+# Broken breed images:
+# Akita 2
+# Bullmastiff 4, 5
+# Rottweiler 3, 5
+# Poodle 2
+# Vizsla 4
+
+
+
 def seed_breed_images():
 
     breeds = [
@@ -953,6 +962,122 @@ def seed_breed_images():
         breed_id=38,
         img_url='https://i2.wp.com/puppytoob.com/wp-content/uploads/2017/07/Hungarian-Vizsla.jpeg?resize=750%2C421&ssl=1'
     ),
+        Breed_Image(
+            breed_id=39,
+            img_url='https://images.pexels.com/photos/786773/pexels-photo-786773.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260'
+        ),
+        Breed_Image(
+            breed_id=39,
+            img_url='https://images.pexels.com/photos/1582835/pexels-photo-1582835.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260'
+        ),
+        Breed_Image(
+            breed_id=39,
+            img_url='https://images.pexels.com/photos/760618/pexels-photo-760618.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260'
+        ),
+        Breed_Image(
+            breed_id=39,
+            img_url='https://images.pexels.com/photos/4006590/pexels-photo-4006590.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260'
+        ),
+        Breed_Image(
+        breed_id=40,
+        img_url='https://dogsbestlife.com/wp-content/uploads/2019/11/Belgian-malinois-scaled.jpeg'
+    ),
+        Breed_Image(
+        breed_id=40,
+        img_url='https://vetstreet.brightspotcdn.com/dims4/default/871f72c/2147483647/thumbnail/645x380/quality/90/?url=https%3A%2F%2Fvetstreet-brightspot.s3.amazonaws.com%2F2b%2F03%2F045cdbe54bd98ab051ece28a144f%2FBelgian-Malinois-AP-1PTFPZ-645sm101513.jpg'
+    ),
+        Breed_Image(
+        breed_id=40,
+        img_url='https://thehappypuppysite.com/wp-content/uploads/2019/02/Belgian-Malinois-Temperament-long.jpg'
+    ),
+        Breed_Image(
+        breed_id=40,
+        img_url='https://cf.ltkcdn.net/dogs/images/orig/258720-1600x1030-belgian-malinois-temperament.jpg'
+    ),
+        Breed_Image(
+        breed_id=40,
+        img_url='https://i.pinimg.com/originals/6c/46/f5/6c46f587a4701ff700f54a9c92f20ac3.jpg'
+    ),
+        Breed_Image(
+        breed_id=41,
+        img_url='https://dogtime.com/assets/uploads/gallery/maltese-dog-breed-picture/9-fullbody.jpg'
+    ),
+        Breed_Image(
+        breed_id=41,
+        img_url='https://thepetproject.in/wp-content/uploads/2020/09/Maltese-Lifespan-long.jpg'
+    ),
+        Breed_Image(
+        breed_id=41,
+        img_url='https://www.akc.org/wp-content/uploads/2017/11/Maltese-laying-down-in-a-chair.jpg'
+    ),
+        Breed_Image(
+        breed_id=41,
+        img_url='https://i.pinimg.com/originals/ee/a4/1c/eea41c427fb61cc3f8aa2a0bc6b236ad.jpg'
+    ),
+        Breed_Image(
+        breed_id=41,
+        img_url='https://spoiledmaltese.com/attachments/img_8779-jpg.257694/'
+    ),
+        Breed_Image(
+        breed_id=41,
+        img_url='https://img.dog-learn.com/dog-breeds/maltese/maltese-sz5.jpg'
+    ),
+        Breed_Image(
+        breed_id=42,
+        img_url='https://www.thesprucepets.com/thmb/ARk1MUmxIxix5Ci5LWR1PzhjlUc=/2121x1414/filters:fill(auto,1)/AdultWeimaranerinPark-465fadcefa954d09aca201d68c2826cb.jpg'
+    ),
+        Breed_Image(
+        breed_id=42,
+        img_url='https://www.dogzone.com/images/breeds/weimaraner.jpg'
+    ),
+        Breed_Image(
+        breed_id=42,
+        img_url='https://res.cloudinary.com/fleetnation/image/private/c_fit,w_1120/g_south,l_text:style_gothic2:%C2%A9%20Christian%20M%C3%BCller,o_20,y_10/g_center,l_watermark4,o_25,y_50/v1493724994/nwqlsm1uq4ynxe8vdykw.jpg'
+    ),
+        Breed_Image(
+        breed_id=42,
+        img_url='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSW3P-GCTpejlYXeCY540rO6nEjWT4NXZcYKU0maWvcT35hmiNAiEJiZ-mtCiNzikPNxPE&usqp=CAU'
+    ),
+        Breed_Image(
+        breed_id=42,
+        img_url='https://c.stocksy.com/a/0xn400/z9/1145326.jpg'
+    ),
+       Breed_Image(
+        breed_id=42,
+        img_url='https://vetstreet.brightspotcdn.com/dims4/default/477f20f/2147483647/thumbnail/645x380/quality/90/?url=https%3A%2F%2Fvetstreet-brightspot.s3.amazonaws.com%2Fe4%2Fe0%2Fab2376c743628f81cc23f6bac97b%2Fweimaraner-AP-18ULPF-645sm12913.jpg'
+    ),
+    #    Breed_Image(
+    #     breed_id=,
+    #     img_url=''
+    # ),
+    #    Breed_Image(
+    #     breed_id=,
+    #     img_url=''
+    # ),
+    #    Breed_Image(
+    #     breed_id=,
+    #     img_url=''
+    # ),
+    #    Breed_Image(
+    #     breed_id=,
+    #     img_url=''
+    # ),
+    #     Breed_Image(
+    #     breed_id=,
+    #     img_url=''
+    # ),
+    #     Breed_Image(
+    #     breed_id=,
+    #     img_url=''
+    # ),
+    #     Breed_Image(
+    #     breed_id=,
+    #     img_url=''
+    # ),
+    #     Breed_Image(
+    #     breed_id=,
+    #     img_url=''
+    # ),
     ]
     
    

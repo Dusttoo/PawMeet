@@ -1,8 +1,12 @@
-from app.models import db, Pet_Profile
+from app.models import db, Pet_Profile, Breed_Image, Breed
 from faker import Faker
-from random import random, randrange
+from random import randint, random, randrange
 
-breeds = ['American Staffordshire Terrier', 'Beagle', 'Boxer', 'Bulldog', 'Cane Corso', 'Dachshund', 'French Bulldog', 'German Shepherd Dog', 'German Shorthaired Pointer', 'Golden Retriever', 'Labrador Retriever', 'Pug', 'Rottweiler', 'Standard Poodle']
+# get_breeds = Breed.query.all()
+# breeds = {'breeds': [breed.to_dict() for breed in get_breeds]}
+
+breeds = ['American Staffordshire Terrier', 'Beagle', 'Boxer', 'Bulldog', 'Cane Corso', 'Dachshund', 'French Bulldog', 'German Shepherd Dog',
+    'German Shorthaired Pointer', 'Golden Retriever', 'Labrador Retriever', 'Pug', 'Rottweiler', 'Standard Poodle']
 
 def seed_pet_profiles():
     fake = Faker()
@@ -18,11 +22,13 @@ def seed_pet_profiles():
     db.session.add(callie)
 
     for i in range(1, 35):
+        num = breeds[randrange(1, 14)]
+        print(num, breeds)
         i = Pet_Profile(
             owner_id=randrange(1, 12),
-            profile_img=f'https://placedog.net/{randrange(1,1001)}',
+            profile_img=f'https://placedog.net/{randint(1, 1001)}',
             name=fake.name(),
-            breed=breeds[randrange(1, 14)],
+            breed= num,
             age=randrange(1, 16),
             description=fake.paragraph()
         )

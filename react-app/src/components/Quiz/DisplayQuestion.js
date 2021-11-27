@@ -37,7 +37,6 @@ const DisplayQuestion = () => {
     const handleSubmit = async (e) => {
     e.preventDefault();
     setLoading(true)
-        console.log(loading)
 
 
         const createdAnswer = {
@@ -48,7 +47,6 @@ const DisplayQuestion = () => {
         };
         const errors = validate();
 
-        console.log(createdAnswer)
 
         if (errors.length > 0) {
             setValidationErrors(errors);
@@ -67,7 +65,6 @@ const DisplayQuestion = () => {
 
 }
 
-        console.log(loading)
 
 
 

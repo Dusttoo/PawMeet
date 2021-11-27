@@ -45,18 +45,6 @@ export const allPosts = () => async (dispatch) => {
     return posts
 }
 
-// export const allPostsForGroup = (id) => async (dispatch) => {
-//     const response = await fetch(`/api/forum/posts${id}`, {
-//         headers: {
-//             'Content-Type': 'application/json'
-//         }
-        
-//     });
-//     const posts = await response.json();
-//     console.log('response posts' , posts)
-//     dispatch(getPostsForGroup(posts))
-//     return posts
-// }
 
 export const addAPost = (post) => async(dispatch) => {
     const response = await fetch(`/api/forum/posts/add`, {
@@ -105,13 +93,6 @@ export default function forumReducer(state = initialState, action) {
                 allPosts[post.id] = post
             })
             return {...allPosts}
-        // case GET_POSTS_FOR_GROUP:
-        //     const allGroupPosts = {...state}
-        //     action.posts.posts.forEach(post => {
-        //         allGroupPosts[post.id] = post
-        //     })
-        //     console.log(allGroupPosts)
-        //     return {...allGroupPosts}
         case ADD_POST:
           const newState = {...state}
             newState[action.post.id] = action.post

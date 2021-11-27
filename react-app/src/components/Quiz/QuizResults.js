@@ -22,7 +22,6 @@ const UserResults = () => {
     const images = useSelector(state => state.breed_images)
     let index = 0;
     const results = []
-    console.log('id', id)
 
 
     useEffect(() => {
