@@ -68,7 +68,7 @@ def seed_pet_profiles():
     for i in range(1, 35):
         num = randrange(1, 20)
         i = Pet_Profile(
-            owner_id=randrange(1, 12),
+            owner_id=randrange(1, 16),
             profile_img=breeds[num]['img'],
             name=fake.name(),
             breed=breeds[num]['name'],
