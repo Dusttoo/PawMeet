@@ -17,7 +17,7 @@ const DisplayQuestion = () => {
     const [next, setNext] = useState(1)
     const breedTraits = useSelector(state => state?.breed_traits)
     const trait_id = breedTraits[next].id
-
+    const breeds = useSelector(state => state?.breeds)
     // const [important, setImportant] = useState('')
     const user_id = useSelector(state => state.session.user.id)
     const history = useHistory();
@@ -27,6 +27,15 @@ const DisplayQuestion = () => {
     const coatLengths = ['Short', 'Medium', 'Long']
     const breedImages = useSelector(state => state.breed_images)
     const [loading, setLoading] = useState(false)
+    const [img, setImg] = useState('https://images.pexels.com/photos/162149/dog-black-labrador-black-dog-162149.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260')
+    console.log('image', img)
+
+    
+    const imageSet = () => {
+        const num = Math.floor(Math.random() * Object.keys(breeds).length - 1)
+        console.log('num', num)
+         setImg(Object.values(breedImages)[num].img_url)
+    }
 
     const validate = () => {
         const validationErrors = [];
@@ -60,10 +69,12 @@ const DisplayQuestion = () => {
         };
         
         setNext(next + 1)
+        imageSet()
         setLoading(false)
 
 
 }
+
 
 
 
@@ -81,7 +92,7 @@ const DisplayQuestion = () => {
         </> :
         <>
         <div className='image-container'>
-            <img className='quiz-image' src={breedImages[next].img_url} alt='breed quiz'></img>
+            <img className='quiz-image' src={img} alt='breed quiz'></img>
             <h2 className='question'>{breedTraits[next].question}</h2>
         </div>
         {validationErrors.length > 0 && (
