@@ -1046,19 +1046,115 @@ def seed_breed_images():
         breed_id=42,
         img_url='https://vetstreet.brightspotcdn.com/dims4/default/477f20f/2147483647/thumbnail/645x380/quality/90/?url=https%3A%2F%2Fvetstreet-brightspot.s3.amazonaws.com%2Fe4%2Fe0%2Fab2376c743628f81cc23f6bac97b%2Fweimaraner-AP-18ULPF-645sm12913.jpg'
     ),
-    #    Breed_Image(
+       Breed_Image(
+        breed_id=43,
+        img_url='https://upload.wikimedia.org/wikipedia/commons/6/6c/1Dog-rough-collie-portrait.jpg'
+    ),
+       Breed_Image(
+        breed_id=43,
+        img_url='https://st.depositphotos.com/1908759/2169/i/600/depositphotos_21697401-stock-photo-colli.jpg'
+    ),
+       Breed_Image(
+        breed_id=43,
+        img_url='https://elsrem.files.wordpress.com/2013/07/collie.jpg'
+    ),
+       Breed_Image(
+        breed_id=43,
+        img_url='https://i.pinimg.com/originals/ae/6c/09/ae6c09a89e029b003fef9221302a1bf2.jpg'
+    ),
+        Breed_Image(
+        breed_id=43,
+        img_url='https://assets.puzzlefactory.pl/puzzle/253/616/original.jpg'
+    ),
+        Breed_Image(
+        breed_id=43,
+        img_url='https://cdn.pixabay.com/photo/2020/05/28/12/11/sheep-dog-5230971_960_720.jpg'
+    ),
+        Breed_Image(
+        breed_id=44,
+        img_url='https://upload.wikimedia.org/wikipedia/commons/a/a5/Newfoundland_dog_Smoky.jpg'
+    ),
+        Breed_Image(
+        breed_id=44,
+        img_url='https://d17fnq9dkz9hgj.cloudfront.net/breed-uploads/2018/08/newfoundland-dog-card-medium.jpg?bust=1535567515&width=560'
+    ),
+        Breed_Image(
+        breed_id=44,
+        img_url='https://www.hospitalveterinariglories.com/wp-content/uploads/2020/03/terranova-676x451.jpg'
+    ),
+        Breed_Image(
+        breed_id=44,
+        img_url='https://i.pinimg.com/originals/0f/8d/de/0f8ddeb972ebd607e01c7b84614ccad4.jpg'
+    ),
+        Breed_Image(
+        breed_id=44,
+        img_url='https://dinoanimals.com/wp-content/uploads/2021/02/Newfoundland-dog-1.jpg'
+    ),
+        Breed_Image(
+        breed_id=44,
+        img_url='https://itsdogornothing.com/wp-content/uploads/2015/11/Newfoundland.jpg'
+    ),
+        Breed_Image(
+        breed_id=45,
+        img_url='https://www.akc.org/wp-content/uploads/2017/11/Rhodesian-Ridgeback-standing-in-profile-outdoors.jpg'
+    ),
+        Breed_Image(
+        breed_id=45,
+        img_url='https://wyattslist.com/wp-content/uploads/2017/09/rhodesianridgeback_adult.jpg'
+    ),
+        Breed_Image(
+        breed_id=45,
+        img_url='https://s3.amazonaws.com/cdn-origin-etr.akc.org/wp-content/uploads/2017/11/13135405/ANC2016-Conformation-Hound-Group-David-0E9A5697.20191213183002111-500x486.jpg'
+    ),
+        Breed_Image(
+        breed_id=45,
+        img_url='https://www.loveyourdog.com/wp-content/uploads/2021/09/Rhodesian-Ridgeback-Dog.jpg'
+    ),
+        Breed_Image(
+        breed_id=45,
+        img_url='https://media.istockphoto.com/photos/beautiful-rhodesian-ridgeback-picture-id1212343227?k=20&m=1212343227&s=170667a&w=0&h=x94SwEhOuRUcL3Jenv22jSY1XS4IvflXW8Rv7V6BvSE='
+    ),
+        Breed_Image(
+        breed_id=45,
+        img_url='https://i.pinimg.com/474x/59/1e/84/591e84a297a6f94574f1dd00b83b7a16.jpg'
+    ),
+        Breed_Image(
+        breed_id=46,
+        img_url='https://www.akc.org/wp-content/uploads/2017/11/Shiba-Inu-standing-in-profile-outdoors.jpg'
+    ),
+        Breed_Image(
+        breed_id=46,
+        img_url='https://m.foolcdn.com/media/affiliates/images/shiba_inu_puppy_in_a_field_3wWwMo1.width-1200.jpg'
+    ),
+        Breed_Image(
+        breed_id=46,
+        img_url='https://parade.com/wp-content/uploads/2018/01/Shiba-Inu-FTR.jpg'
+    ),
+        Breed_Image(
+        breed_id=46,
+        img_url='https://gettotext.com/wp-content/uploads/2021/10/Shiba-Inu-SHIB-not-to-be-stopped-whats-behind.jpg'
+    ),
+        Breed_Image(
+        breed_id=46,
+        img_url='https://www.zooroyal.at/magazin/wp-content/uploads/2019/01/Shiba-Inu-.jpg'
+    ),
+        Breed_Image(
+        breed_id=46,
+        img_url='https://upload.wikimedia.org/wikipedia/commons/a/a3/Taro_%28black_and_tan%2C_reu%29_-_Chiko_%28rood%2C_reu%29_-_Ichigo_%28rood%2C_teef%29.jpg'
+    ),
+    #     Breed_Image(
     #     breed_id=,
     #     img_url=''
     # ),
-    #    Breed_Image(
+    #     Breed_Image(
     #     breed_id=,
     #     img_url=''
     # ),
-    #    Breed_Image(
+    #     Breed_Image(
     #     breed_id=,
     #     img_url=''
     # ),
-    #    Breed_Image(
+    #     Breed_Image(
     #     breed_id=,
     #     img_url=''
     # ),

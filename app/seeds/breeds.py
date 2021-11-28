@@ -751,78 +751,78 @@ def seed_breeds():
             description="The Weimaraner, Germany's sleek and swift 'Gray Ghost,' is beloved by hunters and pet owners alike for their friendliness, obedience, and beauty. They enjoy exercise, and plenty of it, along with lots of quality time with their humans. Instantly recognized by a distinctive silvery-gray coat, male Weimaraners stand 25 to 27 inches at the shoulder, and females 23 to 25 inches. A properly bred Weimaraner will be solid colored, with maybe a small white spot on the chest. The face, with its amber or blue-gray eyes framed by long velvety ears, is amiable and intelligent. Overall, the breed presents a picture of streamlined grace and balance. A well-conditioned Weimaraner on point is a breathtaking sight. Weimaraners are excellent with kids and yearn to be full-fledged family members. Easy grooming, trainability, a loving nature, and a can-do-attitude make them excellent pets, as long as owners are committed to keeping them physically active and mentally engaged.",
 
         ),
-        # Breed(
-        #     name='',
-        #     breed_group=,
-        #     personality=[],
-        #     avg_height={
-        #         'males': '',
-        #         'females': ''
-        #     },
-        #     avg_weight={
-        #         'males': '',
-        #         'females': ''
-        #     },
-        #     avg_life_exp='',
-        #     breed_video='',
+        Breed(
+            name='Collie',
+            breed_group=7,
+            personality=['Devoted', 'Graceful', 'Proud'],
+            avg_height={
+                'males': '24-26 inches',
+                'females': '22-24 inches'
+            },
+            avg_weight={
+                'males': '60-75 pounds',
+                'females': '50-65 pounds'
+            },
+            avg_life_exp='12-14 years',
+            breed_video='https://youtu.be/ZoFze0O_epE?t=9',
 
-        #     description="",
+            description="The majestic Collie, thanks to a hundred years as a pop-culture star, is among the world's most recognizable and beloved dog breeds. The full-coated 'rough' Collie is the more familiar variety, but there is also a sleek 'smooth' Collie. The Collie is a large but lithe herder standing anywhere from 22 to 26 inches tall. The rough variety boasts one of the canine kingdom's most impressively showy coats; the smooth coat's charms are subtler but no less satisfying. Coat colors in both varieties are sable and white, tricolor, blue merle, or white. Collie fanciers take pride in their breed's elegant wedge-shaped head, whose mobile ears and almond eyes convey a wide variety of expressions. Collies are famously fond of children and make wonderful family pets. These swift, athletic dogs thrive on companionship and regular exercise. With gentle training, they learn happily and rapidly. The Collie's loyalty, intelligence, and sterling character are the stuff of legend.",
 
-        # ),
-        # Breed(
-        #     name='',
-        #     breed_group=,
-        #     personality=[],
-        #     avg_height={
-        #         'males': '',
-        #         'females': ''
-        #     },
-        #     avg_weight={
-        #         'males': '',
-        #         'females': ''
-        #     },
-        #     avg_life_exp='',
-        #     breed_video='',
+        ),
+        Breed(
+            name='Newfoundland',
+            breed_group=3,
+            personality=['Sweet', 'Patient', 'Devoted'],
+            avg_height={
+                'males': '28 inches',
+                'females': '26 inches'
+            },
+            avg_weight={
+                'males': '130-150 pounds',
+                'females': '100-120 pounds'
+            },
+            avg_life_exp='9-10 years',
+            breed_video='https://youtu.be/OkGujZAIRnA?t=12',
 
-        #     description="",
+            description="The massive Newfoundland is a strikingly large, powerful working dog of heavy bone and dignified bearing. The sweet-tempered Newfie is a famously good companion and has earned a reputation as a patient and watchful 'nanny dog' for kids. A male Newfoundland can weigh up to 150 pounds and stand 28 inches at the shoulder; females typically go 100 to 120 pounds. The Newf head is majestic, the expression soft and soulful. The outer coat is flat and coarse. Colors are gray, brown, black, and a black-and-white coat named for artist Sir Edwin Landseer, who popularized the look in his paintings. The Newfie breed standard says that a sweet temperament is the 'most important single characteristic of the breed.' The Newf's sterling character is expressed in their affinity for kids. Trusting and trainable, Newfs respond well to gentle guidance. These noble giants are among the world's biggest dogs, and acquiring a pet that could outweigh you comes with obvious challenges.",
 
-        # ),
-        # Breed(
-        #     name='',
-        #     breed_group=,
-        #     personality=[],
-        #     avg_height={
-        #         'males': '',
-        #         'females': ''
-        #     },
-        #     avg_weight={
-        #         'males': '',
-        #         'females': ''
-        #     },
-        #     avg_life_exp='',
-        #     breed_video='',
+        ),
+        Breed(
+            name='Rhodesian Ridgeback',
+            breed_group=2,
+            personality=['Dignified', 'Affectionate', 'Even-Tempered'],
+            avg_height={
+                'males': '25-27 inches',
+                'females': '24-26 inches'
+            },
+            avg_weight={
+                'males': '85 pounds',
+                'females': '70 pounds'
+            },
+            avg_life_exp='9-10 years',
+            breed_video='https://youtu.be/CvObRdhZ5L8?t=10',
 
-        #     description="",
+            description="The Rhodesian Ridgeback is an all-purpose 'Renaissance hound' whose hallmark is the ridge, or stripe of backward-growing hair, on his back. Though the breed was made famous in its native Africa for its skill at tracking and baying '¿ but never, ever killing '¿ lions, today Ridgebacks are cherished family dogs whose owners must be prepared to deal with their independence and strong prey drive Beneath the Ridgeback's trademark ridge is a whole lot of hound: Ridgebacks are fast and powerful athletes who can weigh between 70 and 85 pounds, and oftentimes more. They come in only one color '¿ wheaten '¿ which spans every shade seen in a wheat field, from pale flaxen to the burnished red of a maturing crop. Ridgebacks also have two nose colors: black and the less commonly seen brown. The formidable Ridgeback can be strong willed, independent, and sometimes domineering. Ridgebacks must be guided with a firm but fair hand from puppyhood. They are faithful friends, protective of their loved ones and meltingly affectionate with those whom they trust. Still, a Ridgeback can be too much hound for the novice dog owner.",
 
-        # ),
-        # Breed(
-        #     name='',
-        #     breed_group=,
-        #     personality=[],
-        #     avg_height={
-        #         'males': '',
-        #         'females': ''
-        #     },
-        #     avg_weight={
-        #         'males': '',
-        #         'females': ''
-        #     },
-        #     avg_life_exp='',
-        #     breed_video='',
+        ),
+        Breed(
+            name='Shiba Inu',
+            breed_group=6,
+            personality=['Alert', 'Active', 'Attentive'],
+            avg_height={
+                'males': '14.5-16.5 inches',
+                'females': '13.5-15.5 inches'
+            },
+            avg_weight={
+                'males': '23 pounds',
+                'females': '17 pounds'
+            },
+            avg_life_exp='13-16 years',
+            breed_video='https://youtu.be/lSMAUTvRdwg',
 
-        #     description="",
+            description="An ancient Japanese breed, the Shiba Inu is a little but well-muscled dog once employed as a hunter. Today, the spirited, good-natured Shiba is the most popular companion dog in Japan. The adaptable Shiba is at home in town or country. Brought to America from Japan as recently as 60 years ago, Shibas are growing in popularity in the West and are already the most popular breed in their homeland. Their white markings combined with their coloring (red, red sesame, or black and tan) and their alert expression and smooth stride makes them almost foxlike. They're sturdy, muscular dogs with a bold, confident personality to match.",
 
-        # ),
+        ),
         # Breed(
         #     name='',
         #     breed_group=,

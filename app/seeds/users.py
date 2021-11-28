@@ -42,6 +42,11 @@ def seed_users():
         barking_since='03-25-2020',
         profile_img=f'https://i.pravatar.cc/150?u=tom@aa.io')
 
+    db.session.add(demo)
+    db.session.add(marnie)
+    db.session.add(joe)
+    db.session.add(tom)
+
     for i in range(1, 12):
         email = fake.email()
         i = User(
@@ -59,10 +64,7 @@ def seed_users():
 
     
 
-    db.session.add(demo)
-    db.session.add(marnie)
-    db.session.add(joe)
-    db.session.add(tom)
+    
 
 
 
