@@ -47,7 +47,7 @@ def seed_users():
     db.session.add(joe)
     db.session.add(tom)
 
-    for i in range(1, 12):
+    for i in range(1, 32):
         email = fake.email()
         i = User(
             username=fake.user_name(),

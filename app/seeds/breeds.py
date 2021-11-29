@@ -823,114 +823,114 @@ def seed_breeds():
             description="An ancient Japanese breed, the Shiba Inu is a little but well-muscled dog once employed as a hunter. Today, the spirited, good-natured Shiba is the most popular companion dog in Japan. The adaptable Shiba is at home in town or country. Brought to America from Japan as recently as 60 years ago, Shibas are growing in popularity in the West and are already the most popular breed in their homeland. Their white markings combined with their coloring (red, red sesame, or black and tan) and their alert expression and smooth stride makes them almost foxlike. They're sturdy, muscular dogs with a bold, confident personality to match.",
 
         ),
-        # Breed(
-        #     name='',
-        #     breed_group=,
-        #     personality=[],
-        #     avg_height={
-        #         'males': '',
-        #         'females': ''
-        #     },
-        #     avg_weight={
-        #         'males': '',
-        #         'females': ''
-        #     },
-        #     avg_life_exp='',
-        #     breed_video='',
+        Breed(
+            name='West Highland White Terrier',
+            breed_group=4,
+            personality=['Loyal', 'Happy', 'Entertaining'],
+            avg_height={
+                'males': '11 inches ',
+                'females': '10 inches'
+            },
+            avg_weight={
+                'males': '15-20 pounds',
+                'females': '15-20 pounds'
+            },
+            avg_life_exp='13-15 years',
+            breed_video='https://youtu.be/sldzFjl5y8Y',
 
-        #     description="",
+            description="Smart, confident, and always entertaining at play, the adorable West Highland White Terrier (Westie, for short) has charmed owners for over 300 years. This diminutive but sturdy earthdog is among the most popular of the small terriers. Standing 10 to 11 inches at the shoulder, with dark piercing eyes, compact body, and a carrot-shaped tail wagging with delight, the Westie's looks are irresistible. Beneath the plush-toy exterior, though, is a true working terrier of gameness and courage. Bred to hunt rats and other underground rodents, Westies are surprisingly strong and tough. The all-white double coat is hard to the touch, not soft and fluffy. Alert and active, Westies exhibit traits of a plucky and self-reliant ratting terrier: They require no pampering, they will chase after anything that moves, and their independence can make training a challenge. But, thanks to their faithfulness and keen intelligence, Westies will train nicely with time and patience.",
 
-        # ),
-        # Breed(
-        #     name='',
-        #     breed_group=,
-        #     personality=[],
-        #     avg_height={
-        #         'males': '',
-        #         'females': ''
-        #     },
-        #     avg_weight={
-        #         'males': '',
-        #         'females': ''
-        #     },
-        #     avg_life_exp='',
-        #     breed_video='',
+        ),
+        Breed(
+            name='Bichon Frise',
+            breed_group=6,
+            personality=['Playful', 'Curious', 'Peppy'],
+            avg_height={
+                'males': '9.5-11.5 inches',
+                'females': '9.5-11.5 inches'
+            },
+            avg_weight={
+                'males': '12-18 pounds',
+                'females': '12-18 pounds'
+            },
+            avg_life_exp='14-15 years',
+            breed_video='https://youtu.be/9uwW-7VzjBY',
 
-        #     description="",
+            description="The small but sturdy and resilient Bichon Frise stands among the world's great 'personality dogs.' Since antiquity, these irresistible canine comedians have relied on charm, beauty, and intelligence to weather history's ups and downs. A good-size Bichon will stand a shade under a foot tall at the shoulder. The breed's glory is a white hypoallergenic coat, plush and velvety to the touch, featuring rounded head hair that sets off the large, dark eyes and black leathers of the nose and lips. Bichons are adaptable companions who get on well with other dogs and children. Alert and curious, Bichons make nice little watchdogs'¿but they are lovers, not fighters, and operate under the assumption that there are no strangers, just friends they haven't met yet. Their confidence and size make them ideal city dogs. Bichons train nicely and enjoy performing for their loved ones. Finally, there's the happy-go-lucky Bichon personality that draws smiles and hugs wherever they go.",
 
-        # ),
-        # Breed(
-        #     name='',
-        #     breed_group=,
-        #     personality=[],
-        #     avg_height={
-        #         'males': '',
-        #         'females': ''
-        #     },
-        #     avg_weight={
-        #         'males': '',
-        #         'females': ''
-        #     },
-        #     avg_life_exp='',
-        #     breed_video='',
+        ),
+        Breed(
+            name='Bloodhound',
+            breed_group=2,
+            personality=['Independent', 'Friendly', 'Inquisitive'],
+            avg_height={
+                'males': '25-27 inches',
+                'females': '23-25 inches'
+            },
+            avg_weight={
+                'males': '90-110 pounds',
+                'females': '80-100 pounds'
+            },
+            avg_life_exp='10-12 years',
+            breed_video='https://youtu.be/nFGMVsDEAXQ?t=10',
 
-        #     description="",
+            description="The world-famous 'Sleuth Hound' does one thing better than any creature on earth: find people who are lost or hiding. An off-duty Bloodhound is among the canine kingdom's most docile citizens, but he's relentless and stubborn on a scent. Bloodhounds are large, substantial dogs standing 23 to 27 inches at the shoulder and weighing up to 110 pounds. Their most famous features are a long, wrinkled face with loose skin huge, drooping ears and warm, deep-set eyes that complete an expression of solemn dignity. Coat colors can be black and tan, liver and tan, or red. Powerful legs allow Bloodhounds to scent over miles of punishing terrain. As pack dogs, Bloodhounds enjoy company, including other dogs and kids. They are easygoing, but their nose can sometimes lead them into trouble. A strong leash and long walks in places where they can enjoy sniffing around are recommended. Bloodhounds are droolers, and obedience training these sensitive sleuths can be a challenge.",
 
-        # ),
-        # Breed(
-        #     name='',
-        #     breed_group=,
-        #     personality=[],
-        #     avg_height={
-        #         'males': '',
-        #         'females': ''
-        #     },
-        #     avg_weight={
-        #         'males': '',
-        #         'females': ''
-        #     },
-        #     avg_life_exp='',
-        #     breed_video='',
+        ),
+        Breed(
+            name='Portuguese Water Dog',
+            breed_group=3,
+            personality=['Affectionate', 'Adventurous', 'Athletic'],
+            avg_height={
+                'males': '20-23 inches',
+                'females': '17-21 inches'
+            },
+            avg_weight={
+                'males': '42-60 pounds',
+                'females': '35-50 pounds'
+            },
+            avg_life_exp='11-13 years',
+            breed_video='https://youtu.be/ekZq6y9GBa0',
 
-        #     description="",
+            description="The bright and biddable Portuguese Water Dog was bred to be an all-around fisherman's helper. The robust, medium-sized body is covered by a coat of tight, low-shedding curls. PWDs are eager and athletic companions built for water work. The Portuguese Water Dog is super-smart and very 'biddable''¿meaning he's easy to train and eager to please. The Portie can be groomed in two styles: The retriever clip (the entire coat is clipped to one inch in length, with the tail tip at full length) or the more check-me-out lion clip, where the coat on the hindquarters and muzzle is clipped down to the skin.",
 
-        # ),
-        # Breed(
-        #     name='',
-        #     breed_group=,
-        #     personality=[],
-        #     avg_height={
-        #         'males': '',
-        #         'females': ''
-        #     },
-        #     avg_weight={
-        #         'males': '',
-        #         'females': ''
-        #     },
-        #     avg_life_exp='',
-        #     breed_video='',
+        ),
+        Breed(
+            name='Chesapeake Bay Retriever',
+            breed_group=1,
+            personality=['Affectionate', 'Bright', 'Sensitive'],
+            avg_height={
+                'males': '23-26 inches',
+                'females': '21-24 inches'
+            },
+            avg_weight={
+                'males': '65-80 pounds',
+                'females': '55-70 pounds'
+            },
+            avg_life_exp='10-13 years',
+            breed_video='https://youtu.be/DGD4CLYPCrk?t=11',
 
-        #     description="",
+            description="The Chesapeake Bay Retriever, peerless duck dog of the Mid-Atlantic, is an American original who embodies the classic traits of a good retriever: loyal, upbeat, affectionate, and tireless. The Chessie is famous for his waterproof coat. Chessies are strong, powerfully built gundogs standing anywhere from 21 to 26 inches at the shoulder. A male can weigh up to 80 pounds. The distinctive breed trait is a wavy coat that is oily to the touch. Chessies are solid-colored, either chocolatey brown, sedge, or deadgrass, with keen yellow-amber eyes that nicely complement the coat. Chessies are more emotionally complex than the usual gundog. Chessies take to training, but they have a mind of their own and can tenaciously pursue their own path. They are protective of their humans and polite, but not overtly friendly, to strangers. Chessies make excellent watchdogs and are versatile athletes. A well-socialized Chessie is a confident companion and world-class hunting buddy.",
 
-        # ),
-        # Breed(
-        #     name='',
-        #     breed_group=,
-        #     personality=[],
-        #     avg_height={
-        #         'males': '',
-        #         'females': ''
-        #     },
-        #     avg_weight={
-        #         'males': '',
-        #         'females': ''
-        #     },
-        #     avg_life_exp='',
-        #     breed_video='',
+        ),
+        Breed(
+            name='Dalmatian',
+            breed_group=6,
+            personality=['Dignified', 'Smart', 'Outgoing'],
+            avg_height={
+                'males': '19-24 inches',
+                'females': '19-24 inches'
+            },
+            avg_weight={
+                'males': '45-70 pounds',
+                'females': '45-70 pounds'
+            },
+            avg_life_exp='11-13 years',
+            breed_video='https://youtu.be/N5YnYYSxjYI?t=10',
 
-        #     description="",
+            description="The dignified Dalmatian, dogdom's citizen of the world, is famed for his spotted coat and unique job description. During their long history, these \"coach dogs\" have accompanied the horse-drawn rigs of nobles, gypsies, and firefighters. The Dalmatian's delightful, eye-catching spots of black or liver adorn one of the most distinctive coats in the animal kingdom. Beneath the spots is a graceful, elegantly proportioned trotting dog standing between 19 and 23 inches at the shoulder. Dals are muscular, built to go the distance; the powerful hindquarters provide the drive behind the smooth, effortless gait. The Dal was originally bred to guard horses and coaches, and some of the old protective instinct remains. Reserved and dignified, Dals can be aloof with strangers and are dependable watchdogs. With their preferred humans, Dals are bright, loyal, and loving house dogs. They are strong, active athletes with great stamina'¿a wonderful partner for runners and hikers.",
 
-        # ),
+        ),
         # Breed(
         #     name='',
         #     breed_group=,

@@ -2,10 +2,6 @@ from app.models import db, Pet_Profile, Breed_Image, Breed
 from faker import Faker
 from random import randint, random, randrange
 
-# get_breeds = 
-# breeds = {'breeds': [breed.to_dict() for breed in get_breeds]}
-# print(Breed.query.all())
-
 breeds = [
     {'img': 'https://geniusvets.s3.amazonaws.com/gv-dog-breeds/labrador-retriever-1.jpg', 
     'name': 'Labrador Retriever'},

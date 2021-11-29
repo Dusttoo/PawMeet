@@ -83,7 +83,7 @@
   /* height: 50px; */
   display: flex;
   justify-content: flex-end;
-  width: 50px;
+  width: 80px;
 }
 
 .container {
@@ -259,6 +259,6 @@
 
 .response-container {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: flex-start;
 }

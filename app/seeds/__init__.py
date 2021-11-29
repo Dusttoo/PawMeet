@@ -28,7 +28,7 @@ def seed():
     seed_pet_profiles()
     seed_pet_images()
     seed_posts()
-    seed_comments()
+    # seed_comments()
     seed_likes()
     # Add other seed functions here
 
