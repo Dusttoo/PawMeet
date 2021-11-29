@@ -49,7 +49,7 @@ const PetProfile = () => {
                         </div>
                     </div>
                     <div className='pet-content'>
-                        <p>{pets[id].description}</p>
+                        <p className='pet-description'>{pets[id].description}</p>
                         <Link className='owner-link' to={`/users/${users[pets[id].owner_id].id}`}>
                             <div className='pet-link-details'>
                                 <img className='pet-link-image' src={users[pets[id].owner_id].profile_img} alt={users[pets[id].owner_id].name}/>

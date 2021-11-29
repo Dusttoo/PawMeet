@@ -69,7 +69,7 @@ def seed_pet_profiles():
             name=fake.name(),
             breed=breeds[num]['name'],
             age=randrange(1, 16),
-            description=fake.paragraph()
+            description=fake.paragraph(nb_sentences=25)
         )
 
         db.session.add(i)

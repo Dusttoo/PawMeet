@@ -117,7 +117,7 @@ def seed_posts():
 
     db.session.add_all(posts)
 
-    for i in range(200):
+    for i in range(100):
         num = randrange(0,11)
         user = randrange(1, 36)
         id = 4 + i
@@ -139,6 +139,25 @@ def seed_posts():
                 posted=fake.date_between(start_date='-3y', end_date='today')
             )
             db.session.add(comment_to_add)
+    for i in range(100):
+        num = randrange(0, 11)
+        user = randrange(1, 36)
+        post_to_add = Post(
+            user_id=user,
+            title=fake.sentence(),
+            post_body=fake.paragraph(nb_sentences=25),
+            posted=fake.date_between(start_date='-3y', end_date='today'),
+            group_id=randrange(1, 8)
+
+        )
+        db.session.add(post_to_add)
+        comment_to_add = Comment(
+            user_id=randrange(1, 12),
+            post_id=randint(1, 203),
+            comment_body=fake.paragraph(nb_sentences=10),
+            posted=fake.date_between(start_date='-3y', end_date='today')
+        )
+        db.session.add(comment_to_add)
 
    
     db.session.commit()
