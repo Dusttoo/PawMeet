@@ -13,7 +13,6 @@ const SearchResults = ({ breed, image }) => {
         biz.toLowerCase().includes(lowerString) ?
           <div className="result-container">
             <div className="search-results">
-                
                   <div className='breed-list-item-container'>
                   <img className='breed-link-image' src={image.img_url} alt={breed.name}/>
                   <Link className='breed' to={`/breeds/${breed.id}`}>{breed.name}</Link>

@@ -13,10 +13,11 @@ const [title, setTitle] = useState('')
 const [post_body, setBody] = useState('')
 const user_id = useSelector(state => state.session.user.id)
 const currentDate = new Date()
-const posted = `${currentDate.getMonth()}-${currentDate.getDate()}-${currentDate.getFullYear()}`
+const posted = `${currentDate.getMonth() + 1}-${currentDate.getDate()}-${currentDate.getFullYear()}`
 const breed_groups = useSelector(state => state.groups)
 const [group_id, setGroup] = useState(null)
     const history = useHistory();
+console.log(posted, currentDate.getMonth() + 1)
 
     const validate = () => {
         const validationErrors = [];
@@ -39,9 +40,13 @@ const [group_id, setGroup] = useState(null)
 
 const handleSubmit = async (e) => {
     e.preventDefault();
-    if(group_id === 0) {
-      setGroup(null)
-    }
+
+    console.log( user_id,
+          title,
+          post_body,
+          posted,
+          group_id
+        )
         const createdPost = {
           user_id,
           title,
@@ -94,8 +99,7 @@ const handleSubmit = async (e) => {
                     value={group_id}
                     onChange={(e) => setGroup(e.target.value)}
                     required>
-                      <option value="" disabled>Please select a group</option>
-                      <option value={0}>Main</option>
+                      <option value="" disabled selected>Please select a group</option>
                         {Object.values(breed_groups).map((group) => {
                             return (
                                 <option value={group.id}>{group.name}</option>

@@ -8,6 +8,6 @@ class PostForm(FlaskForm):
     title = StringField('title', validators=[DataRequired(message='Title Required')])
     post_body = StringField('post_body', validators=[DataRequired(message='Body required')])
     posted = StringField('posted', validators=[DataRequired()])
-    group_id = IntegerField('group_id', validators=[DataRequired()])
+    group_id = IntegerField('group_id')
 
 

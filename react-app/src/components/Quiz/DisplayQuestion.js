@@ -121,19 +121,23 @@ const DisplayQuestion = () => {
                         {coatTypes.map((coat) => {
                             index++
                         return (
-                        <div className='coat-min-max'>
-                            <label className='coat-radio-title'>{coat}</label>
-                            <label className='container'>
-                                <input
-                                type='radio'
-                                name='type'
-                                className="quiz-radio"
-                                value={index}
-                                onChange={(e) => setAnswer(e.target.value)}
-                                required/>
-                                <span className='checkmark'></span>
-                            </label>
-                        </div>
+                        <>
+                            <div className='coat-box'>
+                                <label className='coat-radio-title'>{coat}</label>
+                                <div className='coat-min-max'>
+                                    <label className='container'>
+                                        <input
+                                        type='radio'
+                                        name='type'
+                                        className="quiz-radio"
+                                        value={index}
+                                        onChange={(e) => setAnswer(e.target.value)}
+                                        required/>
+                                        <span className='checkmark'></span>
+                                    </label>
+                                </div>
+                            </div>
+                        </>
                         )    
                         
                         })}
@@ -144,8 +148,9 @@ const DisplayQuestion = () => {
                         {coatLengths.map((coat) => {
                         index++
                             return (
+                        <div className='coat-box'>
+                            <label className='coat-radio-title'>{coat}</label>
                             <div className='coat-min-max'>
-                                <label className='coat-radio-title'>{coat}</label>
                                 <label className='container'>
                                     <input
                                     type='radio'
@@ -157,6 +162,7 @@ const DisplayQuestion = () => {
                                     <span className='checkmark'></span>
                                 </label>
                             </div>
+                        </div>
                         )    
                         
                         })}
