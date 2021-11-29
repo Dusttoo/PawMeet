@@ -34,9 +34,9 @@ class SignUpForm(FlaskForm):
     # repeat_password = StringField('password', validators=[DataRequired(
     #     message='Password required')])
     first_name = StringField('first_name', validators=[DataRequired(message='First Name Required'), Length(
-        min=6, max=18, message='First Name must be between 6 and 18 characters')])
+        min=3, max=18, message='First Name must be between 3 and 18 characters')])
     last_name = StringField('last_name', validators=[DataRequired(message='Last Name Required'), Length(
-        min=6, max=18, message='Last Name must be between 6 and 18 characters')])
+        min=3, max=18, message='Last Name must be between 3 and 18 characters')])
     profile_img = StringField('profile_img', validators=[DataRequired(message='Profile Image URL Required')])
     barking_since = StringField('barking_since', validators=[
                                 DataRequired()])
