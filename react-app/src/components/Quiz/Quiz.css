@@ -9,6 +9,7 @@
   align-items: center;
   flex-wrap: wrap;
   padding: 20px;
+  height: 100%;
 }
 
 .matches-title {
@@ -18,7 +19,8 @@
 }
 
 .results-page-container {
-  height: 100%;
+  height: auto;
+  
 }
 
 .add-form-container {
@@ -167,6 +169,24 @@
     width: 350px;
     border-radius: 20px;
     border: 10px solid #8A7B4E;
+
+}
+
+.display-results-breeds {
+  /* position: relative; */
+  display: flex;
+  /* flex-direction: column; */
+  flex-wrap: wrap;
+  padding-bottom: 100px;
+  justify-content: center;
+  height: auto;
+  width: auto;
+
+}
+
+.delete-container {
+  height: 100%;
+  padding-bottom: 200px;
 
 }
 

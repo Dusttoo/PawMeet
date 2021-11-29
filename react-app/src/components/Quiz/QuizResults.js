@@ -10,6 +10,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faAngleLeft, faAngleRight } from '@fortawesome/free-solid-svg-icons';
 import { allBreedAnswers } from '../../store/breed_answers';
 import DeleteQuiz from './DeleteQuiz';
+import PercentageCircle from '../PercentageCircle/PercentageCircle';
 
 
 
@@ -54,7 +55,7 @@ const UserResults = () => {
 
   const topResults = () => {
       const top = []
-      for (let i = 0; i < 5; i++) {
+      for (let i = 0; i < 6; i++) {
         top.push(results[i])
       }
       return top
@@ -64,18 +65,20 @@ const UserResults = () => {
     return (
         <div className='quiz-results'>
             <div className='display-results-breeds'>
-            {topResults().map((breed) => {
-                const thisBreed= breeds[breed[0]]
-                const thisImage = Object.values(images).find((image) => image.breed_id === thisBreed.id)
-                return (
-                <div className='breed-results-container'>
-                  <img className='breed-link-image' src={thisImage.img_url} alt={thisBreed.name}/>
-                  <Link className='breed' to={`/breeds/${thisBreed.id}`}>{thisBreed.name} {breed[1]}% match</Link>
-                </div>
-                )
-            })}
+                {topResults().map((breed) => {
+                    const thisBreed= breeds[breed[0]]
+                    const thisImage = Object.values(images).find((image) => image.breed_id === thisBreed.id)
+                    if(thisImage) {
+                    return (
+                    <PercentageCircle image={thisImage} percentage={breed[1]} breed={thisBreed}/>
+                    )
+                    }
+
+                })}
             </div>
-            < DeleteQuiz userId={id}/>
+            <div className='delete-container'>
+                < DeleteQuiz userId={id}/>
+            </div>
         </div>
     )
 }

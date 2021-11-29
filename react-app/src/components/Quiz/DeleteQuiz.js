@@ -13,6 +13,7 @@ const DeleteQuiz = ({userId}) => {
     const history = useHistory()
 
     const deleteQuiz = () => {
+        console.log(userId)
         dispatch(removeAnswer(userId));
             history.push(`/breed-quiz/${userId}`)
     }

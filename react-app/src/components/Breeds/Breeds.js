@@ -23,7 +23,7 @@ const BreedsPage = () => {
     const [loaded, setLoaded] = useState(false);
     const [loading, setLoading] = useState(true);
     const [search, setSearch] = useState(false)
-
+  console.log(images)
 
 
     useEffect(() => {
@@ -90,12 +90,15 @@ const BreedsPage = () => {
                 return 0;
             }).map((breed) => {
               const thisImage = Object.values(images).find((image) => image.breed_id === breed.id)
+              if(thisImage) {
                 return (
                 <div className='breed-list-item-container'>
                   <img className='breed-link-image' src={thisImage.img_url} alt={breed.name}/>
                   <Link className='breed' to={`/breeds/${breed.id}`}>{breed.name}</Link>
                 </div>
                 )
+              }
+                
             })}
           </div>}
 

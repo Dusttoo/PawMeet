@@ -20,7 +20,6 @@ const DisplayQuestion = () => {
     const breeds = useSelector(state => state?.breeds)
     // const [important, setImportant] = useState('')
     const user_id = useSelector(state => state.session.user.id)
-    const history = useHistory();
     const normal = [1, 2, 3, 4, 5, 6, 9, 10, 11, 12, 13, 14, 15, 16]
     const coatTypes = ['Wiry', 'Rough', 'Curly', 'Hairless', 'Corded', 'Wavy', 'Smooth', 'Double', 'Silky']
     let index = 0;
@@ -28,12 +27,10 @@ const DisplayQuestion = () => {
     const breedImages = useSelector(state => state.breed_images)
     const [loading, setLoading] = useState(false)
     const [img, setImg] = useState('https://images.pexels.com/photos/162149/dog-black-labrador-black-dog-162149.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260')
-    console.log('image', img)
 
     
     const imageSet = () => {
         const num = Math.floor(Math.random() * Object.keys(breeds).length - 1)
-        console.log('num', num)
          setImg(Object.values(breedImages)[num].img_url)
     }
 

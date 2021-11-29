@@ -1,15 +1,7 @@
-import React, { useEffect, useState }  from 'react';
-import { useDispatch } from 'react-redux';
-import { useSelector } from 'react-redux';
-import { Link, useParams } from 'react-router-dom';
-import { allPets, removePet } from '../../store/pets';
-import { useHistory } from 'react-router';
-import { Carousel } from 'react-carousel-minimal';
+import React, { useState }  from 'react';
 import './Breed.css'
-import { allBreedAnswers } from '../../store/breed_answers';
-import { allBreedTraits } from '../../store/breed_traits';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faAngleDown, faAnglesDown } from '@fortawesome/free-solid-svg-icons';
+import { faAngleDown } from '@fortawesome/free-solid-svg-icons';
 
 
 

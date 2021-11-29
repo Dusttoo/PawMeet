@@ -31,11 +31,13 @@ import Footer from './components/Footer/Footer';
 import UserResults from './components/Quiz/QuizResults';
 import Quiz from './components/Quiz/Quiz';
 import { allBreedTraits } from './store/breed_traits';
+import { useHistory } from 'react-router';
 
 
 function App() {
   const [loaded, setLoaded] = useState(false);
   const dispatch = useDispatch();
+  const history = useHistory()
 
   useEffect(() => {
     (async() => {
@@ -111,7 +113,9 @@ function App() {
           <Landing />
         </Route>
       </Switch>
-      <Footer />
+      {console.log('history', window.location.href)}
+      {window.location.href.includes('breed-quiz') ? <></> : <Footer />}
+      
     </BrowserRouter>
   );
 }

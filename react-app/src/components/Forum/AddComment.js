@@ -1,10 +1,8 @@
-import React, { useEffect, useState }  from 'react';
+import React, { useState }  from 'react';
 import { useDispatch } from 'react-redux';
-import { addAPost, allPosts } from '../../store/forum';
 import { useSelector } from 'react-redux';
 import { useParams } from 'react-router';
 import { useHistory } from 'react-router';
-
 import './Forum.css'
 import { addAComment} from '../../store/post_comments';
 
@@ -12,12 +10,10 @@ const AddComment = ({setCommentForm }) => {
 const {postId} = useParams()
 const [validationErrors, setValidationErrors] = useState([]);
 const dispatch = useDispatch()
-const [title, setTitle] = useState('')
 const [comment_body, setBody] = useState('')
 const user_id = useSelector(state => state.session.user.id)
 const currentDate = new Date()
 const posted = `${currentDate.getMonth()}-${currentDate.getDate()}-${currentDate.getFullYear()}`
-    const history = useHistory();
 
     const validate = () => {
         const validationErrors = [];

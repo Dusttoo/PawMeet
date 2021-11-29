@@ -1,17 +1,14 @@
 import React, { useEffect, useState }  from 'react';
 import { useDispatch } from 'react-redux';
 import { useSelector } from 'react-redux';
-import { Link, useParams } from 'react-router-dom';
-import { allPets, removePet } from '../../store/pets';
-import { useHistory } from 'react-router';
+import { useParams } from 'react-router-dom';
 import { Carousel } from 'react-carousel-minimal';
-import './Breed.css'
 import { allBreedAnswers } from '../../store/breed_answers';
 import { allBreedTraits } from '../../store/breed_traits';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faAngleDown, faAnglesDown } from '@fortawesome/free-solid-svg-icons';
 import DisplayTraits from './DisplayTraits';
 import Loading from '../Loading/Loading';
+import './Breed.css'
+
 
 
 
@@ -27,9 +24,7 @@ const BreedInfo = () => {
     const group = Object.values(breedGroups).find((thisGroup => +thisGroup.id === +breeds[id].breed_group))
     const [loaded, setLoaded] = useState(false);
     const [loading, setLoading] = useState(true);
-    console.log(group)
 
-    // let thisAnswer = ''
     const theseAnswers = []
     Object.values(breedAnswers).map((answer) => {
       if(+answer.breed_id === +id) {
