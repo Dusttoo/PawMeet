@@ -15,6 +15,7 @@ const DisplayQuestion = () => {
     const dispatch = useDispatch()
     const [answer, setAnswer] = useState('')
     const [next, setNext] = useState(1)
+    const [check, setCheck] = useState(false)
     const breedTraits = useSelector(state => state?.breed_traits)
     const trait_id = breedTraits[next].id
     const breeds = useSelector(state => state?.breeds)
@@ -36,13 +37,17 @@ const DisplayQuestion = () => {
 
     const validate = () => {
         const validationErrors = [];
-
+        if(!answer) {
+          validationErrors.push('Please choose an answer.')
+        }
         return validationErrors;
     }
 
     const handleSubmit = async (e) => {
     e.preventDefault();
     setLoading(true)
+    console.log(answer)
+
 
 
         const createdAnswer = {
@@ -68,9 +73,20 @@ const DisplayQuestion = () => {
         setNext(next + 1)
         imageSet()
         setLoading(false)
+        setAnswer('')
 
 
 }
+
+    const checkAnswer = () => {
+
+        if(!answer) {
+            setCheck(true)
+         } else {
+             setCheck(false)
+         }
+    
+    }
 
 
 
@@ -92,14 +108,10 @@ const DisplayQuestion = () => {
             <img className='quiz-image' src={img} alt='breed quiz'></img>
             <h2 className='question'>{breedTraits[next].question}</h2>
         </div>
-        {validationErrors.length > 0 && (
-        <div className="errors">
-            <p className="error-title"> The following errors were found: </p>
-            <ul className="error-list">
-                {validationErrors.map(error => <li className="error" key={error}>{error}</li>)}
-            </ul>
-        </div>
-        )}
+        {console.log(validationErrors)}
+        {check ? 
+        <p className='error'>Please choose an answer</p>
+        :<></>}        
         
         <div className="add-form-container">
             <form className='post-form' onSubmit={handleSubmit}>
@@ -155,80 +167,85 @@ const DisplayQuestion = () => {
 
 
                         {normal.includes(breedTraits[next].id) ? 
-                        <>
-                        <div className='min-max'>
-                            <label className='radio-title'>{breedTraits[next].min}</label>
-                            <label className='container'>
-                                <input
-                                type='radio'
-                                name='answer'
-                                className="quiz-radio"
-                                value={1}
-                                onChange={(e) => setAnswer(e.target.value)}
-                                required/>
-                                <span className='checkmark'></span>
-                            </label>
+                        <div className='regular-questions'>
+                            <div className='amount-labels'>
+                                <label className='radio-title'>{breedTraits[next].min}</label>
+                                <label className='radio-title'>{breedTraits[next].max}</label>
+                            </div>
+                            <div className='response-container'>
+                                <div className='min-max'>
 
+                                    <label className='container'>
+                                        <input
+                                        type='radio'
+                                        name='answer'
+                                        className="quiz-radio"
+                                        value={1}
+                                        onChange={(e) => setAnswer(e.target.value)}
+                                        required/>
+                                        <span className='checkmark'></span>
+                                    </label>
+
+                                </div>
+                                <div className='min-max'>
+                                    <label className='container'>
+                                        <input
+                                        type='radio'
+                                        className="quiz-radio"
+                                        name='answer'
+                                        value={2}
+                                        onChange={(e) => setAnswer(e.target.value)}
+                                        required/>
+                                        <span className='checkmark'></span>
+                                    </label>
+
+                                </div>
+                                <div className='min-max'>
+                                    <label className='container'>
+
+                                        <input
+                                        type='radio'
+                                        className="quiz-radio"
+                                        name='answer'
+                                        value={3}
+                                        onChange={(e) => setAnswer(e.target.value)}
+                                        required/>
+                                        <span className='checkmark'></span>
+                                    </label>
+
+                                </div>
+                                <div className='min-max'>
+                                    <label className='container'>
+
+                                        <input
+                                        type='radio'
+                                        className="quiz-radio"
+                                        name='answer'
+                                        value={4}
+                                        onChange={(e) => setAnswer(e.target.value)}
+                                        required/>
+                                        <span className='checkmark'></span>
+                                    </label>
+
+                                </div>
+                                <div className='min-max'>
+                                    <label className='container'>
+                                        <input
+                                        type='radio'
+                                        className="quiz-radio"
+                                        name='answer'
+                                        value={5}
+                                        onChange={(e) => setAnswer(e.target.value)}
+                                        required/>
+                                        <span className='checkmark'></span>
+                                    </label>
+
+                                </div>
+                            </div>
                         </div>
-                        <div className='min-max'>
-                            <label className='container'>
-                                <input
-                                type='radio'
-                                className="quiz-radio"
-                                name='answer'
-                                value={2}
-                                onChange={(e) => setAnswer(e.target.value)}
-                                required/>
-                                <span className='checkmark'></span>
-                            </label>
-
-                        </div>
-                        <div className='min-max'>
-                            <label className='container'>
-
-                                <input
-                                type='radio'
-                                className="quiz-radio"
-                                name='answer'
-                                value={3}
-                                onChange={(e) => setAnswer(e.target.value)}
-                                required/>
-                                <span className='checkmark'></span>
-                            </label>
-
-                        </div>
-                        <div className='min-max'>
-                            <label className='container'>
-
-                                <input
-                                type='radio'
-                                className="quiz-radio"
-                                name='answer'
-                                value={4}
-                                onChange={(e) => setAnswer(e.target.value)}
-                                required/>
-                                <span className='checkmark'></span>
-                            </label>
-
-                        </div>
-                        <div className='min-max'>
-                            <label className='radio-title'>{breedTraits[next].max}</label>
-                            <label className='container'>
-                                <input
-                                type='radio'
-                                className="quiz-radio"
-                                name='answer'
-                                value={5}
-                                onChange={(e) => setAnswer(e.target.value)}
-                                required/>
-                                <span className='checkmark'></span>
-                            </label>
-
-                        </div>
-                        </>
                         :<></>}
                     </div>
-                <div className='submit-container'><button className="quiz-button" type="submit">Next <FontAwesomeIcon className='arrow' icon={faRightLong}/></button></div>
+                <div className='submit-container'><button onClick={checkAnswer} className="quiz-button" type="submit">Next <FontAwesomeIcon className='arrow' icon={faRightLong}/></button></div>
               </div>
             </form>
           </div>
