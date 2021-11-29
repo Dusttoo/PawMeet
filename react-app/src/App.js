@@ -113,7 +113,6 @@ function App() {
           <Landing />
         </Route>
       </Switch>
-      {console.log('history', window.location.href)}
       {window.location.href.includes('breed-quiz') ? <></> : <Footer />}
       
     </BrowserRouter>

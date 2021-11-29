@@ -46,7 +46,6 @@ const DisplayQuestion = () => {
     const handleSubmit = async (e) => {
     e.preventDefault();
     setLoading(true)
-    console.log(answer)
 
 
 
@@ -108,7 +107,6 @@ const DisplayQuestion = () => {
             <img className='quiz-image' src={img} alt='breed quiz'></img>
             <h2 className='question'>{breedTraits[next].question}</h2>
         </div>
-        {console.log(validationErrors)}
         {check ? 
         <p className='error'>Please choose an answer</p>
         :<></>}        

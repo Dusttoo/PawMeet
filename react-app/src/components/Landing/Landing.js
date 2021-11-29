@@ -69,19 +69,19 @@ const [search, setSearch] = useState(false)
   }
 
   const getTenBreeds = () => {
-    return  Object.values(breeds).sort(function(a, b) {
-        let nameA = a.name.toUpperCase();
-        let nameB = b.name.toUpperCase();
-        if (nameA < nameB) {
-            return -1;
-          }
-          if (nameA > nameB) {
-            return 1;
-          }
-          return 0;
-      }).splice(index, 10)
-
+    const tenBreeds = []
+    const breedId = []
+    for (let i=0; i < 11; i++) {
+        const add = Object.values(breeds)[getRandomInt(1, Object.keys(breeds).length - 1)]
+        if(!breedId.includes(add.id)) {
+          tenBreeds.push(add)
+          breedId.push(add.id)
+        }
+          
+    }
+    return tenBreeds
   }
+
 
   const openSearch = () => {
     if (search) setSearch(false)
@@ -163,7 +163,10 @@ const [search, setSearch] = useState(false)
                           const thisImage = Object.values(breedImages).find((image) => image.breed_id === breed.id)
                             return (
                             <div className='landing-breed-container'>
+                              {thisImage ?
                               <img className='breed-link-image' src={thisImage.img_url} alt={breed.name}/>
+                                : <></>
+                              }
                               <Link className='breed' to={`/breeds/${breed.id}`}>{breed.name}</Link>
                             </div>
                             )

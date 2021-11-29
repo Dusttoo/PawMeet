@@ -23,7 +23,6 @@ const BreedsPage = () => {
     const [loaded, setLoaded] = useState(false);
     const [loading, setLoading] = useState(true);
     const [search, setSearch] = useState(false)
-  console.log(images)
 
 
     useEffect(() => {
