@@ -1,55 +1,87 @@
-
-import React, { useState } from 'react';
-import { useSelector } from 'react-redux';
-import { Link } from 'react-router-dom';
-import LogoutButton from './auth/LogoutButton';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-
-import './NavBar.css'
-import { faUser } from '@fortawesome/free-solid-svg-icons';
+import React from "react";
+import { useSelector } from "react-redux";
+import { Link } from "react-router-dom";
+import LogoutButton from "./auth/LogoutButton";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import "./NavBar.css";
+import { faUser } from "@fortawesome/free-solid-svg-icons";
 
 const NavBar = () => {
-  const currentUser = useSelector(state => state.session.user)
+  const currentUser = useSelector((state) => state.session.user);
   return (
-    <nav className='nav'>
+    <nav className="nav">
       <ul className="nav-bar">
-        <li >
-          <Link className="nav-link" to='/' exact={true} activeClassName='active'>
+        <li>
+          <Link
+            className="nav-link"
+            to="/"
+            exact={true}
+            activeClassName="active"
+          >
             Home
           </Link>
         </li>
-        <li >
-          <Link className="nav-link" to='/forum' exact={true} activeClassName='active'>
+        <li>
+          <Link
+            className="nav-link"
+            to="/forum"
+            exact={true}
+            activeClassName="active"
+          >
             Speak
           </Link>
         </li>
-        <li >
-          <Link className="nav-link" to='/breeds' exact={true} activeClassName='active'>
+        <li>
+          <Link
+            className="nav-link"
+            to="/breeds"
+            exact={true}
+            activeClassName="active"
+          >
             Breeds
           </Link>
         </li>
-        {currentUser ? 
-        <li >
-          <Link className="nav-link" to={`/breed-quiz/${currentUser.id}`} exact={true} activeClassName='active'>
-            Breed Selector
-          </Link>
-        </li> :<></>
-        }
-        
         <li>
-          {currentUser ?
-          <>
-            <LogoutButton /> 
-            <Link className='account-button' to={`/users/${currentUser.id}`} ><FontAwesomeIcon icon={faUser} /></Link>
-           </>
-           : <Link to='/login' className='nav-link'>Log In</Link>
-          }
-         
+          <Link
+            className="nav-link"
+            to="/users"
+            exact={true}
+            activeClassName="active"
+          >
+            Users
+          </Link>
         </li>
-        
+        {currentUser ? (
+          <li>
+            <Link
+              className="nav-link"
+              to={`/breed-quiz/${currentUser.id}`}
+              exact={true}
+              activeClassName="active"
+            >
+              Breed Selector
+            </Link>
+          </li>
+        ) : (
+          <></>
+        )}
+        <li>
+          {currentUser ? (
+            <>
+              <LogoutButton />
+              <Link className="account-button" to={`/users/${currentUser.id}`}>
+                <FontAwesomeIcon icon={faUser} />
+              </Link>
+            </>
+          ) : (
+            <Link to="/login" className="nav-link">
+              Log In
+            </Link>
+          )}
+        </li>
       </ul>
     </nav>
   );
-}
+};
 
 export default NavBar;

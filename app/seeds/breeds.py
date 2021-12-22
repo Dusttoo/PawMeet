@@ -931,6 +931,240 @@ def seed_breeds():
             description="The dignified Dalmatian, dogdom's citizen of the world, is famed for his spotted coat and unique job description. During their long history, these \"coach dogs\" have accompanied the horse-drawn rigs of nobles, gypsies, and firefighters. The Dalmatian's delightful, eye-catching spots of black or liver adorn one of the most distinctive coats in the animal kingdom. Beneath the spots is a graceful, elegantly proportioned trotting dog standing between 19 and 23 inches at the shoulder. Dals are muscular, built to go the distance; the powerful hindquarters provide the drive behind the smooth, effortless gait. The Dal was originally bred to guard horses and coaches, and some of the old protective instinct remains. Reserved and dignified, Dals can be aloof with strangers and are dependable watchdogs. With their preferred humans, Dals are bright, loyal, and loving house dogs. They are strong, active athletes with great stamina'¿a wonderful partner for runners and hikers.",
 
         ),
+        Breed(
+            name='Saint Bernard',
+            breed_group=3,
+            personality=['Playful', 'Charming', 'Inquisitive'],
+            avg_height={
+                'males': '28-30 inches',
+                'females': '26-28 inches'
+            },
+            avg_weight={
+                'males': '140-180 pounds',
+                'females': '120-140 pounds'
+            },
+            avg_life_exp='8-10 years',
+            breed_video='https://youtu.be/8va0ZbLM4iE',
+
+            description="The Saint Bernard does not rank very high in AKC registrations, but the genial giant of the Swiss Alps is nonetheless among the world's most famous and beloved breeds. Saints are famously watchful and patient 'nanny dogs' for children. Not ranked particularly high in AKC registrations, this genial giant is nonetheless among the world's most famous and beloved breeds. The Saint's written standard abounds with phrases like 'very powerful,' 'extraordinarily muscular,' 'imposing,' and 'massive.' A male stands a minimum 27.5 inches at the shoulder; females will be smaller and more delicately built. The huge head features a wrinkled brow, a short muzzle, and dark eyes, combining to give Saints the intelligent, friendly expression that was such a welcome sight to stranded Alpine travelers.",
+
+        ),
+        Breed(
+            name='Papillon',
+            breed_group=5,
+            personality=['Friendly', 'Alert', 'Happy'],
+            avg_height={
+                'males': '8-11 inches',
+                'females': '8-11 inches'
+            },
+            avg_weight={
+                'males': '5-10 pounds',
+                'females': '5-10 pounds'
+            },
+            avg_life_exp='14-16 years',
+            breed_video='https://youtu.be/VpphC5Y4K-4',
+
+            description="The quick, curious Papillon is a toy dog of singular beauty and upbeat athleticism. Despite his refined appearance, the Pap is truly a 'doggy dog' blessed with a hardy constitution. Papillon fanciers describe their breed as happy, alert, and friendly. A tiny dog, measuring 8 to 11 inches at the shoulder, you can still spot a Papillon a block away thanks to the large, wing-shaped ears that give the breed its name ('papillon' is French for 'butterfly'). Some Paps have erect ears; in others, known as the Phalene type, the ears are down. Paps are dainty and elegant, with a plumed tail, and a long, silky coat of several color combinations, the base color being white. More robust than they look, Paps are little dogs for all seasons and reasons. They thrive in warm or cool climates, in town or country, and are eager to join family fun. They are excellent agility dogs and are consistent winners at the sport's highest levels; less ambitious owners can train them to do all kinds of tricks.",
+
+        ),
+        # Breed(
+        #     name='',
+        #     breed_group=,
+        #     personality=[],
+        #     avg_height={
+        #         'males': '',
+        #         'females': ''
+        #     },
+        #     avg_weight={
+        #         'males': '',
+        #         'females': ''
+        #     },
+        #     avg_life_exp='',
+        #     breed_video='',
+
+        #     description="",
+
+        # ),
+        # Breed(
+        #     name='',
+        #     breed_group=,
+        #     personality=[],
+        #     avg_height={
+        #         'males': '',
+        #         'females': ''
+        #     },
+        #     avg_weight={
+        #         'males': '',
+        #         'females': ''
+        #     },
+        #     avg_life_exp='',
+        #     breed_video='',
+
+        #     description="",
+
+        # ),
+        # Breed(
+        #     name='',
+        #     breed_group=,
+        #     personality=[],
+        #     avg_height={
+        #         'males': '',
+        #         'females': ''
+        #     },
+        #     avg_weight={
+        #         'males': '',
+        #         'females': ''
+        #     },
+        #     avg_life_exp='',
+        #     breed_video='',
+
+        #     description="",
+
+        # ),
+        # Breed(
+        #     name='',
+        #     breed_group=,
+        #     personality=[],
+        #     avg_height={
+        #         'males': '',
+        #         'females': ''
+        #     },
+        #     avg_weight={
+        #         'males': '',
+        #         'females': ''
+        #     },
+        #     avg_life_exp='',
+        #     breed_video='',
+
+        #     description="",
+
+        # ),
+        # Breed(
+        #     name='',
+        #     breed_group=,
+        #     personality=[],
+        #     avg_height={
+        #         'males': '',
+        #         'females': ''
+        #     },
+        #     avg_weight={
+        #         'males': '',
+        #         'females': ''
+        #     },
+        #     avg_life_exp='',
+        #     breed_video='',
+
+        #     description="",
+
+        # ),
+        # Breed(
+        #     name='',
+        #     breed_group=,
+        #     personality=[],
+        #     avg_height={
+        #         'males': '',
+        #         'females': ''
+        #     },
+        #     avg_weight={
+        #         'males': '',
+        #         'females': ''
+        #     },
+        #     avg_life_exp='',
+        #     breed_video='',
+
+        #     description="",
+
+        # ),
+        # Breed(
+        #     name='',
+        #     breed_group=,
+        #     personality=[],
+        #     avg_height={
+        #         'males': '',
+        #         'females': ''
+        #     },
+        #     avg_weight={
+        #         'males': '',
+        #         'females': ''
+        #     },
+        #     avg_life_exp='',
+        #     breed_video='',
+
+        #     description="",
+
+        # ),
+        # Breed(
+        #     name='',
+        #     breed_group=,
+        #     personality=[],
+        #     avg_height={
+        #         'males': '',
+        #         'females': ''
+        #     },
+        #     avg_weight={
+        #         'males': '',
+        #         'females': ''
+        #     },
+        #     avg_life_exp='',
+        #     breed_video='',
+
+        #     description="",
+
+        # ),
+        # Breed(
+        #     name='',
+        #     breed_group=,
+        #     personality=[],
+        #     avg_height={
+        #         'males': '',
+        #         'females': ''
+        #     },
+        #     avg_weight={
+        #         'males': '',
+        #         'females': ''
+        #     },
+        #     avg_life_exp='',
+        #     breed_video='',
+
+        #     description="",
+
+        # ),
+        # Breed(
+        #     name='',
+        #     breed_group=,
+        #     personality=[],
+        #     avg_height={
+        #         'males': '',
+        #         'females': ''
+        #     },
+        #     avg_weight={
+        #         'males': '',
+        #         'females': ''
+        #     },
+        #     avg_life_exp='',
+        #     breed_video='',
+
+        #     description="",
+
+        # ),
+        # Breed(
+        #     name='',
+        #     breed_group=,
+        #     personality=[],
+        #     avg_height={
+        #         'males': '',
+        #         'females': ''
+        #     },
+        #     avg_weight={
+        #         'males': '',
+        #         'females': ''
+        #     },
+        #     avg_life_exp='',
+        #     breed_video='',
+
+        #     description="",
+
+        # ),
         # Breed(
         #     name='',
         #     breed_group=,

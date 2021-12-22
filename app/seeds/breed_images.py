@@ -1249,78 +1249,79 @@ def seed_breed_images():
         breed_id=51,
         img_url='https://www.akc.org/wp-content/uploads/2017/11/Chesapeake-Bay-Retriever-hunting.jpg'
     ),
-    #     Breed_Image(
-    #     breed_id=,
-    #     img_url=''
-    # ),
-    #     Breed_Image(
-    #     breed_id=,
-    #     img_url=''
-    # ),
-    #     Breed_Image(
-    #     breed_id=,
-    #     img_url=''
-    # ),
-    #     Breed_Image(
-    #     breed_id=,
-    #     img_url=''
-    # ),
-    # Breed_Image(
-    #     breed_id=,
-    #     img_url=''
-    # ),
-    #     Breed_Image(
-    #     breed_id=,
-    #     img_url=''
-    # ),
-    #     Breed_Image(
-    #     breed_id=,
-    #     img_url=''
-    # ),
-    #     Breed_Image(
-    #     breed_id=,
-    #     img_url=''
-    # ),
-    #     Breed_Image(
-    #     breed_id=,
-    #     img_url=''
-    # ),
-    #     Breed_Image(
-    #     breed_id=,
-    #     img_url=''
-    # ),
-    #     Breed_Image(
-    #     breed_id=,
-    #     img_url=''
-    # ),
-    #     Breed_Image(
-    #     breed_id=,
-    #     img_url=''
-    # ),
-    # Breed_Image(
-    #     breed_id=,
-    #     img_url=''
-    # ),
-    #     Breed_Image(
-    #     breed_id=,
-    #     img_url=''
-    # ),
-    #     Breed_Image(
-    #     breed_id=,
-    #     img_url=''
-    # ),
-    #     Breed_Image(
-    #     breed_id=,
-    #     img_url=''
-    # ),
-    #     Breed_Image(
-    #     breed_id=,
-    #     img_url=''
-    # ),
-    #     Breed_Image(
-    #     breed_id=,
-    #     img_url=''
-    # ),
+        Breed_Image(
+        breed_id=53,
+        img_url='https://www.akc.org/wp-content/uploads/2017/11/Saint-Bernard-On-White-01.jpg'
+    ),
+        Breed_Image(
+        breed_id=53,
+        img_url='https://media-be.chewy.com/wp-content/uploads/2021/06/02135531/Saint-Bernard-FeaturedImage.jpg'
+    ),
+        Breed_Image(
+        breed_id=53,
+        img_url='https://www.thesprucepets.com/thmb/lG6YBdOwDZ6UmIkJ2e4ChDl1Yoc=/2121x1193/smart/filters:no_upscale()/SaintBernard-GettyImages-973528124-0bdea12e02ea4d71a21a7fc7c0acb469.jpg'
+    ),
+        Breed_Image(
+        breed_id=53,
+        img_url='https://i.pinimg.com/originals/10/db/7d/10db7d31b07272343588e1eb32d6b904.jpg'
+    ),
+    Breed_Image(
+        breed_id=53,
+        img_url='https://bloximages.newyork1.vip.townnews.com/goldendalesentinel.com/content/tncms/assets/v3/editorial/e/e8/ee825168-8cc9-11eb-abe5-a72d623c8e98/605b7ce04cc00.image.jpg?resize=400%2C376'
+    ),
+        Breed_Image(
+        breed_id=53,
+        img_url='https://better-bred-cdn.azureedge.net/wp-content/uploads/2019/11/AdobeStock_58781044.jpeg'
+    ),
+        Breed_Image(
+        breed_id=53,
+        img_url='https://www.puppyviewer.com/breed-photos/st-bernard.jpg'
+    ),
+        Breed_Image(
+        breed_id=52,
+        img_url='https://www.dogtime.com/assets/uploads/2011/01/file_23146_dalmatian-460x290.jpg'
+    ),
+        Breed_Image(
+        breed_id=52,
+        img_url='https://spiritdogtraining.com/wp-content/uploads/2021/07/Dalmatian-1.png'
+    ),
+        Breed_Image(
+        breed_id=52,
+        img_url='https://www.rd.com/wp-content/uploads/2019/07/shutterstock_1161034495-scaled.jpg?fit=700,1024'
+    ),
+        Breed_Image(
+        breed_id=52,
+        img_url='https://dogsbreedusa.online/wp-content/uploads/2018/10/Spotted-Coach-Dog.jpg'
+    ),
+        Breed_Image(
+        breed_id=52,
+        img_url='https://www.orlandosentinel.com/resizer/2WW8dP_Zvim0a16C_WIAJXfr51I=/800x800/top/cloudfront-us-east-1.images.arcpublishing.com/tronc/J4YZLTJMUZAQ5BUIKJCTPGFVNI.JPG'
+    ),
+    Breed_Image(
+        breed_id=54,
+        img_url='https://www.akc.org/wp-content/uploads/2017/11/Papillon-On-White-01.jpg'
+    ),
+        Breed_Image(
+        breed_id=54,
+        img_url='https://dogfriendlyscene.co.uk/wp-content/uploads/2021/07/Papillon-Dog-Breed.png'
+    ),
+        Breed_Image(
+        breed_id=54,
+        img_url='https://www.thesprucepets.com/thmb/1fxUJ4sMNzmSn4QKWrp7FzO_enU=/1453x1453/smart/filters:no_upscale()/Papillon-GettyImages-713839323-6985913363dd4791852de6f246e6c15d.jpg'
+    ),
+        Breed_Image(
+        breed_id=54,
+        img_url='https://images2.minutemediacdn.com/image/upload/c_fit,f_auto,fl_lossy,q_auto,w_728/v1555996784/shape/mentalfloss/istock_000055044242_small.jpg'
+    ),
+        Breed_Image(
+        breed_id=54,
+        img_url='https://pbs.twimg.com/media/DzMEcbKX0AE_vYW.jpg'
+    ),
+        Breed_Image(
+        breed_id=54,
+        img_url='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQXqjmTYiPag629B7UwwpdGVzfgtkDVL4xPFuOvye3zcyGHK0XuYMAGAI07A3Ki-liiuRo&usqp=CAU'
+    ),
+
     #     Breed_Image(
     #     breed_id=,
     #     img_url=''
