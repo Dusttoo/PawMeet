@@ -91,7 +91,6 @@ const DisplayQuestion = () => {
   const checkBox = () => {
     setIsChecked(!isChecked)
   }
-  console.log(isChecked)
 
   return (
     <div className="question-quiz-container">

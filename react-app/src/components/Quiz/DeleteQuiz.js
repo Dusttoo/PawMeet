@@ -5,6 +5,7 @@ import { removeAnswer } from "../../store/user_answers";
 import { useHistory } from "react-router";
 import { faRotateLeft } from "@fortawesome/free-solid-svg-icons";
 import "./Quiz.css";
+import scrollToTop from "../utils/scroll";
 
 const DeleteQuiz = ({ userId }) => {
   const dispatch = useDispatch();
@@ -13,6 +14,7 @@ const DeleteQuiz = ({ userId }) => {
   const deleteQuiz = () => {
     dispatch(removeAnswer(userId));
     history.push(`/breed-quiz/${userId}`);
+    scrollToTop();
   };
 
   return (

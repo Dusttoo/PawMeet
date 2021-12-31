@@ -31,10 +31,17 @@ const UserResults = () => {
       );
       const userResponses = Object.values(userAnswers);
       for (let i = 0; i < breedResponses.length; i++) {
-        if (breedResponses[i].answer === userResponses[i].answer) {
-          total++;
+        if (userResponses[i].important === true) {
+          if (breedResponses[i].answer === userResponses[i].answer) {
+            total += 2;
+          } else total--;
+        } else {
+          if (breedResponses[i].answer === userResponses[i].answer) {
+            total++;
+          }
         }
       }
+
       average = (total / breedResponses.length) * 100;
       results.push([breed.id, average]);
     });
