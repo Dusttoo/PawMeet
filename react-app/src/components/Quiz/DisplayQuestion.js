@@ -12,6 +12,7 @@ const DisplayQuestion = () => {
   const [validationErrors, setValidationErrors] = useState([]);
   const dispatch = useDispatch();
   const [answer, setAnswer] = useState("");
+  const [isChecked, setIsChecked] = useState(false)
   const [next, setNext] = useState(1);
   const [check, setCheck] = useState(false);
   const breedTraits = useSelector((state) => state?.breed_traits);
@@ -60,6 +61,7 @@ const DisplayQuestion = () => {
       user_id,
       trait_id,
       answer: +answer,
+      important: isChecked
     };
     const errors = validate();
     if (errors.length > 0) {
@@ -74,6 +76,7 @@ const DisplayQuestion = () => {
     imageSet();
     setLoading(false);
     setAnswer("");
+    setIsChecked(false)
     scrollToTop();
   };
 
@@ -84,6 +87,12 @@ const DisplayQuestion = () => {
       setCheck(false);
     }
   };
+
+  const checkBox = () => {
+    setIsChecked(!isChecked)
+  }
+  console.log(isChecked)
+
   return (
     <div className="question-quiz-container">
       {loading ? (
@@ -242,6 +251,17 @@ const DisplayQuestion = () => {
                     <></>
                   )}
                 </div>
+                <label>
+                  Important?
+                  <input
+                    className="important-check"
+                    type="checkbox"
+                    id="important"
+                    name="important"
+                    value={isChecked}
+                    onChange={checkBox}
+                  />
+                </label>
                 <div className="submit-container">
                   <button
                     onClick={checkAnswer}
