@@ -110,6 +110,7 @@ const Posts = () => {
     return new Date(a.posted) - new Date(b.posted);
   });
 
+
   return (
     <>
       <div className="post-container">

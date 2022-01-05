@@ -229,6 +229,8 @@ th, td {
 .author-name:hover {
     color: #333810;
 }
+
+
 /* -- DISPLAY COMMENTS ----------------- */
 .comment-container {
     display:flex;
@@ -351,6 +353,7 @@ th, td {
     padding: 20px;
     display: flex;
     flex-direction: column;
+    box-sizing: border-box;
 }
 
 .form-label {
@@ -369,6 +372,7 @@ th, td {
     border: 1px solid rgb(219, 219, 219);
     border-radius: 4px;
     height: 20px;
+    width: 50%;
 }
 
 .small-form-select {
@@ -396,4 +400,9 @@ th, td {
 .edit-form-container {
     display: flex;
     justify-content: center;
+}
+
+.editor-container {
+    width: 100%;
+    margin-bottom: 20px;
 }

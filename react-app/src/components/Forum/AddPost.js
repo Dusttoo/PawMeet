@@ -3,6 +3,12 @@ import { useDispatch } from "react-redux";
 import { addAPost } from "../../store/forum";
 import { useSelector } from "react-redux";
 import { useHistory } from "react-router";
+import SunEditor from "suneditor-react";
+import plugins from "suneditor/src/plugins";
+import "suneditor/dist/css/suneditor.min.css";
+
+
+
 
 import "./Forum.css";
 
@@ -19,6 +25,8 @@ const AddPost = () => {
   const breed_groups = useSelector((state) => state.groups);
   const [group_id, setGroup] = useState(null);
   const history = useHistory();
+  const [content, setContent] = useState('');
+
 
   const validate = () => {
     const validationErrors = [];
@@ -36,6 +44,10 @@ const AddPost = () => {
     }
 
     return validationErrors;
+  };
+
+  const createContent = (content) => {
+    setBody(content);
   };
 
   const handleSubmit = async (e) => {
@@ -101,13 +113,47 @@ const AddPost = () => {
               })}
             </select>
             <label className="form-label">Body:</label>
-            <textarea
+            {/* <textarea
               placeholder="Post Body"
               className="form-input"
               value={post_body}
               onChange={(e) => setBody(e.target.value)}
               required
-            />
+            /> */}
+            <div className="editor-container">
+              <SunEditor
+                height="200px"
+                width="100%"
+                placeholder="Please type here..."
+                onChange={createContent}
+                setContents={post_body}
+                setOptions={{
+                  plugins: plugins,
+                  buttonList: [
+                    ["undo", "redo"],
+                    ["font", "fontSize", "formatBlock"],
+                    // "/", // Line break
+                    ["paragraphStyle", "blockquote"],
+                    [
+                      "bold",
+                      "underline",
+                      "italic",
+                      "strike",
+                      "subscript",
+                      "superscript",
+                    ],
+                    ["fontColor", "hiliteColor"],
+                    // "/", // Line break
+                    ["removeFormat", "outdent", "indent",
+                    "align", "horizontalRule", "list"],
+                    ["table", "link", "image", "video"],
+                    // "/", // Line break
+                    ["fullScreen"],
+                    ["preview"],
+                  ],
+                }}
+              />
+            </div>
             <div className="submit-container">
               <button className="form-button" type="submit">
                 Submit
