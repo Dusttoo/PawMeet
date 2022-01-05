@@ -20,6 +20,8 @@ class User(db.Model, UserMixin):
     posts = db.relationship('Post', back_populates='users')
     user_answers = db.relationship('User_Answer', back_populates='users')
     likes = db.relationship('Like', back_populates='users')
+    friend_requests = db.relationship('Friend_Request', back_populates='users')
+    friends_list = db.relationship('Friends_List', back_populates='users')
 
 
     @property

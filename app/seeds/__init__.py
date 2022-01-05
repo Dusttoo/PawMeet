@@ -10,6 +10,8 @@ from .pet_profiles import seed_pet_profiles, undo_pet_profiles
 from .posts import seed_posts, undo_posts
 from .comments import seed_comments, undo_comments
 from .likes import seed_likes, undo_likes
+from .friend_requests import seed_requests, undo_requests
+from .friends_lists import seed_lists, undo_list
 
 # Creates a seed group to hold our commands
 # So we can type `flask seed --help`
@@ -28,8 +30,10 @@ def seed():
     seed_pet_profiles()
     seed_pet_images()
     seed_posts()
-    # seed_comments()
+    seed_comments()
     seed_likes()
+    seed_lists()
+    seed_requests()
     # Add other seed functions here
 
 
@@ -47,4 +51,6 @@ def undo():
     undo_posts()
     undo_comments()
     undo_likes()
+    undo_list()
+    undo_requests()
     # Add other undo functions here
