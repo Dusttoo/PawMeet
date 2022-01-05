@@ -98,7 +98,11 @@ const DisplayComments = ({ commentId }) => {
           )}
         </td>
         <td className="comment-body comment-cell" style={{ width: "65%" }}>
-          {theseComments[comment].comment_body}
+          <div
+            dangerouslySetInnerHTML={{
+              __html: theseComments[comment].comment_body,
+            }}
+          />
         </td>
       </tr>
       {editForm ? (

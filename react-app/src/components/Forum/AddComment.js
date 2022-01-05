@@ -77,13 +77,6 @@ const AddComment = ({ setCommentForm }) => {
         <form className="comment-form" onSubmit={handleSubmit}>
           <div className="comment-form-con">
             <label className="comment-form-label">Message:</label>
-            {/* <textarea
-              placeholder="Comment Body"
-              className="comment-form-input"
-              value={comment_body}
-              onChange={(e) => setBody(e.target.value)}
-              required
-            /> */}
             <div className="editor-container">
               <SunEditor
                 height="200px"
