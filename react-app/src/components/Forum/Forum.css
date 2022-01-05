@@ -319,6 +319,7 @@ th, td {
     padding: 20px;
     display: flex;
     flex-direction: column;
+    box-sizing: border-box;
 }
 
 .comment-form-label {

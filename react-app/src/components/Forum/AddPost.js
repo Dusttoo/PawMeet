@@ -6,10 +6,6 @@ import { useHistory } from "react-router";
 import SunEditor from "suneditor-react";
 import plugins from "suneditor/src/plugins";
 import "suneditor/dist/css/suneditor.min.css";
-
-
-
-
 import "./Forum.css";
 
 const AddPost = () => {
