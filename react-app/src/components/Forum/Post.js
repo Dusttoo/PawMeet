@@ -152,7 +152,9 @@ const Posts = () => {
             </div>
           </div>
           <div className="post-body-container">
-            <p>{posts[postId].post_body}</p>
+            <div
+              dangerouslySetInnerHTML={{ __html: posts[postId].post_body }}
+            ></div>
           </div>
 
           {!liked.includes(true) ? (

@@ -25,7 +25,6 @@ const AddPost = () => {
   const breed_groups = useSelector((state) => state.groups);
   const [group_id, setGroup] = useState(null);
   const history = useHistory();
-  const [content, setContent] = useState('');
 
 
   const validate = () => {
