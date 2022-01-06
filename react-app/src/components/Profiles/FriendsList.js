@@ -9,26 +9,32 @@ const FriendsList = () => {
   const dispatch = useDispatch()
   const friendsList = useSelector(state => state.friends.list)
   const users = useSelector(state => state.users)
+  console.log('list', friendsList)
   
 
   useEffect(() => {
     dispatch(allFriends(id))
-  }, [])
+  }, [id])
 
   return (
     <>
       <div className="firends-list-container">
         <h1>Friends</h1>
         {Object.values(friendsList).map(connection => {
+          console.log(connection)
             const friendId = connection.friend_user_id
             const friend = users[friendId]
             console.log(friend)
             return (
-                <>
-                <img src={friend.profile_img} alt={friend.first_name}/>
-                <p>{friend.first_name} {friend.last_name}</p>
-                </>
-            )
+              <>
+                <div key={connection.id} className="friend-container">
+                  <img className='friend-image' src={friend.profile_img} alt={friend.first_name} />
+                  <p>
+                    {friend.first_name} {friend.last_name}
+                  </p>
+                </div>
+              </>
+            );
         })}
       </div>
     </>

@@ -167,3 +167,19 @@
     display: flex;
     flex-direction: column;
 }
+
+.friends-list-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+}
+
+.friend-container {
+    display: flex;
+}
+
+.friend-image {
+    height: 50px;
+    border-radius: 50%;
+}
