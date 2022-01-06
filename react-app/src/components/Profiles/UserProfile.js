@@ -3,6 +3,7 @@ import { useSelector } from "react-redux";
 import { Link, useParams } from "react-router-dom";
 import DisplayPosts from "../Forum/DisplayPost";
 import "./Profiles.css";
+import UserSidebar from "./UserSidebar";
 
 const UserProfile = () => {
   const { id } = useParams();
@@ -42,6 +43,7 @@ const UserProfile = () => {
   return (
     <>
       <div className="user-page">
+        <UserSidebar />
         <div className="user-container">
           <div className="user-header">
             <img

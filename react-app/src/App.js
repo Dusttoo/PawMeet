@@ -29,6 +29,7 @@ import Footer from "./components/Footer/Footer";
 import UserResults from "./components/Quiz/QuizResults";
 import Quiz from "./components/Quiz/Quiz";
 import { allBreedTraits } from "./store/breed_traits";
+import FriendsList from "./components/Profiles/FriendsList";
 
 function App() {
   const [loaded, setLoaded] = useState(false);
@@ -72,6 +73,12 @@ function App() {
         </ProtectedRoute>
         <ProtectedRoute path="/users/:id" exact={true}>
           <UserProfile />
+        </ProtectedRoute>
+        <ProtectedRoute path="/friends/:id" exact={true}>
+          <FriendsList />
+        </ProtectedRoute>
+        <ProtectedRoute path="/friends/:id" exact={true}>
+          {/* requests */}
         </ProtectedRoute>
         <ProtectedRoute path="/pets/add" exact={true}>
           <AddPet />

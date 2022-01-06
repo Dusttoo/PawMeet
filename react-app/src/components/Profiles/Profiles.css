@@ -162,3 +162,8 @@
     padding-bottom: 60px;
     border-bottom: 1px dotted #8A7B4E;
 }
+
+.user-side-container {
+    display: flex;
+    flex-direction: column;
+}
