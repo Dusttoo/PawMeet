@@ -4,18 +4,12 @@ from random import randrange
 
 
 def seed_lists():
-    requests = [
-        Friends_List(
-            user_id_from=1, user_id_to=2
-        )
-    ]
-
     for i in range(20):
         follow = False
         if(i / 2 == 0):
             follow = True
         i = Friends_List(
-            current_user_id=range(1, 12), friend_user_id=range(1, 12),
+            current_user_id=randrange(1, 12), friend_user_id=randrange(1, 12),
             is_following = follow
         )
         db.session.add(i)

@@ -11,7 +11,10 @@ class Friends_List(db.Model):
         db.Integer, db.ForeignKey('users.id'), nullable=False)
     is_following = db.Column(db.Boolean, default=False, nullable=False)
 
-    users = db.relationship('User', back_populates='friend_requests')
+    users = db.relationship('User', foreign_keys=[
+                            current_user_id], backref='friends_list')
+    users = db.relationship('User', foreign_keys=[
+                            friend_user_id], backref='friends_list')
 
     def to_dict(self):
         return {
