@@ -13,6 +13,7 @@ from .api.forum_routes import forum_routes
 from .api.pet_routes import pet_routes
 from .api.breed_routes import breed_routes
 from .api.quiz_routes import quiz_routes
+from .api.friend_routes import friend_routes
 
 from .seeds import seed_commands
 
@@ -40,6 +41,8 @@ app.register_blueprint(forum_routes, url_prefix='/api/forum')
 app.register_blueprint(pet_routes, url_prefix='/api/pets')
 app.register_blueprint(breed_routes, url_prefix='/api/breeds')
 app.register_blueprint(quiz_routes, url_prefix='/api/quiz')
+app.register_blueprint(friend_routes, url_prefix='/api/friends')
+
 
 
 db.init_app(app)
