@@ -20,7 +20,7 @@ def validation_errors_to_error_messages(validation_errors):
 def requests(id):
     requests = Friend_Request.query.filter(Friend_Request.user_id_from == id or 
                                         Friend_Request.user_id_to == id)
-    return {'requests': [requests.to_dict() for request in requests]}
+    return {'requests': [request.to_dict() for request in requests]}
 
 
 @friend_routes.route('/<int:id>/friends')

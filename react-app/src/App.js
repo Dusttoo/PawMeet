@@ -29,6 +29,7 @@ import Footer from "./components/Footer/Footer";
 import UserResults from "./components/Quiz/QuizResults";
 import Quiz from "./components/Quiz/Quiz";
 import { allBreedTraits } from "./store/breed_traits";
+import { allRequests } from "./store/friends";
 
 function App() {
   const [loaded, setLoaded] = useState(false);
@@ -45,6 +46,7 @@ function App() {
       await dispatch(allGroups());
       await dispatch(allImages());
       await dispatch(allBreedTraits());
+      await dispatch(allRequests(1))
       setLoaded(true);
     })();
   }, [dispatch]);
