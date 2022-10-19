@@ -9,7 +9,10 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSearch } from "@fortawesome/free-solid-svg-icons";
 import SearchBar from "../Search/Search";
 import SearchResults from "../Search/SearchResults";
+import Pagination from "../Pagination";
 import "./Breed.css";
+
+const PAGE_SIZES = [15, 25, 50, 100];
 
 const BreedsPage = () => {
   const breeds = useSelector((state) => state.breeds);
@@ -18,6 +21,29 @@ const BreedsPage = () => {
   const [loaded, setLoaded] = useState(false);
   const [loading, setLoading] = useState(true);
   const [search, setSearch] = useState(false);
+  const [currentPage, setCurrentPage] = useState(1)
+  const [pageSize, setPageSize] = useState(15)
+  const currentPaginationData = Object.values(breeds)
+  .sort(function (a, b) {
+    let nameA = a.name.toUpperCase();
+    let nameB = b.name.toUpperCase();
+    if (nameA < nameB) {
+      return -1;
+    }
+    if (nameA > nameB) {
+      return 1;
+    }
+    return 0;
+  })
+  .slice(pageSize * (currentPage - 1), pageSize * currentPage);
+  console.log(currentPaginationData)
+  const updateRowsPerPage = (pageSize) => {
+    setPageSize(Number(pageSize))
+    setCurrentPage(1)
+  };
+  const updatePage = (pageNumber) => {
+    setCurrentPage(pageNumber)
+    };
 
   useEffect(() => {
     (async () => {
@@ -33,8 +59,7 @@ const BreedsPage = () => {
   }
 
   const openSearch = () => {
-    if (search) setSearch(false);
-    if (!search) setSearch(true);
+    setSearch(!search);
   };
 
   return (
@@ -45,6 +70,14 @@ const BreedsPage = () => {
         </>
       ) : (
         <div className="breed-list-container">
+          <Pagination
+            currentPage={currentPage}
+            totalCount={Object.values(breeds).length}
+            pageSize={pageSize}
+            pageSizeOptions={PAGE_SIZES}
+            onPageChange={updatePage}
+            onPageSizeOptionChange={updateRowsPerPage}
+          />
           <div className="header-search">
             <h2 className="breed-list-heading">Meet the Breeds</h2>
             <FontAwesomeIcon
@@ -69,19 +102,7 @@ const BreedsPage = () => {
             <></>
           )}
 
-          {Object.values(breeds)
-            .sort(function (a, b) {
-              let nameA = a.name.toUpperCase();
-              let nameB = b.name.toUpperCase();
-              if (nameA < nameB) {
-                return -1;
-              }
-              if (nameA > nameB) {
-                return 1;
-              }
-              return 0;
-            })
-            .map((breed) => {
+          {currentPaginationData.map((breed) => {
               const thisImage = Object.values(images).find(
                 (image) => image.breed_id === breed.id
               );
