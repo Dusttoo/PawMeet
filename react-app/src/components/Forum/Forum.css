@@ -214,10 +214,23 @@ th, td {
     width: 100%;
     display: flex;
     justify-content: flex-start;
+    align-items: center;
+}
+
+.like-heart {
+    padding-right: 4px;
 }
 
 .like-heart:hover {
     cursor: pointer;
+}
+
+.people-liked-container {
+    padding-left: 5px;
+}
+
+.hide-like {
+    display: none;
 }
 
 .author-name {

@@ -28,6 +28,7 @@ const Posts = () => {
   const users = useSelector((state) => state.users);
   const likes = useSelector((state) => state.likes);
   const comments = useSelector((state) => state.post_comments);
+  const [likeHover, setLikeHover] = useState(false)
   const author = Object.keys(users).find(
     (user) => +user === +posts[postId].user_id
   );
@@ -42,7 +43,8 @@ const Posts = () => {
       return false;
     }
   });
-
+  const likeList = Object.values(likes).filter(like => like.post_id === +postId)
+  console.log(likeHover)
   useEffect(() => {
     (async () => {
       await dispatch(allPosts());
@@ -176,6 +178,19 @@ const Posts = () => {
                 style={{ color: "#ff0808" }}
               />
               {getLikes()}
+              {!likeHover ? 
+              <span
+              onMouseOver={() => setLikeHover(!likeHover)}
+              >People who liked this</span> :
+              <div className={likeHover ? 'people-liked-container' : 'hide-like'}
+              onMouseOver={() => setLikeHover(!likeHover)}>
+              {likeList.splice(0, 3).map(like => (
+                <span>{users[like.id].first_name}</span>
+              ))}
+              </div>
+            }
+              
+              
             </div>
           )}
           {editForm ? <EditPost setEditForm={setEditForm} /> : <></>}
