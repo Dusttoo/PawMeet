@@ -7,6 +7,7 @@ import { faRightLong } from "@fortawesome/free-solid-svg-icons";
 import { addAnAnswer } from "../../store/user_answers";
 import GifPlayer from "react-gif-player";
 import scrollToTop from "../utils/scroll";
+import { faPaw } from "@fortawesome/free-solid-svg-icons";
 
 const DisplayQuestion = () => {
   const [validationErrors, setValidationErrors] = useState([]);
@@ -107,12 +108,12 @@ const DisplayQuestion = () => {
             <img className="quiz-image" src={img} alt="breed quiz"></img>
             <h2 className="question">{breedTraits[next].question}</h2>
           </div>
-          {check ? <p className="error">Please choose an answer</p> : <></>}
+          {check && <p className="error">Please choose an answer</p>}
           <div className="add-form-container">
             <form className="post-form" onSubmit={handleSubmit}>
               <div className="quiz-form-con">
                 <div className="coat-container">
-                  {breedTraits[next].id === 7 ? (
+                  {breedTraits[next].id === 7 && (
                     <>
                       {coatTypes.map((coat) => {
                         index++;
@@ -130,7 +131,7 @@ const DisplayQuestion = () => {
                                     onChange={(e) => setAnswer(e.target.value)}
                                     required
                                   />
-                                  <span className="checkmark"></span>
+                                  <FontAwesomeIcon className="paw" icon={faPaw} />
                                 </label>
                               </div>
                             </div>
@@ -138,10 +139,8 @@ const DisplayQuestion = () => {
                         );
                       })}
                     </>
-                  ) : (
-                    <></>
                   )}
-                  {breedTraits[next].id === 8 ? (
+                  {breedTraits[next].id === 8 && (
                     <>
                       {coatLengths.map((coat) => {
                         index++;
@@ -158,17 +157,17 @@ const DisplayQuestion = () => {
                                   onChange={(e) => setAnswer(e.target.value)}
                                   required
                                 />
-                                <span className="checkmark"></span>
+                                <FontAwesomeIcon className="paw" icon={faPaw} />
                               </label>
                             </div>
                           </div>
                         );
                       })}
                     </>
-                  ) : (
-                    <></>
                   )}
-                  {normal.includes(breedTraits[next].id) ? (
+                  {normal.includes(breedTraits[next].id) && 
+                  // Could split this into another component for readability
+                  (
                     <div className="regular-questions">
                       <div className="amount-labels">
                         <label className="radio-title">
@@ -189,7 +188,7 @@ const DisplayQuestion = () => {
                               onChange={(e) => setAnswer(e.target.value)}
                               required
                             />
-                            <span className="checkmark"></span>
+                            <FontAwesomeIcon className="paw" icon={faPaw} />
                           </label>
                         </div>
                         <div className="min-max">
@@ -202,7 +201,7 @@ const DisplayQuestion = () => {
                               onChange={(e) => setAnswer(e.target.value)}
                               required
                             />
-                            <span className="checkmark"></span>
+                            <FontAwesomeIcon className="paw" icon={faPaw} />
                           </label>
                         </div>
                         <div className="min-max">
@@ -215,7 +214,7 @@ const DisplayQuestion = () => {
                               onChange={(e) => setAnswer(e.target.value)}
                               required
                             />
-                            <span className="checkmark"></span>
+                            <FontAwesomeIcon className="paw" icon={faPaw} />
                           </label>
                         </div>
                         <div className="min-max">
@@ -228,7 +227,7 @@ const DisplayQuestion = () => {
                               onChange={(e) => setAnswer(e.target.value)}
                               required
                             />
-                            <span className="checkmark"></span>
+                            <FontAwesomeIcon className="paw" icon={faPaw} />
                           </label>
                         </div>
                         <div className="min-max">
@@ -241,13 +240,11 @@ const DisplayQuestion = () => {
                               onChange={(e) => setAnswer(e.target.value)}
                               required
                             />
-                            <span className="checkmark"></span>
+                            <FontAwesomeIcon className="paw" icon={faPaw} />
                           </label>
                         </div>
                       </div>
                     </div>
-                  ) : (
-                    <></>
                   )}
                 </div>
                 <label>
