@@ -5,19 +5,13 @@ import { Link } from "react-router-dom";
 
 const DisplayPosts = ({ post }) => {
   const authors = useSelector((state) => state.users);
-  const author = Object.keys(authors).find(
-    (thisAuthor) => +post.user_id === +thisAuthor
+  const author = Object.values(authors).find(
+    (thisAuthor) => post.user_id === thisAuthor.id
   );
   const comments = useSelector((state) => state.comments);
-  const theseComments = [];
-  Object.keys(comments).map((commentId) => {
-    const comment = Object.values(comments).find(
-      (thisComment) => +thisComment.id === +commentId
-    );
-    if (comment.post_id === post.id) {
-      theseComments.push(comment);
-    }
-  });
+  const eachPostComments = Object.values(comments).filter(
+    (thisComment) => thisComment.post_id === post.id
+  );
 
   const modifyTime = () => {
     const date = post.posted.replace("00:00:00 GMT", "");
@@ -32,12 +26,12 @@ const DisplayPosts = ({ post }) => {
             <Link to={`/users/${author}`}>
               <img
                 className="profile-icon"
-                src={authors[author].profile_img}
-                alt={authors[author].first_name}
+                src={author.profile_img}
+                alt={author.first_name}
               />
             </Link>
-            <Link className="user-name" to={`/users/${author}`}>
-              {authors[author].first_name}
+            <Link className="user-name" to={`/users/${author.id}`}>
+              {author.first_name}
             </Link>
           </div>
         </td>
@@ -47,7 +41,7 @@ const DisplayPosts = ({ post }) => {
           </Link>
         </td>
         <td>{modifyTime()}</td>
-        <td className="comment-count">{theseComments.length}</td>
+        <td className="comment-count">{eachPostComments.length}</td>
       </tr>
     </>
   );
