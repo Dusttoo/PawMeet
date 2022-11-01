@@ -68,6 +68,10 @@
 
 .breed-container {
     padding: 0 20px 150px 20px;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .breed-content {
@@ -92,6 +96,10 @@
     border-right: solid 2px #333810;
     padding: 8px;
     margin-right: 4px;
+}
+
+.breed-traits-container {
+    width: 60%;
 }
 
 .breed-info-header {
@@ -192,3 +200,10 @@
     border-bottom: .1px solid #333810;
 }
 
+
+/* -- PawPrint ------------------------- */
+.pawprint-icon {
+    height: 20px;
+    width: 20px;
+    fill: white;
+}

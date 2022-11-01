@@ -6,7 +6,6 @@ export function ImageUpload() {
   const maxNumber = 69;
 
   const onChange = (imageList, addUpdateIndex) => {
-    // data for submit
     setImages(imageList);
   };
 
@@ -28,7 +27,6 @@ export function ImageUpload() {
           isDragging,
           dragProps,
         }) => (
-          // write your building UI
           <div className="upload__image-wrapper">
             <button
               style={isDragging ? { color: "red" } : undefined}

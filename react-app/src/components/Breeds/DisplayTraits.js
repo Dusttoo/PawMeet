@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import "./Breed.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faAngleDown } from "@fortawesome/free-solid-svg-icons";
+import pawPrint from "../icons/pawPrint"
+
 
 const DisplayTraits = ({ trait, thisAnswer }) => {
   const [details, setDetails] = useState(false);
@@ -51,7 +53,10 @@ const DisplayTraits = ({ trait, thisAnswer }) => {
                     key={rate}
                     className={rate <= thisAnswer.answer ? "on" : "off"}
                   >
-                    <span className="bubble"></span>
+                    <span className="bubble">
+                      {pawPrint.primary}
+
+                    </span>
                   </button>
                 </div>
               </>
