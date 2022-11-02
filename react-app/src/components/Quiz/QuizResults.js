@@ -13,7 +13,7 @@ const UserResults = () => {
   const { id } = useParams();
   const dispatch = useDispatch();
   const state = useSelector((state) => state);
-  const {breeds, breed_answers, user_answers, breed_images} = state;
+  const { breeds, breed_answers, user_answers, breed_images } = state;
   const results = calculateResults(breeds, breed_answers, user_answers);
   useEffect(() => {
     dispatch(allUserAnswers(id));
@@ -23,7 +23,7 @@ const UserResults = () => {
   return (
     <div className="quiz-results">
       <div className="display-results-breeds">
-        {results.slice(0,6).map((breed) => {
+        {results.slice(0, 6).map((breed) => {
           const thisBreed = breeds[breed[0]];
           const thisImage = Object.values(breed_images).find(
             (image) => image.breed_id === thisBreed.id

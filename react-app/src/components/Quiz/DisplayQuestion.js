@@ -18,7 +18,7 @@ const DisplayQuestion = () => {
   const [next, setNext] = useState(1);
   const [check, setCheck] = useState(false);
   const state = useSelector((state) => state);
-  const { breed_traits, breeds, session, breed_images} = state;
+  const { breed_traits, breeds, session, breed_images } = state;
   const trait_id = breed_traits[next].id;
   const normal = [7, 8];
   const coatTypes = [
@@ -35,7 +35,9 @@ const DisplayQuestion = () => {
   let index = 0;
   const coatLengths = ["Short", "Medium", "Long"];
   const [loading, setLoading] = useState(false);
-  const [img, setImg] = useState(getRandomImage(1, Object.values(breed_images)));
+  const [img, setImg] = useState(
+    getRandomImage(1, Object.values(breed_images))
+  );
 
   const validate = () => {
     if (!answer) {

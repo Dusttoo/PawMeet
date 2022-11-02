@@ -24,8 +24,8 @@ const Posts = () => {
   const [loaded, setLoaded] = useState(false);
   const history = useHistory();
   const dispatch = useDispatch();
-  const state = useSelector((state) => state)
-  const {session, forum, users, likes, post_comments} = state
+  const state = useSelector((state) => state);
+  const { session, forum, users, likes, post_comments } = state;
   const [likeHover, setLikeHover] = useState(false);
   const author = Object.keys(users).find(
     (user) => +user === +forum[postId].user_id

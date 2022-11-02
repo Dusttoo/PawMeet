@@ -2,14 +2,14 @@ import React from "react";
 import { useSelector } from "react-redux";
 import { Link, useParams } from "react-router-dom";
 import DisplayPosts from "../Forum/DisplayPost";
-import { getFivePosts,  modifyTime} from "../utils/helperFunctions";
+import { getFivePosts, modifyTime } from "../utils/helperFunctions";
 import "./Profiles.css";
 
 const UserProfile = () => {
   const { id } = useParams();
   const state = useSelector((state) => state);
-  const {users, session, pets, forum} = state;
-  const userPets =  Object.values(pets).filter((pet) => +pet.owner_id === +id);
+  const { users, session, pets, forum } = state;
+  const userPets = Object.values(pets).filter((pet) => +pet.owner_id === +id);
 
   return (
     <>

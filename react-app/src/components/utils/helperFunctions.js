@@ -52,8 +52,7 @@ export const getTenBreeds = (breeds) => {
   const tenBreeds = [];
   const breedId = [];
   for (let i = 0; i < 11; i++) {
-    const add =
-      breeds[getRandomInt(1, Object.keys(breeds).length - 1)];
+    const add = breeds[getRandomInt(1, Object.keys(breeds).length - 1)];
     if (!breedId.includes(add.id)) {
       tenBreeds.push(add);
       breedId.push(add.id);
@@ -63,10 +62,10 @@ export const getTenBreeds = (breeds) => {
 };
 
 export const getRandomImage = (min, breedImages) => {
-  const max = breedImages.length
+  const max = breedImages.length;
   const num = Math.floor(Math.random() * (max - min) + min);
   const image = breedImages[num];
-  return image.img_url
+  return image.img_url;
 };
 
 export const calculateResults = (breeds, breedAnswers, userAnswers) => {
@@ -97,15 +96,15 @@ export const calculateResults = (breeds, breedAnswers, userAnswers) => {
   results.sort(function (a, b) {
     return b[1] - a[1];
   });
-  return results
+  return results;
 };
 
 // -- utility functions --------------------------------
-export const getRandomInt =(min, max) => {
+export const getRandomInt = (min, max) => {
   min = Math.ceil(min);
   max = Math.floor(max);
   return Math.floor(Math.random() * (max - min) + min); //The maximum is exclusive and the minimum is inclusive
-}
+};
 
 export const getFivePosts = (posts) => {
   return sortedByTime(posts).splice(0, 5);

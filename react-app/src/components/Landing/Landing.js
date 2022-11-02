@@ -17,12 +17,16 @@ import SearchBar from "../Search/Search";
 import SearchResults from "../Search/SearchResults";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSearch } from "@fortawesome/free-solid-svg-icons";
-import { getRandomInt, getTenBreeds, getFivePosts } from "../utils/helperFunctions";
+import {
+  getRandomInt,
+  getTenBreeds,
+  getFivePosts,
+} from "../utils/helperFunctions";
 
 const Landing = () => {
   const dispatch = useDispatch();
   const state = useSelector((state) => state);
-  const {breeds, breed_images, groups, forum, session} = state
+  const { breeds, breed_images, groups, forum, session } = state;
   const randNum = getRandomInt(1, Object.keys(breeds).length - 1);
   const highlightedBreed = breeds[randNum];
   const [loading, setLoading] = useState(true);

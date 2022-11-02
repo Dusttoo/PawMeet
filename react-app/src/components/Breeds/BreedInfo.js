@@ -14,7 +14,7 @@ const BreedInfo = () => {
   const { id } = useParams();
   const dispatch = useDispatch();
   const state = useSelector((state) => state);
-  const { breeds, breed_images, breed_traits, breed_answers, groups} = state;
+  const { breeds, breed_images, breed_traits, breed_answers, groups } = state;
   const [loaded, setLoaded] = useState(false);
   const [loading, setLoading] = useState(true);
   const personality = cleanUpTraits(breeds[id].personality);
