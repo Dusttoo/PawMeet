@@ -20,7 +20,7 @@ const DisplayQuestion = () => {
   const trait_id = breedTraits[next].id;
   const breeds = useSelector((state) => state?.breeds);
   const user_id = useSelector((state) => state.session.user.id);
-  const normal = [7,8]
+  const normal = [7, 8];
   const coatTypes = [
     "Wiry",
     "Rough",

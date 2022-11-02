@@ -9,23 +9,25 @@ const SearchResults = ({ breed, image }) => {
     <>
       {!queryString ? (
         <div className="search-results-empty"></div>
-      ) : breedName.toLowerCase().includes(lowerString) && (
-        <div className="result-container">
-          <div className="search-results">
-            <div className="breed-list-item-container">
-              {image && (
-                <img
-                  className="breed-link-image"
-                  src={image.img_url}
-                  alt={breed.name}
-                />
-              )}
-              <Link className="breed" to={`/breeds/${breed.id}`}>
-                {breed.name}
-              </Link>
+      ) : (
+        breedName.toLowerCase().includes(lowerString) && (
+          <div className="result-container">
+            <div className="search-results">
+              <div className="breed-list-item-container">
+                {image && (
+                  <img
+                    className="breed-link-image"
+                    src={image.img_url}
+                    alt={breed.name}
+                  />
+                )}
+                <Link className="breed" to={`/breeds/${breed.id}`}>
+                  {breed.name}
+                </Link>
+              </div>
             </div>
           </div>
-        </div>
+        )
       )}
     </>
   );

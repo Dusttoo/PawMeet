@@ -96,10 +96,9 @@ const AddPet = () => {
               required
             >
               <option value={breed}>{breed}</option>
-              {sortBreedsByName(Object.values(breeds))
-              .map((breed) => {
-                  return <option value={breed.name}>{breed.name}</option>;
-                })}
+              {sortBreedsByName(Object.values(breeds)).map((breed) => {
+                return <option value={breed.name}>{breed.name}</option>;
+              })}
             </select>
             <label className="pet-label">Age:</label>
             <input
