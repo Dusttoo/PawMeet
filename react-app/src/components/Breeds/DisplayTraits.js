@@ -7,13 +7,6 @@ import pawPrint from "../icons/pawPrint"
 
 const DisplayTraits = ({ trait, thisAnswer }) => {
   const [details, setDetails] = useState(false);
-  const openDetails = () => {
-    if (details) {
-      setDetails(false);
-    } else {
-      setDetails(true);
-    }
-  };
 
   return (
     <>
@@ -22,17 +15,13 @@ const DisplayTraits = ({ trait, thisAnswer }) => {
         <FontAwesomeIcon
           icon={faAngleDown}
           className="down-icon"
-          onClick={openDetails}
+          onClick={() => setDetails(!details)}
         />
       </div>
-      {details ? (
+      {details && (
         <p className="trait-description">{trait.description}</p>
-      ) : (
-        <></>
       )}
-      {thisAnswer.trait_id === 7 ? (
-        <></>
-      ) : (
+      {thisAnswer.trait_id !== 7 && (
         <div className="scale">
           <p className="least">Least</p>
           <p className="most">Most</p>
@@ -63,7 +52,7 @@ const DisplayTraits = ({ trait, thisAnswer }) => {
           })
         )}
         {thisAnswer.trait_id === 8
-          ? [...Array(3)].map((star, rate) => {
+          && [...Array(3)].map((star, rate) => {
               rate += 1;
               const coatLengths = ["", "Short", "Medium", "Long"];
               return (
@@ -75,10 +64,9 @@ const DisplayTraits = ({ trait, thisAnswer }) => {
                   <span className="bubble">{coatLengths[rate]}</span>
                 </button>
               );
-            })
-          : null}
+            })}
 
-        {thisAnswer.trait_id === 7 ? (
+        {thisAnswer.trait_id === 7 && (
           <div className="coat-types">
             {[...Array(9)].map((star, rate) => {
               rate += 1;
@@ -105,8 +93,6 @@ const DisplayTraits = ({ trait, thisAnswer }) => {
               );
             })}
           </div>
-        ) : (
-          <></>
         )}
       </div>
     </>
