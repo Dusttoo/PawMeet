@@ -3,28 +3,35 @@ import { useDispatch } from "react-redux";
 import { allPostsForGroup } from "../../store/group_posts";
 import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
-import "./Forum.css";
 import DisplayPosts from "./DisplayPost";
 import { allUsers } from "../../store/users";
 import { allComments } from "../../store/comments";
 import ForumSidebar from "./SideBar";
 import { useParams } from "react-router";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faAngleLeft, faAngleRight } from "@fortawesome/free-solid-svg-icons";
-import Next from "./Next";
-import Previous from "./Previous";
+import Pagination from "../Pagination";
+import "./Forum.css";
+
+const PAGE_SIZES = [15, 25, 50, 100];
+
 const BreedForum = () => {
   const dispatch = useDispatch();
   const { id } = useParams();
   const posts = useSelector((state) => state.group_posts);
   const breed_groups = useSelector((state) => state.groups);
-  const [index, setIndex] = useState(0);
-  const [next, setNext] = useState(false);
-  const [first, setFirst] = useState(true);
-  const [previous, setPrevious] = useState(false);
-  const [pageNum, setPageNum] = useState(1);
+  const [currentPage, setCurrentPage] = useState(1)
+  const [pageSize, setPageSize] = useState(15)
+  const sortedByTime = Object.values(posts).sort(function (a, b) {
+    return new Date(b.posted) - new Date(a.posted);
+  });
+  const currentPaginationData = sortedByTime.slice(pageSize * (currentPage - 1), pageSize * currentPage)
+  const updateRowsPerPage = (pageSize) => {
+    setPageSize(Number(pageSize))
+    setCurrentPage(1)
+  };
+  const updatePage = (pageNumber) => {
+    setCurrentPage(pageNumber)
+  };
 
-  const remove = 10;
   const headerImage = [
     "https://www.petfoodprocessing.net/ext/resources/PFP-Images/Articles-20/092920_Eukanuba-Premium-Performance_Lead.jpg?t=1601328222&width=1080",
     "https://imagesvc.meredithcorp.io/v3/mm/image?q=85&c=sc&rect=2%2C0%2C2000%2C1332&poi=face&w=2000&h=1333&url=https%3A%2F%2Fstatic.onecms.io%2Fwp-content%2Fuploads%2Fsites%2F47%2F2020%2F10%2F26%2Fbasset-hound-167768274-2000.jpg",
@@ -40,43 +47,6 @@ const BreedForum = () => {
     dispatch(allUsers());
     dispatch(allComments());
   }, [dispatch, id]);
-
-  const sortedByTime = Object.values(posts).sort(function (a, b) {
-    return new Date(b.posted) - new Date(a.posted);
-  });
-
-  const getTenPosts = () => {
-    return sortedByTime.splice(index, remove);
-  };
-
-  const showNext = () => {
-    const lastPage = Math.ceil(sortedByTime.length / 10);
-    if (lastPage === pageNum) {
-      return null;
-    } else {
-      setFirst(false);
-      setNext(true);
-      setPageNum(pageNum + 1);
-      if (sortedByTime.length - index < 10) {
-        setIndex(index + (sortedByTime.length - index));
-      } else {
-        setIndex(index + 10);
-      }
-    }
-  };
-
-  const showPrevious = () => {
-    if (pageNum < 2) {
-      setFirst(true);
-      setPrevious(false);
-    } else {
-      setPageNum(pageNum - 1);
-      setFirst(false);
-      setNext(false);
-      setPrevious(true);
-      setIndex(index - 10);
-    }
-  };
 
   return (
     <>
@@ -110,24 +80,19 @@ const BreedForum = () => {
               </th>
             </tr>
 
-            {first ? (
-              getTenPosts().map((post) => {
+              {currentPaginationData.map((post) => {
                 return <DisplayPosts post={post} />;
-              })
-            ) : (
-              <></>
-            )}
-            {next ? <Next index={index} /> : <></>}
-            {previous ? <Previous index={index} /> : <></>}
+              })}
           </table>
           {Object.keys(posts).length ? <></> : <h2>No Posts Yet!</h2>}
-          <div className="next-prev-container">
-            <FontAwesomeIcon icon={faAngleLeft} onClick={showPrevious} />
-            <FontAwesomeIcon icon={faAngleRight} onClick={showNext} />
-          </div>
-          <div className="page-num-container">
-            <p>{pageNum}</p>
-          </div>
+          <Pagination 
+            currentPage={currentPage}
+            totalCount={sortedByTime.length}
+            pageSize={pageSize}
+            pageSizeOptions={PAGE_SIZES}
+            onPageChange={updatePage}
+            onPageSizeOptionChange={updateRowsPerPage}
+          />
         </div>
       </div>
     </>
