@@ -22,6 +22,7 @@ import {
   getTenBreeds,
   getFivePosts,
 } from "../utils/helperFunctions";
+import Chat from "../Socket";
 
 const Landing = () => {
   const dispatch = useDispatch();
@@ -73,6 +74,7 @@ const Landing = () => {
                 </Link>
               )}
             </div>
+            <Chat />
             <div className="highlighted-breed-container">
               <ReactPlayer
                 width={"50%"}
