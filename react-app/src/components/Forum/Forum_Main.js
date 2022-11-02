@@ -3,68 +3,39 @@ import { useDispatch } from "react-redux";
 import { allPosts } from "../../store/forum";
 import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
-import "./Forum.css";
 import DisplayPosts from "./DisplayPost";
 import { allUsers } from "../../store/users";
 import { allComments } from "../../store/comments";
 import ForumSidebar from "./SideBar";
-import MainNext from "./MainNext";
-import MainPrevious from "./MainPrevious";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faAngleLeft, faAngleRight } from "@fortawesome/free-solid-svg-icons";
+import Pagination from "../Pagination";
+import "./Forum.css";
+
+
+const PAGE_SIZES = [15, 25, 50, 100];
+
 
 const ForumHome = () => {
   const dispatch = useDispatch();
   const posts = useSelector((state) => state.forum);
-  const [index, setIndex] = useState(0);
-  const remove = 10;
-  const [next, setNext] = useState(false);
-  const [first, setFirst] = useState(true);
-  const [previous, setPrevious] = useState(false);
-  const [pageNum, setPageNum] = useState(1);
-
+  const [currentPage, setCurrentPage] = useState(1)
+  const [pageSize, setPageSize] = useState(15)
+  const sortedByTime = Object.values(posts).sort(function (a, b) {
+    return new Date(b.posted) - new Date(a.posted);
+  });
+  const currentPaginationData = sortedByTime.slice(pageSize * (currentPage - 1), pageSize * currentPage)
+  const updateRowsPerPage = (pageSize) => {
+    setPageSize(Number(pageSize))
+    setCurrentPage(1)
+  };
+  const updatePage = (pageNumber) => {
+    setCurrentPage(pageNumber)
+  };
+  
   useEffect(() => {
     dispatch(allPosts());
     dispatch(allUsers());
     dispatch(allComments());
   }, [dispatch]);
-
-  const sortedByTime = Object.values(posts).sort(function (a, b) {
-    return new Date(b.posted) - new Date(a.posted);
-  });
-
-  const getTenPosts = () => {
-    return sortedByTime.splice(index, remove);
-  };
-
-  const showNext = () => {
-    const lastPage = Math.ceil(sortedByTime.length / 10);
-    if (lastPage === pageNum) {
-      return null;
-    } else {
-      setFirst(false);
-      setNext(true);
-      setPageNum(pageNum + 1);
-      if (sortedByTime.length - index < 10) {
-        setIndex(index + (sortedByTime.length - index));
-      } else {
-        setIndex(index + 10);
-      }
-    }
-  };
-
-  const showPrevious = () => {
-    if (pageNum < 2) {
-      setFirst(true);
-      setPrevious(false);
-    } else {
-      setPageNum(pageNum - 1);
-      setFirst(false);
-      setNext(false);
-      setPrevious(true);
-      setIndex(index - 10);
-    }
-  };
 
   return (
     <>
@@ -100,35 +71,18 @@ const ForumHome = () => {
                 Comments
               </th>
             </tr>
-            {first ? (
-              getTenPosts().map((post) => {
+              {currentPaginationData.map((post) => {
                 return <DisplayPosts post={post} />;
-              })
-            ) : (
-              <></>
-            )}
-            {next ? <MainNext index={index} posts={sortedByTime} /> : <></>}
-            {previous ? (
-              <MainPrevious index={index} allPosts={sortedByTime} />
-            ) : (
-              <></>
-            )}
+              })}
           </table>
-          <div className="next-prev-container">
-            <FontAwesomeIcon
-              icon={faAngleLeft}
-              className="next-prev"
-              onClick={showPrevious}
-            />
-            <FontAwesomeIcon
-              icon={faAngleRight}
-              className="next-prev"
-              onClick={showNext}
-            />
-          </div>
-          <div className="page-num-container">
-            <p>{pageNum}</p>
-          </div>
+          <Pagination 
+            currentPage={currentPage}
+            totalCount={sortedByTime.length}
+            pageSize={pageSize}
+            pageSizeOptions={PAGE_SIZES}
+            onPageChange={updatePage}
+            onPageSizeOptionChange={updateRowsPerPage}
+          />
         </div>
       </div>
     </>

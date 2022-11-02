@@ -36,7 +36,6 @@ const BreedsPage = () => {
     return 0;
   })
   .slice(pageSize * (currentPage - 1), pageSize * currentPage);
-  console.log(currentPaginationData)
   const updateRowsPerPage = (pageSize) => {
     setPageSize(Number(pageSize))
     setCurrentPage(1)
