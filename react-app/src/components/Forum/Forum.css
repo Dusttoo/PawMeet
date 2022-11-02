@@ -210,11 +210,20 @@ th, td {
     color: #333810;
 }
 
-.likes-container {
+.like-section {
+    display: flex;
     width: 100%;
+    align-items: center;
+    /* justify-content: flex-start; */
+}
+
+.likes-container {
+    /* width: 100%; */
     display: flex;
     justify-content: flex-start;
     align-items: center;
+    padding-right: 4px;
+    border-right: 1px solid black;
 }
 
 .like-heart {
@@ -223,6 +232,16 @@ th, td {
 
 .like-heart:hover {
     cursor: pointer;
+}
+
+.people-liked-header {
+    padding-left: 5px;
+    color: #333810;
+}
+
+.people-liked-header:hover {
+    cursor: pointer;
+    color: rgb(121, 121, 121)
 }
 
 .people-liked-container {

@@ -5,18 +5,20 @@ import { useSelector } from "react-redux";
 import { useParams, useHistory } from "react-router";
 import EditPost from "./EditPost";
 import AddComment from "./AddComment";
-import "./Forum.css";
 import DisplayComments from "./DisplayComment";
 import { postComments } from "../../store/post_comments";
 import { Link } from "react-router-dom";
 import { addALike, removeLike } from "../../store/likes";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faHeart } from "@fortawesome/free-solid-svg-icons";
+import { getLikes, sortedByTime } from "../utils/helperFunctions";
 import {
   faPen,
   faMinusCircle,
   faPlus,
 } from "@fortawesome/free-solid-svg-icons";
+import "./Forum.css";
+
 
 const Posts = () => {
   const { postId } = useParams();
@@ -44,7 +46,6 @@ const Posts = () => {
     }
   });
   const likeList = Object.values(likes).filter(like => like.post_id === +postId)
-  console.log(likeHover)
   useEffect(() => {
     (async () => {
       await dispatch(allPosts());
@@ -56,16 +57,6 @@ const Posts = () => {
   if (!loaded) {
     return null;
   }
-
-  const getLikes = () => {
-    let numLikes = 0;
-    Object.values(likes).map((like) => {
-      if (+like.post_id === +postId) {
-        numLikes++;
-      }
-    });
-    return numLikes;
-  };
 
   const openEditForm = () => {
     if (editForm) {
@@ -108,11 +99,6 @@ const Posts = () => {
     dispatch(removeLike(+likeId.id));
   };
 
-  const sortedByTime = Object.values(comments).sort(function (a, b) {
-    return new Date(a.posted) - new Date(b.posted);
-  });
-
-
   return (
     <>
       <div className="post-container">
@@ -154,45 +140,60 @@ const Posts = () => {
             </div>
           </div>
           <div className="post-body-container">
-            <div
-              dangerouslySetInnerHTML={{ __html: posts[postId].post_body }}
-            ></div>
+            <div dangerouslySetInnerHTML={{ __html: posts[postId].post_body }}></div>
           </div>
 
-          {!liked.includes(true) ? (
-            <div className="likes-container">
-              <FontAwesomeIcon
-                className="like-heart"
-                onClick={addLike}
-                icon={faHeart}
-                style={{ color: "#d3d3d3" }}
-              />
-              {getLikes()}
-            </div>
-          ) : (
-            <div className="likes-container">
-              <FontAwesomeIcon
-                className="like-heart"
-                onClick={deleteLike}
-                icon={faHeart}
-                style={{ color: "#ff0808" }}
-              />
-              {getLikes()}
-              {!likeHover ? 
+          <div className="like-section">
+            {!liked.includes(true) ? (
+              <div className="likes-container">
+                <FontAwesomeIcon
+                  className="like-heart"
+                  onClick={addLike}
+                  icon={faHeart}
+                  style={{ color: "#d3d3d3" }}
+                />
+                {getLikes(Object.values(likes), postId)}
+              </div>
+            ) : (
+              <div className="likes-container">
+                <FontAwesomeIcon
+                  className="like-heart"
+                  onClick={deleteLike}
+                  icon={faHeart}
+                  style={{ color: "#ff0808" }}
+                />
+                {getLikes(Object.values(likes), postId)}
+              </div>
+            )}
+
+            {likeList.length &&
+            !likeHover ? 
               <span
-              onMouseOver={() => setLikeHover(!likeHover)}
-              >People who liked this</span> :
-              <div className={likeHover ? 'people-liked-container' : 'hide-like'}
-              onMouseOver={() => setLikeHover(!likeHover)}>
-              {likeList.splice(0, 3).map(like => (
-                <span>{users[like.id].first_name}</span>
-              ))}
+              className="people-liked-header"
+              onClick={() => setLikeHover(!likeHover)}>
+              People who liked this </span> 
+              :
+              <div 
+              className={likeHover ? 'people-liked-container' : 'hide-like'}
+              onClick={() => setLikeHover(!likeHover)}>
+              {likeList.slice(0, 3).map(like => (
+                <span>
+                  <Link className="author-name" to={`/users/${like.user_id}`}> 
+                    {users[like.user_id].first_name} 
+                  </Link>
+                </span>
+              ))} 
+              {likeList.length > 1 && 
+              <span> ... 
+              <Link
+              className="author-name" 
+              to={`/users/${likeList[likeList.length - 1].user_id}`}> {users[likeList[likeList.length - 1].user_id].first_name} </Link></span>
+              }
               </div>
             }
-              
-              
-            </div>
-          )}
+          </div>
+
+
           {editForm ? <EditPost setEditForm={setEditForm} /> : <></>}
         </div>
       </div>
@@ -207,7 +208,7 @@ const Posts = () => {
           </div>
 
           <table className="comments-table">
-            {sortedByTime.map((comment) => {
+            {sortedByTime(Object.values(comments)).map((comment) => {
               return <DisplayComments commentId={comment.id} />;
             })}
           </table>
