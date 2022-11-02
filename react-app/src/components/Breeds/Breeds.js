@@ -10,6 +10,7 @@ import { faSearch } from "@fortawesome/free-solid-svg-icons";
 import SearchBar from "../Search/Search";
 import SearchResults from "../Search/SearchResults";
 import Pagination from "../Pagination";
+import { sortBreedsByName } from "../utils/helperFunctions";
 import "./Breed.css";
 
 const PAGE_SIZES = [15, 25, 50, 100];
@@ -23,19 +24,9 @@ const BreedsPage = () => {
   const [search, setSearch] = useState(false);
   const [currentPage, setCurrentPage] = useState(1)
   const [pageSize, setPageSize] = useState(15)
-  const currentPaginationData = Object.values(breeds)
-  .sort(function (a, b) {
-    let nameA = a.name.toUpperCase();
-    let nameB = b.name.toUpperCase();
-    if (nameA < nameB) {
-      return -1;
-    }
-    if (nameA > nameB) {
-      return 1;
-    }
-    return 0;
-  })
+  const currentPaginationData = sortBreedsByName(Object.values(breeds))
   .slice(pageSize * (currentPage - 1), pageSize * currentPage);
+  
   const updateRowsPerPage = (pageSize) => {
     setPageSize(Number(pageSize))
     setCurrentPage(1)

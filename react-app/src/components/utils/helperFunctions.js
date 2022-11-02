@@ -35,4 +35,19 @@ export const cleanUpTraits = (traits) => {
   return personality
 }
 
+export const sortBreedsByName = (list) => {
+  list.sort(function (a, b) {
+    let nameA = a.name.toUpperCase();
+    let nameB = b.name.toUpperCase();
+    if (nameA < nameB) {
+      return -1;
+    }
+    if (nameA > nameB) {
+      return 1;
+    }
+    return 0;
+  })
+  return list
+}
+
 
