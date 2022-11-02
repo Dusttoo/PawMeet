@@ -70,14 +70,6 @@ const BreedsPage = () => {
         </>
       ) : (
         <div className="breed-list-container">
-          <Pagination
-            currentPage={currentPage}
-            totalCount={Object.values(breeds).length}
-            pageSize={pageSize}
-            pageSizeOptions={PAGE_SIZES}
-            onPageChange={updatePage}
-            onPageSizeOptionChange={updateRowsPerPage}
-          />
           <div className="header-search">
             <h2 className="breed-list-heading">Meet the Breeds</h2>
             <FontAwesomeIcon
@@ -101,7 +93,14 @@ const BreedsPage = () => {
           ) : (
             <></>
           )}
-
+          <Pagination
+            currentPage={currentPage}
+            totalCount={Object.values(breeds).length}
+            pageSize={pageSize}
+            pageSizeOptions={PAGE_SIZES}
+            onPageChange={updatePage}
+            onPageSizeOptionChange={updateRowsPerPage}
+          />
           {currentPaginationData.map((breed) => {
               const thisImage = Object.values(images).find(
                 (image) => image.breed_id === breed.id

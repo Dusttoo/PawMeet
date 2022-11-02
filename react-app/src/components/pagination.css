@@ -1,60 +1,62 @@
-/* .wrapper {
+.wrapper {
   display: flex;
   gap: 0.5rem;
   align-items: center;
+  justify-content: center;
   list-style-type: none;
   margin-bottom: 20px;
+}
 
-  .paginationItem {
-    display: flex;
-    button {
-      border: 1px solid rgb(0, 0, 0, 0.6);
-      background: transparent;
-      height: 34px;
-      width: 34px;
-      border-radius: 50%;
-      overflow: hidden;
-      color: rgb(0, 0, 0);
+.paginationItem {
+  display: flex;
+}
+.paginationItem  > button {
+  border: 1px solid rgb(0, 0, 0, 0.6);
+  background: transparent;
+  height: 34px;
+  width: 34px;
+  border-radius: 50%;
+  overflow: hidden;
+  color: rgb(0, 0, 0); 
+}
 
-      &:hover {
-        background-color: rgba(159, 159, 159, 0.295);
-        cursor: pointer;
-      }
+.paginationItem  > button:hover {
+  background-color: rgba(159, 159, 159, 0.295);
+  cursor: pointer;
+}
 
-      &:disabled {
-        pointer-events: none;
-        opacity: 0.5;
-      }
-    }
+.paginationItem  > button:disabled {
+  pointer-events: none;
+  opacity: 0.5;
+}
 
-    &[aria-current="page"] {
-      button {
-        background-color: rgba(159, 159, 159, 0.295);
-        font-weight: 700;
-        text-decoration: underline;
-      }
-    }
+.paginationItem  > button[aria-current="page"] {
+    background-color: rgba(159, 159, 159, 0.295);
+    font-weight: 700;
+    text-decoration: underline;
+}
 
-    .arrowButton {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      svg {
-        width: 1em;
-        height: 1em;
-      }
-    }
-  }
+.arrowButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
-  .dots {
-    line-height: 34px;
-    margin: 5px 10px;
-  }
+.arrowButton > svg {
+  width: 1em;
+  height: 1em;
+  padding: 4px;
 
-  .paginationSelector {
-    background-color: transparent;
-    border: none;
-    outline: none;
-    margin-left: 10px;
-  }
-} */
+}
+
+.dots {
+  line-height: 34px;
+  margin: 5px 10px;
+}
+
+.paginationSelector {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  margin-left: 10px;
+}
