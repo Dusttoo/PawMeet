@@ -43,7 +43,7 @@ const UserProfile = () => {
   return (
     <>
       <div className="user-page">
-        <UserSidebar />
+        {/* <UserSidebar /> */}
         <div className="user-container">
           <div className="user-header">
             <img
@@ -88,13 +88,11 @@ const UserProfile = () => {
               </div>
             </div>
           </div>
-          {/* <button className='add-friend'>Add Friend</button> */}
-          {+id === +currentUserId ? (
+          {/* {+id !== currentUserId && <button className='add-friend'>Add Friend</button>} */}
+          {+id === +currentUserId && (
             <Link className="add-pet" to="/pets/add">
               Add a pet
             </Link>
-          ) : (
-            <></>
           )}
         </div>
       </div>

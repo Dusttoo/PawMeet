@@ -104,7 +104,7 @@ const Posts = () => {
     <>
       <div className="post-container">
         <div className="post">
-          {thisUser.id === +author ? (
+          {thisUser.id === +author && (
             <div className="post-user-options">
               <FontAwesomeIcon
                 className="edit-button"
@@ -117,8 +117,6 @@ const Posts = () => {
                 icon={faMinusCircle}
               />
             </div>
-          ) : (
-            <></>
           )}
 
           <div className="post-header">

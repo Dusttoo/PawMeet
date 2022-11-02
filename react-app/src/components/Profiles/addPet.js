@@ -3,8 +3,8 @@ import { useDispatch } from "react-redux";
 import { useSelector } from "react-redux";
 import { addAPet } from "../../store/pets";
 import { useHistory } from "react-router";
-import validator from "validator";
 import ImageUploading from "react-images-uploading";
+import { sortBreedsByName } from "../utils/helperFunctions";
 
 import "./Profiles.css";
 
@@ -19,34 +19,6 @@ const AddPet = () => {
   const [description, setDescription] = useState("");
   const owner_id = useSelector((state) => state.session.user.id);
   const history = useHistory();
-  const letters = [
-    "a",
-    "b",
-    "c",
-    "d",
-    "e",
-    "f",
-    "g",
-    "h",
-    "i",
-    "j",
-    "k",
-    "l",
-    "m",
-    "n",
-    "o",
-    "p",
-    "q",
-    "r",
-    "s",
-    "t",
-    "u",
-    "v",
-    "w",
-    "x",
-    "y",
-    "z",
-  ];
   const [image, setImage] = useState([]);
 
   const validate = () => {
@@ -55,8 +27,6 @@ const AddPet = () => {
     if (name.length < 3)
       validationErrors.push("Name must be at least 3 characters");
     if (!breed) validationErrors.push("Please select a breed");
-    if (validator.isIn(age, letters))
-      validationErrors.push("Age must only be numbers");
     if (!description) validationErrors.push("Please enter a description");
     if (description.length < 10)
       validationErrors.push("Description must be at least 10 characters");
@@ -126,35 +96,23 @@ const AddPet = () => {
               required
             >
               <option value={breed}>{breed}</option>
-              {Object.values(breeds)
-                .sort(function (a, b) {
-                  let nameA = a.name.toUpperCase();
-                  let nameB = b.name.toUpperCase();
-                  if (nameA < nameB) {
-                    return -1;
-                  }
-                  if (nameA > nameB) {
-                    return 1;
-                  }
-                  return 0;
-                })
-                .map((breed) => {
+              {sortBreedsByName(Object.values(breeds))
+              .map((breed) => {
                   return <option value={breed.name}>{breed.name}</option>;
                 })}
             </select>
             <label className="pet-label">Age:</label>
             <input
               placeholder="Age in years"
+              type="number"
               className="pet-input"
               value={age}
               onChange={(e) => setAge(e.target.value)}
               required
             />
             <label className="pet-label">Profile Image:</label>
-            {profile_img ? (
+            {profile_img && (
               <img className="upload-preview" src={profile_img} alt="upload" />
-            ) : (
-              <></>
             )}
 
             <ImageUploading
@@ -165,7 +123,6 @@ const AddPet = () => {
               dataURLKey="data_url"
             >
               {({ onImageUpload, isDragging, dragProps }) => (
-                // write your building UI
                 <div className="upload__image-wrapper">
                   <button
                     className="pet-button"

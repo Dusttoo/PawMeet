@@ -4,7 +4,7 @@ import { useSelector } from "react-redux";
 import { useParams } from "react-router-dom";
 import { editAPet } from "../../store/pets";
 import { useHistory } from "react-router";
-import validator from "validator";
+import { sortBreedsByName } from "../utils/helperFunctions";
 import "./Profiles.css";
 
 const EditPet = ({ openEditForm }) => {
@@ -20,42 +20,13 @@ const EditPet = ({ openEditForm }) => {
   const [description, setDescription] = useState(pets[id].description);
   const owner_id = useSelector((state) => state.session.user.id);
   const history = useHistory();
-  const letters = [
-    "a",
-    "b",
-    "c",
-    "d",
-    "e",
-    "f",
-    "g",
-    "h",
-    "i",
-    "j",
-    "k",
-    "l",
-    "m",
-    "n",
-    "o",
-    "p",
-    "q",
-    "r",
-    "s",
-    "t",
-    "u",
-    "v",
-    "w",
-    "x",
-    "y",
-    "z",
-  ];
+
   const validate = () => {
     const validationErrors = [];
     if (!name) validationErrors.push("Name is required");
     if (name.length < 3)
       validationErrors.push("Name must be at least 3 characters");
     if (!breed) validationErrors.push("Please select a breed");
-    if (validator.isIn(age, letters))
-      validationErrors.push("Age must only be numbers");
     if (!description) validationErrors.push("Please enter a description");
     if (description.length < 10)
       validationErrors.push("Description must be at least 10 characters");
@@ -120,7 +91,7 @@ const EditPet = ({ openEditForm }) => {
               required
             >
               <option value={breed}>{breed}</option>
-              {Object.values(breeds).map((breed) => {
+              {sortBreedsByName(Object.values(breeds)).map((breed) => {
                 return <option value={breed.name}>{breed.name}</option>;
               })}
             </select>
@@ -128,6 +99,7 @@ const EditPet = ({ openEditForm }) => {
             <input
               placeholder="Age in years"
               className="pet-input"
+              type="number"
               value={age}
               onChange={(e) => setAge(e.target.value)}
               required

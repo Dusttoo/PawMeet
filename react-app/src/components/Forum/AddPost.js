@@ -107,13 +107,6 @@ const AddPost = () => {
               })}
             </select>
             <label className="form-label">Body:</label>
-            {/* <textarea
-              placeholder="Post Body"
-              className="form-input"
-              value={post_body}
-              onChange={(e) => setBody(e.target.value)}
-              required
-            /> */}
             <div className="editor-container">
               <SunEditor
                 height="200px"
