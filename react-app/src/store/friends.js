@@ -1,5 +1,5 @@
 const GET_ALL_REQUESTS = "friends/GET_REQUESTS";
-const GET_ALL_FRIENDS  = 'friends/GET_FRIENDS';
+const GET_ALL_FRIENDS = "friends/GET_FRIENDS";
 
 const getAllRequests = (requests) => ({
   type: GET_ALL_REQUESTS,
@@ -11,7 +11,7 @@ const getAllFriends = (friends) => ({
   friends,
 });
 
-const initialState = {requests: {}, list: {}};
+const initialState = { requests: {}, list: {} };
 
 export const allRequests = (userId) => async (dispatch) => {
   const response = await fetch(`/api/friends/${userId}/requests`, {

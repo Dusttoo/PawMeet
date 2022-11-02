@@ -22,7 +22,6 @@ const AddPost = () => {
   const [group_id, setGroup] = useState(null);
   const history = useHistory();
 
-
   const validate = () => {
     const validationErrors = [];
     if (!title) {
@@ -139,8 +138,14 @@ const AddPost = () => {
                     ],
                     ["fontColor", "hiliteColor"],
                     // "/", // Line break
-                    ["removeFormat", "outdent", "indent",
-                    "align", "horizontalRule", "list"],
+                    [
+                      "removeFormat",
+                      "outdent",
+                      "indent",
+                      "align",
+                      "horizontalRule",
+                      "list",
+                    ],
                     ["table", "link", "image", "video"],
                     // "/", // Line break
                     ["fullScreen"],

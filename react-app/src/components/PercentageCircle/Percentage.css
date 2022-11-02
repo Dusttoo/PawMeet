@@ -1,35 +1,32 @@
 .progress-bar {
-    height: 400px;
-    margin: 10px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  height: 400px;
+  margin: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .circle-contents {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 80%;
-    
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 80%;
 }
 
 .circle-image {
-    width: 50%;
-    border-radius: 10px;
+  width: 50%;
+  border-radius: 10px;
 }
 
 .circle-result {
-    padding: 5px;
-    font-size: 18px;
+  padding: 5px;
+  font-size: 18px;
 }
 
 .image-link {
-    text-align: center;
+  text-align: center;
 }
 
 .breed {
-    text-align: center;
-    
-
+  text-align: center;
 }

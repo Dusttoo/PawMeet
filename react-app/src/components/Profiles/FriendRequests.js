@@ -9,7 +9,7 @@ const FriendRequests = () => {
   const dispatch = useDispatch();
   const requests = useSelector((state) => state.friends.requests);
   const users = useSelector((state) => state.users);
-  const currentUser = useSelector((state) => state.session.user.id)
+  const currentUser = useSelector((state) => state.session.user.id);
   const sent = [];
   const recieved = [];
 
@@ -19,18 +19,15 @@ const FriendRequests = () => {
 
   Object.values(requests).map((request) => {
     const request_user = request.user_id_from;
-    console.log(request_user, currentUser)
+    console.log(request_user, currentUser);
     if (request_user === currentUser) {
       sent.push(request_user);
     } else {
-        console.log(request_user)
-        recieved.push(request_user)
+      console.log(request_user);
+      recieved.push(request_user);
     }
-    
-
-    
   });
-  console.log(sent, recieved)
+  console.log(sent, recieved);
 
   return (
     <>
@@ -55,7 +52,7 @@ const FriendRequests = () => {
         {recieved.length ? (
           <>
             {Object.values(recieved).map((id) => {
-              const friend = users[id]
+              const friend = users[id];
               return (
                 <>
                   <img src={friend.profile_img} alt={friend.first_name} />

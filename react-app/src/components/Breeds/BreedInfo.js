@@ -23,9 +23,11 @@ const BreedInfo = () => {
   );
   const [loaded, setLoaded] = useState(false);
   const [loading, setLoading] = useState(true);
-  const personality = cleanUpTraits(breeds[id].personality)
+  const personality = cleanUpTraits(breeds[id].personality);
 
-  const theseAnswers = Object.values(breedAnswers).filter((answer) => +answer.breed_id === +id);
+  const theseAnswers = Object.values(breedAnswers).filter(
+    (answer) => +answer.breed_id === +id
+  );
 
   useEffect(() => {
     (async () => {

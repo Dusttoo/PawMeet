@@ -13,7 +13,7 @@ const DisplayQuestion = () => {
   const [validationErrors, setValidationErrors] = useState([]);
   const dispatch = useDispatch();
   const [answer, setAnswer] = useState("");
-  const [isChecked, setIsChecked] = useState(false)
+  const [isChecked, setIsChecked] = useState(false);
   const [next, setNext] = useState(1);
   const [check, setCheck] = useState(false);
   const breedTraits = useSelector((state) => state?.breed_traits);
@@ -62,7 +62,7 @@ const DisplayQuestion = () => {
       user_id,
       trait_id,
       answer: +answer,
-      important: isChecked
+      important: isChecked,
     };
     const errors = validate();
     if (errors.length > 0) {
@@ -77,7 +77,7 @@ const DisplayQuestion = () => {
     imageSet();
     setLoading(false);
     setAnswer("");
-    setIsChecked(false)
+    setIsChecked(false);
     scrollToTop();
   };
 
@@ -90,8 +90,8 @@ const DisplayQuestion = () => {
   };
 
   const checkBox = () => {
-    setIsChecked(!isChecked)
-  }
+    setIsChecked(!isChecked);
+  };
 
   return (
     <div className="question-quiz-container">
@@ -131,7 +131,10 @@ const DisplayQuestion = () => {
                                     onChange={(e) => setAnswer(e.target.value)}
                                     required
                                   />
-                                  <FontAwesomeIcon className="paw" icon={faPaw} />
+                                  <FontAwesomeIcon
+                                    className="paw"
+                                    icon={faPaw}
+                                  />
                                 </label>
                               </div>
                             </div>
@@ -165,9 +168,8 @@ const DisplayQuestion = () => {
                       })}
                     </>
                   )}
-                  {normal.includes(breedTraits[next].id) && 
-                  // Could split this into another component for readability
-                  (
+                  {normal.includes(breedTraits[next].id) && (
+                    // Could split this into another component for readability
                     <div className="regular-questions">
                       <div className="amount-labels">
                         <label className="radio-title">

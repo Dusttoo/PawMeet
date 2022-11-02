@@ -1,144 +1,140 @@
 @import "~react-image-gallery/styles/css/image-gallery.css";
 
 .breed-list-container {
-    display: flex;
-    flex-direction: column;
-    padding: 20px;
-    
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
 }
 
 .header-search {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .breed-list-heading {
-    text-align: center;
+  text-align: center;
 }
 
 .search-button {
-    font-size: 20px;
-    padding-left: 20px;
-
+  font-size: 20px;
+  padding-left: 20px;
 }
 
 .search-button:hover {
-    color: #8A7B4E;
-    cursor: pointer;
-
+  color: #8a7b4e;
+  cursor: pointer;
 }
 
 .breed {
-    text-decoration: none;
-    color: black;
-    padding: 5px;
-    font-size: 20px;
+  text-decoration: none;
+  color: black;
+  padding: 5px;
+  font-size: 20px;
 }
 
 .breed-link-image {
-    max-width: 60px;
-    border-radius: 10px;
+  max-width: 60px;
+  border-radius: 10px;
 }
 
 .breed-list-item-container {
-    height: 100%;
-    width: 100%;
-    display: flex;
-    justify-content: flex-start;
-    padding: 5px;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  padding: 5px;
 }
 
 .breed-list-item-container:hover {
-    background-color: rgb(240, 240, 240);
+  background-color: rgb(240, 240, 240);
 }
 
 .breed:hover {
-    color: #333810;
+  color: #333810;
 }
 
 .carousel {
-    padding: 0;
-    margin: 0;
+  padding: 0;
+  margin: 0;
 }
 
 .carousel-container {
-    /* margin-bottom: 200px; */
+  /* margin-bottom: 200px; */
 }
 
 .breed-container {
-    padding: 0 20px 150px 20px;
-    display:flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+  padding: 0 20px 150px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .breed-content {
-    margin-top: 200px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    height: 100%;
+  margin-top: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
 }
 
 .breed-details {
-    display: flex;
-    width: 100%;
-    justify-content: space-evenly;
-    margin: 60px 0;
+  display: flex;
+  width: 100%;
+  justify-content: space-evenly;
+  margin: 60px 0;
 }
 
 .breed-info-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    border-right: solid 2px #333810;
-    padding: 8px;
-    margin-right: 4px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-right: solid 2px #333810;
+  padding: 8px;
+  margin-right: 4px;
 }
 
 .breed-traits-container {
-    width: 500px;
+  width: 500px;
 }
 
 .breed-info-header {
-    text-align: center;
+  text-align: center;
 }
 
 .trait-dropdown {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding-bottom: 10px;
-    padding-top: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 10px;
+  padding-top: 25px;
 }
 
 .star-rating {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    margin-bottom: 50px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin-bottom: 50px;
 }
 
 .scale {
-    display: flex;
-    justify-content: space-between;
+  display: flex;
+  justify-content: space-between;
 }
 
 .down-icon {
-    font-size: 25px;
+  font-size: 25px;
 }
 
 .breed-ratings {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
 }
 
 .on {
@@ -158,45 +154,43 @@
   margin: 5px;
   border: none;
   background-color: #ccc;
-
 }
 
 .bubble {
-    color: white;
-    text-align: center;
+  color: white;
+  text-align: center;
 }
 
 .pawprint-icon {
-    height: 20px;
-    width: 20px;
-    fill: #333810;
+  height: 20px;
+  width: 20px;
+  fill: #333810;
 }
 
 .paw-on {
-    background: none;
-    width: 100%;
-    height: 30%;
-    border-radius: 10%;
-    margin: 5px;
-    border: #333810 solid 1px;
-    background-color: white;
-  }
-  .paw-off {
-    background: none;
-    width: 100%;
-    height: 28px;
-    border-radius: 10%;
-    margin: 5px;
-    border: #333810 solid 1px;
-    /* background-color: #333810; */
-  
-  }
+  background: none;
+  width: 100%;
+  height: 30%;
+  border-radius: 10%;
+  margin: 5px;
+  border: #333810 solid 1px;
+  background-color: white;
+}
+.paw-off {
+  background: none;
+  width: 100%;
+  height: 28px;
+  border-radius: 10%;
+  margin: 5px;
+  border: #333810 solid 1px;
+  /* background-color: #333810; */
+}
 
 .coat-types {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
 }
 
 .coatOn {
@@ -221,7 +215,7 @@
 
 /* -- Search results ------------------ */
 .search-container {
-    padding: 25px;
-    margin-bottom: 15px;
-    border-bottom: .1px solid #333810;
+  padding: 25px;
+  margin-bottom: 15px;
+  border-bottom: 0.1px solid #333810;
 }

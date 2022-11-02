@@ -19,7 +19,6 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import "./Forum.css";
 
-
 const Posts = () => {
   const { postId } = useParams();
   const [loaded, setLoaded] = useState(false);
@@ -30,7 +29,7 @@ const Posts = () => {
   const users = useSelector((state) => state.users);
   const likes = useSelector((state) => state.likes);
   const comments = useSelector((state) => state.post_comments);
-  const [likeHover, setLikeHover] = useState(false)
+  const [likeHover, setLikeHover] = useState(false);
   const author = Object.keys(users).find(
     (user) => +user === +posts[postId].user_id
   );
@@ -45,7 +44,9 @@ const Posts = () => {
       return false;
     }
   });
-  const likeList = Object.values(likes).filter(like => like.post_id === +postId)
+  const likeList = Object.values(likes).filter(
+    (like) => like.post_id === +postId
+  );
   useEffect(() => {
     (async () => {
       await dispatch(allPosts());
@@ -140,7 +141,9 @@ const Posts = () => {
             </div>
           </div>
           <div className="post-body-container">
-            <div dangerouslySetInnerHTML={{ __html: posts[postId].post_body }}></div>
+            <div
+              dangerouslySetInnerHTML={{ __html: posts[postId].post_body }}
+            ></div>
           </div>
 
           <div className="like-section">
@@ -166,33 +169,43 @@ const Posts = () => {
               </div>
             )}
 
-            {likeList.length &&
-            !likeHover ? 
+            {likeList.length && !likeHover ? (
               <span
-              className="people-liked-header"
-              onClick={() => setLikeHover(!likeHover)}>
-              People who liked this </span> 
-              :
-              <div 
-              className={likeHover ? 'people-liked-container' : 'hide-like'}
-              onClick={() => setLikeHover(!likeHover)}>
-              {likeList.slice(0, 3).map(like => (
-                <span>
-                  <Link className="author-name" to={`/users/${like.user_id}`}> 
-                    {users[like.user_id].first_name} 
-                  </Link>
-                </span>
-              ))} 
-              {likeList.length > 1 && 
-              <span> ... 
-              <Link
-              className="author-name" 
-              to={`/users/${likeList[likeList.length - 1].user_id}`}> {users[likeList[likeList.length - 1].user_id].first_name} </Link></span>
-              }
+                className="people-liked-header"
+                onClick={() => setLikeHover(!likeHover)}
+              >
+                People who liked this{" "}
+              </span>
+            ) : (
+              <div
+                className={likeHover ? "people-liked-container" : "hide-like"}
+                onClick={() => setLikeHover(!likeHover)}
+              >
+                {likeList.slice(0, 3).map((like) => (
+                  <span>
+                    <Link className="author-name" to={`/users/${like.user_id}`}>
+                      {users[like.user_id].first_name}
+                    </Link>
+                  </span>
+                ))}
+                {likeList.length > 1 && (
+                  <span>
+                    {" "}
+                    ...
+                    <Link
+                      className="author-name"
+                      to={`/users/${likeList[likeList.length - 1].user_id}`}
+                    >
+                      {" "}
+                      {
+                        users[likeList[likeList.length - 1].user_id].first_name
+                      }{" "}
+                    </Link>
+                  </span>
+                )}
               </div>
-            }
+            )}
           </div>
-
 
           {editForm ? <EditPost setEditForm={setEditForm} /> : <></>}
         </div>

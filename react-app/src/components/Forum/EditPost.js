@@ -25,9 +25,9 @@ const EditPost = ({ setEditForm }) => {
     return validationErrors;
   };
 
-    const createContent = (content) => {
-      setBody(content);
-    };
+  const createContent = (content) => {
+    setBody(content);
+  };
 
   const handleSubmit = async (e) => {
     e.preventDefault();

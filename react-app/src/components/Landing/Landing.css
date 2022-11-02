@@ -1,104 +1,100 @@
 .landing-container {
-    padding: 20px;
-
+  padding: 20px;
 }
 
 .landing-header {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding-bottom: 25px;
-    border-bottom: 1px solid lightgrey;
-    margin-bottom: 20px;
-    text-align: center;
-
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 25px;
+  border-bottom: 1px solid lightgrey;
+  margin-bottom: 20px;
+  text-align: center;
 }
 
 .highlighted-breed-name {
-    text-decoration: none;
-    font-size: 55px;
-    color: #333810;
-    text-align: center;
+  text-decoration: none;
+  font-size: 55px;
+  color: #333810;
+  text-align: center;
 }
 
 .highlighted-breed-container {
-    display: flex;
-    padding-bottom: 20px;
-    border-bottom: 1px solid lightgrey;
+  display: flex;
+  padding-bottom: 20px;
+  border-bottom: 1px solid lightgrey;
 }
 
 .highlighted-breed-details {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .recent-posts-container {
-    width: 50%;
+  width: 50%;
 }
 
 .recent-posts {
-    border-collapse: collapse;
-    width: auto;
+  border-collapse: collapse;
+  width: auto;
 }
 
 .bottom-content {
-    display: flex;
-    justify-content: space-between;
+  display: flex;
+  justify-content: space-between;
 }
 
-
-
 .loading-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
 }
 
 .intro {
-    text-decoration: none;
-    font-size: 45px;
-    color: #333810;
+  text-decoration: none;
+  font-size: 45px;
+  color: #333810;
 }
 
 .tagline {
-    text-decoration: none;
-    color: #333810;
+  text-decoration: none;
+  color: #333810;
 }
 
 .tagline-breed-quiz {
-    text-decoration: none;
-    color: #333810;
+  text-decoration: none;
+  color: #333810;
 }
 
 .tagline-breed-quiz:hover {
-    text-decoration: none;
-    color: #899e00;
+  text-decoration: none;
+  color: #899e00;
 }
 
 .landing-breed-container {
-    /* height: 100%; */
-    width: 100%;
-    display: flex;
-    justify-content: flex-start;
-    padding: 5px;
+  /* height: 100%; */
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  padding: 5px;
 }
 
 .landing-breed-container:hover {
-    background-color: rgb(240, 240, 240);
+  background-color: rgb(240, 240, 240);
 }
 
 .breed-link-image {
-    max-width: 60px;
-    border-radius: 10px;
+  max-width: 60px;
+  border-radius: 10px;
 }
 
 @media screen and (max-width: 850px) {
-    .bottom-content {
+  .bottom-content {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -106,10 +102,10 @@
     margin-bottom: 20px;
     width: 100%;
     /* justify-content: space-between; */
-    }
+  }
 
-    .recent-posts-container {
-        width: 90%;
-        margin-bottom: 25px;
-    }
+  .recent-posts-container {
+    width: 90%;
+    margin-bottom: 25px;
+  }
 }

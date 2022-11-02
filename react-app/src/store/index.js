@@ -31,7 +31,7 @@ const rootReducer = combineReducers({
   breed_answers: breedAnswerReducer,
   group_posts: groupPostReducer,
   user_answers: userAnswerReducer,
-  friends: friendReducer
+  friends: friendReducer,
 });
 
 let enhancer;

@@ -5,36 +5,35 @@
   justify-content: center;
   list-style-type: none;
   margin: 20px;
-
 }
 
 .paginationItem {
   display: flex;
 }
-.paginationItem  > button {
+.paginationItem > button {
   border: 1px solid rgb(0, 0, 0, 0.6);
   background: transparent;
   height: 34px;
   width: 34px;
   border-radius: 50%;
   overflow: hidden;
-  color: rgb(0, 0, 0); 
+  color: rgb(0, 0, 0);
 }
 
-.paginationItem  > button:hover {
+.paginationItem > button:hover {
   background-color: rgba(159, 159, 159, 0.295);
   cursor: pointer;
 }
 
-.paginationItem  > button:disabled {
+.paginationItem > button:disabled {
   pointer-events: none;
   opacity: 0.5;
 }
 
-.paginationItem  > button[aria-current="page"] {
-    background-color: rgba(159, 159, 159, 0.295);
-    font-weight: 700;
-    text-decoration: underline;
+.paginationItem > button[aria-current="page"] {
+  background-color: rgba(159, 159, 159, 0.295);
+  font-weight: 700;
+  text-decoration: underline;
 }
 
 .arrowButton {
@@ -47,7 +46,6 @@
   width: 1em;
   height: 1em;
   padding: 4px;
-
 }
 
 .dots {

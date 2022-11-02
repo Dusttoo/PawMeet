@@ -1,306 +1,301 @@
 /* -- MAIN FORUM ------------------------ */
 .page-container {
-    display: flex;
-    flex-direction: column;
-    padding-bottom: 100px;
-    align-items: center;
-    margin-top: 25px;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 100px;
+  align-items: center;
+  margin-top: 25px;
 }
 .forum-container {
-    width: 90%;
-    height: 100%;
-    display:flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 10px;
-    padding-bottom: 20px;
-    border: solid 2px rgb(212, 212, 212);
-    border-radius: 5px;
+  width: 90%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 10px;
+  padding-bottom: 20px;
+  border: solid 2px rgb(212, 212, 212);
+  border-radius: 5px;
 }
 
 .profile-icon {
-    border-radius: 100%;
-    width: 50px;
-    height: 50px;
+  border-radius: 100%;
+  width: 50px;
+  height: 50px;
 }
 
 .forum-options {
-    width: 100%;
-    display:flex;
-    justify-content: flex-end;
-    align-items: center;
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
 }
 
 .forum-header-image {
-    width: 100%;
-    height: 150px;
-    /* background-image: url('https://penntoday.upenn.edu/sites/default/files/2019-10/iStock-1094310798.jpg'); */
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-
+  width: 100%;
+  height: 150px;
+  /* background-image: url('https://penntoday.upenn.edu/sites/default/files/2019-10/iStock-1094310798.jpg'); */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .forum-header {
-    text-align: center;
-    width: 100%;
-    padding-bottom: 10px;
-    color: rgb(255, 255, 255);
-    text-shadow: 1px 2px rgb(71, 71, 71);
+  text-align: center;
+  width: 100%;
+  padding-bottom: 10px;
+  color: rgb(255, 255, 255);
+  text-shadow: 1px 2px rgb(71, 71, 71);
 }
 
 .add-post {
-    text-decoration: none;
-    color: black;
-    padding: 5px;
+  text-decoration: none;
+  color: black;
+  padding: 5px;
 }
 
 .add-post:hover {
-    cursor: pointer;
-    color: #333810;
+  cursor: pointer;
+  color: #333810;
 }
 
 .forum-table {
-    width: 100%;
-    border-collapse: collapse;
+  width: 100%;
+  border-collapse: collapse;
 }
 
 .table-label {
-    padding: 8px;
-    border-bottom: 1px solid black;
+  padding: 8px;
+  border-bottom: 1px solid black;
 }
 
-.post-row:nth-child(even) {background-color: #f2f2f2;}
+.post-row:nth-child(even) {
+  background-color: #f2f2f2;
+}
 
-th, td {
+th,
+td {
   padding: 15px;
   text-align: left;
 }
 
 .comment-count {
-    display: flex;
-    justify-content: center;
+  display: flex;
+  justify-content: center;
 }
 
 .post-row {
-    height: 100px;
-    padding: 10px;
+  height: 100px;
+  padding: 10px;
 }
 
 .user-name {
-    text-decoration: none;
-    color:rgb(121, 121, 121);
-    padding-left: 4px;
+  text-decoration: none;
+  color: rgb(121, 121, 121);
+  padding-left: 4px;
 }
 
 .user-name:hover {
-    color: #333810;
+  color: #333810;
 }
 
 .next-prev-container {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    padding: 0 15px;
-    box-sizing: border-box;
-    font-size: 20px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 15px;
+  box-sizing: border-box;
+  font-size: 20px;
 }
-
 
 /* -- SIDEBAR ---------------------- */
 .sidebar-container {
-    width: 90%;
-    height: 100%;
+  width: 90%;
+  height: 100%;
 }
 
 .sidebar-links {
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-    height: 100%;
-    padding-left: 10px;
-
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  height: 100%;
+  padding-left: 10px;
 }
 
 .sidebar-link {
-    text-decoration: none;
-    color: black;
-    font-weight: 500;
-    border-bottom: 1px solid rgb(212, 212, 212);
-    margin-bottom: 10px;
-    text-align: center;
-    padding: 4px;
+  text-decoration: none;
+  color: black;
+  font-weight: 500;
+  border-bottom: 1px solid rgb(212, 212, 212);
+  margin-bottom: 10px;
+  text-align: center;
+  padding: 4px;
 }
 
 .sidebar-link:hover {
-    color: #333810;
+  color: #333810;
 }
 
 /* -- POST PAGE -------------------- */
 .post-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .post {
-    width: 80%;
-    padding: 10px;
-    margin-bottom: 15px;
-    height: 100%;
-    display:flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 10px;
-    padding: 15px;
-    /* padding-bottom: 100px; */
-    border: solid 2px rgb(212, 212, 212);
-    border-radius: 5px;
+  width: 80%;
+  padding: 10px;
+  margin-bottom: 15px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 10px;
+  padding: 15px;
+  /* padding-bottom: 100px; */
+  border: solid 2px rgb(212, 212, 212);
+  border-radius: 5px;
 }
 
 .post-user-options {
-    width: 100%;
-    display: flex;
-    justify-content: flex-end;
-
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
 }
 
 .edit-button {
-    padding: 5px;
-    color: rgb(163, 163, 163);
+  padding: 5px;
+  color: rgb(163, 163, 163);
 }
 
 .delete-button {
-    padding: 5px;
-    color: rgb(255, 129, 129);
+  padding: 5px;
+  color: rgb(255, 129, 129);
 }
 
 .post-header {
-    display: flex;
-    width: 100%;
-    justify-content: space-between;
-    padding-bottom: 5px;
-    border-bottom: 1px solid rgb(163, 163, 163);
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  padding-bottom: 5px;
+  border-bottom: 1px solid rgb(163, 163, 163);
 }
 
 .post-body-container {
-    width: 100%;
-    display: flex;
-    justify-content: flex-start;
-    align-items: flex-start;
-    border-bottom: 1px solid rgb(163, 163, 163);
-    padding: 20px 0;
-    margin-bottom: 15px;
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  border-bottom: 1px solid rgb(163, 163, 163);
+  padding: 20px 0;
+  margin-bottom: 15px;
 }
 
 .post-title-container {
-    width: 100%;
-    padding-left: 15px;
-    display: flex;
-    /* justify-content: center; */
+  width: 100%;
+  padding-left: 15px;
+  display: flex;
+  /* justify-content: center; */
 }
 
 .post-title {
-    text-decoration: none;
-    color: black;
+  text-decoration: none;
+  color: black;
 }
 
 .post-title:hover {
-    color: #333810;
+  color: #333810;
 }
 
 .like-section {
-    display: flex;
-    width: 100%;
-    align-items: center;
-    /* justify-content: flex-start; */
+  display: flex;
+  width: 100%;
+  align-items: center;
+  /* justify-content: flex-start; */
 }
 
 .likes-container {
-    /* width: 100%; */
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    padding-right: 4px;
-    border-right: 1px solid black;
+  /* width: 100%; */
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding-right: 4px;
+  border-right: 1px solid black;
 }
 
 .like-heart {
-    padding-right: 4px;
+  padding-right: 4px;
 }
 
 .like-heart:hover {
-    cursor: pointer;
+  cursor: pointer;
 }
 
 .people-liked-header {
-    padding-left: 5px;
-    color: #333810;
+  padding-left: 5px;
+  color: #333810;
 }
 
 .people-liked-header:hover {
-    cursor: pointer;
-    color: rgb(121, 121, 121)
+  cursor: pointer;
+  color: rgb(121, 121, 121);
 }
 
 .people-liked-container {
-    padding-left: 5px;
+  padding-left: 5px;
 }
 
 .hide-like {
-    display: none;
+  display: none;
 }
 
 .author-name {
-    text-decoration: none;
-    color: black;
-
+  text-decoration: none;
+  color: black;
 }
 
 .author-name:hover {
-    color: #333810;
+  color: #333810;
 }
-
 
 /* -- DISPLAY COMMENTS ----------------- */
 .comment-container {
-    display:flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 10px;
 }
 .comments-table {
-    width: 100%;
-    border-collapse: collapse;
+  width: 100%;
+  border-collapse: collapse;
 }
 
 .comment-options-container {
-    width: 100%;
-    display: flex;
-    justify-content: flex-end;
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
 }
 
 .comment-row {
-    width:100%;
-    border-bottom: 1px solid rgb(163, 163, 163);
+  width: 100%;
+  border-bottom: 1px solid rgb(163, 163, 163);
 }
 
 .add-comment {
-    color: rgb(163, 163, 163);
-
+  color: rgb(163, 163, 163);
 }
 
 .add-comment:hover {
-    color: black;
-    cursor: pointer;
+  color: black;
+  cursor: pointer;
 }
 
 .edit-comment-cell {
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
 }
 
 /* .comment-cell {
@@ -311,31 +306,29 @@ th, td {
 } */
 
 .comment-info {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
 }
 
 .name-date {
-    display: flex;
-    flex-direction: column;
-    padding-left: 10px;
+  display: flex;
+  flex-direction: column;
+  padding-left: 10px;
 }
 
 .comment-body {
-    text-align: left;
+  text-align: left;
 }
 
 .table-cell {
-    padding-bottom: 20px;
+  padding-bottom: 20px;
 }
 
 .comment-edit-delete {
-    width: 100%;
-    display: flex;
-    justify-content: flex-start;
-
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
 }
 
 /* -- ADD COMMENT ------------------ */
@@ -347,95 +340,95 @@ th, td {
 } */
 
 .comment-form-con {
-    width: 100%;
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-    box-sizing: border-box;
+  width: 100%;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
 }
 
 .comment-form-label {
-    padding-bottom: 4px;
-    font-weight: 500;
+  padding-bottom: 4px;
+  font-weight: 500;
 }
 
 .comment-form-input {
-    border: 1px solid rgb(219, 219, 219);
-    border-radius: 4px;
-    height: 100px;
+  border: 1px solid rgb(219, 219, 219);
+  border-radius: 4px;
+  height: 100px;
 }
 
 .submit-container {
-    display: flex;
-    justify-content: center;
+  display: flex;
+  justify-content: center;
 }
 
 .comment-form-button {
-    margin-top: 5px;
-    padding: 2px 0;
-    background-color: rgb(201, 201, 201);
-    border: none;
-    border-radius: 3px;
-    width: 50%;
-    color: rgb(0, 3, 20);
+  margin-top: 5px;
+  padding: 2px 0;
+  background-color: rgb(201, 201, 201);
+  border: none;
+  border-radius: 3px;
+  width: 50%;
+  color: rgb(0, 3, 20);
 }
 
 /* -- ADD POST ----------------------- */
 .add-form-con {
-    width: 100%;
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-    box-sizing: border-box;
+  width: 100%;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
 }
 
 .form-label {
-    padding-top: 8px;
-    padding-bottom: 4px;
-    font-weight: 500;
+  padding-top: 8px;
+  padding-bottom: 4px;
+  font-weight: 500;
 }
 
 .form-input {
-    border: 1px solid rgb(219, 219, 219);
-    border-radius: 4px;
-    height: 100px;
+  border: 1px solid rgb(219, 219, 219);
+  border-radius: 4px;
+  height: 100px;
 }
 
 .small-form-input {
-    border: 1px solid rgb(219, 219, 219);
-    border-radius: 4px;
-    height: 20px;
-    width: 50%;
+  border: 1px solid rgb(219, 219, 219);
+  border-radius: 4px;
+  height: 20px;
+  width: 50%;
 }
 
 .small-form-select {
-    border: 1px solid rgb(219, 219, 219);
-    border-radius: 4px;
-    height: 20px;
-    width: 40%;
+  border: 1px solid rgb(219, 219, 219);
+  border-radius: 4px;
+  height: 20px;
+  width: 40%;
 }
 
 .submit-container {
-    display: flex;
-    justify-content: center;
+  display: flex;
+  justify-content: center;
 }
 
 .form-button {
-    margin-top: 5px;
-    padding: 2px 0;
-    background-color: rgb(201, 201, 201);
-    border: none;
-    border-radius: 3px;
-    width: 50%;
-    color: rgb(0, 3, 20);
+  margin-top: 5px;
+  padding: 2px 0;
+  background-color: rgb(201, 201, 201);
+  border: none;
+  border-radius: 3px;
+  width: 50%;
+  color: rgb(0, 3, 20);
 }
 
 .edit-form-container {
-    display: flex;
-    justify-content: center;
+  display: flex;
+  justify-content: center;
 }
 
 .editor-container {
-    width: 100%;
-    margin-bottom: 20px;
+  width: 100%;
+  margin-bottom: 20px;
 }

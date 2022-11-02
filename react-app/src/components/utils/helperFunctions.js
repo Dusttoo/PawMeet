@@ -1,20 +1,20 @@
 // -- Post Like Helpers ------------------------------
 export const getLikes = (likes, postId) => {
-    let numLikes = 0;
-    likes.map((like) => {
-      if (like.post_id === +postId) {
-        numLikes++;
-      }
-    });
-    return numLikes;
-  };
+  let numLikes = 0;
+  likes.map((like) => {
+    if (like.post_id === +postId) {
+      numLikes++;
+    }
+  });
+  return numLikes;
+};
 
 export const sortedByTime = (list) => {
-    console.log(list)
-    list.sort(function (a, b) {
+  console.log(list);
+  list.sort(function (a, b) {
     return new Date(a.posted) - new Date(b.posted);
-  })
-  return list
+  });
+  return list;
 };
 
 // -- Breed Helpers ------------------------------
@@ -22,7 +22,7 @@ export const sortedByTime = (list) => {
 export const cleanUpTraits = (traits) => {
   const personality = [];
   traits.split(",").map((word) => {
-    console.log(word)
+    console.log(word);
     if (word.includes("{")) {
       personality.push(word.replace("{", ""));
     } else if (word.includes("}")) {
@@ -32,8 +32,8 @@ export const cleanUpTraits = (traits) => {
     }
   });
 
-  return personality
-}
+  return personality;
+};
 
 export const sortBreedsByName = (list) => {
   list.sort(function (a, b) {
@@ -46,8 +46,6 @@ export const sortBreedsByName = (list) => {
       return 1;
     }
     return 0;
-  })
-  return list
-}
-
-
+  });
+  return list;
+};

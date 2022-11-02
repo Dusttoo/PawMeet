@@ -18,13 +18,12 @@ const AddComment = ({ setCommentForm }) => {
   let month = currentDate.getMonth();
   let day = currentDate.getDate();
   if (currentDate.getMonth() + 1 < 10) {
-    month = `0${month + 1}`
+    month = `0${month + 1}`;
   }
   if (currentDate.getDate() < 10) {
-    day = `0${day}`
+    day = `0${day}`;
   }
   let posted = `${month}-${day}-${currentDate.getFullYear()}`;
-  
 
   const validate = () => {
     const validationErrors = [];
@@ -41,7 +40,7 @@ const AddComment = ({ setCommentForm }) => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log('posted', posted)
+    console.log("posted", posted);
     const createdComment = {
       user_id,
       post_id: postId,

@@ -22,18 +22,20 @@ const BreedsPage = () => {
   const [loaded, setLoaded] = useState(false);
   const [loading, setLoading] = useState(true);
   const [search, setSearch] = useState(false);
-  const [currentPage, setCurrentPage] = useState(1)
-  const [pageSize, setPageSize] = useState(15)
-  const currentPaginationData = sortBreedsByName(Object.values(breeds))
-  .slice(pageSize * (currentPage - 1), pageSize * currentPage);
-  
+  const [currentPage, setCurrentPage] = useState(1);
+  const [pageSize, setPageSize] = useState(15);
+  const currentPaginationData = sortBreedsByName(Object.values(breeds)).slice(
+    pageSize * (currentPage - 1),
+    pageSize * currentPage
+  );
+
   const updateRowsPerPage = (pageSize) => {
-    setPageSize(Number(pageSize))
-    setCurrentPage(1)
+    setPageSize(Number(pageSize));
+    setCurrentPage(1);
   };
   const updatePage = (pageNumber) => {
-    setCurrentPage(pageNumber)
-    };
+    setCurrentPage(pageNumber);
+  };
 
   useEffect(() => {
     (async () => {
@@ -92,24 +94,24 @@ const BreedsPage = () => {
             onPageSizeOptionChange={updateRowsPerPage}
           />
           {currentPaginationData.map((breed) => {
-              const thisImage = Object.values(images).find(
-                (image) => image.breed_id === breed.id
+            const thisImage = Object.values(images).find(
+              (image) => image.breed_id === breed.id
+            );
+            if (thisImage) {
+              return (
+                <div className="breed-list-item-container">
+                  <img
+                    className="breed-link-image"
+                    src={thisImage.img_url}
+                    alt={breed.name}
+                  />
+                  <Link className="breed" to={`/breeds/${breed.id}`}>
+                    {breed.name}
+                  </Link>
+                </div>
               );
-              if (thisImage) {
-                return (
-                  <div className="breed-list-item-container">
-                    <img
-                      className="breed-link-image"
-                      src={thisImage.img_url}
-                      alt={breed.name}
-                    />
-                    <Link className="breed" to={`/breeds/${breed.id}`}>
-                      {breed.name}
-                    </Link>
-                  </div>
-                );
-              }
-            })}
+            }
+          })}
         </div>
       )}
     </>

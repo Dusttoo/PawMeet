@@ -1,9 +1,8 @@
 import React, { useState } from "react";
-import "./Breed.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faAngleDown, faPaw } from "@fortawesome/free-solid-svg-icons";
-import pawPrint from "../icons/pawPrint"
-
+import { faAngleDown } from "@fortawesome/free-solid-svg-icons";
+import pawPrint from "../icons/pawPrint";
+import "./Breed.css";
 
 const DisplayTraits = ({ trait, thisAnswer }) => {
   const [details, setDetails] = useState(false);
@@ -18,9 +17,7 @@ const DisplayTraits = ({ trait, thisAnswer }) => {
           onClick={() => setDetails(!details)}
         />
       </div>
-      {details && (
-        <p className="trait-description">{trait.description}</p>
-      )}
+      {details && <p className="trait-description">{trait.description}</p>}
       {thisAnswer.trait_id !== 7 && (
         <div className="scale">
           <p className="least">Least</p>
@@ -42,29 +39,31 @@ const DisplayTraits = ({ trait, thisAnswer }) => {
                     key={rate}
                     className={rate <= thisAnswer.answer ? "paw-on" : "paw-off"}
                   >
-                    {rate <= thisAnswer.answer ? pawPrint.primary :
-                    <span className="bubble"></span>}
-                      
+                    {rate <= thisAnswer.answer ? (
+                      pawPrint.primary
+                    ) : (
+                      <span className="bubble"></span>
+                    )}
                   </button>
                 </div>
               </>
             );
           })
         )}
-        {thisAnswer.trait_id === 8
-          && [...Array(3)].map((star, rate) => {
-              rate += 1;
-              const coatLengths = ["", "Short", "Medium", "Long"];
-              return (
-                <button
-                  type="button"
-                  key={rate}
-                  className={rate === thisAnswer.answer ? "on" : "off"}
-                >
-                  <span className="bubble">{coatLengths[rate]}</span>
-                </button>
-              );
-            })}
+        {thisAnswer.trait_id === 8 &&
+          [...Array(3)].map((star, rate) => {
+            rate += 1;
+            const coatLengths = ["", "Short", "Medium", "Long"];
+            return (
+              <button
+                type="button"
+                key={rate}
+                className={rate === thisAnswer.answer ? "on" : "off"}
+              >
+                <span className="bubble">{coatLengths[rate]}</span>
+              </button>
+            );
+          })}
 
         {thisAnswer.trait_id === 7 && (
           <div className="coat-types">

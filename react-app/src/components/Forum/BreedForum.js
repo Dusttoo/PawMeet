@@ -18,18 +18,21 @@ const BreedForum = () => {
   const { id } = useParams();
   const posts = useSelector((state) => state.group_posts);
   const breed_groups = useSelector((state) => state.groups);
-  const [currentPage, setCurrentPage] = useState(1)
-  const [pageSize, setPageSize] = useState(15)
+  const [currentPage, setCurrentPage] = useState(1);
+  const [pageSize, setPageSize] = useState(15);
   const sortedByTime = Object.values(posts).sort(function (a, b) {
     return new Date(b.posted) - new Date(a.posted);
   });
-  const currentPaginationData = sortedByTime.slice(pageSize * (currentPage - 1), pageSize * currentPage)
+  const currentPaginationData = sortedByTime.slice(
+    pageSize * (currentPage - 1),
+    pageSize * currentPage
+  );
   const updateRowsPerPage = (pageSize) => {
-    setPageSize(Number(pageSize))
-    setCurrentPage(1)
+    setPageSize(Number(pageSize));
+    setCurrentPage(1);
   };
   const updatePage = (pageNumber) => {
-    setCurrentPage(pageNumber)
+    setCurrentPage(pageNumber);
   };
 
   const headerImage = [
@@ -80,12 +83,12 @@ const BreedForum = () => {
               </th>
             </tr>
 
-              {currentPaginationData.map((post) => {
-                return <DisplayPosts post={post} />;
-              })}
+            {currentPaginationData.map((post) => {
+              return <DisplayPosts post={post} />;
+            })}
           </table>
           {Object.keys(posts).length ? <></> : <h2>No Posts Yet!</h2>}
-          <Pagination 
+          <Pagination
             currentPage={currentPage}
             totalCount={sortedByTime.length}
             pageSize={pageSize}
