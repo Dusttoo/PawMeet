@@ -7,6 +7,7 @@ import { allBreedAnswers } from "../../store/breed_answers";
 import { allBreedTraits } from "../../store/breed_traits";
 import DisplayTraits from "./DisplayTraits";
 import Loading from "../Loading/Loading";
+import { cleanUpTraits } from "../utils/helperFunctions";
 import "./Breed.css";
 
 const BreedInfo = () => {
@@ -22,13 +23,9 @@ const BreedInfo = () => {
   );
   const [loaded, setLoaded] = useState(false);
   const [loading, setLoading] = useState(true);
+  const personality = cleanUpTraits(breeds[id].personality)
 
-  const theseAnswers = [];
-  Object.values(breedAnswers).map((answer) => {
-    if (+answer.breed_id === +id) {
-      theseAnswers.push(answer);
-    }
-  });
+  const theseAnswers = Object.values(breedAnswers).filter((answer) => +answer.breed_id === +id);
 
   useEffect(() => {
     (async () => {
@@ -58,18 +55,6 @@ const BreedInfo = () => {
     fontWeight: "bold",
   };
 
-  const traits = breeds[id].personality.split(",");
-  const personality = [];
-  traits.map((word) => {
-    if (word.includes("{")) {
-      personality.push(word.replace("{", ""));
-    } else if (word.includes("}")) {
-      personality.push(word.replace("}", ""));
-    } else {
-      personality.push(word);
-    }
-  });
-
   return (
     <>
       {loading ? (
@@ -88,7 +73,6 @@ const BreedInfo = () => {
               captionStyle={captionStyle}
               radius="10px"
               slideNumber={false}
-              // slideNumberStyle={slideNumberStyle}
               captionPosition="bottom"
               automatic={true}
               dots={true}

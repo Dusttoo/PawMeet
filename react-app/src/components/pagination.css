@@ -4,7 +4,8 @@
   align-items: center;
   justify-content: center;
   list-style-type: none;
-  margin-bottom: 20px;
+  margin: 20px;
+
 }
 
 .paginationItem {

@@ -17,3 +17,22 @@ export const sortedByTime = (list) => {
   return list
 };
 
+// -- Breed Helpers ------------------------------
+
+export const cleanUpTraits = (traits) => {
+  const personality = [];
+  traits.split(",").map((word) => {
+    console.log(word)
+    if (word.includes("{")) {
+      personality.push(word.replace("{", ""));
+    } else if (word.includes("}")) {
+      personality.push(word.replace("}", ""));
+    } else {
+      personality.push(word);
+    }
+  });
+
+  return personality
+}
+
+
