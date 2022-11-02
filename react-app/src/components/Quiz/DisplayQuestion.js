@@ -20,7 +20,7 @@ const DisplayQuestion = () => {
   const trait_id = breedTraits[next].id;
   const breeds = useSelector((state) => state?.breeds);
   const user_id = useSelector((state) => state.session.user.id);
-  const normal = [1, 2, 3, 4, 5, 6, 9, 10, 11, 12, 13, 14, 15, 16];
+  const normal = [7,8]
   const coatTypes = [
     "Wiry",
     "Rough",
@@ -36,9 +36,7 @@ const DisplayQuestion = () => {
   const coatLengths = ["Short", "Medium", "Long"];
   const breedImages = useSelector((state) => state.breed_images);
   const [loading, setLoading] = useState(false);
-  const [img, setImg] = useState(
-    "https://images.pexels.com/photos/162149/dog-black-labrador-black-dog-162149.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260"
-  );
+  const [img, setImg] = useState(breedImages[1].img_url);
 
   const imageSet = () => {
     const min = 1;
@@ -168,7 +166,7 @@ const DisplayQuestion = () => {
                       })}
                     </>
                   )}
-                  {normal.includes(breedTraits[next].id) && (
+                  {!normal.includes(breedTraits[next].id) && (
                     // Could split this into another component for readability
                     <div className="regular-questions">
                       <div className="amount-labels">
