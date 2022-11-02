@@ -9,7 +9,6 @@ const FriendsList = () => {
   const dispatch = useDispatch();
   const friendsList = useSelector((state) => state.friends.list);
   const users = useSelector((state) => state.users);
-  console.log("list", friendsList);
 
   useEffect(() => {
     dispatch(allFriends(id));
@@ -20,10 +19,8 @@ const FriendsList = () => {
       <div className="firends-list-container">
         <h1>Friends</h1>
         {Object.values(friendsList).map((connection) => {
-          console.log(connection);
           const friendId = connection.friend_user_id;
           const friend = users[friendId];
-          console.log(friend);
           return (
             <>
               <div key={connection.id} className="friend-container">

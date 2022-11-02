@@ -2,48 +2,18 @@ import React from "react";
 import { useSelector } from "react-redux";
 import { Link, useParams } from "react-router-dom";
 import DisplayPosts from "../Forum/DisplayPost";
+import { getFivePosts,  modifyTime} from "../utils/helperFunctions";
 import "./Profiles.css";
-import UserSidebar from "./UserSidebar";
 
 const UserProfile = () => {
   const { id } = useParams();
-  const users = useSelector((state) => state.users);
-  const currentUserId = useSelector((state) => state.session.user.id);
-  const pets = useSelector((state) => state.pets);
-  const thesePets = [];
-  const posts = useSelector((state) => state.forum);
-  const index = 0;
-
-  const thesePosts = [];
-  Object.values(posts).map((post) => {
-    if (+post.user_id === +id) {
-      thesePosts.push(post);
-    }
-  });
-
-  const sortedByTime = thesePosts.sort(function (a, b) {
-    return new Date(b.posted) - new Date(a.posted);
-  });
-
-  Object.values(pets).map((pet) => {
-    if (+pet.owner_id === +id) {
-      thesePets.push(pet);
-    }
-  });
-
-  const modifyTime = () => {
-    const date = users[id].barking_since.replace("00:00:00 GMT", "");
-    return date;
-  };
-
-  const getTenPosts = () => {
-    return sortedByTime.splice(index, 3);
-  };
+  const state = useSelector((state) => state);
+  const {users, session, pets, forum} = state;
+  const userPets =  Object.values(pets).filter((pet) => +pet.owner_id === +id);
 
   return (
     <>
       <div className="user-page">
-        {/* <UserSidebar /> */}
         <div className="user-container">
           <div className="user-header">
             <img
@@ -55,15 +25,15 @@ const UserProfile = () => {
               <h1>
                 {users[id].first_name} {users[id].last_name}
               </h1>
-              <p>Barking since: {modifyTime()}</p>
+              <p>Barking since: {modifyTime(users[id].barking_since)}</p>
             </div>
           </div>
           <div className="user-content">
             <div className="pet-links">
               <h3>Pets:</h3>
               <div className="pet-links-container">
-                {thesePets.length === 0 ? <h2>No pets to display.</h2> : <></>}
-                {thesePets.map((pet) => {
+                {!userPets.length ? <h2>No pets to display.</h2> : <></>}
+                {userPets.map((pet) => {
                   return (
                     <Link className="pet-link" to={`/pets/${pet.id}`}>
                       <div className="pet-link-details">
@@ -82,14 +52,13 @@ const UserProfile = () => {
             <div className="user-posts">
               <h3>Recent Posts:</h3>
               <div className="user-post-list">
-                {getTenPosts().map((post) => {
+                {getFivePosts(Object.values(forum)).map((post) => {
                   return <DisplayPosts post={post} />;
                 })}
               </div>
             </div>
           </div>
-          {/* {+id !== currentUserId && <button className='add-friend'>Add Friend</button>} */}
-          {+id === +currentUserId && (
+          {+id === session.user.id && (
             <Link className="add-pet" to="/pets/add">
               Add a pet
             </Link>

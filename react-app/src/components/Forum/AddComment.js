@@ -40,7 +40,6 @@ const AddComment = ({ setCommentForm }) => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log("posted", posted);
     const createdComment = {
       user_id,
       post_id: postId,

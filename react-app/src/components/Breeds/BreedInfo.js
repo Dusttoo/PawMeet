@@ -13,29 +13,24 @@ import "./Breed.css";
 const BreedInfo = () => {
   const { id } = useParams();
   const dispatch = useDispatch();
-  const breeds = useSelector((state) => state.breeds);
-  const images = useSelector((state) => state.breed_images);
-  const breedTraits = useSelector((state) => state.breed_traits);
-  const breedAnswers = useSelector((state) => state.breed_answers);
-  const breedGroups = useSelector((state) => state.groups);
-  const group = Object.values(breedGroups).find(
-    (thisGroup) => +thisGroup.id === +breeds[id].breed_group
-  );
+  const state = useSelector((state) => state);
+  const { breeds, breed_images, breed_traits, breed_answers, groups} = state;
   const [loaded, setLoaded] = useState(false);
   const [loading, setLoading] = useState(true);
   const personality = cleanUpTraits(breeds[id].personality);
 
-  const theseAnswers = Object.values(breedAnswers).filter(
+  const theseAnswers = Object.values(breed_answers).filter(
     (answer) => +answer.breed_id === +id
+  );
+  const group = Object.values(groups).find(
+    (thisGroup) => +thisGroup.id === +breeds[id].breed_group
   );
 
   useEffect(() => {
-    (async () => {
-      await dispatch(allBreedTraits());
-      await dispatch(allBreedAnswers());
-      setLoaded(true);
-      setLoading(false);
-    })();
+    dispatch(allBreedTraits());
+    dispatch(allBreedAnswers());
+    setLoaded(true);
+    setLoading(false);
   }, [dispatch]);
 
   if (!loaded) {
@@ -43,7 +38,7 @@ const BreedInfo = () => {
   }
 
   const data = [];
-  Object.values(images).map((image) => {
+  Object.values(breed_images).map((image) => {
     if (+image.breed_id === +id) {
       data.push({
         image: image.img_url,
@@ -130,11 +125,13 @@ const BreedInfo = () => {
             </div>
           </div>
           <div className="breed-traits-container">
-            {Object.values(breedTraits).map((trait) => {
+            {Object.values(breed_traits).map((trait) => {
               const thisAnswer = theseAnswers.find(
                 (answer) => +answer.trait_id === +trait.id
               );
-              return <DisplayTraits trait={trait} thisAnswer={thisAnswer} />;
+              if (theseAnswers.length) {
+                return <DisplayTraits trait={trait} thisAnswer={thisAnswer} />;
+              }
             })}
           </div>
         </div>

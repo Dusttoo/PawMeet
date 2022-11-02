@@ -19,15 +19,12 @@ const FriendRequests = () => {
 
   Object.values(requests).map((request) => {
     const request_user = request.user_id_from;
-    console.log(request_user, currentUser);
     if (request_user === currentUser) {
       sent.push(request_user);
     } else {
-      console.log(request_user);
       recieved.push(request_user);
     }
   });
-  console.log(sent, recieved);
 
   return (
     <>
@@ -37,7 +34,6 @@ const FriendRequests = () => {
         {sent.length ? (
           <>
             {Object.values(sent).map((id) => {
-              console.log(id);
               return (
                 <>
                   <p>{users[id].first_name}</p>

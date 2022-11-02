@@ -24,21 +24,17 @@ const Posts = () => {
   const [loaded, setLoaded] = useState(false);
   const history = useHistory();
   const dispatch = useDispatch();
-  const currentUser = useSelector((state) => state.session.user);
-  const posts = useSelector((state) => state.forum);
-  const users = useSelector((state) => state.users);
-  const likes = useSelector((state) => state.likes);
-  const comments = useSelector((state) => state.post_comments);
+  const state = useSelector((state) => state)
+  const {session, forum, users, likes, post_comments} = state
   const [likeHover, setLikeHover] = useState(false);
   const author = Object.keys(users).find(
-    (user) => +user === +posts[postId].user_id
+    (user) => +user === +forum[postId].user_id
   );
-  const thisUser = useSelector((state) => state.session.user);
   const [editForm, setEditForm] = useState(false);
   const [commentForm, setCommentForm] = useState(false);
   const liked = Object.values(likes).map((like) => {
     if (+like.post_id === +postId) {
-      if (+like.user_id === +currentUser.id) {
+      if (+like.user_id === +session.user.id) {
         return true;
       }
       return false;
@@ -87,7 +83,7 @@ const Posts = () => {
 
   const addLike = () => {
     const createdLike = {
-      user_id: currentUser.id,
+      user_id: session.user.id,
       post_id: postId,
     };
     dispatch(addALike(createdLike));
@@ -95,7 +91,7 @@ const Posts = () => {
 
   const deleteLike = () => {
     const likeId = Object.values(likes).find(
-      (like) => +like.user_id === +currentUser.id
+      (like) => +like.user_id === +session.user.id
     );
     dispatch(removeLike(+likeId.id));
   };
@@ -104,7 +100,7 @@ const Posts = () => {
     <>
       <div className="post-container">
         <div className="post">
-          {thisUser.id === +author && (
+          {session.user.id === +author && (
             <div className="post-user-options">
               <FontAwesomeIcon
                 className="edit-button"
@@ -135,12 +131,12 @@ const Posts = () => {
               </div>
             </div>
             <div className="post-title-container">
-              <h1 className="show-post-title">{posts[postId].title}</h1>
+              <h1 className="show-post-title">{forum[postId].title}</h1>
             </div>
           </div>
           <div className="post-body-container">
             <div
-              dangerouslySetInnerHTML={{ __html: posts[postId].post_body }}
+              dangerouslySetInnerHTML={{ __html: forum[postId].post_body }}
             ></div>
           </div>
 
@@ -219,7 +215,7 @@ const Posts = () => {
           </div>
 
           <table className="comments-table">
-            {sortedByTime(Object.values(comments)).map((comment) => {
+            {sortedByTime(Object.values(post_comments)).map((comment) => {
               return <DisplayComments commentId={comment.id} />;
             })}
           </table>
