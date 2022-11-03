@@ -31,6 +31,7 @@ import Quiz from "./components/Quiz/Quiz";
 import { allBreedTraits } from "./store/breed_traits";
 import FriendsList from "./components/Profiles/FriendsList";
 import FriendRequests from "./components/Profiles/FriendRequests";
+import Inbox from "./components/Messaging/Inbox";
 
 function App() {
   const [loaded, setLoaded] = useState(false);
@@ -111,6 +112,9 @@ function App() {
         <ProtectedRoute path="/forum/posts/:postId" exact={true}>
           <Posts />
         </ProtectedRoute>
+        <Route path="/inbox/:id" exact={true}>
+          <Inbox />
+        </Route>
         <Route path="/" exact={true}>
           <Landing />
         </Route>
