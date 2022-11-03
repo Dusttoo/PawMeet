@@ -27,6 +27,10 @@ class User(db.Model, UserMixin):
         'Friends_List', foreign_keys='Friends_List.current_user_id', back_populates='users')
     friend2 = db.relationship(
         'Friends_List', foreign_keys='Friends_List.friend_user_id', back_populates='users')
+    message_to = db.relationship(
+        'Message', foreign_keys='Message.user_id_to', back_populates='users')
+    message_from = db.relationship(
+        'Message', foreign_keys='Message.user_id_from', back_populates='users')
 
 
     @property

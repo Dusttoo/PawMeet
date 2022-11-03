@@ -20,7 +20,7 @@ const Chat = ({setMessages}) => {
         // create websocket
         socket = io();
 
-        socket.on("chat", (chat) => {
+        socket.on('data', (chat) => {
             setMessages(messages => [...messages, chat])
         })
         // when component unmounts, disconnect
@@ -35,7 +35,7 @@ const Chat = ({setMessages}) => {
 
     const sendChat = (e) => {
         e.preventDefault()
-        socket.emit("chat", { from: user.id, to: sendTo, msg: chatInput });
+        socket.emit('data', { user_id_from: user.id, user_id_to: +sendTo, msg: chatInput });
         setChatInput("")
     }
 
