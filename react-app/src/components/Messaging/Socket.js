@@ -5,7 +5,7 @@ import { allFriends } from "../../store/friends";
 import './inbox.css'
 let socket;
 
-const Chat = ({setMessages}) => {
+const Chat = ({setMessages, userConversation}) => {
     const dispatch = useDispatch();
     const [chatInput, setChatInput] = useState("");
     const user = useSelector(state => state.session.user)
@@ -35,22 +35,13 @@ const Chat = ({setMessages}) => {
 
     const sendChat = (e) => {
         e.preventDefault()
-        socket.emit('data', { user_id_from: user.id, user_id_to: +sendTo, msg: chatInput });
+        socket.emit('data', { user_id_from: user.id, user_id_to: userConversation, msg: chatInput });
         setChatInput("")
     }
 
     return (user && (
         <div className="chat-container">
             <form onSubmit={sendChat}>
-                <label for="sendTo">Select a user:</label>
-                <select 
-                name='sendTo' id='sendTo'
-                onChange={(e) => setSendTo(e.target.value)}>
-                <option value="" disabled selected>Select a user</option>
-                {Object.values(friendsList).map(friend => (
-                    <option value={friend.friend_user_id}>{usersList[friend.friend_user_id].first_name} {usersList[friend.friend_user_id].last_name}</option>
-                ))}
-                </select>
                 <input
                     value={chatInput}
                     onChange={updateChatInput}
