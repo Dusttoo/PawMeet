@@ -26,6 +26,8 @@ const UserProfile = () => {
                 {users[id].first_name} {users[id].last_name}
               </h1>
               <p>Barking since: {modifyTime(users[id].barking_since)}</p>
+              {+id === session.user.id && 
+              <Link to={`/inbox/${session.user.id}`}>Inbox</Link>}
             </div>
           </div>
           <div className="user-content">

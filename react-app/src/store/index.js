@@ -15,6 +15,7 @@ import breedAnswerReducer from "./breed_answers";
 import groupPostReducer from "./group_posts";
 import userAnswerReducer from "./user_answers";
 import friendReducer from "./friends";
+import messageReducer from "./messages";
 
 const rootReducer = combineReducers({
   session,
@@ -32,6 +33,7 @@ const rootReducer = combineReducers({
   group_posts: groupPostReducer,
   user_answers: userAnswerReducer,
   friends: friendReducer,
+  messages: messageReducer,
 });
 
 let enhancer;
