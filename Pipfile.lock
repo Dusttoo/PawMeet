@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "cda6b69104ee7f2a7bb58c5af95be02de63d17f064fdc7712dcd6c3f9d65810d"
+            "sha256": "04fc680a970241b536177c1d0ac72ed7e6acd1d12704f3e1d3ef35acde8e41d4"
         },
         "pipfile-spec": 6,
         "requires": {
@@ -29,7 +29,7 @@
                 "sha256:1e0f7f74e4860e6d0943a05d4134c63a2fad86f3d4732fb265bd79e4e856d81d",
                 "sha256:6ef212238eb884b664f28da76f33f1d28b260f665fc737b413b287d5487d1e7b"
             ],
-            "markers": "python_version >= '3.7'",
+            "index": "pypi",
             "version": "==0.22.1"
         },
         "click": {
@@ -322,7 +322,7 @@
                 "sha256:67a675569f3e9bb274a8077f3c2068a8fe79cbfcb111cf31ca27b968484fe6c7",
                 "sha256:b167a1b208fcdce5dbe96a61a6ca22391cfa6715d796c22de93e3adf9c07ae0c"
             ],
-            "markers": "python_version >= '3.6'",
+            "index": "pypi",
             "version": "==4.5.1"
         },
         "python-socketio": {
@@ -330,7 +330,7 @@
                 "sha256:7adb8867aac1c2929b9c1429f1c02e12ca4c36b67c807967393e367dfbb01441",
                 "sha256:e714f4dddfaaa0cb0e37a1e2deef2bb60590a5b9fea9c343dd8ca5e688416fd9"
             ],
-            "markers": "python_version >= '3.6'",
+            "index": "pypi",
             "version": "==5.8.0"
         },
         "setuptools": {

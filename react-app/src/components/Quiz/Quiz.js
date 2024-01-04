@@ -37,6 +37,11 @@ const Quiz = () => {
             </>
           ) : (
             <>
+              <div className="number-container">
+                <p className="question-number">
+                  Question <span className="current-number">{Object.keys(userAnswers).length + 1}</span>/16
+                </p>
+              </div>
               <DisplayQuestion />
             </>
           )}
