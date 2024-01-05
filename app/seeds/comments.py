@@ -24,7 +24,7 @@ def seed_comments():
     db.session.add(comment1)
     db.session.add(comment2)
 
-    for i in range(100):
+    for i in range(200):
 
         i = Comment(
             user_id=randrange(1, 12),

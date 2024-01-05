@@ -4,6 +4,7 @@ from flask_cors import CORS
 from flask_migrate import Migrate
 from flask_wtf.csrf import CSRFProtect, generate_csrf
 from flask_login import LoginManager
+from flask_socketio import SocketIO, emit
 
 from .models import db, User, Breed
 # , Breed_Group, Breed_Image, Breed_Trait, Breed_Answer, Comment, Post, Like, Pet_Profile, Pet_Image, User_Answer
@@ -13,6 +14,8 @@ from .api.forum_routes import forum_routes
 from .api.pet_routes import pet_routes
 from .api.breed_routes import breed_routes
 from .api.quiz_routes import quiz_routes
+from .api.friend_routes import friend_routes
+from .api.socket_routes import socketio, socket_routes
 
 from .seeds import seed_commands
 
@@ -30,6 +33,7 @@ def load_user(id):
     return User.query.get(int(id))
 
 
+
 # Tell flask about our seed commands
 app.cli.add_command(seed_commands)
 
@@ -40,10 +44,14 @@ app.register_blueprint(forum_routes, url_prefix='/api/forum')
 app.register_blueprint(pet_routes, url_prefix='/api/pets')
 app.register_blueprint(breed_routes, url_prefix='/api/breeds')
 app.register_blueprint(quiz_routes, url_prefix='/api/quiz')
+app.register_blueprint(friend_routes, url_prefix='/api/friends')
+app.register_blueprint(socket_routes, url_prefix='/api/sockets')
 
 
 db.init_app(app)
 Migrate(app, db)
+
+socketio.init_app(app)
 
 # Application Security
 CORS(app)
@@ -81,3 +89,6 @@ def react_root(path):
     if path == 'favicon.ico':
         return app.send_static_file('favicon.ico')
     return app.send_static_file('index.html')
+
+if __name__ == '__main__':
+    socketio.run(app)

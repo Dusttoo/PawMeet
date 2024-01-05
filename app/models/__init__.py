@@ -11,3 +11,6 @@ from .pet_profile import Pet_Profile
 from .pet_image import Pet_Image 
 from .post import Post
 from .user_answer import User_Answer
+from .friend_request import Friend_Request
+from .friends_list import Friends_List
+from .message import Message

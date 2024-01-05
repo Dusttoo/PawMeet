@@ -7,7 +7,7 @@ class User_Answer(db.Model):
     user_id = db.Column(db.Integer, db.ForeignKey('users.id'), nullable=False)
     trait_id = db.Column(db.Integer, db.ForeignKey('breed_traits.id'), nullable=False)
     answer = db.Column(db.Integer, nullable=False)
-    # important = db.Column(db.Boolean, default=False)
+    important = db.Column(db.Boolean, default=False)
 
     users = db.relationship('User', back_populates='user_answers')
     breed_traits = db.relationship('Breed_Trait', back_populates='user_answers')
@@ -18,5 +18,5 @@ class User_Answer(db.Model):
             'user_id': self.user_id,
             'trait_id': self.trait_id,
             'answer': self.answer,
-            # 'important': self.important
+            'important': self.important
         }

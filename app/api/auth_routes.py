@@ -68,7 +68,7 @@ def sign_up():
             password=form.data['password'],
             first_name=form.data['first_name'],
             last_name=form.data['last_name'],
-            profile_img=form.data['last_name'],
+            profile_img=form.data['profile_img'],
             barking_since=form.data['barking_since'],
             # repeat_password=form.data['repeat_password']
         )

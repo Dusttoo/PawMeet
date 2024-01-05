@@ -1,5 +1,9 @@
 from app.models import db, Breed_Image
 
+
+
+
+
 def seed_breed_images():
 
     breeds = [
@@ -137,7 +141,7 @@ def seed_breed_images():
     ),
     Breed_Image(
         breed_id=6,
-        img_url='https://static.wikia.nocookie.net/naturerules1/images/a/af/Standard-poodle-white.jpg/revision/latest?cb=20210422030633'
+        img_url='https://www.akc.org/wp-content/uploads/2017/11/Poodle-Standard-Gray-On-White-Standing.jpg'
     ),
     Breed_Image(
         breed_id=6,
@@ -181,7 +185,7 @@ def seed_breed_images():
     ),
     Breed_Image(
         breed_id=8,
-        img_url='https://www.loveyourdog.com/wp-content/uploads/2020/06/Adult-Rottweiler-in-Harness.jpg'
+        img_url='https://rottweilerhealth.org/wp-content/uploads/2021/01/Rottweiler-Health-Foundation-header-image-1-1500x630.jpg'
     ),
     Breed_Image(
         breed_id=8,
@@ -189,7 +193,7 @@ def seed_breed_images():
     ),
     Breed_Image(
         breed_id=8,
-        img_url='https://lh3.googleusercontent.com/proxy/0tXKIqYUED35aVBuGyutwk9g2Zf9Qd8gm_XZGOwl8JsP7VUFz-Gi7tGDNN3jYN4SgEspu3Gbs5IBlJOJpDaNom5Glvo59Lw'
+        img_url='https://media-be.chewy.com/wp-content/uploads/2021/06/02111021/Rottweiler_Feature-Image.jpg'
     ),
     Breed_Image(
         breed_id=9,
@@ -355,7 +359,7 @@ def seed_breed_images():
     ),
         Breed_Image(
         breed_id=15,
-        img_url='https://www.loveyourdog.com/wp-content/uploads/2020/09/Akita-Dog-Outdoors-900x500.jpg'
+        img_url='https://cdn.pixabay.com/photo/2021/01/30/15/14/akita-5964180__480.jpg'
     ),
         Breed_Image(
         breed_id=15,
@@ -471,11 +475,11 @@ def seed_breed_images():
     ),
     Breed_Image(
         breed_id=20,
-        img_url='https://lh3.googleusercontent.com/proxy/Vw2-U6hwRwZ6TOCnIdVCej6w0m_sQyjzAJE7jlWE4W1cgqz_OEigIccPipKjT8gQjmbV7QV7EkYaIupBvJLm3qedpA'
+        img_url='https://fuzzy-rescue.com/wp-content/uploads/2020/11/Bullmastiff-1a.jpg'
     ),
         Breed_Image(
         breed_id=20,
-        img_url='https://lh3.googleusercontent.com/proxy/HBZT8YsLpIFaZ2BVQoTbq2TJ-Vv1ZMQrlf6njNCsWIJXdPKOObsKaDRdQ24M_jx8htQasYLKAt_YMKcLny8_5o-F7Q'
+        img_url='https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fstatic.onecms.io%2Fwp-content%2Fuploads%2Fsites%2F47%2F2021%2F02%2F23%2Fbullmastiff-running-tongue-249331584-2000.jpeg'
     ),
 
         Breed_Image(
@@ -741,6 +745,687 @@ def seed_breed_images():
         breed_id=29,
         img_url='https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fstatic.onecms.io%2Fwp-content%2Fuploads%2Fsites%2F47%2F2021%2F05%2F27%2Fbernese-mountain-dog-closeup-puppy-429989103-2000.jpg'
     ),
+        Breed_Image(
+        breed_id=30,
+        img_url='https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fstatic.onecms.io%2Fwp-content%2Fuploads%2Fsites%2F47%2F2021%2F03%2F12%2Fpomeranian-beach-1190837479-2000.jpg'
+    ),
+        Breed_Image(
+        breed_id=30,
+        img_url='https://i1.wp.com/alaskadogworks.com/wp-content/uploads/2020/02/pomeranian461cb6a24c9f653bbdf5ff0000035de2.jpg?fit=460%2C246&ssl=1'
+    ),
+        Breed_Image(
+        breed_id=30,
+        img_url='https://media-be.chewy.com/wp-content/uploads/2021/06/02102132/Pomeranian_Featured-Image.jpg'
+    ),
+        Breed_Image(
+        breed_id=30,
+        img_url='https://highlandcanine.com/wp-content/uploads/2021/03/pomeranian-running-and-happy.jpg'
+    ),
+        Breed_Image(
+        breed_id=30,
+        img_url='https://i.dailymail.co.uk/i/pix/2013/12/07/video-undefined-19EFC1D600000578-516_636x358.jpg'
+    ),
+        Breed_Image(
+        breed_id=31,
+        img_url='https://upload.wikimedia.org/wikipedia/commons/e/ed/A_Havanese_judging.jpg'
+    ),
+        Breed_Image(
+        breed_id=31,
+        img_url='https://media-be.chewy.com/wp-content/uploads/2021/06/02143631/Havanese-FeaturedImage.jpg'
+    ),
+        Breed_Image(
+        breed_id=31,
+        img_url='https://i.pinimg.com/originals/76/74/87/7674870f6d207bf7f3e1030c8112c237.jpg'
+    ),
+        Breed_Image(
+        breed_id=31,
+        img_url='https://www.thesprucepets.com/thmb/6qDIditb6Uw9Im4A_90Opvdxzr0=/2592x2592/smart/filters:no_upscale()/havanese-HansSurfer-Moment-GettyImages-462845543-58a4777a3df78c47586a596f.jpg'
+    ),
+        Breed_Image(
+        breed_id=31,
+        img_url='https://images.ctfassets.net/440y9b545yd9/6XCxx2l7veIe9DL6CfgEoU/0f9451b3c92c543c64b83c8ff1f41313/Havanese850.jpg'
+    ),
+        Breed_Image(
+        breed_id=32,
+        img_url='https://dogtime.com/assets/uploads/gallery/english-spaniel-dog-breed-pictures/3-water.jpg'
+    ),
+        Breed_Image(
+        breed_id=32,
+        img_url='https://keyassets.timeincuk.net/inspirewp/live/wp-content/uploads/sites/6/2020/06/Springer-spaniels_393004211_696634241.jpg'
+    ),
+        Breed_Image(
+        breed_id=32,
+        img_url='https://i.pinimg.com/originals/c9/b5/73/c9b5731030007d0dad9978ac998c9bb0.jpg'
+    ),
+        Breed_Image(
+        breed_id=32,
+        img_url='https://vetstreet.brightspotcdn.com/dims4/default/89f653e/2147483647/crop/0x0%2B0%2B0/resize/645x380/quality/90/?url=https%3A%2F%2Fvetstreet-brightspot.s3.amazonaws.com%2F78%2F20e770a0d711e0a2380050568d634f%2Ffile%2FEnglish-Springer-Spaniel-2-645mk062311-.jpg'
+    ),
+        Breed_Image(
+        breed_id=32,
+        img_url='https://www.purina.com.au/-/media/project/purina/main/breeds/dog/mobile/dog_english-springer-spaniel_mobile.jpg?h=300&la=en&w=375&hash=F5617F7E548E64866E8E2D8D4D3BF3C8'
+    ),
+        Breed_Image(
+        breed_id=33,
+        img_url='https://s36700.pcdn.co/wp-content/uploads/2019/11/Sheltie_8463-170411-CharlotteReeves-e1600083550271-600x665.png'
+    ),
+        Breed_Image(
+        breed_id=33,
+        img_url='https://vetstreet-brightspot.s3.amazonaws.com/76/76fd40a80411e0a0d50050568d634f/file/Shetland-Sheepdog-3-645mk062811.jpg'
+    ),
+        Breed_Image(
+        breed_id=33,
+        img_url='https://vetstreet.brightspotcdn.com/dims4/default/4e20015/2147483647/thumbnail/645x380/quality/90/?url=https%3A%2F%2Fvetstreet-brightspot.s3.amazonaws.com%2F04%2F37%2F505c751547a39f7164930317b2a4%2Fshetland-sheepdog-ap-uzbjbg-645-x-380.jpg'
+    ),
+        Breed_Image(
+        breed_id=33,
+        img_url='https://i.pinimg.com/originals/16/18/f3/1618f378c4ebecd6ef65e3b2ed52a575.jpg'
+    ),
+        Breed_Image(
+        breed_id=33,
+        img_url='https://vetstreet.brightspotcdn.com/dims4/default/39177d1/2147483647/crop/0x0%2B0%2B0/resize/645x380/quality/90/?url=https%3A%2F%2Fvetstreet-brightspot.s3.amazonaws.com%2F94%2F3965c0a80411e0a0d50050568d634f%2Ffile%2FShetland-Sheepdog-5-645mk062811.jpg'
+    ),
+        Breed_Image(
+        breed_id=33,
+        img_url='https://cdn.shopify.com/s/files/1/0994/0236/articles/shetland-sheepdog_1200x.jpg?v=1502396148'
+    ),
+        Breed_Image(
+        breed_id=34,
+        img_url='https://www.akc.org/wp-content/uploads/2017/11/Brittany-1.jpg'
+    ),
+        Breed_Image(
+        breed_id=34,
+        img_url='https://m8r6w9i6.rocketcdn.me/wp-content/uploads/2020/09/Brittany-Dog-Breed.jpeg'
+    ),
+        Breed_Image(
+        breed_id=34,
+        img_url='https://d17fnq9dkz9hgj.cloudfront.net/breed-uploads/2018/08/brittany-spaniel-card-small.jpg?bust=1535567402'
+    ),
+        Breed_Image(
+        breed_id=34,
+        img_url='https://s3.amazonaws.com/images.gearjunkie.com/uploads/2021/03/bs-2400x1600.jpg'
+    ),
+        Breed_Image(
+        breed_id=34,
+        img_url='https://upload.wikimedia.org/wikipedia/commons/thumb/f/fe/American_Brittany_standing.jpg/1024px-American_Brittany_standing.jpg'
+    ),
+        Breed_Image(
+        breed_id=34,
+        img_url='https://www.pheasantsforever.org/getattachment/8d46f083-bc5f-456f-8ca5-266256238803/American-Brittany-On-Point.jpg.aspx'
+    ),
+        Breed_Image(
+        breed_id=35,
+        img_url='https://kennelclubofbeverlyhills.org/wp-content/uploads/2019/12/Miniature-American-Shepherd4.jpg'
+    ),
+        Breed_Image(
+        breed_id=35,
+        img_url='https://i.pinimg.com/originals/ab/2c/e2/ab2ce22068e711163df581c4d0aadf52.jpg'
+    ),
+        Breed_Image(
+        breed_id=35,
+        img_url='https://upload.wikimedia.org/wikipedia/commons/d/d3/Miniature_American_Shepherd_red_merle.jpg'
+    ),
+        Breed_Image(
+        breed_id=35,
+        img_url='https://m8r6w9i6.rocketcdn.me/wp-content/uploads/2020/08/Miniature-American-Shepherd-Dog-Breed.jpeg'
+    ),
+        Breed_Image(
+        breed_id=35,
+        img_url='https://dogisworld.com/wp-content/uploads/2019/09/Miniature-American-Shepherd.jpg'
+    ),
+        Breed_Image(
+        breed_id=35,
+        img_url='https://doglime.com/wp-content/uploads/2019/03/Miniature-American-Shepherd.jpg'
+    ),
+        Breed_Image(
+        breed_id=35,
+        img_url='https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fstatic.onecms.io%2Fwp-content%2Fuploads%2Fsites%2F47%2F2021%2F06%2F14%2Fminiature-american-shepherd-vertical-jumping-208478711.jpg'
+    ),
+        Breed_Image(
+        breed_id=36,
+        img_url='https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fstatic.onecms.io%2Fwp-content%2Fuploads%2Fsites%2F47%2F2021%2F03%2F02%2Fborder-collie-green-field-268313239-2000.jpeg'
+    ),
+        Breed_Image(
+        breed_id=36,
+        img_url='https://www.pupvine.com/wp-content/uploads/2021/05/Male-Vs.-Female-Border-Collie-Can-You-Handle-Them-720x405.jpg'
+    ),
+        Breed_Image(
+        breed_id=36,
+        img_url='https://media-be.chewy.com/wp-content/uploads/2021/04/15160416/Border-Collie_Featured-Image.jpg'
+    ),
+        Breed_Image(
+        breed_id=36,
+        img_url='https://i.pinimg.com/474x/8a/f1/c9/8af1c93320d9b5a2ee930f6deeecd459--border-collie-mix-best-dogs.jpg'
+    ),
+        Breed_Image(
+        breed_id=36,
+        img_url='https://dogfoodsmart.com/wp-content/uploads/2021/05/Border_Collie_Life_Expectancy.jpg'
+    ),
+        Breed_Image(
+        breed_id=36,
+        img_url='http://iheartdogs.com/wp-content/uploads/2015/08/shutterstock_140916883.jpg'
+    ),
+        Breed_Image(
+        breed_id=36,
+        img_url='https://vetstreet.brightspotcdn.com/dims4/default/5d9d95a/2147483647/crop/0x0%2B0%2B0/resize/645x380/quality/90/?url=https%3A%2F%2Fvetstreet-brightspot.s3.amazonaws.com%2Fc3%2F54ed80c75711e0a5640050568d6ceb%2Ffile%2FBorder-Collie-3-645mk062411.jpg'
+    ),
+        Breed_Image(
+        breed_id=37,
+        img_url='https://blog.myollie.com/content/images/2020/03/chihuahua-puppy-on-grey-background--1-.jpg'
+    ),
+        Breed_Image(
+        breed_id=37,
+        img_url='https://www.petguide.com/wp-content/uploads/2013/02/chihuahua1.jpg'
+    ),
+        Breed_Image(
+        breed_id=37,
+        img_url='https://2.bp.blogspot.com/-G4vji4gGPi0/Vza9sHNTYDI/AAAAAAAAE58/H1QQKB2taCkBIJtEVITiI9kYvFkZfnS2gCLcB/s1600/Chihuahua-lying-down.jpg'
+    ),
+        Breed_Image(
+        breed_id=37,
+        img_url='https://i.pinimg.com/originals/65/0a/de/650ade94faae09ed46d230c7c20a98f5.jpg'
+    ),
+        Breed_Image(
+        breed_id=37,
+        img_url='https://puccicafe.com/wp-content/uploads/2020/09/Chihuahua-Traits-PUCCI-Cafe.jpg'
+    ),
+        Breed_Image(
+        breed_id=37,
+        img_url='https://www.zooplus.co.uk/magazine/wp-content/uploads/2019/12/chihuahua-UK.jpg'
+    ),
+        Breed_Image(
+        breed_id=38,
+        img_url='https://www.thesprucepets.com/thmb/hWG-gNdY8wVZ0G5-V2BloRy3UMs=/2837x2128/smart/filters:no_upscale()/HillaryKladkeGettyImages-964594770-505a264849384317a11e77259e8e5feb.jpg'
+    ),
+        Breed_Image(
+        breed_id=38,
+        img_url='https://vetstreet.brightspotcdn.com/dims4/default/ffc131a/2147483647/crop/0x0%2B0%2B0/resize/645x380/quality/90/?url=https%3A%2F%2Fvetstreet-brightspot.s3.amazonaws.com%2Fff%2F325bd0a80811e0a0d50050568d634f%2Ffile%2FVizsla-2-645mk062911.jpg'
+    ),
+        Breed_Image(
+        breed_id=38,
+        img_url='https://cdn.fotofits.com/petzlover/gallery/img/l/hungarian-wirehaired-vizsla-dogs-824850.jpg'
+    ),
+        Breed_Image(
+        breed_id=38,
+        img_url='https://blog.myollie.com/content/images/2021/09/Vizslapuppyoutdoors.jpg'
+    ),
+        Breed_Image(
+        breed_id=38,
+        img_url='https://cf.ltkcdn.net/dogs/images/orig/252973-1600x1030-vizsla-dog-breed-traits.jpg'
+    ),
+        Breed_Image(
+        breed_id=38,
+        img_url='https://i2.wp.com/puppytoob.com/wp-content/uploads/2017/07/Hungarian-Vizsla.jpeg?resize=750%2C421&ssl=1'
+    ),
+        Breed_Image(
+            breed_id=39,
+            img_url='https://images.pexels.com/photos/786773/pexels-photo-786773.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260'
+        ),
+        Breed_Image(
+            breed_id=39,
+            img_url='https://images.pexels.com/photos/1582835/pexels-photo-1582835.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260'
+        ),
+        Breed_Image(
+            breed_id=39,
+            img_url='https://images.pexels.com/photos/760618/pexels-photo-760618.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260'
+        ),
+        Breed_Image(
+            breed_id=39,
+            img_url='https://images.pexels.com/photos/4006590/pexels-photo-4006590.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260'
+        ),
+        Breed_Image(
+        breed_id=40,
+        img_url='https://dogsbestlife.com/wp-content/uploads/2019/11/Belgian-malinois-scaled.jpeg'
+    ),
+        Breed_Image(
+        breed_id=40,
+        img_url='https://vetstreet.brightspotcdn.com/dims4/default/871f72c/2147483647/thumbnail/645x380/quality/90/?url=https%3A%2F%2Fvetstreet-brightspot.s3.amazonaws.com%2F2b%2F03%2F045cdbe54bd98ab051ece28a144f%2FBelgian-Malinois-AP-1PTFPZ-645sm101513.jpg'
+    ),
+        Breed_Image(
+        breed_id=40,
+        img_url='https://thehappypuppysite.com/wp-content/uploads/2019/02/Belgian-Malinois-Temperament-long.jpg'
+    ),
+        Breed_Image(
+        breed_id=40,
+        img_url='https://cf.ltkcdn.net/dogs/images/orig/258720-1600x1030-belgian-malinois-temperament.jpg'
+    ),
+        Breed_Image(
+        breed_id=40,
+        img_url='https://i.pinimg.com/originals/6c/46/f5/6c46f587a4701ff700f54a9c92f20ac3.jpg'
+    ),
+        Breed_Image(
+        breed_id=41,
+        img_url='https://dogtime.com/assets/uploads/gallery/maltese-dog-breed-picture/9-fullbody.jpg'
+    ),
+        Breed_Image(
+        breed_id=41,
+        img_url='https://thepetproject.in/wp-content/uploads/2020/09/Maltese-Lifespan-long.jpg'
+    ),
+        Breed_Image(
+        breed_id=41,
+        img_url='https://www.akc.org/wp-content/uploads/2017/11/Maltese-laying-down-in-a-chair.jpg'
+    ),
+        Breed_Image(
+        breed_id=41,
+        img_url='https://i.pinimg.com/originals/ee/a4/1c/eea41c427fb61cc3f8aa2a0bc6b236ad.jpg'
+    ),
+        Breed_Image(
+        breed_id=41,
+        img_url='https://spoiledmaltese.com/attachments/img_8779-jpg.257694/'
+    ),
+        Breed_Image(
+        breed_id=41,
+        img_url='https://img.dog-learn.com/dog-breeds/maltese/maltese-sz5.jpg'
+    ),
+        Breed_Image(
+        breed_id=42,
+        img_url='https://www.thesprucepets.com/thmb/ARk1MUmxIxix5Ci5LWR1PzhjlUc=/2121x1414/filters:fill(auto,1)/AdultWeimaranerinPark-465fadcefa954d09aca201d68c2826cb.jpg'
+    ),
+        Breed_Image(
+        breed_id=42,
+        img_url='https://www.dogzone.com/images/breeds/weimaraner.jpg'
+    ),
+        Breed_Image(
+        breed_id=42,
+        img_url='https://res.cloudinary.com/fleetnation/image/private/c_fit,w_1120/g_south,l_text:style_gothic2:%C2%A9%20Christian%20M%C3%BCller,o_20,y_10/g_center,l_watermark4,o_25,y_50/v1493724994/nwqlsm1uq4ynxe8vdykw.jpg'
+    ),
+        Breed_Image(
+        breed_id=42,
+        img_url='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSW3P-GCTpejlYXeCY540rO6nEjWT4NXZcYKU0maWvcT35hmiNAiEJiZ-mtCiNzikPNxPE&usqp=CAU'
+    ),
+        Breed_Image(
+        breed_id=42,
+        img_url='https://c.stocksy.com/a/0xn400/z9/1145326.jpg'
+    ),
+       Breed_Image(
+        breed_id=42,
+        img_url='https://vetstreet.brightspotcdn.com/dims4/default/477f20f/2147483647/thumbnail/645x380/quality/90/?url=https%3A%2F%2Fvetstreet-brightspot.s3.amazonaws.com%2Fe4%2Fe0%2Fab2376c743628f81cc23f6bac97b%2Fweimaraner-AP-18ULPF-645sm12913.jpg'
+    ),
+       Breed_Image(
+        breed_id=43,
+        img_url='https://upload.wikimedia.org/wikipedia/commons/6/6c/1Dog-rough-collie-portrait.jpg'
+    ),
+       Breed_Image(
+        breed_id=43,
+        img_url='https://st.depositphotos.com/1908759/2169/i/600/depositphotos_21697401-stock-photo-colli.jpg'
+    ),
+       Breed_Image(
+        breed_id=43,
+        img_url='https://elsrem.files.wordpress.com/2013/07/collie.jpg'
+    ),
+       Breed_Image(
+        breed_id=43,
+        img_url='https://i.pinimg.com/originals/ae/6c/09/ae6c09a89e029b003fef9221302a1bf2.jpg'
+    ),
+        Breed_Image(
+        breed_id=43,
+        img_url='https://assets.puzzlefactory.pl/puzzle/253/616/original.jpg'
+    ),
+        Breed_Image(
+        breed_id=43,
+        img_url='https://cdn.pixabay.com/photo/2020/05/28/12/11/sheep-dog-5230971_960_720.jpg'
+    ),
+        Breed_Image(
+        breed_id=44,
+        img_url='https://upload.wikimedia.org/wikipedia/commons/a/a5/Newfoundland_dog_Smoky.jpg'
+    ),
+        Breed_Image(
+        breed_id=44,
+        img_url='https://d17fnq9dkz9hgj.cloudfront.net/breed-uploads/2018/08/newfoundland-dog-card-medium.jpg?bust=1535567515&width=560'
+    ),
+        Breed_Image(
+        breed_id=44,
+        img_url='https://www.hospitalveterinariglories.com/wp-content/uploads/2020/03/terranova-676x451.jpg'
+    ),
+        Breed_Image(
+        breed_id=44,
+        img_url='https://i.pinimg.com/originals/0f/8d/de/0f8ddeb972ebd607e01c7b84614ccad4.jpg'
+    ),
+        Breed_Image(
+        breed_id=44,
+        img_url='https://dinoanimals.com/wp-content/uploads/2021/02/Newfoundland-dog-1.jpg'
+    ),
+        Breed_Image(
+        breed_id=44,
+        img_url='https://itsdogornothing.com/wp-content/uploads/2015/11/Newfoundland.jpg'
+    ),
+        Breed_Image(
+        breed_id=45,
+        img_url='https://www.akc.org/wp-content/uploads/2017/11/Rhodesian-Ridgeback-standing-in-profile-outdoors.jpg'
+    ),
+        Breed_Image(
+        breed_id=45,
+        img_url='https://wyattslist.com/wp-content/uploads/2017/09/rhodesianridgeback_adult.jpg'
+    ),
+        Breed_Image(
+        breed_id=45,
+        img_url='https://s3.amazonaws.com/cdn-origin-etr.akc.org/wp-content/uploads/2017/11/13135405/ANC2016-Conformation-Hound-Group-David-0E9A5697.20191213183002111-500x486.jpg'
+    ),
+        Breed_Image(
+        breed_id=45,
+        img_url='https://www.loveyourdog.com/wp-content/uploads/2021/09/Rhodesian-Ridgeback-Dog.jpg'
+    ),
+        Breed_Image(
+        breed_id=45,
+        img_url='https://media.istockphoto.com/photos/beautiful-rhodesian-ridgeback-picture-id1212343227?k=20&m=1212343227&s=170667a&w=0&h=x94SwEhOuRUcL3Jenv22jSY1XS4IvflXW8Rv7V6BvSE='
+    ),
+        Breed_Image(
+        breed_id=45,
+        img_url='https://i.pinimg.com/474x/59/1e/84/591e84a297a6f94574f1dd00b83b7a16.jpg'
+    ),
+        Breed_Image(
+        breed_id=46,
+        img_url='https://www.akc.org/wp-content/uploads/2017/11/Shiba-Inu-standing-in-profile-outdoors.jpg'
+    ),
+        Breed_Image(
+        breed_id=46,
+        img_url='https://m.foolcdn.com/media/affiliates/images/shiba_inu_puppy_in_a_field_3wWwMo1.width-1200.jpg'
+    ),
+        Breed_Image(
+        breed_id=46,
+        img_url='https://parade.com/wp-content/uploads/2018/01/Shiba-Inu-FTR.jpg'
+    ),
+        Breed_Image(
+        breed_id=46,
+        img_url='https://gettotext.com/wp-content/uploads/2021/10/Shiba-Inu-SHIB-not-to-be-stopped-whats-behind.jpg'
+    ),
+        Breed_Image(
+        breed_id=46,
+        img_url='https://www.zooroyal.at/magazin/wp-content/uploads/2019/01/Shiba-Inu-.jpg'
+    ),
+        Breed_Image(
+        breed_id=46,
+        img_url='https://upload.wikimedia.org/wikipedia/commons/a/a3/Taro_%28black_and_tan%2C_reu%29_-_Chiko_%28rood%2C_reu%29_-_Ichigo_%28rood%2C_teef%29.jpg'
+    ),
+        Breed_Image(
+        breed_id=47,
+        img_url='https://www.akc.org/wp-content/uploads/2017/11/West-Highland-White-Terrier-laying-down-in-the-grass.jpg'
+    ),
+        Breed_Image(
+        breed_id=47,
+        img_url='http://cdn.akc.org/westie_header_1.jpg'
+    ),
+        Breed_Image(
+        breed_id=47,
+        img_url='https://i.pinimg.com/originals/a0/8b/af/a08bafb2bcbf289baa1ae8beafd6c9d2.jpg'
+    ),
+        Breed_Image(
+        breed_id=47,
+        img_url='https://terriblyterrier.com/wp-content/uploads/2019/05/west-highland-white-terrier-feature.jpg'
+    ),
+        Breed_Image(
+        breed_id=47,
+        img_url='https://vetstreet.brightspotcdn.com/dims4/default/09a78ea/2147483647/thumbnail/645x380/quality/90/?url=https%3A%2F%2Fvetstreet-brightspot.s3.amazonaws.com%2Fcd%2F88fde0a81d11e0a0d50050568d634f%2Ffile%2Fwest-highland-white-terrier-5-645mk070111.jpg'
+    ),
+        Breed_Image(
+        breed_id=47,
+        img_url='https://i.pinimg.com/originals/14/a8/76/14a876465378131bc0c215d71664709e.jpg'
+    ),
+        Breed_Image(
+        breed_id=48,
+        img_url='https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fstatic.onecms.io%2Fwp-content%2Fuploads%2Fsites%2F47%2F2020%2F08%2F03%2Fbichon-frise-175833398-2000.jpg'
+    ),
+        Breed_Image(
+        breed_id=48,
+        img_url='https://www.thekennelclub.org.uk/media/1605/bichon-frise-standing.jpg?mode=pad&width=1000&rnd=132143802470000000'
+    ),
+        Breed_Image(
+        breed_id=48,
+        img_url='https://www.thegoodypet.com/wp-content/uploads/2020/06/what-is-the-temperaments-of-a-bichon-frise-1200x900.jpg'
+    ),
+        Breed_Image(
+        breed_id=48,
+        img_url='https://s.abcnews.com/images/Lifestyle/bichon-frise-westminster-winner5-ap-mem-180214_4x5_992.jpg'
+    ),
+        Breed_Image(
+        breed_id=49,
+        img_url='https://dogtime.com/assets/uploads/gallery/bloodhound-dog-breed-pictures/7-faceforward.jpg'
+    ),
+        Breed_Image(
+        breed_id=49,
+        img_url='http://web5.lifelearn.com/wp-content/uploads/2011/02/BloodHound1of1.jpg'
+    ),
+        Breed_Image(
+        breed_id=49,
+        img_url='https://s36700.pcdn.co/wp-content/uploads/2018/01/Bloodhound-600x400.jpg.optimal.jpg'
+    ),
+        Breed_Image(
+        breed_id=49,
+        img_url='https://www.thetimes.co.uk/imageserver/image/%2Fmethode%2Ftimes%2Fprod%2Fweb%2Fbin%2Fa0955992-d7c5-11e9-a836-b8a7068a08fb.jpg?crop=3369%2C4211%2C839%2C1628'
+    ),
+        Breed_Image(
+        breed_id=49,
+        img_url='https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fstatic.onecms.io%2Fwp-content%2Fuploads%2Fsites%2F47%2F2021%2F09%2F02%2Fbloodhound-four-puppies-873691218-2000.jpg'
+    ),
+        Breed_Image(
+        breed_id=49,
+        img_url='https://i.pinimg.com/originals/83/3d/58/833d5830517d7274f537d12a7352325f.jpg'
+    ),
+        Breed_Image(
+        breed_id=50,
+        img_url='https://vetstreet.brightspotcdn.com/dims4/default/563369a/2147483647/crop/0x0%2B0%2B0/resize/645x380/quality/90/?url=https%3A%2F%2Fvetstreet-brightspot.s3.amazonaws.com%2Ff9%2F5c7930a7f811e0a0d50050568d634f%2Ffile%2FPortugese-Water-Dog-2-645mk062811.jpg'
+    ),
+        Breed_Image(
+        breed_id=50,
+        img_url='https://www.k9rl.com/wp-content/uploads/2016/07/Portuguese-Water-Dog-Image.jpg'
+    ),
+        Breed_Image(
+        breed_id=50,
+        img_url='https://i1.wp.com/wagave.com/wp-content/uploads/2020/06/Portuguese_Water_Dog.jpg?fit=1200%2C867&ssl=1'
+    ),
+        Breed_Image(
+        breed_id=50,
+        img_url='https://images.squarespace-cdn.com/content/v1/5e45de34031fc90ac86298fa/1589040887032-24F79TORY1R48KAC5BMY/portuguese-water-dog-jaxi-kimball-art-museum-7931.jpg'
+    ),
+        Breed_Image(
+        breed_id=50,
+        img_url='https://images.squarespace-cdn.com/content/v1/5e45de34031fc90ac86298fa/1588963811014-FPNBU0ON1VY50QPB4U4Z/yare-portuguese-water-dogs-padfoot-portrait-7501.jpg'
+    ),
+        Breed_Image(
+        breed_id=50,
+        img_url='https://portraitofaportuguesewaterdog.files.wordpress.com/2017/01/apier3-shareable.jpg?w=1000'
+    ),
+        Breed_Image(
+        breed_id=51,
+        img_url='https://s3.amazonaws.com/images.gearjunkie.com/uploads/2021/04/ch.jpg'
+    ),
+        Breed_Image(
+        breed_id=51,
+        img_url='https://cdn.shopify.com/s/files/1/0053/9649/6456/articles/Chesapeake-Bay-Retriever-Breed-Profile-Hero-min-564269_1800x.png?v=1625947130'
+    ),
+        Breed_Image(
+        breed_id=51,
+        img_url='https://vetstreet.brightspotcdn.com/dims4/default/2ed2583/2147483647/crop/0x0%2B0%2B0/resize/645x380/quality/90/?url=https%3A%2F%2Fvetstreet-brightspot.s3.amazonaws.com%2F71%2Fe869409e9411e0a2380050568d634f%2Ffile%2FChesapeake-Bay-Retriever-2-645mk062111.jpg'
+    ),
+        Breed_Image(
+        breed_id=51,
+        img_url='https://s3.amazonaws.com/ocn-media/e07b677f-0d47-467d-8da1-4d96c1ff46c1.png'
+    ),
+        Breed_Image(
+        breed_id=51,
+        img_url='https://www.k9rl.com/wp-content/uploads/2016/04/Chesapeake-Bay-Retriever-dog-breed.jpg'
+    ),
+        Breed_Image(
+        breed_id=51,
+        img_url='https://www.akc.org/wp-content/uploads/2017/11/Chesapeake-Bay-Retriever-hunting.jpg'
+    ),
+        Breed_Image(
+        breed_id=53,
+        img_url='https://www.akc.org/wp-content/uploads/2017/11/Saint-Bernard-On-White-01.jpg'
+    ),
+        Breed_Image(
+        breed_id=53,
+        img_url='https://media-be.chewy.com/wp-content/uploads/2021/06/02135531/Saint-Bernard-FeaturedImage.jpg'
+    ),
+        Breed_Image(
+        breed_id=53,
+        img_url='https://www.thesprucepets.com/thmb/lG6YBdOwDZ6UmIkJ2e4ChDl1Yoc=/2121x1193/smart/filters:no_upscale()/SaintBernard-GettyImages-973528124-0bdea12e02ea4d71a21a7fc7c0acb469.jpg'
+    ),
+        Breed_Image(
+        breed_id=53,
+        img_url='https://i.pinimg.com/originals/10/db/7d/10db7d31b07272343588e1eb32d6b904.jpg'
+    ),
+    Breed_Image(
+        breed_id=53,
+        img_url='https://bloximages.newyork1.vip.townnews.com/goldendalesentinel.com/content/tncms/assets/v3/editorial/e/e8/ee825168-8cc9-11eb-abe5-a72d623c8e98/605b7ce04cc00.image.jpg?resize=400%2C376'
+    ),
+        Breed_Image(
+        breed_id=53,
+        img_url='https://better-bred-cdn.azureedge.net/wp-content/uploads/2019/11/AdobeStock_58781044.jpeg'
+    ),
+        Breed_Image(
+        breed_id=53,
+        img_url='https://www.puppyviewer.com/breed-photos/st-bernard.jpg'
+    ),
+        Breed_Image(
+        breed_id=52,
+        img_url='https://www.dogtime.com/assets/uploads/2011/01/file_23146_dalmatian-460x290.jpg'
+    ),
+        Breed_Image(
+        breed_id=52,
+        img_url='https://spiritdogtraining.com/wp-content/uploads/2021/07/Dalmatian-1.png'
+    ),
+        Breed_Image(
+        breed_id=52,
+        img_url='https://www.rd.com/wp-content/uploads/2019/07/shutterstock_1161034495-scaled.jpg?fit=700,1024'
+    ),
+        Breed_Image(
+        breed_id=52,
+        img_url='https://dogsbreedusa.online/wp-content/uploads/2018/10/Spotted-Coach-Dog.jpg'
+    ),
+        Breed_Image(
+        breed_id=52,
+        img_url='https://www.orlandosentinel.com/resizer/2WW8dP_Zvim0a16C_WIAJXfr51I=/800x800/top/cloudfront-us-east-1.images.arcpublishing.com/tronc/J4YZLTJMUZAQ5BUIKJCTPGFVNI.JPG'
+    ),
+    Breed_Image(
+        breed_id=54,
+        img_url='https://www.akc.org/wp-content/uploads/2017/11/Papillon-On-White-01.jpg'
+    ),
+        Breed_Image(
+        breed_id=54,
+        img_url='https://dogfriendlyscene.co.uk/wp-content/uploads/2021/07/Papillon-Dog-Breed.png'
+    ),
+        Breed_Image(
+        breed_id=54,
+        img_url='https://www.thesprucepets.com/thmb/1fxUJ4sMNzmSn4QKWrp7FzO_enU=/1453x1453/smart/filters:no_upscale()/Papillon-GettyImages-713839323-6985913363dd4791852de6f246e6c15d.jpg'
+    ),
+        Breed_Image(
+        breed_id=54,
+        img_url='https://images2.minutemediacdn.com/image/upload/c_fit,f_auto,fl_lossy,q_auto,w_728/v1555996784/shape/mentalfloss/istock_000055044242_small.jpg'
+    ),
+        Breed_Image(
+        breed_id=54,
+        img_url='https://pbs.twimg.com/media/DzMEcbKX0AE_vYW.jpg'
+    ),
+        Breed_Image(
+        breed_id=54,
+        img_url='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQXqjmTYiPag629B7UwwpdGVzfgtkDVL4xPFuOvye3zcyGHK0XuYMAGAI07A3Ki-liiuRo&usqp=CAU'
+    ),
+
+    #     Breed_Image(
+    #     breed_id=,
+    #     img_url=''
+    # ),
+    #     Breed_Image(
+    #     breed_id=,
+    #     img_url=''
+    # ),
+    # Breed_Image(
+    #     breed_id=,
+    #     img_url=''
+    # ),
+    #     Breed_Image(
+    #     breed_id=,
+    #     img_url=''
+    # ),
+    #     Breed_Image(
+    #     breed_id=,
+    #     img_url=''
+    # ),
+    #     Breed_Image(
+    #     breed_id=,
+    #     img_url=''
+    # ),
+    #     Breed_Image(
+    #     breed_id=,
+    #     img_url=''
+    # ),
+    #     Breed_Image(
+    #     breed_id=,
+    #     img_url=''
+    # ),
+    #     Breed_Image(
+    #     breed_id=,
+    #     img_url=''
+    # ),
+    #     Breed_Image(
+    #     breed_id=,
+    #     img_url=''
+    # ),
+    # Breed_Image(
+    #     breed_id=,
+    #     img_url=''
+    # ),
+    #     Breed_Image(
+    #     breed_id=,
+    #     img_url=''
+    # ),
+    #     Breed_Image(
+    #     breed_id=,
+    #     img_url=''
+    # ),
+    #     Breed_Image(
+    #     breed_id=,
+    #     img_url=''
+    # ),
+    #     Breed_Image(
+    #     breed_id=,
+    #     img_url=''
+    # ),
+    #     Breed_Image(
+    #     breed_id=,
+    #     img_url=''
+    # ),
+    #     Breed_Image(
+    #     breed_id=,
+    #     img_url=''
+    # ),
+    #     Breed_Image(
+    #     breed_id=,
+    #     img_url=''
+    # ),
+    #     Breed_Image(
+    #     breed_id=,
+    #     img_url=''
+    # ),
+    #     Breed_Image(
+    #     breed_id=,
+    #     img_url=''
+    # ),
+    #     Breed_Image(
+    #     breed_id=,
+    #     img_url=''
+    # ),
+    #     Breed_Image(
+    #     breed_id=,
+    #     img_url=''
+    # ),
+    #     Breed_Image(
+    #     breed_id=,
+    #     img_url=''
+    # ),
+    #     Breed_Image(
+    #     breed_id=,
+    #     img_url=''
+    # ),
+    #     Breed_Image(
+    #     breed_id=,
+    #     img_url=''
+    # ),
+    #     Breed_Image(
+    #     breed_id=,
+    #     img_url=''
+    # ),
     ]
     
    

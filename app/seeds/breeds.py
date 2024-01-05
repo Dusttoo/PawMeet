@@ -517,6 +517,618 @@ def seed_breeds():
             description="Big, powerful, and built for hard work, the Bernese Mountain Dog is also strikingly beautiful and blessed with a sweet, affectionate nature. Berners are generally placid but are always up for a romp with the owner, whom they live to please. The Bernese Mountain Dog is a large, sturdy worker who can stand over 27 inches at the shoulder. The thick, silky, and moderately long coat is tricolored: jet black, clear white, and rust. The distinctive markings on the coat and face are breed hallmarks and, combined with the intelligent gleam in the dark eyes, add to the Berner's aura of majestic nobility. A hardy dog who thrives in cold weather, the Berner's brain and brawn helped him multitask on the farms and pastures of Switzerland. Berners get along with the entire family and are particularly gentle with children, but they will often become more attached to one lucky human. Berners are imposing but not threatening, and they maintain an aloof dignity with strangers.",
 
         ),
+        Breed(
+            name='Pomeranian',
+            breed_group=5,
+            personality=['Lively', 'Inquisitive', 'Bold'],
+            avg_height={
+                'males': '6-7 inches',
+                'females': '6-7 inches'
+            },
+            avg_weight={
+                'males': '3-7 pounds',
+                'females': '3-7 pounds'
+            },
+            avg_life_exp='12-16 years',
+            breed_video='https://youtu.be/jmaI3YWmbN0',
+
+            description="The tiny Pomeranian, long a favorite of royals and commoners alike, has been called the ideal companion. The glorious coat, smiling, foxy face, and vivacious personality have helped make the Pom one of the world's most popular toy breeds. ¿The Pomeranian combines a tiny body (no more than seven pounds) and a commanding big-dog demeanor. The abundant double coat, with its frill extending over the chest and shoulders, comes in almost two dozen colors, and various patterns and markings, but is most commonly seen in orange or red. Alert and intelligent, Pomeranians are easily trained and make fine watchdogs and perky pets for families with children old enough to know the difference between a toy dog and a toy. Poms are active but can be exercised with indoor play and short walks, so they are content in both the city and suburbs. They will master tricks and games with ease, though their favorite activity is providing laughs and companionship to their special human.",
+
+        ),
+        Breed(
+            name='Havanese',
+            breed_group=5,
+            personality=['Intelligent', 'Outgoing', 'Funny'],
+            avg_height={
+                'males': '8.5-11.5 inches',
+                'females': '8.5-11.5 inches'
+            },
+            avg_weight={
+                'males': '7-13 pounds',
+                'females': '7-13 pounds'
+            },
+            avg_life_exp='14-16 years',
+            breed_video='https://youtu.be/8VyL0SAVQ7s',
+
+            description="Havanese, the only dog breed native to Cuba, are cheerful little dogs with a spring in their step and a gleam in their big, brown eyes. These vivacious and sociable companions are becoming especially popular with American city dwellers. ¿Distinctive features of the Havanese include a curled-over tail and a gorgeous silky coat, which comes in a variety of colors. Some owners enjoy cording the coat, in the manner of a Puli, and others clip it short to reduce grooming time. Happily, Havenese are just as cute no matter what hairdo you give them. Their small but sturdy bodies, adaptable nature, and social skills make Havanese an ideal city dog, but they are content to be anywhere that they can command the attention of admirers young and old alike. Havanese, smart and trainable extroverts with the comic instincts of a born clown, are natural trick dogs. Havanese are also excellent watchdogs and take the job seriously, but will usually keep the barking to a minimum.",
+
+        ),
+        Breed(
+            name='English Springer Spaniel',
+            breed_group=1,
+            personality=['Friendly', 'Playful', 'Obedient'],
+            avg_height={
+                'males': '20 inches',
+                'females': '19 inches'
+            },
+            avg_weight={
+                'males': '50 pounds',
+                'females': '40 pounds'
+            },
+            avg_life_exp='12-14 years',
+            breed_video='https://youtu.be/kvJWumK34AI',
+
+            description="The English Springer Spaniel is a sweet-faced, lovable bird dog of great energy, stamina, and brains. Sport hunters cherish the duality of working Springers: handsome, mannerly pets during the week, and trusty hunting buddies on weekends. Built for long days in the field, English Springer Spaniels are tough, muscular hunters standing 19 to 20 inches at the shoulder and weighing between 40 and 50 pounds. The double coat comes in several colors and patterns, the ears are long and lush, and the kindly, trusting expression of the eyes is a cherished hallmark of the breed. Springers move with a smooth, ground-covering stride. Bred to work closely with humans, Springers are highly trainable people-pleasers. They crave company and are miserable when neglected. Polite dogs, Springers are good with kids and their fellow mammals. They are eager to join in any family activity. Long walks, games of chase and fetch, and swimming are favorite pastimes of these rugged spaniels.",
+
+        ),
+        Breed(
+            name='Shetland Sheepdog',
+            breed_group=7,
+            personality=['Playful', 'Entergetic', 'Bright'],
+            avg_height={
+                'males': '13-16 inches',
+                'females': '13-16 inches'
+            },
+            avg_weight={
+                'males': '15-25 pounds',
+                'females': '15-25 pounds'
+            },
+            avg_life_exp='12-14 years',
+            breed_video='https://youtu.be/yCarFtHnAeo',
+
+            description="The Shetland Sheepdog, also known as the Sheltie, is an extremely intelligent, quick, and obedient herder from Scotland's remote and rugged Shetland Islands. Shelties bear a strong family resemblance to their bigger cousin, the Collie. The Shetland Sheepdog is a small, active, and agile herding dog standing between 13 and 16 inches at the shoulder. The long coat is harsh and straight, with a dense undercoat, and comes in black, blue merle, and sable, with white markings. The coat, along with a long, wedge-shaped head; small, three-quarter erect ears; and deep-chested, level-backed torso, give Shelties the look of a rough-coated Collie in miniature. Bright and eager Shelties are easy trainers and world-class competitors in obedience, agility, and herding trials. They are sensitive and affectionate family dogs, highly in tune with the mood of the household. They like to bark and tend to be reserved toward strangers'¿two qualifications of an excellent watchdog.",
+
+        ),
+        Breed(
+            name='Brittany',
+            breed_group=1,
+            personality=['Bright', 'Fun-Loving', 'Upbeat'],
+            avg_height={
+                'males': '17.5-20.5 inches',
+                'females': '17.5-20.5 inches'
+            },
+            avg_weight={
+                'males': '30-40 pounds',
+                'females': '30-40 pounds'
+            },
+            avg_life_exp='12-14 years',
+            breed_video='https://youtu.be/yYhRKmwCGBQ',
+
+            description="Sportsmen on both sides of the Atlantic cherish the agile, energetic Brittany as a stylish and versatile gundog. Bright and eager at home, and tireless afield, Brittanys require a lot of exercises, preferably with their favorite humans. Brittanys are smaller than setters but leggier than spaniels, standing about 20 inches at the shoulder. Their beautiful, boldly patterned coat comes in combinations of white and vivid orange and liver (reddish-brown). They are rugged and strong but smooth, clean, and quick afoot. The face has the 'softness' prized by bird-dog lovers; high-set ears convey the breed's essential eagerness. The zeal and versatility that make Brittanys peerless hunters can be channeled into dog sports. Obedience, agility, flyball, dock diving'¿you name it, this trainable breed is up for it. The Brittany is a nice fit for those seeking an all-purpose hunting partner, a dog-sport teammate, or a companion in sync with an upbeat, outdoorsy family life.",
+
+        ),
+        Breed(
+            name='Miniature American Shepherd',
+            breed_group=7,
+            personality=['Intelligent', 'Good-Natured', 'Devoted'],
+            avg_height={
+                'males': '14-18 inches',
+                'females': '13-17 inches'
+            },
+            avg_weight={
+                'males': '20-40 pounds',
+                'females': '20-40 pounds'
+            },
+            avg_life_exp='12-13 years',
+            breed_video='https://youtu.be/sW5BY0gnJSA?t=14',
+
+            description="The Miniature American Shepherd resembles a small Australian Shepherd. True herders in spite of their compact size, Minis are bright, self-motivated workers and endearingly loyal and lively companion dogs who have an affinity for horses. The Miniature American Shepherd shares many physical traits with its forebear the Australian Shepherd'¿only on a smaller scale. Females stand between 13 and 17 inches at the shoulder; males range from 14 to 18 inches. Despite their size, Minis are every inch a true herding dog: energetic, versatile, rugged, and extremely bright. The eye-catching coat comes in black, blue merle, red, and red merle. (The merle will exhibit in any amount marbling, flecks, or blotches.) Minis move with the smooth and agile step of a dog built for hard work on punishing terrain.",
+
+        ),
+        Breed(
+            name='Border Collie',
+            breed_group=7,
+            personality=['Affectionate', 'Smart', 'Energetic'],
+            avg_height={
+                'males': '19-22 inches',
+                'females': '18-21 inches'
+            },
+            avg_weight={
+                'males': '30-55 pounds',
+                'females': '30-55 pounds'
+            },
+            avg_life_exp='12-15 years',
+            breed_video='https://youtu.be/NeqHSKTqffI',
+
+            description="A remarkably bright workaholic, the Border Collie is an amazing dog'¿maybe a bit too amazing for owners without the time, energy, or means to keep it occupied. These energetic dogs will settle down for cuddle time when the workday is done. Borders are athletic, medium-sized herders standing 18 to 22 inches at the shoulder. The overall look is that of a muscular but nimble worker unspoiled by passing fads. Both the rough coat and the smooth coat come in a variety of colors and patterns. The almond eyes are the focus of an intelligent expression'¿an intense gaze, the Border's famous 'herding eye', is a breed hallmark. On the move, Borders are among the canine kingdom's most agile, balanced, and durable citizens. The intelligence, athleticism, and trainability of Borders have a perfect outlet in agility training. Having a job to perform, like agility'¿or herding or obedience work'¿is key to Border happiness. Amiable among friends, they may be reserved with strangers.",
+
+        ),
+        Breed(
+            name='Chihuahua',
+            breed_group=5,
+            personality=['Charming', 'Graceful', 'Sassy'],
+            avg_height={
+                'males': '5-8 inches',
+                'females': '5-8 inches'
+            },
+            avg_weight={
+                'males': 'not exceeding 6 pounds',
+                'females': 'not exceeding 6 pounds'
+            },
+            avg_life_exp='14-16 years',
+            breed_video='https://youtu.be/dHX2xul3WEk',
+
+            description="The Chihuahua is a tiny dog with a huge personality. A national symbol of Mexico, these alert and amusing \"purse dogs\" stand among the oldest breeds of the Americas, with a lineage going back to the ancient kingdoms of pre-Columbian times. The Chihuahua is a balanced, graceful dog of terrier-like demeanor, weighing no more than 6 pounds. The rounded \"apple\" head is a breed hallmark. The erect ears and full, luminous eyes are acutely expressive. Coats come in many colors and patterns, and can be long or short. The varieties are identical except for coat. Chihuahuas possess loyalty, charm, and big-dog attitude. Even tiny dogs require training, and without it this clever scamp will rule your household like a little Napoleon. Compact and confident, Chihuahuas are ideal city pets. They are too small for roughhousing with kids, and special care must be taken in cold weather, but Chihuahuas are adaptable'¿as long as they get lots of quality time in their preferred lap.",
+
+        ),
+        Breed(
+            name='Vizsla',
+            breed_group=1,
+            personality=['Affectionate', 'Energetic', 'Gentle'],
+            avg_height={
+                'males': '22-24 inches',
+                'females': '21-23 inches'
+            },
+            avg_weight={
+                'males': '55-60 pounds',
+                'females': '44-55 pounds'
+            },
+            avg_life_exp='12-14 years',
+            breed_video='https://youtu.be/wLTdf8k5KcQ',
+
+            description="The Vizsla is a versatile, red-coated gundog built for long days in the field. For centuries these rugged but elegant athletes have been the pride of Hungarian sportsmen, and their popularity in America increases with each passing year. The Vizsla is easily recognized by his sleek golden-rust coat. They can stand between 21 to 24 inches at the shoulder and are the picture of a lean, light-footed hunter's companion. The long, silky ears frame a facial expression that is sensitive and loving around the house and intense when at work. As a hunter expected to work closely with humans, Vizslas form a tight bond with their owners and hate to be left alone. Athletes of many talents, Vizslas excel at various sports and activities. They are eager and graceful trotters of great stamina, making them ideal jogging or biking companions. An expert on the breed tells us, 'If you don't have the time to encourage this breed's full use of its brain, you're wasting a good dog.'",
+
+        ),
+        Breed(
+            name='Basset Hound',
+            breed_group=2,
+            personality=['Charming', 'Patient', 'Low-Key'],
+            avg_height={
+                'males': 'up to 15 inches',
+                'females': '40-65 pounds'
+            },
+            avg_weight={
+                'males': '40-65 pounds',
+                'females': '40-65 pounds'
+            },
+            avg_life_exp='12-13 years',
+            breed_video='https://youtu.be/pHJ8JRHAFlE',
+
+            description="Among the most appealing of the AKC breeds, the endearing and instantly recognizable Basset Hound is a perennial favorite of dog lovers all over the world. This low-slung and low-key hound can be sometimes stubborn, but is always charming. The Basset Hound stands no higher than 14 inches at the shoulder but, with his remarkably heavy bone, powerful little legs, and massive paws, he possesses big-dog strength and stamina. Bassets are famous for a large, domed head that features extremely long, velvety ears, mournful eyes, and a wrinkled brow, which give the breed the look of a sad clown. Built more for endurance than speed, the Basset moves in a deliberate but effortless manner. The breed's scenting ability is uncanny; it's said that among dogs only the Bloodhound's nose is more accurate. Mild and agreeable at home, the Basset is stubborn on the trail and barks in a loud, ringing voice. Although they may not be wildly demonstrative in their affections, they are steadfastly loyal.",
+
+        ),
+        Breed(
+            name='Belgian Malinois',
+            breed_group=7,
+            personality=['Confident', 'Smart', 'Hardworking'],
+            avg_height={
+                'males': '24-26 inches',
+                'females': '22-24 inches'
+            },
+            avg_weight={
+                'males': '60-80 pounds',
+                'females': '40-60 pounds'
+            },
+            avg_life_exp='14-16 years',
+            breed_video='https://youtu.be/roC80WTQSLM?t=11',
+
+            description="The smart, confident, and versatile Belgian Malinois is a world-class worker who forges an unbreakable bond with his human partner. To deny a Mal activity and the pleasure of your company is to deprive him of his very reasons for being. Belgian Malinois are squarely built, proud, and alert herders standing 22 to 26 inches. Strong and well-muscled, but more elegant than bulky, there's an honest, no-frills look about them, as befit dogs built to work hard for their feed. A breed hallmark is the proud carriage of the head. Coat colors range from a rich fawn to mahogany. The black ears and mask accentuate bright, questioning eyes the color of dark Belgian chocolate. If you have ever seen a Mal perform an obedience routine, you know firsthand what a smart and eager breed this is. Problems set in, though, when this people-oriented dog is underemployed and neglected. Exercise, and plenty of it, preferably side by side with their adored owner, is key to Mal happiness.",
+
+        ),
+        Breed(
+            name='Maltese',
+            breed_group=5,
+            personality=['Playful', 'Charming', 'Gentle'],
+            avg_height={
+                'males': '7-9 inches',
+                'females': '7-9 inches'
+            },
+            avg_weight={
+                'males': 'under 7 pounds',
+                'females': 'under 7 pounds'
+            },
+            avg_life_exp='12-15 years',
+            breed_video='https://youtu.be/tRA2W1D0PTc',
+
+            description="The tiny Maltese, 'Ye Ancient Dogge of Malta,' has been sitting in the lap of luxury since the Bible was a work in progress. Famous for their show-stopping, floor-length coat, Maltese are playful, charming, and adaptable toy companions. Maltese are affectionate toy dogs weighing less than seven pounds, covered by a long, straight, silky coat. Beneath the all-white mantle is a compact body moving with a smooth and effortless gait. The overall picture depicts free-flowing elegance and balance. The irresistible Maltese face'¿with its big, dark eyes and black gumdrop nose'¿can conquer the most jaded sensibility. Despite their aristocratic bearing, Maltese are hardy and adaptable pets. They make alert watchdogs who are fearless in a charming toy-dog way, and they are game little athletes on the agility course. Maltese are low-shedding, long-lived, and happy to make new friends of all ages. Sometimes stubborn and willful, they respond well to rewards-based training.",
+
+        ),
+        Breed(
+            name='Weimaraner',
+            breed_group=1,
+            personality=['Fearless', 'Friendly','Obedient'],
+            avg_height={
+                'males': '25-27 inches',
+                'females': '23-25 inches'
+            },
+            avg_weight={
+                'males': '70-90 pounds',
+                'females': '55-75 pounds'
+            },
+            avg_life_exp='10-13 years',
+            breed_video='https://youtu.be/VUxM2qEZZFU',
+
+            description="The Weimaraner, Germany's sleek and swift 'Gray Ghost,' is beloved by hunters and pet owners alike for their friendliness, obedience, and beauty. They enjoy exercise, and plenty of it, along with lots of quality time with their humans. Instantly recognized by a distinctive silvery-gray coat, male Weimaraners stand 25 to 27 inches at the shoulder, and females 23 to 25 inches. A properly bred Weimaraner will be solid colored, with maybe a small white spot on the chest. The face, with its amber or blue-gray eyes framed by long velvety ears, is amiable and intelligent. Overall, the breed presents a picture of streamlined grace and balance. A well-conditioned Weimaraner on point is a breathtaking sight. Weimaraners are excellent with kids and yearn to be full-fledged family members. Easy grooming, trainability, a loving nature, and a can-do-attitude make them excellent pets, as long as owners are committed to keeping them physically active and mentally engaged.",
+
+        ),
+        Breed(
+            name='Collie',
+            breed_group=7,
+            personality=['Devoted', 'Graceful', 'Proud'],
+            avg_height={
+                'males': '24-26 inches',
+                'females': '22-24 inches'
+            },
+            avg_weight={
+                'males': '60-75 pounds',
+                'females': '50-65 pounds'
+            },
+            avg_life_exp='12-14 years',
+            breed_video='https://youtu.be/ZoFze0O_epE?t=9',
+
+            description="The majestic Collie, thanks to a hundred years as a pop-culture star, is among the world's most recognizable and beloved dog breeds. The full-coated 'rough' Collie is the more familiar variety, but there is also a sleek 'smooth' Collie. The Collie is a large but lithe herder standing anywhere from 22 to 26 inches tall. The rough variety boasts one of the canine kingdom's most impressively showy coats; the smooth coat's charms are subtler but no less satisfying. Coat colors in both varieties are sable and white, tricolor, blue merle, or white. Collie fanciers take pride in their breed's elegant wedge-shaped head, whose mobile ears and almond eyes convey a wide variety of expressions. Collies are famously fond of children and make wonderful family pets. These swift, athletic dogs thrive on companionship and regular exercise. With gentle training, they learn happily and rapidly. The Collie's loyalty, intelligence, and sterling character are the stuff of legend.",
+
+        ),
+        Breed(
+            name='Newfoundland',
+            breed_group=3,
+            personality=['Sweet', 'Patient', 'Devoted'],
+            avg_height={
+                'males': '28 inches',
+                'females': '26 inches'
+            },
+            avg_weight={
+                'males': '130-150 pounds',
+                'females': '100-120 pounds'
+            },
+            avg_life_exp='9-10 years',
+            breed_video='https://youtu.be/OkGujZAIRnA?t=12',
+
+            description="The massive Newfoundland is a strikingly large, powerful working dog of heavy bone and dignified bearing. The sweet-tempered Newfie is a famously good companion and has earned a reputation as a patient and watchful 'nanny dog' for kids. A male Newfoundland can weigh up to 150 pounds and stand 28 inches at the shoulder; females typically go 100 to 120 pounds. The Newf head is majestic, the expression soft and soulful. The outer coat is flat and coarse. Colors are gray, brown, black, and a black-and-white coat named for artist Sir Edwin Landseer, who popularized the look in his paintings. The Newfie breed standard says that a sweet temperament is the 'most important single characteristic of the breed.' The Newf's sterling character is expressed in their affinity for kids. Trusting and trainable, Newfs respond well to gentle guidance. These noble giants are among the world's biggest dogs, and acquiring a pet that could outweigh you comes with obvious challenges.",
+
+        ),
+        Breed(
+            name='Rhodesian Ridgeback',
+            breed_group=2,
+            personality=['Dignified', 'Affectionate', 'Even-Tempered'],
+            avg_height={
+                'males': '25-27 inches',
+                'females': '24-26 inches'
+            },
+            avg_weight={
+                'males': '85 pounds',
+                'females': '70 pounds'
+            },
+            avg_life_exp='9-10 years',
+            breed_video='https://youtu.be/CvObRdhZ5L8?t=10',
+
+            description="The Rhodesian Ridgeback is an all-purpose 'Renaissance hound' whose hallmark is the ridge, or stripe of backward-growing hair, on his back. Though the breed was made famous in its native Africa for its skill at tracking and baying '¿ but never, ever killing '¿ lions, today Ridgebacks are cherished family dogs whose owners must be prepared to deal with their independence and strong prey drive Beneath the Ridgeback's trademark ridge is a whole lot of hound: Ridgebacks are fast and powerful athletes who can weigh between 70 and 85 pounds, and oftentimes more. They come in only one color '¿ wheaten '¿ which spans every shade seen in a wheat field, from pale flaxen to the burnished red of a maturing crop. Ridgebacks also have two nose colors: black and the less commonly seen brown. The formidable Ridgeback can be strong willed, independent, and sometimes domineering. Ridgebacks must be guided with a firm but fair hand from puppyhood. They are faithful friends, protective of their loved ones and meltingly affectionate with those whom they trust. Still, a Ridgeback can be too much hound for the novice dog owner.",
+
+        ),
+        Breed(
+            name='Shiba Inu',
+            breed_group=6,
+            personality=['Alert', 'Active', 'Attentive'],
+            avg_height={
+                'males': '14.5-16.5 inches',
+                'females': '13.5-15.5 inches'
+            },
+            avg_weight={
+                'males': '23 pounds',
+                'females': '17 pounds'
+            },
+            avg_life_exp='13-16 years',
+            breed_video='https://youtu.be/lSMAUTvRdwg',
+
+            description="An ancient Japanese breed, the Shiba Inu is a little but well-muscled dog once employed as a hunter. Today, the spirited, good-natured Shiba is the most popular companion dog in Japan. The adaptable Shiba is at home in town or country. Brought to America from Japan as recently as 60 years ago, Shibas are growing in popularity in the West and are already the most popular breed in their homeland. Their white markings combined with their coloring (red, red sesame, or black and tan) and their alert expression and smooth stride makes them almost foxlike. They're sturdy, muscular dogs with a bold, confident personality to match.",
+
+        ),
+        Breed(
+            name='West Highland White Terrier',
+            breed_group=4,
+            personality=['Loyal', 'Happy', 'Entertaining'],
+            avg_height={
+                'males': '11 inches ',
+                'females': '10 inches'
+            },
+            avg_weight={
+                'males': '15-20 pounds',
+                'females': '15-20 pounds'
+            },
+            avg_life_exp='13-15 years',
+            breed_video='https://youtu.be/sldzFjl5y8Y',
+
+            description="Smart, confident, and always entertaining at play, the adorable West Highland White Terrier (Westie, for short) has charmed owners for over 300 years. This diminutive but sturdy earthdog is among the most popular of the small terriers. Standing 10 to 11 inches at the shoulder, with dark piercing eyes, compact body, and a carrot-shaped tail wagging with delight, the Westie's looks are irresistible. Beneath the plush-toy exterior, though, is a true working terrier of gameness and courage. Bred to hunt rats and other underground rodents, Westies are surprisingly strong and tough. The all-white double coat is hard to the touch, not soft and fluffy. Alert and active, Westies exhibit traits of a plucky and self-reliant ratting terrier: They require no pampering, they will chase after anything that moves, and their independence can make training a challenge. But, thanks to their faithfulness and keen intelligence, Westies will train nicely with time and patience.",
+
+        ),
+        Breed(
+            name='Bichon Frise',
+            breed_group=6,
+            personality=['Playful', 'Curious', 'Peppy'],
+            avg_height={
+                'males': '9.5-11.5 inches',
+                'females': '9.5-11.5 inches'
+            },
+            avg_weight={
+                'males': '12-18 pounds',
+                'females': '12-18 pounds'
+            },
+            avg_life_exp='14-15 years',
+            breed_video='https://youtu.be/9uwW-7VzjBY',
+
+            description="The small but sturdy and resilient Bichon Frise stands among the world's great 'personality dogs.' Since antiquity, these irresistible canine comedians have relied on charm, beauty, and intelligence to weather history's ups and downs. A good-size Bichon will stand a shade under a foot tall at the shoulder. The breed's glory is a white hypoallergenic coat, plush and velvety to the touch, featuring rounded head hair that sets off the large, dark eyes and black leathers of the nose and lips. Bichons are adaptable companions who get on well with other dogs and children. Alert and curious, Bichons make nice little watchdogs'¿but they are lovers, not fighters, and operate under the assumption that there are no strangers, just friends they haven't met yet. Their confidence and size make them ideal city dogs. Bichons train nicely and enjoy performing for their loved ones. Finally, there's the happy-go-lucky Bichon personality that draws smiles and hugs wherever they go.",
+
+        ),
+        Breed(
+            name='Bloodhound',
+            breed_group=2,
+            personality=['Independent', 'Friendly', 'Inquisitive'],
+            avg_height={
+                'males': '25-27 inches',
+                'females': '23-25 inches'
+            },
+            avg_weight={
+                'males': '90-110 pounds',
+                'females': '80-100 pounds'
+            },
+            avg_life_exp='10-12 years',
+            breed_video='https://youtu.be/nFGMVsDEAXQ?t=10',
+
+            description="The world-famous 'Sleuth Hound' does one thing better than any creature on earth: find people who are lost or hiding. An off-duty Bloodhound is among the canine kingdom's most docile citizens, but he's relentless and stubborn on a scent. Bloodhounds are large, substantial dogs standing 23 to 27 inches at the shoulder and weighing up to 110 pounds. Their most famous features are a long, wrinkled face with loose skin huge, drooping ears and warm, deep-set eyes that complete an expression of solemn dignity. Coat colors can be black and tan, liver and tan, or red. Powerful legs allow Bloodhounds to scent over miles of punishing terrain. As pack dogs, Bloodhounds enjoy company, including other dogs and kids. They are easygoing, but their nose can sometimes lead them into trouble. A strong leash and long walks in places where they can enjoy sniffing around are recommended. Bloodhounds are droolers, and obedience training these sensitive sleuths can be a challenge.",
+
+        ),
+        Breed(
+            name='Portuguese Water Dog',
+            breed_group=3,
+            personality=['Affectionate', 'Adventurous', 'Athletic'],
+            avg_height={
+                'males': '20-23 inches',
+                'females': '17-21 inches'
+            },
+            avg_weight={
+                'males': '42-60 pounds',
+                'females': '35-50 pounds'
+            },
+            avg_life_exp='11-13 years',
+            breed_video='https://youtu.be/ekZq6y9GBa0',
+
+            description="The bright and biddable Portuguese Water Dog was bred to be an all-around fisherman's helper. The robust, medium-sized body is covered by a coat of tight, low-shedding curls. PWDs are eager and athletic companions built for water work. The Portuguese Water Dog is super-smart and very 'biddable''¿meaning he's easy to train and eager to please. The Portie can be groomed in two styles: The retriever clip (the entire coat is clipped to one inch in length, with the tail tip at full length) or the more check-me-out lion clip, where the coat on the hindquarters and muzzle is clipped down to the skin.",
+
+        ),
+        Breed(
+            name='Chesapeake Bay Retriever',
+            breed_group=1,
+            personality=['Affectionate', 'Bright', 'Sensitive'],
+            avg_height={
+                'males': '23-26 inches',
+                'females': '21-24 inches'
+            },
+            avg_weight={
+                'males': '65-80 pounds',
+                'females': '55-70 pounds'
+            },
+            avg_life_exp='10-13 years',
+            breed_video='https://youtu.be/DGD4CLYPCrk?t=11',
+
+            description="The Chesapeake Bay Retriever, peerless duck dog of the Mid-Atlantic, is an American original who embodies the classic traits of a good retriever: loyal, upbeat, affectionate, and tireless. The Chessie is famous for his waterproof coat. Chessies are strong, powerfully built gundogs standing anywhere from 21 to 26 inches at the shoulder. A male can weigh up to 80 pounds. The distinctive breed trait is a wavy coat that is oily to the touch. Chessies are solid-colored, either chocolatey brown, sedge, or deadgrass, with keen yellow-amber eyes that nicely complement the coat. Chessies are more emotionally complex than the usual gundog. Chessies take to training, but they have a mind of their own and can tenaciously pursue their own path. They are protective of their humans and polite, but not overtly friendly, to strangers. Chessies make excellent watchdogs and are versatile athletes. A well-socialized Chessie is a confident companion and world-class hunting buddy.",
+
+        ),
+        Breed(
+            name='Dalmatian',
+            breed_group=6,
+            personality=['Dignified', 'Smart', 'Outgoing'],
+            avg_height={
+                'males': '19-24 inches',
+                'females': '19-24 inches'
+            },
+            avg_weight={
+                'males': '45-70 pounds',
+                'females': '45-70 pounds'
+            },
+            avg_life_exp='11-13 years',
+            breed_video='https://youtu.be/N5YnYYSxjYI?t=10',
+
+            description="The dignified Dalmatian, dogdom's citizen of the world, is famed for his spotted coat and unique job description. During their long history, these \"coach dogs\" have accompanied the horse-drawn rigs of nobles, gypsies, and firefighters. The Dalmatian's delightful, eye-catching spots of black or liver adorn one of the most distinctive coats in the animal kingdom. Beneath the spots is a graceful, elegantly proportioned trotting dog standing between 19 and 23 inches at the shoulder. Dals are muscular, built to go the distance; the powerful hindquarters provide the drive behind the smooth, effortless gait. The Dal was originally bred to guard horses and coaches, and some of the old protective instinct remains. Reserved and dignified, Dals can be aloof with strangers and are dependable watchdogs. With their preferred humans, Dals are bright, loyal, and loving house dogs. They are strong, active athletes with great stamina'¿a wonderful partner for runners and hikers.",
+
+        ),
+        Breed(
+            name='Saint Bernard',
+            breed_group=3,
+            personality=['Playful', 'Charming', 'Inquisitive'],
+            avg_height={
+                'males': '28-30 inches',
+                'females': '26-28 inches'
+            },
+            avg_weight={
+                'males': '140-180 pounds',
+                'females': '120-140 pounds'
+            },
+            avg_life_exp='8-10 years',
+            breed_video='https://youtu.be/8va0ZbLM4iE',
+
+            description="The Saint Bernard does not rank very high in AKC registrations, but the genial giant of the Swiss Alps is nonetheless among the world's most famous and beloved breeds. Saints are famously watchful and patient 'nanny dogs' for children. Not ranked particularly high in AKC registrations, this genial giant is nonetheless among the world's most famous and beloved breeds. The Saint's written standard abounds with phrases like 'very powerful,' 'extraordinarily muscular,' 'imposing,' and 'massive.' A male stands a minimum 27.5 inches at the shoulder; females will be smaller and more delicately built. The huge head features a wrinkled brow, a short muzzle, and dark eyes, combining to give Saints the intelligent, friendly expression that was such a welcome sight to stranded Alpine travelers.",
+
+        ),
+        Breed(
+            name='Papillon',
+            breed_group=5,
+            personality=['Friendly', 'Alert', 'Happy'],
+            avg_height={
+                'males': '8-11 inches',
+                'females': '8-11 inches'
+            },
+            avg_weight={
+                'males': '5-10 pounds',
+                'females': '5-10 pounds'
+            },
+            avg_life_exp='14-16 years',
+            breed_video='https://youtu.be/VpphC5Y4K-4',
+
+            description="The quick, curious Papillon is a toy dog of singular beauty and upbeat athleticism. Despite his refined appearance, the Pap is truly a 'doggy dog' blessed with a hardy constitution. Papillon fanciers describe their breed as happy, alert, and friendly. A tiny dog, measuring 8 to 11 inches at the shoulder, you can still spot a Papillon a block away thanks to the large, wing-shaped ears that give the breed its name ('papillon' is French for 'butterfly'). Some Paps have erect ears; in others, known as the Phalene type, the ears are down. Paps are dainty and elegant, with a plumed tail, and a long, silky coat of several color combinations, the base color being white. More robust than they look, Paps are little dogs for all seasons and reasons. They thrive in warm or cool climates, in town or country, and are eager to join family fun. They are excellent agility dogs and are consistent winners at the sport's highest levels; less ambitious owners can train them to do all kinds of tricks.",
+
+        ),
+        # Breed(
+        #     name='',
+        #     breed_group=,
+        #     personality=[],
+        #     avg_height={
+        #         'males': '',
+        #         'females': ''
+        #     },
+        #     avg_weight={
+        #         'males': '',
+        #         'females': ''
+        #     },
+        #     avg_life_exp='',
+        #     breed_video='',
+
+        #     description="",
+
+        # ),
+        # Breed(
+        #     name='',
+        #     breed_group=,
+        #     personality=[],
+        #     avg_height={
+        #         'males': '',
+        #         'females': ''
+        #     },
+        #     avg_weight={
+        #         'males': '',
+        #         'females': ''
+        #     },
+        #     avg_life_exp='',
+        #     breed_video='',
+
+        #     description="",
+
+        # ),
+        # Breed(
+        #     name='',
+        #     breed_group=,
+        #     personality=[],
+        #     avg_height={
+        #         'males': '',
+        #         'females': ''
+        #     },
+        #     avg_weight={
+        #         'males': '',
+        #         'females': ''
+        #     },
+        #     avg_life_exp='',
+        #     breed_video='',
+
+        #     description="",
+
+        # ),
+        # Breed(
+        #     name='',
+        #     breed_group=,
+        #     personality=[],
+        #     avg_height={
+        #         'males': '',
+        #         'females': ''
+        #     },
+        #     avg_weight={
+        #         'males': '',
+        #         'females': ''
+        #     },
+        #     avg_life_exp='',
+        #     breed_video='',
+
+        #     description="",
+
+        # ),
+        # Breed(
+        #     name='',
+        #     breed_group=,
+        #     personality=[],
+        #     avg_height={
+        #         'males': '',
+        #         'females': ''
+        #     },
+        #     avg_weight={
+        #         'males': '',
+        #         'females': ''
+        #     },
+        #     avg_life_exp='',
+        #     breed_video='',
+
+        #     description="",
+
+        # ),
+        # Breed(
+        #     name='',
+        #     breed_group=,
+        #     personality=[],
+        #     avg_height={
+        #         'males': '',
+        #         'females': ''
+        #     },
+        #     avg_weight={
+        #         'males': '',
+        #         'females': ''
+        #     },
+        #     avg_life_exp='',
+        #     breed_video='',
+
+        #     description="",
+
+        # ),
+        # Breed(
+        #     name='',
+        #     breed_group=,
+        #     personality=[],
+        #     avg_height={
+        #         'males': '',
+        #         'females': ''
+        #     },
+        #     avg_weight={
+        #         'males': '',
+        #         'females': ''
+        #     },
+        #     avg_life_exp='',
+        #     breed_video='',
+
+        #     description="",
+
+        # ),
+        # Breed(
+        #     name='',
+        #     breed_group=,
+        #     personality=[],
+        #     avg_height={
+        #         'males': '',
+        #         'females': ''
+        #     },
+        #     avg_weight={
+        #         'males': '',
+        #         'females': ''
+        #     },
+        #     avg_life_exp='',
+        #     breed_video='',
+
+        #     description="",
+
+        # ),
+        # Breed(
+        #     name='',
+        #     breed_group=,
+        #     personality=[],
+        #     avg_height={
+        #         'males': '',
+        #         'females': ''
+        #     },
+        #     avg_weight={
+        #         'males': '',
+        #         'females': ''
+        #     },
+        #     avg_life_exp='',
+        #     breed_video='',
+
+        #     description="",
+
+        # ),
         # Breed(
         #     name='',
         #     breed_group=,

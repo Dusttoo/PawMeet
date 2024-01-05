@@ -15,8 +15,6 @@ def answers(id):
 @quiz_routes.route('/add', methods=['POST'])
 def submit_answers():
     if request.method == "POST":
-        print('\n\n\n', request.data, '\n\n\n')
-
         form = UserAnswerForm()
         form['csrf_token'].data = request.cookies['csrf_token']
         if form.validate_on_submit():
@@ -25,3 +23,12 @@ def submit_answers():
             db.session.add(data)
             db.session.commit()
             return data.to_dict()
+
+
+@quiz_routes.route('<int:id>/delete', methods=['DELETE'])
+def delete_quiz(id):
+
+    db.session.query(User_Answer).filter_by(user_id=id).delete()
+    db.session.commit()
+
+    return {'deleted': id}

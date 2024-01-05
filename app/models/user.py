@@ -20,6 +20,17 @@ class User(db.Model, UserMixin):
     posts = db.relationship('Post', back_populates='users')
     user_answers = db.relationship('User_Answer', back_populates='users')
     likes = db.relationship('Like', back_populates='users')
+    user1 = db.relationship('Friend_Request', foreign_keys='Friend_Request.user_id_from', back_populates='users')
+    user2 = db.relationship(
+        'Friend_Request', foreign_keys='Friend_Request.user_id_to', back_populates='users')
+    friend1 = db.relationship(
+        'Friends_List', foreign_keys='Friends_List.current_user_id', back_populates='users')
+    friend2 = db.relationship(
+        'Friends_List', foreign_keys='Friends_List.friend_user_id', back_populates='users')
+    message_to = db.relationship(
+        'Message', foreign_keys='Message.user_id_to', back_populates='users')
+    message_from = db.relationship(
+        'Message', foreign_keys='Message.user_id_from', back_populates='users')
 
 
     @property

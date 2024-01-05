@@ -1,10 +1,7 @@
-import React, { useState } from 'react';
+import React from "react";
 import * as sessionActions from "../../store/session";
-import { useSelector, useDispatch } from 'react-redux';
-import { Redirect } from 'react-router-dom';
-import { Link } from 'react-router-dom'
-import { login } from '../../store/session';
-import './Auth.css'
+import { useDispatch } from "react-redux";
+import "./Auth.css";
 
 const DemoButton = () => {
   const dispatch = useDispatch();
@@ -13,12 +10,11 @@ const DemoButton = () => {
     return dispatch(sessionActions.login("demo@aa.io", "password"));
   };
 
-
   return (
     <>
-        <button className="login-button" onClick={handleSubmit}>
-          Demo User
-        </button>
+      <button className="login-button" onClick={handleSubmit}>
+        Demo User
+      </button>
     </>
   );
 };

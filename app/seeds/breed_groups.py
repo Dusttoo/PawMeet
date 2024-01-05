@@ -47,6 +47,7 @@ def seed_breed_groups():
 
     db.session.commit()
 
+
 def undo_breed_groups():
     db.session.execute('TRUNCATE breed_groups RESTART IDENTITY CASCADE;')
     db.session.commit()

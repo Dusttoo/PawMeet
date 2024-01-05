@@ -8,4 +8,4 @@ class UserAnswerForm(FlaskForm):
     user_id = IntegerField('user_id', validators=[DataRequired()])
     trait_id = IntegerField('trait_id', validators=[DataRequired()])
     answer = IntegerField('answer', validators=[DataRequired()])
-    # trait_id = BooleanField('important')
+    important = BooleanField('important')

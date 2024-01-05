@@ -5,21 +5,21 @@ def seed_breed_traits():
         trait='Affectionate with family',
         question='My dog should be good with family',
         min='Not so good',
-        max='Very Good',
+        max='Family Oriented',
         description='How affectionate a breed is likely to be with family members, or other people he knows well. Some breeds can be aloof with everyone but their owner, while other breeds treat everyone they know like their best friend.',
      )
      children = Breed_Trait(
          trait='Good with young children',
          question='My dog should be good with small children',
-         min='Not so good',
-         max='Very good',
+         min='I don\'t have kids',
+         max='Nanny dog',
          description="A breed's level of tolerance and patience with childrens' behavior, and overall family-friendly nature. Dogs should always be supervised around young children, or children of any age who have little exposure to dogs.",
      )
      dogs = Breed_Trait(
          trait='Good with other dogs',
          question='My dog should be good with other dogs',
          min='Not so good',
-         max='Very good',
+         max='Dog\'s are friends',
          description="How generally friendly a breed is towards other dogs. Dogs should always be supervised for interactions and introductions with other dogs, but some breeds are innately more likely to get along with other dogs, both at home and in public.",
      )
      shed = Breed_Trait(
@@ -81,7 +81,7 @@ def seed_breed_traits():
      adaptability = Breed_Trait(
          trait="Adaptability level",
          question='How adaptable my dog should be to changes',
-         min='Type A',
+         min='Keeps a schedule',
          max='Down for whatever',
          description="How easily a breed handles change. This can include changes in living conditions, noise, weather, daily schedule, and other variations in day-to-day life.",
      )
