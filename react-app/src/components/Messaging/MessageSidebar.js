@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { allMessages } from "../../store/messages";
-import {v4 as uuidv4} from 'uuid';
+import { getUniqueConversations } from "../utils/helperFunctions";
 
 const MessageSidebar = ({selected, setSelected, setUserConversation}) => {
   const dispatch = useDispatch()
@@ -9,12 +9,19 @@ const MessageSidebar = ({selected, setSelected, setUserConversation}) => {
   const user = useSelector(state => state.session.user)
   const usersList = useSelector(state => state.users)
   const previousMessages = useSelector(state => state.messages)
-  const generatedConversations = []
-  console.log(generatedConversations.includes({'to': 2, 'from': 1}), {'to': 2, 'from': 1} in generatedConversations)
 
   useEffect(() => {
-    dispatch(allMessages(user.id))
-  }, [])
+    dispatch(allMessages(user.id));
+  }, [dispatch, user.id]);
+
+  useEffect(() => {
+      const generatedConversations = Object.values(previousMessages).filter(
+        (message) => message.user_id_to === user.id || message.user_id_from === user.id
+      );
+    setMessages(
+      getUniqueConversations(generatedConversations, user.id)
+    );
+  }, [previousMessages, user.id]);
 
   const handleSelect = (message) => {
     if(message.user_id_from === user.id) {
@@ -32,22 +39,16 @@ const MessageSidebar = ({selected, setSelected, setUserConversation}) => {
       <div>
       {Object.values(previousMessages).length &&
             <>
-            {Object.values(previousMessages).map((message, ind) => {
-              
-              if(!generatedConversations.includes({'to': message.user_id_from, 'from': message.user_id_to})) {
-                generatedConversations.push({'to': message.user_id_to, 'from': message.user_id_from})
-                generatedConversations.push({'to': message.user_id_from, 'from': message.user_id_to})
+            {messages.map((message, ind) => {
                 return (
-                  <div 
-                  key={ind}
-                  onClick={() => handleSelect(message)}>
-                    <img src='' />
-                    <span>{`${usersList[message.user_id_from].first_name} ${usersList[message.user_id_from].last_name}`}</span>
-                    <p>{message.message}</p>
-                    </div>
-                  )
-              }
-              
+                  <div key={ind} onClick={() => handleSelect(message)}>
+                    <img src={usersList[message.user_id_to].profile_img} />
+                    <span>{`${usersList[message.user_id_to].first_name} ${
+                      usersList[message.user_id_to].last_name
+                    }`}</span>
+                    <p>{message.lastMessage}</p>
+                  </div>
+                );
               })}
             </>}
       </div>

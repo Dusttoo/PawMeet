@@ -26,7 +26,7 @@ def handle_message(data):
     message_data = Message(
         user_id_from = data['user_id_from'],
         user_id_to = data['user_id_to'],
-        message = data['msg']
+        message = data['message']
     )
     db.session.add(message_data)
     db.session.commit()
