@@ -1,6 +1,6 @@
 # Paw Meet
 
-#### By Dusty Mumphrey - [Live Site](https://paw-meet.herokuapp.com/)
+#### By Dusty Mumphrey - [Live Site](https://pawmeet-b485eb47bf7d.herokuapp.com/)
 
 ## Technologies used:
 
