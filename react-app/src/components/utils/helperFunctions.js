@@ -99,6 +99,51 @@ export const calculateResults = (breeds, breedAnswers, userAnswers) => {
   return results;
 };
 
+// -- Messaging helpers -------------------------------
+/**
+ * This function returns a list of unique conversations.
+ * A conversation is considered unique if the same pair of user IDs
+ * has not been encountered before, regardless of the direction of the message.
+ * 
+ * @param {Object} messages - The object containing all messages.
+ * @param {number} currentUserId - The ID of the current user.
+ * @return {Array} - An array of unique conversation objects.
+ */
+export const getUniqueConversations = (messages, currentUserId) => {
+  const conversations = new Map();
+
+  Object.values(messages).forEach((message) => {
+    const participants = [message.user_id_from, message.user_id_to].sort();
+    const conversationKey = participants.join('-');
+
+    // Check if this pair of users has already been added to the conversations
+    if (!conversations.has(conversationKey)) {
+      conversations.set(conversationKey, {
+        // Assuming the message object contains a user_id and message
+        user_id_from: message.user_id_from,
+        user_id_to: message.user_id_to,
+        lastMessage: message.message,
+        // You can add any other details you want to show for each conversation
+      });
+    }
+  });
+
+  // Return an array of conversation objects
+  return Array.from(conversations.values()).filter(convo => 
+    convo.user_id_from === currentUserId || convo.user_id_to === currentUserId
+  ).map(convo => {
+    // Swap if the current user is the recipient to display the conversation correctly
+    if (convo.user_id_to === currentUserId) {
+      return {
+        ...convo,
+        user_id_from: convo.user_id_to,
+        user_id_to: convo.user_id_from,
+      };
+    }
+    return convo;
+  });
+};
+
 // -- utility functions --------------------------------
 export const getRandomInt = (min, max) => {
   min = Math.ceil(min);
